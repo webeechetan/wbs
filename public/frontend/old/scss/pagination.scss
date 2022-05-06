@@ -1,0 +1,38 @@
+/* PAGINATION */
+.pagination {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+
+	li.page-item {
+		margin-right: 5px;
+
+		&:first-child a.page-link {
+			padding-left: 0;
+		}
+
+		&.active a.page-link {
+			border: 1px solid $color-dark;
+			background: none;
+		}
+
+		a.page-link {
+			border: none;
+			color: $color-dark;
+			font-size: 13px;
+			font-weight: 600;
+			border-radius: 50%;
+
+			&:hover {
+				background: none;
+				opacity: 0.5;
+			}
+
+			&:focus {
+				border: none;
+				background: none;
+				box-shadow: none;
+			}
+		}
+	}
+}

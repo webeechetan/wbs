@@ -1,0 +1,270 @@
+/* NAVIGATION MENU */
+.navigation-menu {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	position: fixed;
+	right: calc(-100% + -200px);
+	top: 0;
+	z-index: 2;
+	background: $color-dark;
+	@include transition-cubic;
+	visibility: hidden;
+
+	&:before {
+		content: "";
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 200px 100vh 0;
+		border-color: transparent $color-dark transparent transparent;
+		position: absolute;
+		left: -200px;
+		top: 0;
+	}
+
+	&.active {
+		right: 0;
+		visibility: visible;
+
+		.inner {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	#map {
+		width: 600px;
+		height: 450px;
+		display: none;
+		border: none;
+	}
+
+	.inner {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		padding: 0 10%;
+		color: #fff;
+		transform: translateX(40%);
+		opacity: 0;
+		@include transition-cubic;
+		transition-delay: 0.35s;
+		padding-top: 80px;
+
+		.side-menu {
+			width: 100%;
+			float: right;
+			display: none;
+
+			ul {
+				float: right;
+				margin: 0;
+				padding: 0;
+				text-align: right;
+
+				li {
+					display: block;
+					list-style: none;
+					margin-bottom: 5px;
+
+					a {
+						font-size: 8vw;
+						color: #fff;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+
+		.sides {
+			flex: 1;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			justify-content: center;
+
+			&:last-child {
+				padding-left: 50px;
+			}
+		}
+
+		h2 {
+			display: block;
+			margin-bottom: 20px;
+			line-height: 1.7;
+			font-size: 25px;
+
+			strong {
+				font-weight: 600;
+			}
+		}
+
+		figure {
+			display: block;
+			margin: 0;
+			background: #fff;
+			padding: 6px;
+			position: relative;
+
+			a {
+				width: 50px;
+				height: 50px;
+				line-height: 44px;
+				position: absolute;
+				right: 6px;
+				top: 6px;
+				background: #fff;
+				text-align: center;
+			}
+		}
+
+		address {
+			display: block;
+			font-size: 19px;
+
+			a {
+				display: block;
+				color: #fff;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+/* NAVBAR */
+.navbar {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	z-index: 9;
+	@include transition;
+
+	&.hide {
+		transform: translateY(-100px) !important;
+		@include transition;
+	}
+
+	&.light {
+		color: #fff;
+
+		.logo a img {
+			-webkit-filter: brightness(0) invert(1);
+			filter: brightness(0) invert(1);
+		}
+
+		.main-menu ul li a {
+			color: #fff;
+
+			&:after {
+				background: #fff;
+			}
+
+			&:hover:before {
+				background: #fff;
+			}
+		}
+	}
+
+	.inner {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		padding: 30px 0;
+		@include transition;
+		@media (max-width: 991px) {
+			padding: 15px 0;
+		}
+	}
+
+	.logo {
+		margin-left: 0;
+
+		a {
+			margin: 0;
+
+			img {
+				width: 160px;
+				@media (max-width: 991px) {
+					width: 125px;
+				}
+			}
+		}
+	}
+
+	.phone {
+		margin-left: 50px;
+	}
+
+	.main-menu {
+		margin-left: auto;
+
+		ul {
+			margin: 0;
+			padding: 0;
+
+			li {
+				display: inline-block;
+				margin: 0 18px;
+				padding: 0;
+
+				a {
+					display: block;
+					font-size: 15px;
+					font-weight: 600;
+					position: relative;
+					padding: 0;
+
+					&:hover {
+						text-decoration: none;
+					}
+
+					&:before {
+						content: '';
+						display: block;
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						height: 2px;
+						width: 0;
+						transition: width 0s ease, background .25s ease;
+					}
+
+					&:after {
+						content: '';
+						display: block;
+						position: absolute;
+						right: 0;
+						bottom: 0;
+						height: 2px;
+						width: 0;
+						background: $color-dark;
+						transition: width .25s ease;
+					}
+
+					&:hover:before {
+						width: 100%;
+						background: $color-dark;
+						transition: width .25s ease;
+					}
+
+					&:hover:after {
+						width: 100%;
+						background: transparent;
+						transition: all 0s ease;
+					}
+				}
+			}
+		}
+	}
+
+	.hamburger-menu {
+		margin-right: 0;
+		margin-left: 30px;
+	}
+}

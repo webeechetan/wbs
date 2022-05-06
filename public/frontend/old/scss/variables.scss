@@ -1,0 +1,34 @@
+// Colors
+$color-dark : #282828;
+$primary: #51B174;
+$secondry: #F7D600;
+$pink: #ec008c;
+$banner_overlay_dark: rgba(0,0,0,0.4);
+
+// Ease
+$ease_03: all 0.3s ease;
+$ease_05: all 0.5s ease;
+
+@mixin transition_03 {
+    transition: $ease_03;
+}
+@mixin transition_05 {
+    transition: $ease_05;
+}
+
+@mixin text_gradient {
+    background: linear-gradient(to right, $primary 0%, $color-dark 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.text {
+    &-gradient {
+        @include text_gradient;
+    }
+    &-secondary {
+        color: $secondry !important;
+    }
+    &-primary {
+        color: $primary !important;
+    }
+}
