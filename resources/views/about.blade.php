@@ -109,7 +109,7 @@
             <div class="col-md-6">
                 <div class="card-leader">
                     <div class="card-leader-head">
-                        <figure class="bg-design-1"><img src="images/team-1.png"></figure>
+                        <figure class="bg-design-1"><img src="{{ asset('frontend') }}/images/team-1.png"></figure>
                         <div class="card-leader-title">
                             <p><span class="font-weight-600">Soumya Sharma</span><br/><span class="text-primary">Co-Founder & CEO</span></p>
                             <p>Soumya sharma is the Co-Founder & CEO of WebeeSocial. She also heads the Creative Department of the agency. Before setting up WeBeeSocial, she spearheaded some of the biggest campaigns for brands like Huawei, Intel, Ford, Dabur etc.</p>
@@ -120,7 +120,7 @@
             <div class="col-md-6">
                 <div class="card-leader">
                     <div class="card-leader-head">
-                        <figure><img src="images/team-2.png"></figure>
+                        <figure><img src="{{ asset('frontend') }}/images/team-2.png"></figure>
                         <div class="card-leader-title">
                             <p><span class="font-weight-600">Shubhendu Jha</span><br/><span class="text-primary">Co-Founder & MD</span></p>
                             <p>Shubhendu Jha is the Co-Founder & MD of WebeeSocial. He also heads the Client Servicing Department of the agency. Being a digitalhead he loves creativity, not only as a hobby, but as a away of life. Before setting up WeBeeSocial, he was working with brands like airtel, Dabur, Honda, Adidas etc. which made him proficient in different verticals.</p>
@@ -152,7 +152,7 @@
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/messe-frankfurt-black.png" alt="Messe frankfurt Logo"></figure></li>
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/oupont-black.png" alt="Oupont Logo"></figure></li>
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/usaid-black.png" alt="Usaid Logo"></figure></li>
-            <!-- <li><figure><img src="images/client-logos/hella-black.png" alt="Hella Logo"></figure></li> -->
+            <!-- <li><figure><img src="{{ asset('frontend') }}/images/client-logos/hella-black.png" alt="Hella Logo"></figure></li> -->
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/bpcl-black.png" alt="Bharat Petroleum Logo"></figure></li>
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/max-black.png" alt="Max Healthcare Logo"></figure></li>
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/solo-black.png" alt="Solo Expenses Logo"></figure></li>
@@ -162,7 +162,7 @@
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/nasscom-black.png" alt="Nasscom Logo"></figure></li>
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/ozone-black.png" alt="Ozone Logo"></figure></li>
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/shemford-black.png" alt="Shemford Logo"></figure></li>
-            <!-- <li><figure><img src="images/client-logos/isgec-black.png" alt="ISGEC Logo"></figure></li> -->
+            <!-- <li><figure><img src="{{ asset('frontend') }}/images/client-logos/isgec-black.png" alt="ISGEC Logo"></figure></li> -->
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/ccc-black.png" alt="CCC Logo"></figure></li>
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/colors-black.png" alt="Colors Logo"></figure></li>
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/sos-black.png" alt="SOS Logo"></figure></li>
