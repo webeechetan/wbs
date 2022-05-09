@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<section class="sec-space">
+<section>
 
     <div class="headlines">
 
