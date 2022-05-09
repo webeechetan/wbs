@@ -42,3 +42,7 @@ Route::get('/get-in-touch', function () {
 Route::get('/work-with-us', function () {
     return view('work-with-us');
 });
+
+Route::get('/portfolio-item', function () {
+    return view('euler');
+});
