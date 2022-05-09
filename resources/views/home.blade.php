@@ -39,7 +39,7 @@
                 <!-- end slide-inner -->
             </div>
             <!-- end swiper-slide -->
-            <div class="swiper-slide" data-background="images/home-slider/home_hero_slide2.jpg">
+            <div class="swiper-slide" data-background="{{ asset('frontend') }}/images/home-slider/home_hero_slide2.jpg">
                 <div class="slide-inner">
                     <figure><img src="{{ asset('frontend') }}/images/home-slider/home_hero_slide2_logo.png" alt="Lotus Logo"></figure>
                     <h2>Making <span>Lotus Herbals</span> White Glow, glow on the internet was one hell of a roller coaster ride</h2>
@@ -51,7 +51,7 @@
                 <!-- end slide-inner -->
             </div>
             <!-- end swiper-slide -->
-            <div class="swiper-slide" data-background="images/home-slider/home_hero_slide3.jpg">
+            <div class="swiper-slide" data-background="{{ asset('frontend') }}/images/home-slider/home_hero_slide3.jpg">
                 <div class="slide-inner">
                     <figure><img src="{{ asset('frontend') }}/images/home-slider/home_hero_slide3_logo.png" alt="Mahindra Kabira Logo"></figure>
                     <h2>A unique festival where our <span>targeted campaigns</span> brought people together for celebrating Kabir at the ghats of Varanasi</h2>
@@ -119,7 +119,7 @@
             <div class="col-md-3 p-0">
                 <div class="port-box">
                     <div class="port-box-img">
-                        <img alt="" src="{{ asset('frontend') }}/images/port-img1.jpg">
+                        <img src="{{ asset('frontend') }}/images/port-img1.jpg" alt="Social Media Marketing">
                     </div>
                     <div class="port-box-items">
                         <div class="titles">
@@ -131,7 +131,7 @@
             <div class="col-md-3 p-0">
                 <div class="port-box">
                     <div class="port-box-img">
-                        <img src="{{ asset('frontend') }}/images/port-img2.jpg">
+                        <img src="{{ asset('frontend') }}/images/port-img2.jpg" alt="Performance Marketing">
                     </div>
                     <div class="port-box-items">
                         <div class="titles">
@@ -143,7 +143,7 @@
             <div class="col-md-3 p-0">
                 <div class="port-box">
                     <div class="port-box-img">
-                        <img src="{{ asset('frontend') }}/images/port-img3.jpg">
+                        <img src="{{ asset('frontend') }}/images/port-img3.jpg" alt="Web Analytics">
                     </div>
                     <div class="port-box-items">
                         <div class="titles">
@@ -155,7 +155,7 @@
             <div class="col-md-3 p-0">
                 <div class="port-box">
                     <div class="port-box-img">
-                        <img alt="" src="{{ asset('frontend') }}/images/port-img4.jpg">
+                        <img src="{{ asset('frontend') }}/images/port-img4.jpg" alt="Website Design & Development">
                     </div>
                     <div class="port-box-items">
                         <div class="titles">
@@ -173,10 +173,10 @@
         <div class="row align-items-center">
             <div class="col-md-6">
                 <figure class="project-image reveal-effect masker wow"> 
-                    <img src="{{ asset('frontend') }}/images/digital-solutions.jpg" alt="Image">
+                    <img src="{{ asset('frontend') }}/images/digital-solutions.jpg" alt="Integrated Digital Solutions">
                 </figure>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 pl-md-5">
                 <div class="titles">
                     <h4>Integrated Digital Solutions</h4>
                     <p class="font-weight-600">Insights, Metrics and Analytics - Everything is connected!</p>
@@ -193,7 +193,7 @@
             </div>
             <div class="col-md-6">
                 <figure class="project-image reveal-effect masker wow"> 
-                    <img src="{{ asset('frontend') }}/images/creativity-results.jpg" alt="Image">
+                    <img src="{{ asset('frontend') }}/images/creativity-results.jpg" alt="Strategy, Creativity & Results!">
                 </figure>
             </div>
         </div>

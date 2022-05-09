@@ -116,7 +116,7 @@
             </div>
             <div class="col-md-4 sec-space pt-0">
                 <div class="card-icon">
-                    <figure class="card-icon-img"><img src="{{ asset('frontend') }}/images/icons/analysis.png"></figure>
+                    <figure class="card-icon-img"><img src="{{ asset('frontend') }}/images/icons/web-analytics.png"></figure>
                     <div class="card-icon-content">
                          <div class="titles">
                               <h6 class="font-weight-600">Web Analytics</h6>

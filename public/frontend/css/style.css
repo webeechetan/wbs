@@ -805,7 +805,7 @@ body .slider {
 }
 
 /* FORM ELEMENTS */
-input[type=text] {
+input[type=text], select {
   width: 100%;
   height: 54px;
   border: 1px solid #eee;
@@ -814,7 +814,6 @@ input[type=text] {
 
 textarea {
   width: 100%;
-  height: 160px;
   border: 1px solid #eee;
   padding: 15px 20px;
 }
@@ -3083,7 +3082,7 @@ body .slider {
 .contact .contact-form {
   display: block;
   border: 1px solid #ddd;
-  padding: 40px;
+  padding: 70px;
 }
 .contact .contact-form h5 {
   margin-bottom: 40px;

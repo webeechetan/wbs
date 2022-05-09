@@ -26,7 +26,7 @@
                     <img src="{{ asset('frontend') }}/images/about_img4.jpg" alt="Image">
                 </figure>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 pl-md-5">
                 <div class="titles">
                     <h4>Who we are?</h4>
                     <p class="font-weight-600">We live and breathe digital. The Internet is our home.</p>
@@ -44,7 +44,7 @@
             </div>
             <div class="col-md-6">
                 <figure class="project-image reveal-effect masker wow"> 
-                    <img src="{{ asset('frontend') }}/images/about_img2.jpg" alt="Image">
+                    <img src="{{ asset('frontend') }}/images/what-we-do.jpg" alt="What We Do?">
                 </figure>
             </div>
         </div>

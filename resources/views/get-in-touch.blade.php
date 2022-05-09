@@ -1,11 +1,10 @@
 @extends('layouts.app')
 @section('content')
 <section>
-    <div class="headlines">
+    <div class="headlines pb-0">
         <div class="container">
             <div class="zikzak-container">
                 <h2 class="title-big mb-4">Get In <span class="text-primary">Touch</span></h2>
-                
             </div>
         </div>
         <!-- end container -->
@@ -13,7 +12,7 @@
     <!-- end headlines -->
 </section>
 <!-- end about headline -->
-<section class="contact sec-space">
+<section class="contact sec-space pt-0">
     <div class="container">
         <div class="row">
             <div class="col-lg-10">
@@ -38,62 +37,50 @@
                                 <input type='text' style='display:none;' name='returnURL' value='https://www.webeesocial.com/thank-you/' />
                                 <div id="elementDiv4656515000001312057">
                                     <div class="row">
-                                        <div class="col-md-6 mb-4">
-                                            <div class="bgn-wf-label">First Name <span class="bgn-star">&#42;</span></div>
+                                        <div class="col-md-6 mb-3">
+                                            <label>First Name <span class="text-danger">&#42;</span></label>
                                             <div class="bgn-wf-field">
                                                 <input name="First Name" id="first_name" type="text" maxlength="40" value="" placeholder="" />
                                                 <div class="error" id="first_name_error"></div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 mb-4">
-                                            <div class="bgn-wf-label">Last Name
-                                                <span class="bgn-star">&#42;</span>
-                                            </div>
-                                            <div class="bgn-wf-field">
+                                        <div class="col-md-6 mb-3">
+                                            <label>Last Name <span class="text-danger">&#42;</span></label>
+                                            <div>
                                                 <input name="Last Name" type="text" id="last_name" maxlength="80" value="" placeholder="" />
                                                 <div class="error" id="last_name_error"></div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 mb-4">
-                                            <div class="bgn-wf-label">Email
-                                                <span class="bgn-star">&#42;</span>
-                                            </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label>Email <span class="text-danger">&#42;</span></label>
                                             <div class="bgn-wf-field">
                                                 <input name="Email" type="text" maxlength="100" value="" placeholder="" id="email" />
                                                 <div class="error" id="email_error"></div>
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-4">
-                                            <div class="bgn-wf-label">Phone Number
-                                                <span class="bgn-star">&#42;</span>
-                                            </div>
+                                            <label class="bgn-wf-label">Phone Number <span class="text-danger">&#42;</span></label>
                                             <div class="bgn-wf-field">
                                                 <input name="Home Phone" type="text" maxlength="30" value="" placeholder="" id="contact" />
                                                 <div class="error" id="contact_error"></div>
                                             </div>
                                         </div>
                                         <div class="col-12 mb-4">
-                                            <div class="bgn-wf-label">Company Name
-                                                <span class="bgn-star">&#42;</span>
-                                            </div>
+                                            <label class="bgn-wf-label">Company Name <span class="text-danger">&#42;</span></label>
                                             <div class="bgn-wf-field">
                                                 <input name="Account Name" type="text" id="company_name" maxlength="120" value="" placeholder="" />
-                                                    <div class="error" id="company_name_error"></div>
+                                                <div class="error" id="company_name_error"></div>
                                             </div>
                                         </div>
                                         <div class="col-12 mb-4">
-                                            <div class="bgn-wf-label">Services you are looking for? <br/>Digital Strategy, SEO, Social Media, Website, Ads etc
-                                                <span class="bgn-star">&#42;</span>
-                                            </div>
+                                            <label class="bgn-wf-label">Services you are looking for? <br/>Digital Strategy, SEO, Social Media, Website, Ads etc <span class="text-danger">&#42;</span></label>
                                             <div class="bgn-wf-field">
-                                                <textarea name="Description" maxlength="32000" placeholder="" id="service"></textarea>
+                                                <textarea name="Description" maxlength="32000" rows="2" placeholder="" id="service"></textarea>
                                                 <div class="error" id="service_error"></div>
                                             </div>
                                         </div>
                                         <div class="col-12 mb-4">
-                                            <div class="bgn-wf-label">Budget
-                                                <span class="bgn-star">&#42;</span>
-                                            </div>
+                                            <label class="bgn-wf-label">Budget <span class="text-danger">&#42;</span></label>
                                             <div class="bgn-wf-field">
                                                 <select name="CONTACTCF1" id="budget">
                                                     <option value="">-Select-</option>
@@ -106,14 +93,13 @@
                                                 <div class="error" id="budget_error"></div>
                                             </div>
                                         </div>
-                                        <div class="col-12">
-                                            <div class="bgn-wf-label">Captcha
-                                            </div>
+                                        <div class="col-12 mb-4">
+                                            <label class="bgn-wf-label">Captcha <span class="text-danger">&#42;</span></label>
                                             <div class="bgn-wf-field">
                                                 <input type="text" name="enterdigest">
                                             </div>
                                         </div>
-                                        <div class="col-12">
+                                        <div class="col-12 mb-4">
                                             <div class="bgn-wf-label"></div>
                                             <div class="bgn-wf-field">
                                                 <img id="imgid4656515000001312057" src="https://bigin.zoho.com/crm/CaptchaServlet?formId=2a6d43142652ff05c15a66c6f21272dbb944a823ba4d9b091cc13b08821a7bd0&grpid=6c9bfa7e8365d92f04b28f483f3c29bb32af25cffc16d86fc4c8172a8ed6d534">
