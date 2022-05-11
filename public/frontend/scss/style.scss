@@ -701,7 +701,11 @@
 	}
 }
 .headlines {
-	padding-bottom: 70px;
+	padding-bottom: 90px;
+	padding-top: 20px;
+	.container-fluid {
+		width: calc(100% - 18%);
+	}
 	@media (max-width: 991px) {
 		padding: 50px 0;
 	}
@@ -2000,7 +2004,7 @@
 		margin: 0;
 
 		img {
-			height: 42px;
+			height: 70px;
 		}
 	}
 

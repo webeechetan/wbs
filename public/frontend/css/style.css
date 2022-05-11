@@ -116,7 +116,7 @@ p {
 }
 /* Headings */
 .title-big {
-  font-size: 5.5em;
+  font-size: 7em;
   font-weight: 800;
   margin: 0;
   line-height: normal;
@@ -760,7 +760,7 @@ body .slider {
 }
 .navbar .main-menu ul li a {
   display: block;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   position: relative;
   padding: 0;
@@ -981,7 +981,7 @@ p {
 }
 /* Headings */
 .title-big {
-  font-size: 5.5em;
+  font-size: 7em;
   font-weight: 800;
   margin: 0;
   line-height: normal;
@@ -2035,7 +2035,11 @@ body .slider {
 }
 
 .headlines {
-  padding-bottom: 70px;
+  padding-bottom: 90px;
+  padding-top: 20px;
+}
+.headlines .container-fluid {
+  width: 82%;
 }
 @media (max-width: 991px) {
   .headlines {
@@ -3190,7 +3194,7 @@ body .slider {
   margin: 0;
 }
 .footer .logo img {
-  height: 42px;
+  height: 70px;
 }
 .footer h5 {
   font-size: 15px;

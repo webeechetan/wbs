@@ -2,9 +2,9 @@
 @section('content')
 <section>
     <div class="headlines">
-        <div class="container">
+        <div class="container-fluid">
             <div class="zikzak-container">
-                <h2 class="title-big">We create <span class="text-primary">super - rich experiences</span> online!</h2>
+                <h2 class="title-big">We create super - rich experiences online<span class="text-primary">!</span></h2>
             </div>
         </div>
         <!-- end container -->
@@ -171,8 +171,8 @@
 <section class="layout1 sec-space">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-6">
-                <figure class="project-image reveal-effect masker wow"> 
+            <div class="col-md-6 px-md-0">
+                <figure class="project-image mb-0 reveal-effect masker wow"> 
                     <img src="{{ asset('frontend') }}/images/digital-solutions.jpg" alt="Integrated Digital Solutions">
                 </figure>
             </div>
@@ -183,7 +183,7 @@
                     <p class="mb-0">In a digital world where everything’s connected, we believe that the approach to digital communications has to be joined-up too. Our approach combines creativity & technology and blends a diverse range of digital marketing disciplines — from mobile and responsive web design to search and social media campaigns — all under one roof.</p>
             </div>
         </div>
-        <div class="row sec-space pb-0 align-items-center">
+        <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="titles">
                     <h4>Strategy, Creativity & Results!</h4>
@@ -191,8 +191,8 @@
                     <p>We understand that each client and each project we undertake is different and so we have developed a repeatable process that we know works. Our methodology puts the user at the heart of the experience from the start. By working iteratively through a pre-defined set of stages, we create beautiful and usable solutions that work hard and deliver targeted results.</p>
                 </div>
             </div>
-            <div class="col-md-6">
-                <figure class="project-image reveal-effect masker wow"> 
+            <div class="col-md-6 px-md-0">
+                <figure class="project-image mb-0 reveal-effect masker wow"> 
                     <img src="{{ asset('frontend') }}/images/creativity-results.jpg" alt="Strategy, Creativity & Results!">
                 </figure>
             </div>
@@ -250,7 +250,7 @@
     <div class="container">
         <div class="titles mb-5 text-center">
             <h6 class="text-primary">#WeBeeWinning</h6>
-            <h2>AWARDS & PRIZES</h2>
+            <h2>Awards & Accolades</h2>
             <div class="row">
                 <div class="col-md-8 mx-auto">
                     <p class="text-sub">Here are a few shiny objects that make us smile and tilt our heads upwards with pride.</p>

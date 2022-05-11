@@ -123,7 +123,7 @@
                         <figure><img src="{{ asset('frontend') }}/images/team-2.png"></figure>
                         <div class="card-leader-title">
                             <p><span class="font-weight-600">Shubhendu Jha</span><br/><span class="text-primary">Co-Founder & MD</span></p>
-                            <p>Shubhendu Jha is the Co-Founder & MD of WebeeSocial. He also heads the Client Servicing Department of the agency. Being a digitalhead he loves creativity, not only as a hobby, but as a away of life. Before setting up WeBeeSocial, he was working with brands like airtel, Dabur, Honda, Adidas etc. which made him proficient in different verticals.</p>
+                            <p>Shubhendu Jha is the Co-Founder & MD of WebeeSocial. He also heads the Client Servicing Department of the agency. Before setting up WeBeeSocial, he was working with brands like airtel, Dabur, Honda, Adidas etc. which made him proficient in different verticals.</p>
                         </div>
                     </div>
                 </div>
@@ -185,7 +185,7 @@
         <div class="row sec-space">
             <div class="col-12">
                 <div class="titles mb-md-0 wow fadeInUp">
-                    <h3 class="mb-0">We live by our motto – “We create super-rich experiences online!”</h3>
+                    <h3 class="mb-0">We live by our motto – “We create super-rich experiences online<span class="text-primary">!</span>”</h3>
                 </div>
                 <!-- end career -->
             </div>
