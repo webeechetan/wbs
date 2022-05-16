@@ -28,7 +28,7 @@
 
 <section class="page-header">
 
-    <img src="{{ asset('frontend') }}/images/work_with_us_banner.jpg" alt="Work With Us">
+    <img src="{{ asset('frontend') }}/images/work_with_us_banner.jpg" width="100%" alt="Work With Us">
 
 </section>
 
@@ -46,13 +46,13 @@
 
                 <figure class="project-image reveal-effect masker wow"> 
 
-                    <img src="{{ asset('frontend') }}/images/about_img1.jpg" alt="Image">
+                    <img src="{{ asset('frontend') }}/images/our-value.jpg" alt="Our Value">
 
                 </figure>
 
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 pl-md-5">
 
                 <div class="titles">
 
@@ -84,7 +84,7 @@
 
                 <figure class="project-image reveal-effect masker wow"> 
 
-                    <img src="{{ asset('frontend') }}/images/about_img2.jpg" alt="Image">
+                    <img src="{{ asset('frontend') }}/images/our-environment.jpg" alt="Our Environment">
 
                 </figure>
 
