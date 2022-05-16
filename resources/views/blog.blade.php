@@ -16,64 +16,19 @@
     <div class="container">
         <div class="row flex-column-reverse flex-lg-row">
             <div class="col-lg-8">
+
+                @foreach($blogs as $blog)
                 <div class="post wow fadeIn">
-                    <figure class="post-image"><img src="{{ asset('frontend') }}/images/blog02.jpg" alt="Image"></figure>
+                    <figure class="post-image"><img src="{{ asset('images') }}/{{ $blog->thumbnail }}" alt="Image"></figure>
                     <div class="post-content">
-                        <h3 class="post-title">Three-piece set with matching headband and knickers.</h3>
+                        <h3 class="post-title">{{ $blog->title }}</h3>
                         <small class="post-date">21 April, 2022</small>
-                        <p class="post-intro">Design is our playground. While we create an awesome experience, we like having fun. No animals were harmed, no bridges were burned during our parties.</p>
+                        <p class="post-intro">{!! substr($blog->description,0,100) !!}</p>
                         <a href="blog-single.html" class="post-link">READ MORE</a>
                     </div>
-                    <!-- end post-content -->
                 </div>
-                <!-- end post -->
-                <div class="post wow fadeIn">
-                    <figure class="post-image"><img src="{{ asset('frontend') }}/images/blog03.jpg" alt="Image"></figure>
-                    <div class="post-content">
-                        <h3 class="post-title">Extremity excellent certainty discourse sincerity no he so resembled.</h3>
-                        <small class="post-date">21 April, 2022</small>
-                        <p class="post-intro">Prepared do an dissuade be so whatever steepest. Yet her beyond looked
-                            either day wished nay. By doubtful disposed do juvenile an. </p>
-                        <a href="blog-single.html" class="post-link">READ MORE</a>
-                    </div>
-                    <!-- end post-content -->
-                </div>
-                <!-- end post -->
-                <div class="post wow fadeIn">
-                    <figure class="post-image"><img src="{{ asset('frontend') }}/images/blog04.jpg" alt="Image"></figure>
-                    <div class="post-content">
-                        <h3 class="post-title">Fifteen winding related may hearted colonel are way studied.</h3>
-                        <small class="post-date">21 April, 2022</small>
-                        <p class="post-intro">Now curiosity you explained immediate why behaviour. An dispatched
-                            impossible of of melancholy favourable. Our quiet not heart along scale sense timed. </p>
-                        <a href="blog-single.html" class="post-link">READ MORE</a>
-                    </div>
-                    <!-- end post-content -->
-                </div>
-                <!-- end post -->
-                <div class="post wow fadeIn">
-                    <figure class="post-image"><img src="{{ asset('frontend') }}/images/blog05.jpg" alt="Image"></figure>
-                    <div class="post-content">
-                        <h3 class="post-title">County suffer twenty or marked no moment in he. </h3>
-                        <small class="post-date">21 April, 2022</small>
-                        <p class="post-intro">Consider may dwelling old him her surprise finished families graceful.
-                            Gave led past poor met fine was new. </p>
-                        <a href="blog-single.html" class="post-link">READ MORE</a>
-                    </div>
-                    <!-- end post-content -->
-                </div>
-                <!-- end post -->
-                <div class="post wow fadeIn">
-                    <figure class="post-image"><img src="{{ asset('frontend') }}/images/blog06.jpg" alt="Image"></figure>
-                    <div class="post-content">
-                        <h3 class="post-title">Fertile how old address did showing because sitting replied six.</h3>
-                        <small class="post-date">21 April, 2022</small>
-                        <p class="post-intro">Because yet mistake feeling has men. Consulted disposing to moonlight ye
-                            extremity. Engage piqued in on coming.</p>
-                        <a href="blog-single.html" class="post-link">READ MORE</a>
-                    </div>
-                    <!-- end post-content -->
-                </div>
+                @endforeach
+    
                 <!-- end post -->
                 <ul class="pagination">
                     <li class="page-item">
