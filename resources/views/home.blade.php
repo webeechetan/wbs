@@ -218,7 +218,6 @@
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/messe-frankfurt-black.png" alt="Messe frankfurt Logo"></figure></li>
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/oupont-black.png" alt="Oupont Logo"></figure></li>
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/usaid-black.png" alt="Usaid Logo"></figure></li>
-            <!-- <li><figure><img src="images/client-logos/hella-black.png" alt="Hella Logo"></figure></li> -->
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/bpcl-black.png" alt="Bharat Petroleum Logo"></figure></li>
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/max-black.png" alt="Max Healthcare Logo"></figure></li>
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/solo-black.png" alt="Solo Expenses Logo"></figure></li>
@@ -228,7 +227,6 @@
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/nasscom-black.png" alt="Nasscom Logo"></figure></li>
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/ozone-black.png" alt="Ozone Logo"></figure></li>
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/shemford-black.png" alt="Shemford Logo"></figure></li>
-            <!-- <li><figure><img src="images/client-logos/isgec-black.png" alt="ISGEC Logo"></figure></li> -->
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/ccc-black.png" alt="CCC Logo"></figure></li>
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/colors-black.png" alt="Colors Logo"></figure></li>
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/sos-black.png" alt="SOS Logo"></figure></li>
@@ -238,7 +236,7 @@
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/teamwork-black.png" alt="Teamwork Logo"></figure></li>
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/aston-black.png" alt="Aston University Logo"></figure></li>
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/bare-body-black.png" alt="Bare Body Logo"></figure></li>
-            <li><figure><img src="{{ asset('frontend') }}/images/client-logos/pfi-black.png" alt="PFI Logo"></figure></li>
+            <li><figure><img src="{{ asset('frontend') }}/images/client-logos/PFI-black.png" alt="PFI Logo"></figure></li>
             <li><figure><img src="{{ asset('frontend') }}/images/client-logos/jagat-pharma-black.png" alt="Jagat Pharma Logo"></figure></li>
         </ul>
     </div>
@@ -262,27 +260,32 @@
             <li class="wow fadeInUp" data-wow-delay="0s">
                 <figure><img src="{{ asset('frontend') }}/images/awards/indias-fastest.png" alt="Image"></figure>
                 <p>India’s Fastest Growing Social Media Agency</p>
-                <small>February 2022 Awarded by Agency Reporter</small>
+                <small class="text-primary"><b>February 2022</b></small>
+                <small>Awarded by Agency Reporter</small>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.05s">
                 <figure><img src="{{ asset('frontend') }}/images/awards/bronze.png" alt="Image"></figure>
                 <p>Bronze For Best SEO Campaign</p>
-                <small>July 2021 Awarded by Agency Reporter</small>
+                <small class="text-primary"><b>July 2021</b></small>
+                <small>Awarded by Agency Reporter</small>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.10s">
                 <figure><img src="{{ asset('frontend') }}/images/awards/indias-top-10.png" alt="Image"></figure>
                 <p>India’s top 10 Digital Agencies - Independent</p>
-                <small>March 2021 Awarded at the Driver of Digital Summit</small>
+                <small class="text-primary"><b>March 2021</b></small>
+                <small>Awarded at the Driver of Digital Summit</small>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.15s">
                 <figure><img src="{{ asset('frontend') }}/images/awards/gold-for-best.png" alt="Image"></figure>
                 <p>Gold for Best Social Media Campaign (Non – Profit)</p>
-                <small>June 2020 Awarded at the Digixx summit by Adgully</small>
+                <small class="text-primary"><b>June 2020</b></small>
+                <small>Awarded at the Digixx summit by Adgully</small>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.20s">
                 <figure><img src="{{ asset('frontend') }}/images/awards/best-digital-award.png" alt="Image"></figure>
                 <p>Best Digital Innovation for ACMA Safer Drives</p>
-                <small>December 2017 Awarded at the ACT Digital Summit Pune</small>
+                <small class="text-primary"><b>December 2017</b></small>
+                <small>Awarded at the ACT Digital Summit Pune</small>
             </li>
         </ul>
     </div>
