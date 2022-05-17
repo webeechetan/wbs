@@ -16,11 +16,11 @@ class AuthController extends Controller
     public function authenticate(Request $request){
 
         $request->validate([
-            'email' => 'required|email',
+            'username' => 'required|min:5',
             'password' => 'required|min:6',
         ]);
 
-        $attempt = Auth::attempt(['email'=>$request->email,'password'=>$request->password]);
+        $attempt = Auth::attempt(['email'=>$request->username,'password'=>$request->password]);
         if($attempt){
             return redirect()->route('dashboard');
         }

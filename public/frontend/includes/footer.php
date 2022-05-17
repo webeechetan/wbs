@@ -12,7 +12,8 @@
                 <h5>Our Offices</h5>
                 <address>Sector 22, Dwarka, New Delhi 110075</address>
                 <address>Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, Delhi 110017</address>
-                <address>South Ridge Tower 6, Downtown Dubai, UAE</address>
+                <address>AE Clover Bay Tower, Marasi Drive, Business Bay, Dubai, UAE P. O. Box - 391483</address>
+                <address>CA North York, ON M3A 2Y7, Canada</address>
             </div>
             <!-- end col-4 -->
             <div class="col-lg-4 col-md-6 wow fadeInUp">
@@ -25,8 +26,8 @@
             <div class="col-12 wow fadeInUp">
                 <div class="sub-footer">
                     <ul>
-                        <li><a href="#">Career</a></li>
                         <li><a href="#">Term & Condutions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
                     </ul>
                     <span>© 2022 Webeesocial - All rights Reserved</span>
                 </div>

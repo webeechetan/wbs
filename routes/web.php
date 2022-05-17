@@ -38,6 +38,10 @@ Route::get('/our-work',[OurWorkController::class,'front_end_view'])->name('our-w
 
 Route::get('/blog', [BlogController::class,'front_end_view'])->name('blog');
 
+Route::get('/blog-inner', function () {
+    return view('blog-inner');
+})->name('blog-inner');   
+
 Route::get('/get-in-touch', function () {
     return view('get-in-touch');
 })->name('get-in-touch');
