@@ -13,11 +13,11 @@
 
     <!-- SOCIAL MEDIA META -->
     <meta property="og:description" content="WeBeeSocial is a creative digital marketing agency in Delhi, India. We offer SEO, Performance and Social Media Marketing, Website design &amp; development services.">
-    <meta property="og:image" content="http://www.themezinho.net/agensy/preview.png">
-    <meta property="og:site_name" content="agensy">
-    <meta property="og:title" content="agensy">
+    <meta property="og:image" content="https://www.webeesocial.com/preview.png">
+    <meta property="og:site_name" content="Webeesocial">
+    <meta property="og:title" content="Webeesocial">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://www.themezinho.net/agensy">
+    <meta property="og:url" content="https://www.webeesocial.com">
 
     <!-- TWITTER META -->
     <meta name="twitter:card" content="summary">
@@ -25,7 +25,7 @@
     <meta name="twitter:creator" content="@agensy">
     <meta name="twitter:title" content="agensy">
     <meta name="twitter:description" content="WeBeeSocial | Creative Agency New Delhi | Digital Marketing Company">
-    <meta name="twitter:image" content="http://www.themezinho.net/agensy/preview.png">
+    <meta name="twitter:image" content="https://www.webeesocial.com/preview.png">
 
     <!-- FAVICON FILES -->
     <link href="ico/apple-touch-icon-144-precomposed.jpg" rel="apple-touch-icon" sizes="144x144">

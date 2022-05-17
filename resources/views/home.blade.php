@@ -89,7 +89,7 @@
                 <div>
                     <div class="titles">
                         <h5>Digital.</h5>
-                        <p class="font-weight-600">We create super-rich experiences online!</p>
+                        <p class="font-weight-700">We create super-rich experiences online!</p>
                         <p>WeBeeSocial is a full-scale Digital Marketing Agency based out of New Delhi, India. We mix our years of experience and knowledge to create solutions for our clients which are not only performance driven, but also creative.  We are running kick-ass digital campaigns for our clients, even as you read this!</p>
                     </div>
                     <div class="custom-link"><a href="about-us.php">About Us</a> <span></span> <i></i></div>
@@ -100,7 +100,7 @@
                 <div>
                     <div class="titles">
                         <h5>And More Digital.</h5>
-                        <p class="font-weight-600">Marketing brands with care</p>
+                        <p class="font-weight-700">Marketing brands with care</p>
                         <p>What is marketing if it is not performance driven?</p>
                         <p>We create digital experiences which stick with audiences and also reach the end objective. Trust us with making your brand visible and desired, with highly focused performance marketing.</p>
                     </div> 
@@ -173,13 +173,13 @@
         <div class="row align-items-center">
             <div class="col-md-6 px-md-0">
                 <figure class="project-image mb-0 reveal-effect masker wow"> 
-                    <img src="{{ asset('frontend') }}/images/digital-solutions.jpg" alt="Integrated Digital Solutions">
+                    <img src="{{ asset('frontend') }}/images/digital-solutions.jpg" width="100%" alt="Integrated Digital Solutions">
                 </figure>
             </div>
             <div class="col-md-6 pl-md-5">
                 <div class="titles">
                     <h4>Integrated Digital Solutions</h4>
-                    <p class="font-weight-600">Insights, Metrics and Analytics - Everything is connected!</p>
+                    <p class="font-weight-700">Insights, Metrics and Analytics - Everything is connected!</p>
                     <p class="mb-0">In a digital world where everything’s connected, we believe that the approach to digital communications has to be joined-up too. Our approach combines creativity & technology and blends a diverse range of digital marketing disciplines — from mobile and responsive web design to search and social media campaigns — all under one roof.</p>
             </div>
         </div>
@@ -187,13 +187,13 @@
             <div class="col-md-6">
                 <div class="titles">
                     <h4>Strategy, Creativity & Results!</h4>
-                    <p class="font-weight-600">Our approach is backed by strategy, creativity and optimised for results.</p>
+                    <p class="font-weight-700">Our approach is backed by strategy, creativity and optimised for results.</p>
                     <p>We understand that each client and each project we undertake is different and so we have developed a repeatable process that we know works. Our methodology puts the user at the heart of the experience from the start. By working iteratively through a pre-defined set of stages, we create beautiful and usable solutions that work hard and deliver targeted results.</p>
                 </div>
             </div>
             <div class="col-md-6 px-md-0">
                 <figure class="project-image mb-0 reveal-effect masker wow"> 
-                    <img src="{{ asset('frontend') }}/images/creativity-results.jpg" alt="Strategy, Creativity & Results!">
+                    <img src="{{ asset('frontend') }}/images/creativity-results.jpg" width="100%" alt="Strategy, Creativity & Results!">
                 </figure>
             </div>
         </div>
@@ -250,7 +250,7 @@
     <div class="container">
         <div class="titles mb-5 text-center">
             <h6 class="text-primary">#WeBeeWinning</h6>
-            <h2>Awards & Accolades</h2>
+            <h2>Our Awards</h2>
             <div class="row">
                 <div class="col-md-8 mx-auto">
                     <p class="text-sub">Here are a few shiny objects that make us smile and tilt our heads upwards with pride.</p>

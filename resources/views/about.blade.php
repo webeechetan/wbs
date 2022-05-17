@@ -21,30 +21,30 @@
 <section class="sec-space pb-0">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-6">
-                <figure class="project-image reveal-effect masker wow"> 
-                    <img src="{{ asset('frontend') }}/images/about_img4.jpg" alt="Image">
+            <div class="col-md-6 p-md-0">
+                <figure class="project-image reveal-effect mb-0 masker wow"> 
+                    <img src="{{ asset('frontend') }}/images/about_img4.jpg" width="100%" alt="Image">
                 </figure>
             </div>
-            <div class="col-md-6 pl-md-5">
+            <div class="col-md-6 pl-md-5 pr-md-0">
                 <div class="titles">
                     <h4>Who we are?</h4>
-                    <p class="font-weight-600">We live and breathe digital. The Internet is our home.</p>
+                    <p class="font-weight-700">We live and breathe digital. The Internet is our home.</p>
                     <p class="mb-0">We are a buzzing digital media agency based out of New Delhi, India. Our team consists of experienced and hardworking social bees who breathe and live digital. Change on Facebook, Twitter, YouTube, Instagram, Google algorithm? Rest assured that we are aware of it the moment it’s out. We combine our years of experience in creating integrated social solutions with creative output to generate a rich digital experience for our clients. We think we research, we create, and for our clients, we thrive to deliver best solutions to their every problem.</p>
                 </div>
             </div>
         </div>
-        <div class="row sec-space pb-0 align-items-center">
-            <div class="col-md-6">
+        <div class="row align-items-center">
+            <div class="col-md-6 pl-md-0">
                 <div class="titles">
                     <h4>What We Do?</h4>
-                    <p class="font-weight-600">We are working with clients from India, U.K., Canada, New Zealand, Hong Kong, Singapore , U.A.E. e.t.c. across verticals like ecommerce, technology, retail and events.</p>
+                    <p class="font-weight-700">We are working with clients from India, U.K., Canada, New Zealand, Hong Kong, Singapore , U.A.E. e.t.c. across verticals like ecommerce, technology, retail and events.</p>
                     <p class="mb-0"> From marketing events like Auto Expo - Components and MTV unplugged to creating some incredible ROAS (Return on ad spends) for ecommerce brands, our team loves to be creative and strategic about different lines of businesses. We won the 'Best Digital Innovation' award at the ACT summit in Pune where our digital activation campaign for ACMA Safer work-places won accolades from auto component OEMs. We are hungry for creativity and passionate about driving results. Our clients below can attest to our efforts!</p>
                 </div>
             </div>
-            <div class="col-md-6">
-                <figure class="project-image reveal-effect masker wow"> 
-                    <img src="{{ asset('frontend') }}/images/what-we-do.jpg" alt="What We Do?">
+            <div class="col-md-6 p-md-0">
+                <figure class="project-image reveal-effect mb-0 masker wow"> 
+                    <img src="{{ asset('frontend') }}/images/what-we-do.jpg" width="100%" alt="What We Do?">
                 </figure>
             </div>
         </div>
@@ -58,7 +58,7 @@
     <div class="container">
         <div class="titles mb-5 text-center">
             <h6 class="text-primary">#WeBeeWinning</h6>
-            <h2>AWARDS & PRIZES</h2>
+            <h2>Our Awards</h2>
             <div class="row">
                 <div class="col-md-8 mx-auto">
                     <p class="text-sub">Here are a few shiny objects that make us smile and tilt our heads upwards with pride.</p>
@@ -111,7 +111,7 @@
                     <div class="card-leader-head">
                         <figure class="bg-design-1"><img src="{{ asset('frontend') }}/images/team-1.png"></figure>
                         <div class="card-leader-title">
-                            <p><span class="font-weight-600">Soumya Sharma</span><br/><span class="text-primary">Co-Founder & CEO</span></p>
+                            <p><span class="font-weight-700">Soumya Sharma</span><br/><span class="text-primary">Co-Founder & CEO</span></p>
                             <p>Soumya sharma is the Co-Founder & CEO of WebeeSocial. She also heads the Creative Department of the agency. Before setting up WeBeeSocial, she spearheaded some of the biggest campaigns for brands like Huawei, Intel, Ford, Dabur etc.</p>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
                     <div class="card-leader-head">
                         <figure><img src="{{ asset('frontend') }}/images/team-2.png"></figure>
                         <div class="card-leader-title">
-                            <p><span class="font-weight-600">Shubhendu Jha</span><br/><span class="text-primary">Co-Founder & MD</span></p>
+                            <p><span class="font-weight-700">Shubhendu Jha</span><br/><span class="text-primary">Co-Founder & MD</span></p>
                             <p>Shubhendu Jha is the Co-Founder & MD of WebeeSocial. He also heads the Client Servicing Department of the agency. Before setting up WeBeeSocial, he was working with brands like airtel, Dabur, Honda, Adidas etc. which made him proficient in different verticals.</p>
                         </div>
                     </div>
