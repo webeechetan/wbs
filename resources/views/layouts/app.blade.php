@@ -102,12 +102,12 @@
                 <!-- end phone -->
                 <div class="main-menu">
                     <ul>
-                        <li><a href="/about-us">About Us</a></li>
-                        <li><a href="/our-services">Our Services</a></li>
-                        <li><a href="/our-work">Our Work</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/get-in-touch">Get in touch</a></li>
-                        <li><a href="/work-with-us">Work with us</a></li>
+                        <li><a href="{{ route('about') }}">About Us</a></li>
+                        <li><a href="{{ route('services') }}">Our Services</a></li>
+                        <li><a href="{{ route('our-work') }}">Our Work</a></li>
+                        <li><a href="{{ route('blog') }}">Blog</a></li>
+                        <li><a href="{{ route('get-in-touch') }}">Get in touch</a></li>
+                        <li><a href="{{ route('work-with-us') }}">Work with us</a></li>
                     </ul>
                 </div>
                 <!-- end main-menu -->
