@@ -129,7 +129,7 @@
             <div class="container">
                 <div class="zikzak-container">
                     <div class="zikzak-top"><img src="images/zig-zag-separator.png" width="100" alt=""></div>
-                    <h2 class="title-big">We create <span class="text-primary">super - rich experiences</span> online!</h2>
+                    <h2 class="title-banner">We create <span class="text-primary">super - rich experiences</span> online!</h2>
                     <div class="zikzak-btm"><img src="images/zig-zag-separator.png" width="100" alt=""></div>
                 </div>
             </div>

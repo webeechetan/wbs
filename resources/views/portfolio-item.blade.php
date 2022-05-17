@@ -4,7 +4,7 @@
         <div class="headlines">
             <div class="container">
                 <div class="zikzak-container">
-                    <h2 class="title-big">{{$work->name}}</h2>
+                    <h2 class="title-banner">{{$work->name}}</h2>
                 </div>
             </div>
             <!-- end container -->

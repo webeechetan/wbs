@@ -715,6 +715,7 @@
 .zikzak {
 	&-container {
 		position: relative;
+		max-width: 991px;
 	}
 	&-top, &-btm {
 		position: absolute;

@@ -4,7 +4,7 @@
     <div class="headlines">
         <div class="container-fluid">
             <div class="zikzak-container">
-                <h2 class="title-big">We create super - rich experiences online<span class="text-primary">!</span></h2>
+                <h2 class="title-banner">We create super - rich experiences online<span class="text-primary">!</span></h2>
             </div>
         </div>
         <!-- end container -->

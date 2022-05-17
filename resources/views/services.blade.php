@@ -4,7 +4,7 @@
     <div class="headlines">
         <div class="container">
             <div class="zikzak-container">
-                <h2 class="title-big">Our <span class="text-primary">Services</span></h2>
+                <h2 class="title-banner">Our <span class="text-primary">Services</span></h2>
             </div>
         </div>
         <!-- end container -->
