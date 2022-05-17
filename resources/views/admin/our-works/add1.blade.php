@@ -54,7 +54,8 @@
                                     @enderror
                                 </div>
                                 <div class="col-lg-5">
-                                    <input type="file" class="form-control" name="image[]" multiple >
+                                    <span class="col-form-label col-lg-2">Thumbnail</span>
+                                    <input type="file" class="form-control" name="image" multiple >
                                 </div>
                             </div>
 

@@ -21,7 +21,7 @@
                                <th>S.No</th>
                                <th>Name</th>
                                <th>Category</th>
-                               <th>Images</th>
+                               <th>Thumbnail</th>
                                <th>Actions</th>
                             </tr>
                          </thead>
@@ -32,12 +32,7 @@
                                 <td>{{ $work->name }}</td>
                                 <td>{{ $work->category->name }}</td>
                                 <td>
-                                    @php
-                                    $images = explode(",", $work->images);
-                                    @endphp
-                                    @foreach ($images as $image)
-                                        <img src="{{ asset('images')}}/{{$image}}" height="50" width="50" >
-                                    @endforeach
+                                    <img src="{{ asset('images')}}/{{$work->images}}" height="50" width="50" >
                                 </td>
                                 <td>
                                     <a href="{{ route('our-work.edit',$work->id) }}"><button type="button" class="btn btn-outline-info waves-effect waves-light " ><i class="mdi mdi-pencil d-block font-size-16"></i></button></a>
