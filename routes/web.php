@@ -24,25 +24,27 @@ use App\Http\Controllers\BlogController;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
+
 Route::get('/about-us', function () {
     return view('about');
-});
+})->name('about');
+
 Route::get('/our-services', function () {
     return view('services');
-});
+})->name('services');
 
-Route::get('/our-work',[OurWorkController::class,'front_end_view']);
+Route::get('/our-work',[OurWorkController::class,'front_end_view'])->name('our-work');
 
-Route::get('/blog', [BlogController::class,'front_end_view']);
+Route::get('/blog', [BlogController::class,'front_end_view'])->name('blog');
 
 Route::get('/get-in-touch', function () {
     return view('get-in-touch');
-});
+})->name('get-in-touch');
 
 Route::get('/work-with-us', function () {
     return view('work-with-us');
-});
+})->name('work-with-us');
 
 Route::get('/portfolio-item/{work}',[OurWorkController::class,'view_work'])->name('view.work');
 
