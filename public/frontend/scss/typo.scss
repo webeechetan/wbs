@@ -66,6 +66,7 @@ body {
 	margin: 0;
 	padding-left: 150px;
 	padding-right: 50px;
+	font-weight: 500;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 16px;
 	color: $color-dark;
@@ -118,8 +119,8 @@ p {
 }
 
 /* Headings */
-.title-big {
-	font-size: 7em;
+.title-banner {
+	font-size: 4.5em;
 	font-weight: 800;
 	margin: 0;
 	line-height: normal;

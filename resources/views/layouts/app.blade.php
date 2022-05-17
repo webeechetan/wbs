@@ -98,7 +98,7 @@
     <header class="header">
         <nav class="navbar">
             <div class="inner">
-                <div class="logo"> <a href="index.php"><img src="{{ asset('frontend') }}/images/webeesocial_logo.svg" alt="Image"></a> </div>
+                <div class="logo"> <a href="index.php"><img src="{{ asset('frontend') }}/images/logo-tm.png" alt="Webeesocial Logo"></a> </div>
                 <!-- end phone -->
                 <div class="main-menu">
                     <ul>

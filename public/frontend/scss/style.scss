@@ -715,6 +715,7 @@
 .zikzak {
 	&-container {
 		position: relative;
+		max-width: 991px;
 	}
 	&-top, &-btm {
 		position: absolute;
@@ -1079,7 +1080,7 @@
 			width: 20%;
 			float: left;
 			margin: 0;
-			padding: 20px;
+			padding: 20px 5px;
 			list-style: none;
 			img {
 				
@@ -1121,7 +1122,6 @@
 
 			small {
 				display: block;
-				opacity: 0.6;
 				margin-bottom: 5px;
 			}
 
