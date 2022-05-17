@@ -87,6 +87,13 @@
 			flex-direction: column;
 			justify-content: center;
 
+			address {
+				img {
+					filter: invert(1);
+					margin-right: 10px;
+				}
+			}
+
 			&:last-child {
 				padding-left: 50px;
 			}
@@ -107,8 +114,9 @@
 			display: block;
 			margin: 0;
 			background: #fff;
-			padding: 6px;
+			border: 5px solid $dark-grey;
 			position: relative;
+			overflow: hidden;
 
 			a {
 				width: 50px;
@@ -124,12 +132,9 @@
 
 		address {
 			display: block;
-			font-size: 19px;
 
 			a {
-				display: block;
 				color: #fff;
-				text-decoration: underline;
 			}
 		}
 	}
@@ -215,7 +220,7 @@
 
 				a {
 					display: block;
-					font-size: 15px;
+					font-size: 18px;
 					font-weight: 600;
 					position: relative;
 					padding: 0;

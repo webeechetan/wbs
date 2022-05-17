@@ -22,7 +22,7 @@
             </div>
             <div class="col-sm-6 col-lg-4 mb-4 mb-sm-5">
                 <div class="titles">
-                    <h5>The Brief</h5>
+                    <h5 class="text-primary">The Brief</h5>
                     <p>A user-friendly website that resonates with the products of the client, i.e. Electric Vehicles.</p>
                 </div>
             </div>
@@ -40,7 +40,7 @@
             </div>
             <div class="col-sm-6 col-lg-4 mb-4 mb-sm-5 mb-lg-0">
                 <div class="titles">
-                    <h5>Results</h5>
+                    <h5 class="text-primary">Results</h5>
                     <p>A fast-paced, user responsive design that majorly focused on enhancing UI/UX of the website.</p>
                 </div>
             </div>
