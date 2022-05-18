@@ -37,50 +37,50 @@
                                 <input type='text' style='display:none;' name='returnURL' value='https://www.webeesocial.com/thank-you/' />
                                 <div id="elementDiv4656515000001312057">
                                     <div class="row">
-                                        <div class="col-md-4 mb-3">
-                                            <label>First Name <span class="text-danger">&#42;</span></label>
+                                        <div class="col-md-6 mb-4">
+                                            <label class="font-weight-700">First Name <span class="text-danger">&#42;</span></label>
                                             <div class="bgn-wf-field">
                                                 <input name="First Name" id="first_name" type="text" maxlength="40" value="" placeholder="" />
                                                 <div class="error" id="first_name_error"></div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 mb-3">
-                                            <label>Last Name <span class="text-danger">&#42;</span></label>
+                                        <div class="col-md-6 mb-4">
+                                            <label class="font-weight-700">Last Name <span class="text-danger">&#42;</span></label>
                                             <div>
                                                 <input name="Last Name" type="text" id="last_name" maxlength="80" value="" placeholder="" />
                                                 <div class="error" id="last_name_error"></div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 mb-3">
-                                            <label>Email <span class="text-danger">&#42;</span></label>
+                                        <div class="col-md-6 mb-4">
+                                            <label class="font-weight-700">Email <span class="text-danger">&#42;</span></label>
                                             <div class="bgn-wf-field">
                                                 <input name="Email" type="text" maxlength="100" value="" placeholder="" id="email" />
                                                 <div class="error" id="email_error"></div>
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-4">
-                                            <label class="bgn-wf-label">Phone Number <span class="text-danger">&#42;</span></label>
+                                            <label class="bgn-wf-label font-weight-700">Phone Number <span class="text-danger">&#42;</span></label>
                                             <div class="bgn-wf-field">
                                                 <input name="Home Phone" type="text" maxlength="30" value="" placeholder="" id="contact" />
                                                 <div class="error" id="contact_error"></div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 mb-4">
-                                            <label class="bgn-wf-label">Company Name <span class="text-danger">&#42;</span></label>
+                                        <div class="col-12 mb-4">
+                                            <label class="bgn-wf-label font-weight-700">Company Name <span class="text-danger">&#42;</span></label>
                                             <div class="bgn-wf-field">
                                                 <input name="Account Name" type="text" id="company_name" maxlength="120" value="" placeholder="" />
                                                 <div class="error" id="company_name_error"></div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 mb-4">
-                                            <label class="bgn-wf-label">Services you are looking for? <br/>Digital Strategy, SEO, Social Media, Website, Ads etc <span class="text-danger">&#42;</span></label>
+                                        <div class="col-12 mb-4">
+                                            <label class="bgn-wf-label font-weight-700">Services you are looking for? <br/>Digital Strategy, SEO, Social Media, Website, Ads etc <span class="text-danger">&#42;</span></label>
                                             <div class="bgn-wf-field">
                                                 <textarea name="Description" maxlength="32000" rows="2" placeholder="" id="service"></textarea>
                                                 <div class="error" id="service_error"></div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 mb-4">
-                                            <label class="bgn-wf-label">Budget <br/> Please select your budget <span class="text-danger">&#42;</span></label>
+                                        <div class="col-12 mb-4">
+                                            <label class="bgn-wf-label font-weight-700">Budget <br/> Please select your budget <span class="text-danger">&#42;</span></label>
                                             <div class="bgn-wf-field">
                                                 <select name="CONTACTCF1" id="budget">
                                                     <option value="">-Select-</option>
@@ -279,22 +279,22 @@
             <div class="col-md-6 pl-md-5">
                 <div class="titles mb-md-5">
                     <h6>For business enquiries</h6>
-                    <address><a class="font-weight-600" href="mailto:soumya.sharma@webeesocial.com"><img src="{{ asset('frontend') }}/images/icon-mail.svg" width="24" alt="Email"> <span>soumya.sharma@webeesocial.com</span></a></address>
-                    <address><a class="font-weight-600" href="mailto:shubhendu.jha@webeesocial.com"><img src="{{ asset('frontend') }}/images/icon-mail.svg" width="24" alt="Email"> <span>shubhendu.jha@webeesocial.com</span></a></address>
+                    <address class="icon-list"><a class="font-weight-600" href="mailto:soumya.sharma@webeesocial.com"><img src="{{ asset('frontend') }}/images/icon-mail.svg" width="24" alt="Email"> <span>soumya.sharma@webeesocial.com</span></a></address>
+                    <address class="icon-list"><a class="font-weight-600" href="mailto:shubhendu.jha@webeesocial.com"><img src="{{ asset('frontend') }}/images/icon-mail.svg" width="24" alt="Email"> <span>shubhendu.jha@webeesocial.com</span></a></address>
                 </div>
                 <div class="titles mb-md-5">
                     <h6>For job queries</h6>
-                    <address>
-                        <p>We allways looking for talented peoples, soo let's work together</p>
+                    <p>We allways looking for talented peoples, soo let's work together</p>
+                    <address class="icon-list">
                         <a class="font-weight-600" href="mailto:roshni.hr@webeesocial.com"><img src="{{ asset('frontend') }}/images/icon-mail.svg" width="24" alt="Email"> <span>hr@webeesocial.com</span></a>
                     </address>
                 </div>
                 <div class="titles mb-0">
                     <h6>Address</h6>
-                    <address><img src="{{ asset('frontend') }}/images/icon-map-marker.svg" alt="Location"> <span class="font-weight-600">Sector 22, Dwarka, New Delhi 110075</span></address>
-                    <address><img src="{{ asset('frontend') }}/images/icon-map-marker.svg" alt="Location"> <span class="font-weight-600">Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, Delhi 110017</span></address>
-                    <address><img src="{{ asset('frontend') }}/images/icon-map-marker.svg" alt="Location"> <span class="font-weight-600">AE Clover Bay Tower, Marasi Drive, Business Bay, Dubai, UAE P. O. Box - 391483</span></address>
-                    <address><img src="{{ asset('frontend') }}/images/icon-map-marker.svg" alt="Location"> <span class="font-weight-600">CA North York, ON M3A 2Y7, Canada</span></address>
+                    <address class="icon-list"><img src="{{ asset('frontend') }}/images/icon-map-marker.svg" alt="Location"> <span class="font-weight-600">Sector 22, Dwarka, New Delhi 110075</span></address>
+                    <address class="icon-list"><img src="{{ asset('frontend') }}/images/icon-map-marker.svg" alt="Location"> <span class="font-weight-600">Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, Delhi 110017</span></address>
+                    <address class="icon-list"><img src="{{ asset('frontend') }}/images/icon-map-marker.svg" alt="Location"> <span class="font-weight-600">AE Clover Bay Tower, Marasi Drive, Business Bay, Dubai, UAE P. O. Box - 391483</span></address>
+                    <address class="icon-list"><img src="{{ asset('frontend') }}/images/icon-map-marker.svg" alt="Location"> <span class="font-weight-600">CA North York, ON M3A 2Y7, Canada</span></address>
                 </div>
             </div>
         </div>

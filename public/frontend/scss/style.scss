@@ -1878,25 +1878,9 @@
 		margin-bottom: 20px;
 		display: block;
 	}
-
-	address {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: flex-start;
-		img {
-			margin-top: 2px;
-			max-width: 20px;
-			max-height: 20px;
-		}
-		span {
-			flex: 1;
-			margin-left: 10px;
-		}
-	}
-
 	.contact-form {
 		display: block;
-		border: 1px solid #eee;
+		border: 1px solid $grey;
 		padding: 50px;
 
 		h5 {
@@ -2049,6 +2033,7 @@
 					display: block;
 					position: relative;
 					padding: 0 2px;
+					font-size: 12px;
 
 					&:hover {
 						text-decoration: none;
@@ -2094,6 +2079,7 @@
 
 		span {
 			margin-right: 0;
+			font-size: 12px;
 		}
 	}
 }

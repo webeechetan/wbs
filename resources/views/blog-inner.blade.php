@@ -73,13 +73,12 @@
                     <h3>Related Posts</h3>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="post wow fadeIn">
 					<figure class="post-image"><img src="{{ asset('frontend') }}/images/digital-solutions.jpg" alt="Image"></figure>
 					<div class="post-content">
                         <h3 class="post-title">Three-piece set with matching headband and knickers.</h3>
                         <small class="post-date">21 April, 2022</small>
-                        <p class="post-intro">Design is our playground. While we create an awesome experience, we like having fun. No animals were harmed, no bridges were burned during our parties.</p>
                         <a href="blog-single.html" class="post-link">READ MORE</a>
 					</div>
 					<!-- end post-content -->
