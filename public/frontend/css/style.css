@@ -50,6 +50,7 @@ body {
   margin: 0;
   padding-left: 150px;
   padding-right: 50px;
+  font-weight: 500;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   color: #282828;
@@ -115,24 +116,24 @@ p {
   }
 }
 /* Headings */
-.title-big {
-  font-size: 7em;
+.title-banner {
+  font-size: 4.5em;
   font-weight: 800;
   margin: 0;
   line-height: normal;
 }
 @media (max-width: 991px) {
-  .title-big {
+  .title-banner {
     font-size: 4.2em;
   }
 }
 @media (max-width: 767px) {
-  .title-big {
+  .title-banner {
     font-size: 3.6em;
   }
 }
 @media (max-width: 575px) {
-  .title-big {
+  .title-banner {
     font-size: 3.2em;
   }
 }
@@ -765,7 +766,7 @@ body .slider {
 }
 .navbar .main-menu ul li a {
   display: block;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   position: relative;
   padding: 0;
@@ -920,6 +921,7 @@ body {
   margin: 0;
   padding-left: 150px;
   padding-right: 50px;
+  font-weight: 500;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   color: #282828;
@@ -985,24 +987,24 @@ p {
   }
 }
 /* Headings */
-.title-big {
-  font-size: 7em;
+.title-banner {
+  font-size: 4.5em;
   font-weight: 800;
   margin: 0;
   line-height: normal;
 }
 @media (max-width: 991px) {
-  .title-big {
+  .title-banner {
     font-size: 4.2em;
   }
 }
 @media (max-width: 767px) {
-  .title-big {
+  .title-banner {
     font-size: 3.6em;
   }
 }
 @media (max-width: 575px) {
-  .title-big {
+  .title-banner {
     font-size: 3.2em;
   }
 }
@@ -2059,6 +2061,7 @@ body .slider {
 /* ZIGZAG CONTAINER */
 .zikzak-container {
   position: relative;
+  max-width: 991px;
 }
 .zikzak-top, .zikzak-btm {
   position: absolute;
@@ -2383,7 +2386,7 @@ body .slider {
   width: 20%;
   float: left;
   margin: 0;
-  padding: 20px;
+  padding: 20px 5px;
   list-style: none;
 }
 .our-awards ul li img {
@@ -2418,7 +2421,6 @@ body .slider {
 }
 .our-awards ul li small {
   display: block;
-  opacity: 0.6;
   margin-bottom: 5px;
 }
 .our-awards ul li .odometer {
