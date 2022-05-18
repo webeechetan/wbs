@@ -73,7 +73,11 @@ Route::get('/blog/{title?}', [BlogController::class,'show'])->name('blog.view');
 
 Route::get('/blog-inner', function () {
     return view('blog-inner');
-})->name('blog-inner');   
+})->name('blog-inner');  
+
+Route::get('/thankyou', function () {
+    return view('thankyou');
+})->name('thankyou');  
 
 Route::get('/get-in-touch', function () {
     return view('get-in-touch');

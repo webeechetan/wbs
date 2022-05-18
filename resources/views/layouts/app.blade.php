@@ -31,6 +31,9 @@
     <link href="{{ asset('frontend') }}/images/Favicon.png" rel="apple-touch-icon">
     <link href="{{ asset('frontend') }}/images/Favicon.png" rel="shortcut icon">
 
+    <!-- FONT AWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- CSS FILES -->
     <link rel="stylesheet" href="{{ asset('frontend') }}/css/animate.min.css">
     <link rel="stylesheet" href="{{ asset('frontend') }}/css/odometer.min.css">
@@ -54,12 +57,12 @@
                     <li><a href="our-services.php">Our Services</a></li>
                     <li><a href="our-work.php">Our Work</a></li>
                     <li><a href="blog.php">Blog</a></li>
-                    <li><a href="get-in-touch.php">Get in touch</a></li>
-                    <li><a href="work-with-us.php">Work with us</a></li>
+                    <li><a href="get-in-touch.php">Get In Touch</a></li>
+                    <li><a href="work-with-us.php">Work With Us</a></li>
                 </ul>
             </div>
             <!-- end side-menu -->
-            <div class="sides">
+            <div class="sides sides-img">
                 <figure>
                     <img src="{{ asset('frontend') }}/images/sidebar-img.jpg" width="100%" alt="Team Image">
                 </figure>
@@ -67,16 +70,43 @@
             <!-- end sides -->
             <div class="sides">
                 <div class="titles">
-                    <p>WeBeeSocial is a full-scale Digital Marketing Agency based in India and with satellite offices in UAE and Canada. We mix our years of experience and knowledge to create solutions for our clients which are not only performance driven, but also creative.  We are running kick-ass digital campaigns for our clients, even as you read this!</p>
+                    <p class="mb-0">WeBeeSocial is a full-scale Digital Marketing Agency based in India and with satellite offices in UAE and Canada. We mix our years of experience and knowledge to create solutions for our clients which are not only performance driven, but also creative.  We are running kick-ass digital campaigns for our clients, even as you read this!</p>
                 </div>
-                <address>
-                    <img src="{{ asset('frontend') }}/images/icon-map-marker.svg" width="18" alt="Location"> <span>New Delhi, India | North York, Toronto | Dubai, UAE</span></address>
-                <address>
-                    <a href="mailto:roshni.hr@webeesocial.com"><img src="{{ asset('frontend') }}/images/icon-mail.svg" width="18" alt="Email"> <span>hr@webeesocial.com</span></a>
+                <address class="mb-4">
+                    <img src="{{ asset('frontend') }}/images/icon-map-marker.svg" width="18" alt="Location"> <span>New Delhi, India | North York, Toronto | Dubai, UAE</span>
                 </address>
-                <address>
-                    <a href="get-in-touch"><img src="{{ asset('frontend') }}/images/icon-support.svg" width="18" alt="Suport"> <span>Contact Us</span></a>
-                </address>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <address class="mb-4">
+                            <h6>For Business Enquiries:</h6>
+                            <a href="mailto:saurav.k@webeesocial.com"><img src="{{ asset('frontend') }}/images/icon-mail.svg" width="18" alt="Email"> <span>saurav.k@webeesocial.com</span></a>
+                        </address>
+                    </div>
+                    <div class="col-lg-6">
+                        <address class="mb-4">
+                            <h6>For Jobs Enquiries:</h6>
+                            <a href="mailto:hr@webeesocial.com"><img src="{{ asset('frontend') }}/images/icon-mail.svg" width="18" alt="Email"> <span>hr@webeesocial.com</span></a>
+                        </address>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <address class="mb-0"><img src="{{ asset('frontend') }}/images/icon-support.svg" width="18" alt="Suport"> Contact us <a href="get-in-touch" class="btn-link text-underline"><span>here</span></a></address>
+                    </div>
+                    <div class="col-lg-6">
+                        <address class="mb-0">
+                            <h6>Follow us:</h6>
+                            <ul class="social-icons">
+                                <li><a href="https://www.facebook.com/webeesocial/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://twitter.com/webeesocial" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/webeesocial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/webeesocial/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCDT0KsuN4ytOlEwX_tZxAqA" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="https://www.behance.net/webeesocial/" target="_blank"><i class="fab fa-behance"></i></a></li>
+                            </ul>
+                        </address>
+                    </div>
+                </div>
             </div>
             <!-- end sides -->
         </div>
@@ -106,8 +136,8 @@
                         <li><a href="{{ route('services') }}">Our Services</a></li>
                         <li><a href="{{ route('our-work') }}">Our Work</a></li>
                         <li><a href="{{ route('blog') }}">Blog</a></li>
-                        <li><a href="{{ route('get-in-touch') }}">Get in touch</a></li>
-                        <li><a href="{{ route('work-with-us') }}">Work with us</a></li>
+                        <li><a href="{{ route('get-in-touch') }}">Get In Touch</a></li>
+                        <li><a href="{{ route('work-with-us') }}">Work With Us</a></li>
                     </ul>
                 </div>
                 <!-- end main-menu -->
@@ -149,19 +179,37 @@
                 <div class="titles">
                     <h6>Our Offices</h6>
                 </div>
-                <address>Sector 22, Dwarka, New Delhi 110075</address>
-                <address>Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, Delhi 110017</address>
-                <address>AE Clover Bay Tower, Marasi Drive, Business Bay, Dubai, UAE P. O. Box - 391483</address>
-                <address>CA North York, ON M3A 2Y7, Canada</address>
+                <address class="icon-list"><img src="http://127.0.0.1:8000/frontend/images/icon-map-marker.svg" alt="Location"> <span>Sector 22, Dwarka, New Delhi 110075</span></address>
+                <address class="icon-list"><img src="http://127.0.0.1:8000/frontend/images/icon-map-marker.svg" alt="Location"> <span>Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, Delhi 110017</span></address>
+                <address class="icon-list"><img src="http://127.0.0.1:8000/frontend/images/icon-map-marker.svg" alt="Location"> <span>AE Clover Bay Tower, Marasi Drive, Business Bay, Dubai, UAE P. O. Box - 391483</span></address>
+                <address class="icon-list"><img src="http://127.0.0.1:8000/frontend/images/icon-map-marker.svg" alt="Location"> <span>CA North York, ON M3A 2Y7, Canada</span></address>
             </div>
             <!-- end col-4 -->
             <div class="col-lg-4 col-md-6 wow fadeInUp">
                 <div class="titles">
                     <h6>Connect With Us</h6>
                 </div>
-                <address>Contact us <a href="get-in-touch" class="text-link text-primary">here</a></address>
-                <address><a href="mailto:saurav.k@webeesocial.com">saurav.k@webeesocial.com</a></address>
-                <img src="{{ asset('frontend') }}/images/Google-partners-logo.jpg" alt="Google Partner Logo">
+                <address>Contact us <a href="get-in-touch" class="text-link"><b>here</b></a></address>
+                <address class="mb-4">
+                    <div class="titles mb-0">
+                        <h6 class="mb-2">Write to us</h6>
+                    </div>
+                    <a href="mailto:saurav.k@webeesocial.com">saurav.k@webeesocial.com</a>
+                </address>
+                <address class="mb-4">
+                    <div class="titles mb-0">
+                        <h6 class="mb-2">Follow us:</h6>
+                    </div>
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/webeesocial/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://twitter.com/webeesocial" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/webeesocial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/webeesocial/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCDT0KsuN4ytOlEwX_tZxAqA" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="https://www.behance.net/webeesocial/" target="_blank"><i class="fab fa-behance"></i></a></li>
+                    </ul>
+                </address>
+                <img src="{{ asset('frontend') }}/images/Google-partners-logo.jpg" width="200" alt="Google Partner Logo">
             </div>
             <!-- end col-3 -->
             <div class="col-12 wow fadeInUp">
@@ -169,15 +217,10 @@
                     <div class="row align-items-center">
                         <div class="col-lg-8 mb-4 mb-lg-0">
                             <ul class="mb-2">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About Us</a></li>
                                 <li><a href="#">Our Services</a></li>
                                 <li><a href="#">Our Work</a></li>
                                 <li><a href="#">Blog</a></li>
                                 <li><a href="#">Get in touch</a></li>
-                            </ul>
-                            <ul>
-                                <li><a href="#">Work with us</a></li>
                                 <li><a href="#">Terms & Conditions</a></li>
                                 <li><a href="#">Privacy Policy</a></li>
                             </ul>
