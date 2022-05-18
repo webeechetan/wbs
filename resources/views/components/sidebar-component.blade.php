@@ -36,6 +36,13 @@
                     </a>
                 </li>
 
+                <li>
+                    <a href="{{ route('service.list') }}" class="has-arrow waves-effect">
+                        <i class="bx bx-layout"></i>
+                        <span key="t-layouts">Services</span>
+                    </a>
+                </li>
+
             </ul>
         </div>
         <!-- Sidebar -->

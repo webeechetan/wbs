@@ -9,8 +9,8 @@
     <div class="col-12">
        <div class="card">
            <div class="card-body">
-              <a href="{{ route('our-work.create') }}"><button type="button" class="btn btn-outline-primary waves-effect waves-light" >Add New</button></a>
-             <h4 class="card-title">Our Works</h4>
+              <a href="{{ route('service.create') }}"><button type="button" class="btn btn-outline-primary waves-effect waves-light" >Add New</button></a>
+             <h4 class="card-title">Services</h4>
              <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                
                 <div class="row">
@@ -19,24 +19,20 @@
                          <thead>
                             <tr role="row">
                                <th>S.No</th>
-                               <th>Name</th>
-                               <th>Category</th>
-                               <th>Thumbnail</th>
+                               <th>Title</th>
+                               <th>Icon</th>
                                <th>Actions</th>
                             </tr>
                          </thead>
                          <tbody>
-                            @foreach ($ourWork as $work)
+                            @foreach ($services as $service)
                             <tr>
-                                <td>{{ $work->id }}</td>
-                                <td>{{ $work->name }}</td>
-                                <td>{{ $work->category->name }}</td>
+                                <td>{{ $service->id }}</td>
+                                <td>{{ implode(' ', array_slice(explode(' ', $service->title), 0, 10)); }}</td>
+                                <td><img class="rounded avatar-md" src="{{ asset('images') }}/{{ $service->icon }}"></td>
                                 <td>
-                                    <img src="{{ asset('images')}}/{{$work->images}}" height="50" width="50" >
-                                </td>
-                                <td>
-                                    <a href="{{ route('our-work.edit',$work->id) }}"><button type="button" class="btn btn-outline-info waves-effect waves-light " ><i class="mdi mdi-pencil d-block font-size-16"></i></button></a>
-                                    <a href="{{ route('our-work.delete',$work->id) }}"><button type="button" class="btn btn-outline-danger waves-effect waves-light"><i class="mdi mdi-delete d-block font-size-16"></i></button></a>
+                                    <a href="{{ route('service.edit',$service->id) }}"><button type="button" class="btn btn-outline-info waves-effect waves-light " ><i class="mdi mdi-pencil d-block font-size-16"></i></button></a>
+                                    <a href="{{ route('service.delete',$service->id) }}"><button type="button" class="btn btn-outline-danger waves-effect waves-light"><i class="mdi mdi-delete d-block font-size-16"></i></button></a>
                                 </td>
                             </tr>
                             @endforeach

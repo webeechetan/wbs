@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\OurWorkController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ServicesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,10 +34,42 @@ Route::get('/about-us', function () {
 Route::get('/our-services', function () {
     return view('services');
 })->name('services');
+Route::get('/digital-strategy-and-planning', function () {
+    return view('digital-strategy-and-planning');
+})->name('digital-strategy-and-planning');   
+Route::get('/creative-strategy-and-web-graphics-design', function () {
+    return view('creative-strategy-and-web-graphics-design');
+})->name('creative-strategy-and-web-graphics-design'); 
+Route::get('/social-media-marketing', function () {
+    return view('social-media-marketing');
+})->name('social-media-marketing'); 
+Route::get('/seo-and-search-engine-marketing', function () {
+    return view('seo-and-search-engine-marketing');
+})->name('seo-and-search-engine-marketing'); 
+Route::get('/videos-gifs-and-content-marketing', function () {
+    return view('videos-gifs-and-content-marketing');
+})->name('videos-gifs-and-content-marketing'); 
+Route::get('/website-design-and-development', function () {
+    return view('website-design-and-development');
+})->name('website-design-and-development'); 
+Route::get('/email-marketing', function () {
+    return view('email-marketing');
+})->name('email-marketing'); 
+Route::get('/web-analytics', function () {
+    return view('web-analytics');
+})->name('web-analytics'); 
+Route::get('/media-planning-and-buying', function () {
+    return view('media-planning-and-buying');
+})->name('media-planning-and-buying'); 
+Route::get('/shopify-website-development', function () {
+    return view('shopify-website-development');
+})->name('shopify-website-development'); 
+Route::get('/our-services', [ServicesController::class,'front_end_view'])->name('services');
 
 Route::get('/our-work',[OurWorkController::class,'front_end_view'])->name('our-work');
 
 Route::get('/blog', [BlogController::class,'front_end_view'])->name('blog');
+Route::get('/blog/{title?}', [BlogController::class,'show'])->name('blog.view');
 
 Route::get('/blog-inner', function () {
     return view('blog-inner');
@@ -53,6 +86,9 @@ Route::get('/get-in-touch', function () {
 Route::get('/work-with-us', function () {
     return view('work-with-us');
 })->name('work-with-us');
+Route::get('/privacy-policy', function () {
+    return view('privacy-policy');
+})->name('privacy-policy');
 
 Route::get('/portfolio-item/{work}',[OurWorkController::class,'view_work'])->name('view.work');
 
@@ -86,6 +122,15 @@ Route::group(['prefix' =>'/webeesite','middleware' => ['auth']],function () {
     Route::get('/blog/delete/{id}',[BlogController::class,'destroy'])->name('blog.delete');
     Route::get('/blog/edit/{id}',[BlogController::class,'edit'])->name('blog.edit');
     Route::post('/blog/update',[BlogController::class,'update'])->name('blog.update');
+
+    ///Services
+
+    Route::get('/services',[ServicesController::class,'index'])->name('service.list');
+    Route::get('/services/create',[ServicesController::class,'create'])->name('service.create');
+    Route::post('/services/store',[ServicesController::class,'store'])->name('service.store');
+    Route::get('/services/edit/{id}',[ServicesController::class,'edit'])->name('service.edit');
+    Route::post('/services/update',[ServicesController::class,'update'])->name('service.update');
+    Route::get('/services/delete/{id}',[ServicesController::class,'destroy'])->name('service.delete');
 
 });
 

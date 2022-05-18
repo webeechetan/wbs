@@ -38,39 +38,23 @@ class OurWorkController extends Controller
      */
     public function store(Request $request)
     {       
-        $files = []; 
-        if($request->hasfile('images')){
-            foreach($request->file('image') as $file)
-            {
-                $name = time().rand(1,50).'.'.$file->extension();
-                $file->move(public_path('images'), $name);  
-                $files[] = $name;  
-            }
-        }
         $request->validate([
             'name' => 'required',
-            // 'meet_the_client' => 'required',
-            // 'breif' => 'required',
-            // 'challenge' => 'required',
-            // 'what_we_did' => 'required',
-            // 'result' => 'required',
+            'image' => 'required',
             'meta_title' => 'required',
             'meta_description' => 'required',
             'category_id' => 'required',
         ]);
+        $image = time().rand(1,50).'.'.$request->file('image')->extension();
+        $request->file('image')->move(public_path('images'),$image);
 
         $ourWork = new OurWork();
         $ourWork->name = $request->name;
-        // $ourWork->meet_the_client = $request->meet_the_client;
-        // $ourWork->brief = $request->breif;
-        // $ourWork->challenge = $request->challenge;
-        // $ourWork->what_we_did = $request->what_we_did;
-        // $ourWork->result = $request->result;
         $ourWork->description = json_encode($request->section);
         $ourWork->meta_title = $request->meta_title;
         $ourWork->meta_description = $request->meta_description;
         $ourWork->cat_id = $request->category_id;
-        $ourWork->images = $files;
+        $ourWork->images = $image;
         $ourWork->save();
         if($ourWork->id){
             return redirect()->route('our-work.list')->with('success','New Record Created');
@@ -111,29 +95,23 @@ class OurWorkController extends Controller
      */
     public function update(Request $request)
     {
-        $files = []; 
-        if($request->hasfile('images')){
-            foreach($request->file('image') as $file)
-            {
-                $name = time().rand(1,50).'.'.$file->extension();
-                $file->move(public_path('images'), $name);  
-                $files[] = $name;  
-            }
-        }else{
-            dd('s');
-        }
-
-        dd($files);
+        $request->validate([
+            'name' => 'required',
+            'meta_title' => 'required',
+            'meta_description' => 'required',
+            'category_id' => 'required',
+        ]);
         $ourWork =  OurWork::find($request->id);
+        if($request->hasFile('image')){
+            $image = time().rand(1,50).'.'.$request->file('image')->extension();
+            $request->file('image')->move(public_path('images'),$image);
+            $ourWork->images = $image;
+        }
         $ourWork->name = $request->name;
         $ourWork->description = json_encode($request->section);
         $ourWork->meta_title = $request->meta_title;
         $ourWork->meta_description = $request->meta_description;
         $ourWork->cat_id = $request->category_id;
-        $old_images = explode(',', $ourWork->images);
-        $r = array_merge($old_images, $files);
-        dd($r);
-        $ourWork->images = array_merge($old_images,$files);
         if($ourWork->save()){
             return redirect()->route('our-work.list')->with('success','Updated Successfully');
         }

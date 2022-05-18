@@ -23,8 +23,8 @@
                     <div class="post-content">
                         <h3 class="post-title">{{ $blog->title }}</h3>
                         <small class="post-date">21 April, 2022</small>
-                        <p class="post-intro">{!! substr($blog->description,0,100) !!}</p>
-                        <a href="blog-single.html" class="post-link">READ MORE</a>
+                        <p class="post-intro">{!! Str::limit($blog->description,7) !!}</p>
+                        <a href="{{ route('blog.view') }}/{{ $blog->title }}" class="post-link">READ MORE</a>
                     </div>
                 </div>
                 @endforeach
@@ -60,13 +60,9 @@
                     <div class="widget">
                         <h4 class="title">CATEGORIES</h4>
                         <ul class="categories">
-                            <li><a href="#">Web Design</a><span>14</span></li>
-                            <li><a href="#">Web Development</a><span>22</span></li>
-                            <li><a href="#">e-Commerce</a><span>74</span></li>
-                            <li><a href="#">Woo Commerce</a><span>4</span></li>
-                            <li><a href="#">Wordpress</a><span>64</span></li>
-                            <li><a href="#">App Development</a><span>53</span></li>
-                            <li><a href="#">Print Design</a><span>14</span>71</li>
+                            @foreach($categories as $category)
+                                <li><a href="#">{{ $category->name }}</a><span>{{ $category->blogs()->count() }}</span></li>
+                            @endforeach
                         </ul>
                     </div>
                     <!-- end widget -->

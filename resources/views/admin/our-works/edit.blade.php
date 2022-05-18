@@ -64,22 +64,10 @@
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror
                                 </div>
-                                <div class="col-lg-5">
-                                    <input type="file" class="form-control" name="image[]" multiple >
+                                <div class="col-lg-5 text-center">
+                                    <input type="file" class="form-control" name="image"  >
+                                    <img src="{{ asset('images') }}/{{$work->images}}" class="rounded avatar-md mt-2">
                                 </div>
-                            </div>
-
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label col-lg-2">Images</label>
-                                @php
-                                $images = explode(",", $work->images);
-                                @endphp
-                                @foreach ($images as $image)
-                                    <div class="col-lg-1 text-danger">
-                                        <img src="{{ asset('images') }}/{{$image}}" class="rounded avatar-md">
-                                        <a class="btn btn-danger btn-sm remove_image" data-id="{{ $work->id }}" data-image_name ='{{ $image }}'>Remove</a>
-                                    </div>
-                                @endforeach
                             </div>
 
                             <div class="form-group row mb-4">
