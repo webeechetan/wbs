@@ -37,6 +37,7 @@ Route::get('/our-services', function () {
 Route::get('/our-work',[OurWorkController::class,'front_end_view'])->name('our-work');
 
 Route::get('/blog', [BlogController::class,'front_end_view'])->name('blog');
+Route::get('/blog/{title?}', [BlogController::class,'show'])->name('blog.view');
 
 Route::get('/blog-inner', function () {
     return view('blog-inner');

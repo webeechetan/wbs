@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use Illuminate\Http\Request;
 use App\Models\Category;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use PhpParser\Node\Expr\AssignOp\Mod;
 
 class BlogController extends Controller
 {
@@ -72,9 +74,11 @@ class BlogController extends Controller
      * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function show(Blog $blog)
+    public function show($title)
     {
-        //
+        $blog = Blog::where('title',$title)->first();
+        $related_blog = Blog::where('cat_id', $blog->cat_id)->take(5)->get();
+        return view('blog-inner',compact('blog','related_blog'));
     }
 
     /**
