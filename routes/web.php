@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\OurWorkController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ServicesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,9 +31,7 @@ Route::get('/about-us', function () {
     return view('about');
 })->name('about');
 
-Route::get('/our-services', function () {
-    return view('services');
-})->name('services');
+Route::get('/our-services', [ServicesController::class,'front_end_view'])->name('services');
 
 Route::get('/our-work',[OurWorkController::class,'front_end_view'])->name('our-work');
 
@@ -83,6 +82,15 @@ Route::group(['prefix' =>'/webeesite','middleware' => ['auth']],function () {
     Route::get('/blog/delete/{id}',[BlogController::class,'destroy'])->name('blog.delete');
     Route::get('/blog/edit/{id}',[BlogController::class,'edit'])->name('blog.edit');
     Route::post('/blog/update',[BlogController::class,'update'])->name('blog.update');
+
+    ///Services
+
+    Route::get('/services',[ServicesController::class,'index'])->name('service.list');
+    Route::get('/services/create',[ServicesController::class,'create'])->name('service.create');
+    Route::post('/services/store',[ServicesController::class,'store'])->name('service.store');
+    Route::get('/services/edit/{id}',[ServicesController::class,'edit'])->name('service.edit');
+    Route::post('/services/update',[ServicesController::class,'update'])->name('service.update');
+    Route::get('/services/delete/{id}',[ServicesController::class,'destroy'])->name('service.delete');
 
 });
 
