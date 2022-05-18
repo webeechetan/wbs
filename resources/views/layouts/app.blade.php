@@ -179,10 +179,10 @@
                 <div class="titles">
                     <h6>Our Offices</h6>
                 </div>
-                <address class="icon-list"><img src="http://127.0.0.1:8000/frontend/images/icon-map-marker.svg" alt="Location"> <span>Sector 22, Dwarka, New Delhi 110075</span></address>
-                <address class="icon-list"><img src="http://127.0.0.1:8000/frontend/images/icon-map-marker.svg" alt="Location"> <span>Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, Delhi 110017</span></address>
-                <address class="icon-list"><img src="http://127.0.0.1:8000/frontend/images/icon-map-marker.svg" alt="Location"> <span>AE Clover Bay Tower, Marasi Drive, Business Bay, Dubai, UAE P. O. Box - 391483</span></address>
-                <address class="icon-list"><img src="http://127.0.0.1:8000/frontend/images/icon-map-marker.svg" alt="Location"> <span>CA North York, ON M3A 2Y7, Canada</span></address>
+                <address class="icon-list"><img src="{{ asset('frontend') }}/images/icon-map-marker.svg" alt="Location"> <span>Sector 22, Dwarka, New Delhi 110075</span></address>
+                <address class="icon-list"><img src="{{ asset('frontend') }}/images/icon-map-marker.svg" alt="Location"> <span>Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, Delhi 110017</span></address>
+                <address class="icon-list"><img src="{{ asset('frontend') }}/images/icon-map-marker.svg" alt="Location"> <span>AE Clover Bay Tower, Marasi Drive, Business Bay, Dubai, UAE P. O. Box - 391483</span></address>
+                <address class="icon-list"><img src="{{ asset('frontend') }}/images/icon-map-marker.svg" alt="Location"> <span>CA North York, ON M3A 2Y7, Canada</span></address>
             </div>
             <!-- end col-4 -->
             <div class="col-lg-4 col-md-6 wow fadeInUp">
