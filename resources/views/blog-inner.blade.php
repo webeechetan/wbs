@@ -19,7 +19,7 @@
             </div>
             @foreach($related_blog as $blog)
                 <div class="col-md-4">
-                    <div class="post wow fadeIn">
+                    <div class="post wow fadeIn ">
                         <figure class="post-image"><img src="{{ asset('images') }}/{{ $blog->thumbnail }}" alt="Image"></figure>
                         <div class="post-content">
                             <h3 class="post-title">{{ $blog->title }}</h3>
