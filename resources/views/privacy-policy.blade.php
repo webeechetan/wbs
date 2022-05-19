@@ -39,9 +39,14 @@
                 </ul>
                 <p>Log Files</p>
                 <p>Webeesocial.com&nbsp;follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services’ analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users’ movement on the website, and gathering demographic information.</p>
-                <h3>Cookies and Web Beacons</h3>
+                <div class="titles">
+                   <h6>Cookies and Web Beacons</h6>
+                </div>
                 <p>Like any other website,&nbsp;Website Name&nbsp;uses ‘cookies’. These cookies are used to store information including visitors’ preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users’ experience by customizing our web page content based on visitors’ browser type and/or other information.</p>
-                <h3>DoubleClick DART Cookie</h3>
+                <div class="titles">
+                  <h6>DoubleClick DART Cookie</h6>
+                </div>
+               
                 <p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to&nbsp;<a href="http://www.website.com/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://www.website.com&amp;source=gmail&amp;ust=1652771960705000&amp;usg=AOvVaw3sWYpOaPWcRZLSr1C5jfep">www.website.com</a>&nbsp;and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL –&nbsp;<a href="https://policies.google.com/technologies/ads" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://policies.google.com/technologies/ads&amp;source=gmail&amp;ust=1652771960705000&amp;usg=AOvVaw1J_qakKHRXuVLjmgAE3LKp">https://policies.google.com/<wbr>technologies/ads</a>.</p>
                 <p>Some of advertisers on our site may use cookies and web beacons. Our advertising partners are listed below. Each of our advertising partners has their own Privacy Policy for their policies on user data. For easier access, we hyperlinked to their Privacy Policies below.</p>
                 <ul>
