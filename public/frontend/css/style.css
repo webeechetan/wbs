@@ -2988,7 +2988,7 @@ body .slider {
   display: block;
   margin-bottom: 15px;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 .blog .post .post-content .post-date {
   display: block;
@@ -3006,6 +3006,7 @@ body .slider {
   font-weight: 700;
   padding-bottom: 8px;
   position: relative;
+  font-size: 0.8rem;
 }
 .blog .post .post-content .post-link:hover {
   text-decoration: none;

@@ -16,35 +16,33 @@
     <div class="container">
         <div class="row flex-column-reverse flex-lg-row">
             <div class="col-lg-8">
-
-                @foreach($blogs as $blog)
-                <div class="post wow fadeIn">
-                    <figure class="post-image"><img src="{{ asset('images') }}/{{ $blog->thumbnail }}" alt="Image"></figure>
-                    <div class="post-content">
-                        <h3 class="post-title">{{ $blog->title }}</h3>
-                        <small class="post-date">21 April, 2022</small>
-                        <p class="post-intro">{!! Str::limit($blog->description,7) !!}</p>
-                        <a href="{{ route('blog.view') }}/{{ $blog->title }}" class="post-link">READ MORE</a>
-                    </div>
+                <div class="row">
+                    @foreach($blogs as $blog)
+                        <div class="col-lg-6">
+                            <div class="post wow fadeIn">
+                                <figure class="post-image"><img src="{{ asset('images') }}/{{ $blog->thumbnail }}" alt="Image"></figure>
+                                <div class="post-content">
+                                    <h3 class="post-title">{{ $blog->title }}</h3>
+                                    <small class="post-date">21 April, 2022</small>
+                                    <!-- <p class="post-intro">{!! Str::limit($blog->description,7) !!}</p> -->
+                                    <a href="{{ route('blog.view') }}/{{ $blog->title }}" class="post-link">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
-                @endforeach
     
                 <!-- end post -->
                 <ul class="pagination">
-                    <li class="page-item">
-                        <a class="page-link" href="#">Previous</a>
-                    </li>
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
                     <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item active">
-                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
                     <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
-                    </li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
                 </ul>
             </div>
             <!-- end col-8 -->
+            
             <div class="col-lg-4 mb-5 mb-lg-0">
                 <aside class="sidebar">
                     <div class="widget">
