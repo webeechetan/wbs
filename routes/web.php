@@ -89,6 +89,9 @@ Route::get('/work-with-us', function () {
 Route::get('/privacy-policy', function () {
     return view('privacy-policy');
 })->name('privacy-policy');
+Route::get('/terms-conditions', function () {
+    return view('terms-conditions');
+})->name('terms-conditions');
 
 Route::get('/portfolio-item/{work}',[OurWorkController::class,'view_work'])->name('view.work');
 
