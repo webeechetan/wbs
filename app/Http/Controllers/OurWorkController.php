@@ -44,6 +44,7 @@ class OurWorkController extends Controller
             'meta_title' => 'required',
             'meta_description' => 'required',
             'category_id' => 'required',
+            'short_description' => 'required'
         ]);
         $image = time().rand(1,50).'.'.$request->file('image')->extension();
         $request->file('image')->move(public_path('images'),$image);
@@ -55,6 +56,14 @@ class OurWorkController extends Controller
         $ourWork->meta_description = $request->meta_description;
         $ourWork->cat_id = $request->category_id;
         $ourWork->images = $image;
+        $ourWork->short_description = $request->short_description;
+        $ourWork->slug = $request->slug;
+        if($request->hasFile('og_image')){
+            $og_image = time().rand(1,50).'.'.$request->file('og_image')->extension();
+            $request->file('og_image')->move(public_path('images'),$og_image);
+            $ourWork->og_image = $og_image;
+        }
+        $ourWork->og_title = $request->og_title;
         $ourWork->save();
         if($ourWork->id){
             return redirect()->route('our-work.list')->with('success','New Record Created');
@@ -100,6 +109,7 @@ class OurWorkController extends Controller
             'meta_title' => 'required',
             'meta_description' => 'required',
             'category_id' => 'required',
+            'short_description' => 'required'
         ]);
         $ourWork =  OurWork::find($request->id);
         if($request->hasFile('image')){
@@ -112,6 +122,14 @@ class OurWorkController extends Controller
         $ourWork->meta_title = $request->meta_title;
         $ourWork->meta_description = $request->meta_description;
         $ourWork->cat_id = $request->category_id;
+        $ourWork->short_description = $request->short_description;
+        $ourWork->slug = $request->slug;
+        if($request->hasFile('og_image')){
+            $og_image = time().rand(1,50).'.'.$request->file('og_image')->extension();
+            $request->file('og_image')->move(public_path('images'),$og_image);
+            $ourWork->og_image = $og_image;
+        }
+        $ourWork->og_title = $request->og_title;
         if($ourWork->save()){
             return redirect()->route('our-work.list')->with('success','Updated Successfully');
         }
@@ -138,8 +156,8 @@ class OurWorkController extends Controller
         return view('our-work',compact('ourWork','categories'));
     }
 
-    public function view_work($work){
-        $work = OurWork::where('name', $work)->first();
+    public function view_work($slug){
+        $work = OurWork::where('slug', $slug)->first();
         return view('portfolio-item', compact('work'));
     }
 

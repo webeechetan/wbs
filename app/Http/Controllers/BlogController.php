@@ -48,6 +48,7 @@ class BlogController extends Controller
             'meta_description' => 'required',
             'thumbnail' => 'mimes:jpeg,jpg,png,gif|required|max:10000',
             'banner' => 'mimes:jpeg,jpg,png,gif|required|max:10000',
+            'short_description' => 'required|min:6'
         ]);
         $thumbnail = time().rand(1,50).'.'.$request->file('thumbnail')->extension();
         $request->file('thumbnail')->move(public_path('images'),$thumbnail);
@@ -56,6 +57,14 @@ class BlogController extends Controller
         $blog = new Blog();
         $blog->title = $request->title;
         $blog->description = $request->description;
+        $blog->short_description = $request->short_description;
+        $blog->slug = $request->slug;
+        if($request->hasFile('og_image')){
+            $og_image = time().rand(1,50).'.'.$request->file('og_image')->extension();
+            $request->file('og_image')->move(public_path('images'),$og_image);
+            $blog->og_image = $og_image;
+        }
+        $blog->og_title = $request->og_title;
         $blog->cat_id = $request->category;
         $blog->thumbnail = $thumbnail;
         $blog->banner = $banner;
@@ -74,9 +83,9 @@ class BlogController extends Controller
      * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function show($title)
+    public function show($slug)
     {
-        $blog = Blog::where('title',$title)->first();
+        $blog = Blog::where('slug',$slug)->first();
         $related_blog = Blog::where('cat_id', $blog->cat_id)->take(5)->get();
         return view('blog-inner',compact('blog','related_blog'));
     }
@@ -112,6 +121,7 @@ class BlogController extends Controller
             'meta_description' => 'required',
             'thumbnail' => 'mimes:jpeg,jpg,png,gif|max:10000',
             'banner' => 'mimes:jpeg,jpg,png,gif|max:10000',
+            'short_description' => 'required|min:6'
         ]);
 
         $blog = Blog::find($request->id);
@@ -130,7 +140,14 @@ class BlogController extends Controller
         $blog->cat_id = $request->category;
         $blog->meta_description = $request->meta_description;
         $blog->meta_title = $request->meta_title;
-
+        $blog->short_description = $request->short_description;
+        $blog->slug = $request->slug;
+        if($request->hasFile('og_image')){
+            $og_image = time().rand(1,50).'.'.$request->file('og_image')->extension();
+            $request->file('og_image')->move(public_path('images'),$og_image);
+            $blog->og_image = $og_image;
+        }
+        $blog->og_title = $request->og_title;
         if($blog->save()){
             return redirect()->route('blog.list')->with('success','Blog Updated');
         }

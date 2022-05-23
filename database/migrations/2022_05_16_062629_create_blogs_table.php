@@ -18,10 +18,14 @@ return new class extends Migration
             $table->longText('title');
             $table->unsignedBigInteger('cat_id');
             $table->longText('description');
+            $table->longText('short_description');
             $table->string('meta_title');
             $table->longText('meta_description');
             $table->string('thumbnail');
             $table->string('banner');
+            $table->string('og_title')->nullable();
+            $table->string('og_image')->nullable();
+            $table->longText('slug');
             $table->timestamps();
         });
     }
