@@ -10,35 +10,35 @@
 
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
-                        <i class="bx bx-home-circle"></i><span class="badge rounded-pill bg-info float-end">04</span>
+                    <i class='bx bxs-dashboard'></i><span class="badge rounded-pill bg-info float-end">04</span>
                         <span key="t-dashboards">Dashboards</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="{{ route('category.list') }}" class="has-arrow waves-effect">
-                        <i class="bx bx-layout"></i>
+                        <i class='bx bx-category'></i>
                         <span key="t-layouts">Category</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="{{ route('our-work.list') }}" class="has-arrow waves-effect">
-                        <i class="bx bx-layout"></i>
+                        <i class='bx bxs-briefcase'></i>
                         <span key="t-layouts">Our Work</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="{{ route('blog.list') }}" class="has-arrow waves-effect">
-                        <i class="bx bx-layout"></i>
+                        <i class='bx bxl-blogger' ></i>
                         <span key="t-layouts">Blog</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="{{ route('service.list') }}" class="has-arrow waves-effect">
-                        <i class="bx bx-layout"></i>
+                         <i class='bx bxs-business'></i>
                         <span key="t-layouts">Services</span>
                     </a>
                 </li>
