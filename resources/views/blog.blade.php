@@ -24,8 +24,8 @@
                                 <div class="post-content">
                                     <h3 class="post-title">{{ $blog->title }}</h3>
                                     <small class="post-date">21 April, 2022</small>
-                                    <!-- <p class="post-intro">{!! Str::limit($blog->description,7) !!}</p> -->
-                                    <a href="{{ route('blog.view') }}/{{ $blog->title }}" class="post-link">READ MORE</a>
+                                    <p class="post-intro">{{ Str::limit($blog->short_description,25) }}</p>
+                                    <a href="{{ route('blog.view') }}/{{ $blog->slug }}" class="post-link">READ MORE</a>
                                 </div>
                             </div>
                         </div>

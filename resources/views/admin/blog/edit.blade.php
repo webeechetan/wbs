@@ -15,8 +15,17 @@
                             <div class="form-group row mb-4">
                                 <label for="taskname" class="col-form-label col-lg-2">Title</label>
                                 <div class="col-lg-10">
-                                    <input id="" name="title" required type="text" class="form-control" placeholder="Enter Title Here..." id=""  value="{{$blog->title }}">
+                                    <input id="title" name="title" required type="text" class="form-control" placeholder="Enter Title Here..."   value="{{$blog->title }}">
                                     @error('title')
+                                        <span class="text-danger">{{$message}}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group row mb-4">
+                                <label for="taskname" class="col-form-label col-lg-2">Slug</label>
+                                <div class="col-lg-10">
+                                    <input id="slug" name="slug" required type="text" class="form-control" placeholder="Enter Slug Here..."  value="{{ $blog->slug }}">
+                                    @error('slug')
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror
                                 </div>
@@ -26,6 +35,16 @@
                                 <div class="col-lg-10">
                                     <textarea id="description" name="description" class="form-control"  >{{$blog->description }}</textarea>
                                     @error('description')
+                                        <span class="text-danger">{{$message}}</span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label col-lg-2">Short Description</label>
+                                <div class="col-lg-10">
+                                    <textarea id="short_description" name="short_description" class="form-control"  >{{ $blog->short_description }}</textarea>
+                                    @error('short_description')
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror
                                 </div>
@@ -84,6 +103,20 @@
                                     @enderror
                                 </div>
                             </div>
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label col-lg-2">OG</label>
+                                <div class="col-lg-5">
+                                    <label class="col-form-label col-lg-2">OG Title</label>
+                                    <input type="text" class="form-control" name="og_title" placeholder="OG Title" value="{{ $blog->og_title }}">
+                                </div>
+                                <div class="col-lg-5">
+                                    <label class="col-form-label col-lg-2">OG Image</label>
+                                    <input type="file" class="form-control" name="og_image" >
+                                    @if($blog->og_image)
+                                        <img src="{{ asset('images') }}/{{ $blog->og_image }}" class="rounded avatar-md mt-2">
+                                    @endif
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <input type="hidden" name="id" value="{{ $blog->id }}">
@@ -117,6 +150,11 @@
         $('#what_we_did').summernote();
         $('#result').summernote();
         $('#challenge').summernote();
+        $("#title").keyup(function(e){
+            let title = $(this).val();
+            let slug = title.split(' ').join('-');
+            $("#slug").val(slug);
+        })
     });
 </script>
 @endsection

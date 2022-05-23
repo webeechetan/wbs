@@ -15,15 +15,22 @@
                             <div class="form-group row mb-4">
                                 <label for="taskname" class="col-form-label col-lg-2">Name</label>
                                 <div class="col-lg-10">
-                                    <input id="" name="name" type="text" class="form-control" placeholder="Enter Work Name..." id="" value="{{ $work->name }}">
+                                    <input id="title" name="name" type="text" class="form-control" placeholder="Enter Work Name..." value="{{ $work->name }}">
                                     @error('name')
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror
                                 </div>
                             </div>
-                            <div class="text-center">
-                            <button type="button" class="btn btn-outline-success waves-effect waves-light add_more_section">Add More</button>
+                            <div class="form-group row mb-4">
+                                <label for="taskname" class="col-form-label col-lg-2">Slug</label>
+                                <div class="col-lg-10">
+                                    <input id="slug" name="slug" required type="text" class="form-control" placeholder="Enter Slug Here..."  value="{{ $work->slug }}">
+                                    @error('slug')
+                                        <span class="text-danger">{{$message}}</span>
+                                    @enderror
+                                </div>
                             </div>
+                        
 
                             @php 
                                 $description = json_decode($work->description);
@@ -45,8 +52,18 @@
                                 @endphp
                                 @endforeach
                             </div>
-
-                            
+                            <div class="text-center mb-4">
+                                <button type="button" class="btn btn-outline-success waves-effect waves-light add_more_section">Add More</button>
+                            </div>
+                            <div class="form-group row mb-4 mt-4">
+                                <label class="col-form-label col-lg-2">Short Description</label>
+                                <div class="col-lg-10">
+                                    <textarea id="short_description" name="short_description" class="form-control"  >{{ $work->short_description }}</textarea>
+                                    @error('short_description')
+                                        <span class="text-danger">{{$message}}</span>
+                                    @enderror
+                                </div>
+                            </div>
 
                             <div class="form-group row mb-4">
                                 <label class="col-form-label col-lg-2">Category</label>
@@ -83,6 +100,20 @@
                                     @error('meta_description')
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror
+                                </div>
+                            </div>
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label col-lg-2">OG</label>
+                                <div class="col-lg-5">
+                                    <label class="col-form-label col-lg-2">OG Title</label>
+                                    <input type="text" class="form-control" name="og_title" placeholder="OG Title" value="{{ $work->og_title }}">
+                                </div>
+                                <div class="col-lg-5">
+                                    <label class="col-form-label col-lg-2">OG Image</label>
+                                    <input type="file" class="form-control" name="og_image" >
+                                    @if($work->og_image)
+                                        <img src="{{ asset('images') }}/{{$work->og_image}}" class="rounded avatar-md mt-2">
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -176,6 +207,12 @@
                 toastr["info"](data.msg);
             }
         })
+    })
+
+    $("#title").keyup(function(e){
+        let title = $(this).val();
+        let slug = title.split(' ').join('-');
+        $("#slug").val(slug);
     })
 </script>
 @endsection

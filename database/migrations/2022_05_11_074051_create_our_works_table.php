@@ -17,15 +17,14 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('cat_id');
-            $table->longText('meet_the_client')->nullable();
-            $table->longText('brief')->nullable();
-            $table->longText('challenge')->nullable();
-            $table->longText('what_we_did')->nullable();
-            $table->longText('result')->nullable();
             $table->longText('description')->nullable();
+            $table->longText('short_description');
             $table->longText('meta_title')->nullable();
             $table->longText('meta_description')->nullable();
             $table->longText('images')->nullable();
+            $table->string('og_title')->nullable();
+            $table->string('og_image')->nullable();
+            $table->longText('slug');
             $table->timestamps();
         });
     }
