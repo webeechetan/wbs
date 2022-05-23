@@ -66,9 +66,9 @@ class ServicesController extends Controller
      * @param  \App\Models\Services  $services
      * @return \Illuminate\Http\Response
      */
-    public function show(Services $services)
+    public function show($title)
     {
-        //
+        $service = Services::where('title',$title)->first();
     }
 
     /**

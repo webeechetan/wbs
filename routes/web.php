@@ -32,6 +32,7 @@ Route::get('/about-us', function () {
 })->name('about');
 
 Route::get('/our-services', [ServicesController::class,'front_end_view'])->name('services');
+Route::get('/our-services/{title?}', [ServicesController::class,'show'])->name('services.view');
 
 Route::get('/our-work',[OurWorkController::class,'front_end_view'])->name('our-work');
 

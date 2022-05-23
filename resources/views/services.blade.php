@@ -25,7 +25,7 @@
                     </div>
                     <div class="card-icon-content">
                         <p>{{ Str::words(strip_tags($service->description),25) }}</p>
-                        <div class="custom-link"><a href="about-us.php">Read More</a> <span></span> <i></i></div>
+                        <div class="custom-link"><a href="{{ route('services.view') }}/{{ $service->title }}">Read More</a> <span></span> <i></i></div>
                     </div>
                     <!-- end  -->
                 </div>
