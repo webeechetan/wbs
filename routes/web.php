@@ -65,6 +65,7 @@ Route::get('/shopify-website-development', function () {
     return view('shopify-website-development');
 })->name('shopify-website-development'); 
 Route::get('/our-services', [ServicesController::class,'front_end_view'])->name('services');
+Route::get('/our-services/{title?}', [ServicesController::class,'show'])->name('services.view');
 
 Route::get('/our-work',[OurWorkController::class,'front_end_view'])->name('our-work');
 
