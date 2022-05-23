@@ -1459,7 +1459,7 @@
 				display: block;
 				margin-bottom: 15px;
 				font-weight: 700;
-				font-size: 2rem;
+				font-size: 1.2rem;
 			}
 
 			.post-date {
@@ -1480,6 +1480,7 @@
 				font-weight: 700;
 				padding-bottom: 8px;
 				position: relative;
+				font-size: 0.8rem;
 
 				&:hover {
 					text-decoration: none;
@@ -1878,25 +1879,9 @@
 		margin-bottom: 20px;
 		display: block;
 	}
-
-	address {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: flex-start;
-		img {
-			margin-top: 2px;
-			max-width: 20px;
-			max-height: 20px;
-		}
-		span {
-			flex: 1;
-			margin-left: 10px;
-		}
-	}
-
 	.contact-form {
 		display: block;
-		border: 1px solid #eee;
+		border: 1px solid $grey;
 		padding: 50px;
 
 		h5 {
@@ -2049,6 +2034,7 @@
 					display: block;
 					position: relative;
 					padding: 0 2px;
+					font-size: 12px;
 
 					&:hover {
 						text-decoration: none;
@@ -2094,6 +2080,7 @@
 
 		span {
 			margin-right: 0;
+			font-size: 12px;
 		}
 	}
 }
