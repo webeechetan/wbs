@@ -9,8 +9,14 @@
     <div class="col-12">
        <div class="card">
            <div class="card-body">
-              <a href="{{ route('blog.create') }}"><button type="button" class="btn btn-outline-primary waves-effect waves-light" >Add New</button></a>
-             <h4 class="card-title">Blogs</h4>
+               <div class="row mb-4">
+                   <div class="col-md-6">
+                        <h4 class="card-title">Blogs</h4>
+                   </div>
+                   <div class="col-md-6 text-md-end">
+                    <a href="{{ route('blog.create') }}"><button type="button" class="btn btn-outline-primary waves-effect waves-light" ><i class="bx bx-plus-medical"></i> Add New</button></a>
+                   </div>
+               </div>
              <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                
                 <div class="row">

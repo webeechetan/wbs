@@ -7,7 +7,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title mb-4">Our-Work</h4>
+                <h4 class="card-title mb-4">Our Work</h4>
                 <form class="outer-repeater" method="POST" action="{{ route('our-work.store') }}" enctype="multipart/form-data">
                     @csrf
                     <div data-repeater-list="outer-group" class="outer">
@@ -30,22 +30,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            
 
-                            <div class="custom_row mt-2">
-                                <div class="form-group row mb-4">
-                                    <label class="col-form-label col-lg-2">Section 1</label>
-                                    <div class="col-lg-10">
-                                        <textarea id="editor" name="section[]" class="form-control"  ></textarea>
-                                        <div class="text-center mt-1">
-                                            <button type="button" class="btn btn-outline-danger waves-effect waves-light remove_section"><i class="mdi mdi-delete d-block font-size-16"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-outline-success waves-effect waves-light add_more_section">Add More</button>
-                            </div>
                             <div class="form-group row mb-4 mt-4">
                                 <label class="col-form-label col-lg-2">Short Description</label>
                                 <div class="col-lg-10">
@@ -56,9 +41,27 @@
                                 </div>
                             </div>
 
-                            
+                            <div class="custom_row mt-2">
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label col-lg-2">Column 1</label>
+                                    <div class="col-lg-10">
+                                        <textarea id="editor" name="section[]" class="form-control"  ></textarea>
+                                        <div class="mt-3">
+                                            <button type="button" class="btn btn-outline-danger waves-effect waves-light remove_section"><i class="mdi mdi-delete font-size-16"></i> Delete Column</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-10 ms-auto">
+                                    <hr>
+                                    <div class="mb-3">
+                                        <button type="button" class="btn btn-outline-success waves-effect waves-light add_more_section"><i class="bx bx-plus-medical"></i> Add Column</button>
+                                    </div>
+                                </div>
+                            </div>                            
 
-                            <div class="form-group row mb-4">
+                            <div class="form-group row mb-4 align-items-end">
                                 <label class="col-form-label col-lg-2">Category</label>
                                 <div class="col-lg-5">
                                     <select name="category_id" class="form-control">
@@ -148,11 +151,11 @@
         let rand_number = Math.floor((Math.random() * 1000) + 1);
         let section = `
                     <div class="form-group row mb-4">
-                        <label class="col-form-label col-lg-2">Section ${section_count}</label>
+                        <label class="col-form-label col-lg-2">Column ${section_count}</label>
                         <div class="col-lg-10">
                             <textarea data-rand_num='${rand_number}' id="ckEditor${section_count}" name="section[]" class="form-control ckEditor"  ></textarea>
-                            <div class="text-center mt-1">
-                                <button type="button" class="btn btn-outline-danger waves-effect waves-light remove_section"><i class="mdi mdi-delete d-block font-size-16"></i></button>
+                            <div class="mt-3">
+                                <button type="button" class="btn btn-outline-danger waves-effect waves-light remove_section"><i class="mdi mdi-delete font-size-16"></i> Delete Column</button>
                             </div>
                         </div>
                     </div>
