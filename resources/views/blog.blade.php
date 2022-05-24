@@ -22,8 +22,8 @@
                             <div class="post wow fadeIn">
                                 <figure class="post-image"><img src="{{ asset('images') }}/{{ $blog->thumbnail }}" alt="Image"></figure>
                                 <div class="post-content">
-                                    <h3 class="post-title">{{ $blog->title }}</h3>
-                                    <small class="post-date">21 April, 2022</small>
+                                    <h3 class="post-title mb-2">{{ $blog->title }}</h3>
+                                    <small class="post-date mb-3">21 April, 2022</small>
                                     <p class="post-intro">{{ Str::limit($blog->short_description,25) }}</p>
                                     <a href="{{ route('blog.view') }}/{{ $blog->slug }}" class="post-link">READ MORE</a>
                                 </div>

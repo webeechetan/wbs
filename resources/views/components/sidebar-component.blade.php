@@ -9,37 +9,37 @@
                 <li class="menu-title" key="t-menu">Menu</li>
 
                 <li>
-                    <a href="javascript: void(0);" class="waves-effect">
-                    <i class='bx bxs-dashboard'></i><span class="badge rounded-pill bg-info float-end">04</span>
+                    <a href="javascript: void(0);">
+                    <i class='bx bx-home-circle'></i>
                         <span key="t-dashboards">Dashboards</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="{{ route('category.list') }}" class="has-arrow waves-effect">
-                        <i class='bx bx-category'></i>
+                    <a href="{{ route('category.list') }}">
+                        <i class='bx bx-duplicate'></i>
                         <span key="t-layouts">Category</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="{{ route('our-work.list') }}" class="has-arrow waves-effect">
-                        <i class='bx bxs-briefcase'></i>
+                    <a href="{{ route('our-work.list') }}">
+                        <i class='bx bx-layout'></i>
                         <span key="t-layouts">Our Work</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="{{ route('blog.list') }}" class="has-arrow waves-effect">
-                        <i class='bx bxl-blogger' ></i>
+                    <a href="{{ route('blog.list') }}">
+                        <i class='bx bxs-book-content' ></i>
                         <span key="t-layouts">Blog</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="{{ route('service.list') }}" class="has-arrow waves-effect">
-                         <i class='bx bxs-business'></i>
-                        <span key="t-layouts">Services</span>
+                    <a href="{{ route('blog.list') }}">
+                        <i class='bx bx-unlink' ></i>
+                        <span key="t-layouts">Meta</span>
                     </a>
                 </li>
 
