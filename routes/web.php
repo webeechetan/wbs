@@ -34,36 +34,36 @@ Route::get('/about-us', function () {
 Route::get('/our-services', function () {
     return view('services');
 })->name('services');
-Route::get('/digital-strategy-and-planning', function () {
+Route::get('/our-services/digital-strategy-and-planning', function () {
     return view('digital-strategy-and-planning');
-})->name('digital-strategy-and-planning');   
-Route::get('/creative-strategy-and-web-graphics-design', function () {
+})->name('digital.strategy.and.planning');   
+Route::get('/our-services/creative-strategy-and-web-graphics-design', function () {
     return view('creative-strategy-and-web-graphics-design');
-})->name('creative-strategy-and-web-graphics-design'); 
-Route::get('/social-media-marketing', function () {
+})->name('creative.strategy.and.web.graphics.design'); 
+Route::get('/our-services/social-media-marketing', function () {
     return view('social-media-marketing');
-})->name('social-media-marketing'); 
-Route::get('/seo-and-search-engine-marketing', function () {
+})->name('social.media.marketing'); 
+Route::get('/our-services/seo-and-search-engine-marketing', function () {
     return view('seo-and-search-engine-marketing');
-})->name('seo-and-search-engine-marketing'); 
-Route::get('/videos-gifs-and-content-marketing', function () {
+})->name('seo.and.search.engine.marketing'); 
+Route::get('/our-services/videos-gifs-and-content-marketing', function () {
     return view('videos-gifs-and-content-marketing');
-})->name('videos-gifs-and-content-marketing'); 
-Route::get('/website-design-and-development', function () {
+})->name('videos.gifs.and.content.marketing'); 
+Route::get('/our-services/website-design-and-development', function () {
     return view('website-design-and-development');
-})->name('website-design-and-development'); 
-Route::get('/email-marketing', function () {
+})->name('website.design.and.development'); 
+Route::get('/our-services/email-marketing', function () {
     return view('email-marketing');
-})->name('email-marketing'); 
-Route::get('/web-analytics', function () {
+})->name('email.marketing'); 
+Route::get('/our-services/web-analytics', function () {
     return view('web-analytics');
-})->name('web-analytics'); 
-Route::get('/media-planning-and-buying', function () {
+})->name('web.analytics'); 
+Route::get('/our-services/media-planning-and-buying', function () {
     return view('media-planning-and-buying');
-})->name('media-planning-and-buying'); 
-Route::get('/shopify-website-development', function () {
+})->name('media.planning.and.buying'); 
+Route::get('/our-services/shopify-website-development', function () {
     return view('shopify-website-development');
-})->name('shopify-website-development'); 
+})->name('shopify.website.development'); 
 Route::get('/our-services', [ServicesController::class,'front_end_view'])->name('services');
 Route::get('/our-services/{title?}', [ServicesController::class,'show'])->name('services.view');
 
@@ -89,10 +89,10 @@ Route::get('/work-with-us', function () {
 })->name('work-with-us');
 Route::get('/privacy-policy', function () {
     return view('privacy-policy');
-})->name('privacy-policy');
+})->name('privacy.policy');
 Route::get('/terms-conditions', function () {
     return view('terms-conditions');
-})->name('terms-conditions');
+})->name('terms.conditions');
 
 Route::get('/portfolio-item/{work}',[OurWorkController::class,'view_work'])->name('view.work');
 

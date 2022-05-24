@@ -221,8 +221,8 @@
                                 <li><a href="#">Our Work</a></li>
                                 <li><a href="#">Blog</a></li>
                                 <li><a href="#">Get in touch</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="{{route('terms.conditions')}}">Terms & Conditions</a></li>
+                                <li><a href="{{route('privacy.policy')}}">Privacy Policy</a></li>
                             </ul>
                         </div>
                         <div class="col-lg-4 text-lg-right">
