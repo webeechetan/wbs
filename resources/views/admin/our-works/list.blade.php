@@ -32,7 +32,7 @@
                                 <td>{{ $work->name }}</td>
                                 <td>{{ $work->category->name }}</td>
                                 <td>
-                                    <img src="{{ asset('images')}}/{{$work->images}}" height="50" width="50" >
+                                    <img src="{{$work->images}}" height="125" width="200" >
                                 </td>
                                 <td>
                                     <a href="{{ route('our-work.edit',$work->id) }}"><button type="button" class="btn btn-outline-info waves-effect waves-light " ><i class="mdi mdi-pencil d-block font-size-16"></i></button></a>

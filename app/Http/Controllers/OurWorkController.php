@@ -44,25 +44,19 @@ class OurWorkController extends Controller
             'meta_title' => 'required',
             'meta_description' => 'required',
             'category_id' => 'required',
-            'short_description' => 'required'
         ]);
-        $image = time().rand(1,50).'.'.$request->file('image')->extension();
-        $request->file('image')->move(public_path('images'),$image);
+        
 
         $ourWork = new OurWork();
         $ourWork->name = $request->name;
         $ourWork->description = json_encode($request->section);
+        $ourWork->heading = json_encode($request->heading);
         $ourWork->meta_title = $request->meta_title;
         $ourWork->meta_description = $request->meta_description;
         $ourWork->cat_id = $request->category_id;
-        $ourWork->images = $image;
-        $ourWork->short_description = $request->short_description;
+        $ourWork->images = $request->image;
         $ourWork->slug = $request->slug;
-        if($request->hasFile('og_image')){
-            $og_image = time().rand(1,50).'.'.$request->file('og_image')->extension();
-            $request->file('og_image')->move(public_path('images'),$og_image);
-            $ourWork->og_image = $og_image;
-        }
+        $ourWork->og_image = $request->og_image;
         $ourWork->og_title = $request->og_title;
         $ourWork->save();
         if($ourWork->id){
@@ -109,26 +103,18 @@ class OurWorkController extends Controller
             'meta_title' => 'required',
             'meta_description' => 'required',
             'category_id' => 'required',
-            'short_description' => 'required'
+            'image' => 'required'
         ]);
         $ourWork =  OurWork::find($request->id);
-        if($request->hasFile('image')){
-            $image = time().rand(1,50).'.'.$request->file('image')->extension();
-            $request->file('image')->move(public_path('images'),$image);
-            $ourWork->images = $image;
-        }
+        $ourWork->images = $request->image;
         $ourWork->name = $request->name;
         $ourWork->description = json_encode($request->section);
+        $ourWork->heading = json_encode($request->heading);
         $ourWork->meta_title = $request->meta_title;
         $ourWork->meta_description = $request->meta_description;
         $ourWork->cat_id = $request->category_id;
-        $ourWork->short_description = $request->short_description;
         $ourWork->slug = $request->slug;
-        if($request->hasFile('og_image')){
-            $og_image = time().rand(1,50).'.'.$request->file('og_image')->extension();
-            $request->file('og_image')->move(public_path('images'),$og_image);
-            $ourWork->og_image = $og_image;
-        }
+        $ourWork->og_image = $request->og_image;
         $ourWork->og_title = $request->og_title;
         if($ourWork->save()){
             return redirect()->route('our-work.list')->with('success','Updated Successfully');

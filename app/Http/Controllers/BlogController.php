@@ -46,28 +46,20 @@ class BlogController extends Controller
             'category' => 'required',
             'meta_title' => 'required',
             'meta_description' => 'required',
-            'thumbnail' => 'mimes:jpeg,jpg,png,gif|required|max:10000',
-            'banner' => 'mimes:jpeg,jpg,png,gif|required|max:10000',
+            'thumbnail' => 'required',
+            'banner' => 'required',
             'short_description' => 'required|min:6'
         ]);
-        $thumbnail = time().rand(1,50).'.'.$request->file('thumbnail')->extension();
-        $request->file('thumbnail')->move(public_path('images'),$thumbnail);
-        $banner = time().rand(1,50).'.'.$request->file('banner')->extension();
-        $request->file('banner')->move(public_path('images'),$banner);
         $blog = new Blog();
         $blog->title = $request->title;
         $blog->description = $request->description;
         $blog->short_description = $request->short_description;
         $blog->slug = $request->slug;
-        if($request->hasFile('og_image')){
-            $og_image = time().rand(1,50).'.'.$request->file('og_image')->extension();
-            $request->file('og_image')->move(public_path('images'),$og_image);
-            $blog->og_image = $og_image;
-        }
+        $blog->thumbnail = $request->thumbnail;
+        $blog->banner = $request->banner;
+        $blog->og_image = $request->og_image;
         $blog->og_title = $request->og_title;
         $blog->cat_id = $request->category;
-        $blog->thumbnail = $thumbnail;
-        $blog->banner = $banner;
         $blog->meta_title = $request->meta_title;
         $blog->meta_description = $request->meta_description;
         $blog->save();
@@ -119,22 +111,15 @@ class BlogController extends Controller
             'category' => 'required',
             'meta_title' => 'required',
             'meta_description' => 'required',
-            'thumbnail' => 'mimes:jpeg,jpg,png,gif|max:10000',
-            'banner' => 'mimes:jpeg,jpg,png,gif|max:10000',
+            'thumbnail' => 'required',
+            'banner' => 'required',
             'short_description' => 'required|min:6'
         ]);
 
         $blog = Blog::find($request->id);
-        if($request->hasFile('thumbnail')){
-            $thumbnail = time().rand(1,50).'.'.$request->file('thumbnail')->extension();
-            $request->file('thumbnail')->move(public_path('images'),$thumbnail);
-            $blog->thumbnail = $thumbnail;
-        }
-        if($request->hasFile('banner')){
-            $banner = time().rand(1,50).'.'.$request->file('banner')->extension();
-            $request->file('banner')->move(public_path('images'),$banner);
-            $blog->banner = $banner;
-        }
+        $blog->thumbnail = $request->thumbnail;
+        $blog->banner = $request->banner;
+        $blog->og_image = $request->og_image;
         $blog->title = $request->title;
         $blog->description = $request->description;
         $blog->cat_id = $request->category;
@@ -142,11 +127,6 @@ class BlogController extends Controller
         $blog->meta_title = $request->meta_title;
         $blog->short_description = $request->short_description;
         $blog->slug = $request->slug;
-        if($request->hasFile('og_image')){
-            $og_image = time().rand(1,50).'.'.$request->file('og_image')->extension();
-            $request->file('og_image')->move(public_path('images'),$og_image);
-            $blog->og_image = $og_image;
-        }
         $blog->og_title = $request->og_title;
         if($blog->save()){
             return redirect()->route('blog.list')->with('success','Blog Updated');

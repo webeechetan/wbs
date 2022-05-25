@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 mb-4 mb-md-5">
-                <img src="{{ asset('images') }}/{{ $blog->banner }}" width="100%" alt="{{ $blog->title }}">
+                <img src="{{ $blog->banner }}" width="100%" alt="{{ $blog->title }}">
             </div>
         </div>
         <div class="row flex-column-reverse flex-lg-row">
@@ -24,7 +24,7 @@
             @foreach($related_blog as $blog)
                 <div class="col-md-4">
                     <div class="post wow fadeIn ">
-                        <figure class="post-image"><img src="{{ asset('images') }}/{{ $blog->thumbnail }}" alt="Image"></figure>
+                        <figure class="post-image"><img src="{{ $blog->thumbnail }}" alt="Image"></figure>
                         <div class="post-content">
                             <h3 class="post-title">{{ $blog->title }}</h3>
                             <small class="post-date">{{ $blog->created_at }}</small>

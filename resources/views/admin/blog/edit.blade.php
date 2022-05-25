@@ -88,16 +88,20 @@
                                 <label class="col-form-label col-lg-2">Images</label>
                                 <div class="col-lg-5">
                                     <label class="col-form-label col-lg-2">Thumbnail</label>
-                                    <input type="file" class="form-control" name="thumbnail" >
-                                    <img src="{{ asset('images') }}/{{ $blog->thumbnail }}" class="rounded avatar-md mt-2">
+                                    <div class="input-group">
+                                        <div class="input-group-text open_gallery"><i class="bx bx-image-add"></i></div>
+                                        <input type="text" class="form-control" placeholder="Enter Thumbnail URL" name="thumbnail" value="{{ $blog->thumbnail}}">
+                                    </div>
                                     @error('thumbnail')
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror
                                 </div>
                                 <div class="col-lg-5">
                                     <label class="col-form-label col-lg-2">Banner</label>
-                                    <input type="file" class="form-control" name="banner" >
-                                    <img src="{{ asset('images') }}/{{ $blog->banner }}" class="rounded avatar-md mt-2">
+                                    <div class="input-group">
+                                        <div class="input-group-text open_gallery"><i class="bx bx-image-add"></i></div>
+                                        <input type="text" class="form-control" placeholder="Enter Banner URL" name="banner" value="{{ $blog->banner }}">
+                                    </div>
                                     @error('banner')
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror
@@ -111,10 +115,10 @@
                                 </div>
                                 <div class="col-lg-5">
                                     <label class="col-form-label col-lg-2">OG Image</label>
-                                    <input type="file" class="form-control" name="og_image" >
-                                    @if($blog->og_image)
-                                        <img src="{{ asset('images') }}/{{ $blog->og_image }}" class="rounded avatar-md mt-2">
-                                    @endif
+                                    <div class="input-group">
+                                        <div class="input-group-text open_gallery"><i class="bx bx-image-add"></i></div>
+                                        <input type="text" class="form-control" placeholder="Enter OG-Image URL" name="og_image" value="{{ $blog->og_image }}">
+                                    </div>
                                 </div>
                             </div>
                         </div>

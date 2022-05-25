@@ -7,21 +7,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\OurWorkController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\GalleryController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-// Route::get('/', function () {
-//     return view('layouts.app');
-// });
 
 Route::get('/', function () {
     return view('home');
@@ -64,6 +51,7 @@ Route::get('/media-planning-and-buying', function () {
 Route::get('/shopify-website-development', function () {
     return view('shopify-website-development');
 })->name('shopify-website-development'); 
+
 Route::get('/our-services', [ServicesController::class,'front_end_view'])->name('services');
 Route::get('/our-services/{title?}', [ServicesController::class,'show'])->name('services.view');
 
@@ -97,6 +85,7 @@ Route::get('/terms-conditions', function () {
 Route::get('/portfolio-item/{work}',[OurWorkController::class,'view_work'])->name('view.work');
 
 //---------Admin Route---------//
+Route::post('/gallery/ajax',[GalleryController::class,'gallery_list_ajax'])->name('gallery_list_ajax');
 
 Route::group(['prefix' =>'/webeesite','middleware' => ['auth']],function () {
     Route::get('/logout',[AuthController::class,'logout'])->name('logout');
@@ -136,6 +125,11 @@ Route::group(['prefix' =>'/webeesite','middleware' => ['auth']],function () {
     Route::post('/services/update',[ServicesController::class,'update'])->name('service.update');
     Route::get('/services/delete/{id}',[ServicesController::class,'destroy'])->name('service.delete');
 
+    ///Gallery
+
+    Route::get('/gallery',[GalleryController::class,'index'])->name('gallery.list');
+    Route::post('/gallery/save',[GalleryController::class,'store'])->name('gallery.store');
+    Route::get('gallery/delete/{id}',[GalleryController::class,'destroy'])->name('gallery.delete');
 });
 
 Route::group(['prefix' =>'/webeesite','middleware' => ['guest']],function () {

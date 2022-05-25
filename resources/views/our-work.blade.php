@@ -24,7 +24,7 @@
          @foreach ($ourWork as $work)
          
          <div class="gallery-product col-sm-4 col-lg-3 filter {{$work->category->name}}">
-            <a href="{{ route('view.work',$work->slug) }}"><img src="{{ asset('images') }}/{{ $work->images }}"  class="img-fluid"></a>
+            <a href="{{ route('view.work',$work->slug) }}"><img src="{{ $work->images }}"  class="img-fluid"></a>
             <div class="content ">
                <h5><a href="{{ route('view.work',$work->slug) }}">{{$work->name}}</a></h5>
                <p>{{$work->category->name}}</p>

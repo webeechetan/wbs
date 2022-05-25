@@ -38,8 +38,8 @@
                                 <td>{{ $blog->id }}</td>
                                 <td>{{ implode(' ', array_slice(explode(' ', $blog->title), 0, 10)); }}</td>
                                 <td>{{ $blog->category->name }}</td>
-                                <td><img class="rounded avatar-md" src="{{ asset('images') }}/{{ $blog->thumbnail }}"></td>
-                                <td><img class="rounded avatar-md" src="{{ asset('images') }}/{{ $blog->banner }}"></td>
+                                <td><img height="100" width="200" src="{{ $blog->thumbnail }}"></td>
+                                <td><img height="100" width="200" src="{{ $blog->banner }}"></td>
                                 {{-- <td>
                                     @php
                                     $images = explode(",", $work->images);

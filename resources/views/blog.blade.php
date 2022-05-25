@@ -20,7 +20,7 @@
                     @foreach($blogs as $blog)
                         <div class="col-lg-6">
                             <div class="post wow fadeIn">
-                                <figure class="post-image"><img src="{{ asset('images') }}/{{ $blog->thumbnail }}" alt="Image"></figure>
+                                <figure class="post-image"><img src="{{ $blog->thumbnail }}" alt="Image"></figure>
                                 <div class="post-content">
                                     <h3 class="post-title mb-2">{{ $blog->title }}</h3>
                                     <small class="post-date mb-3">21 April, 2022</small>

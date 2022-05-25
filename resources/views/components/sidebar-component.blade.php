@@ -16,6 +16,13 @@
                 </li>
 
                 <li>
+                    <a href="{{ route('gallery.list') }}">
+                    <i class='bx bx-image'></i>
+                        <span key="t-dashboards">Gallery</span>
+                    </a>
+                </li>
+                
+                <li>
                     <a href="{{ route('category.list') }}">
                         <i class='bx bx-duplicate'></i>
                         <span key="t-layouts">Category</span>
