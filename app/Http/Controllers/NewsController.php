@@ -4,11 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use Illuminate\Http\Request;
-use App\Models\Category;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
-use PhpParser\Node\Expr\AssignOp\Mod;
 
-class BlogController extends Controller
+class NewsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +14,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::where('type','1')->get();
-        return view('admin.blog.list',compact('blogs'));
+        $news = Blog::where('type','2')->get();
+        return view('admin.news.list',compact('news'));
     }
 
     /**
@@ -28,7 +25,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('admin.blog.add');
+        return view('admin.news.add');
     }
 
     /**
@@ -41,7 +38,7 @@ class BlogController extends Controller
     {
         $request->validate([
             'title' => 'required|min:6',
-            'description' => 'required|min:25',
+            'description' => 'required',
             'meta_title' => 'required',
             'meta_description' => 'required',
             'thumbnail' => 'required',
@@ -59,10 +56,10 @@ class BlogController extends Controller
         $blog->og_title = $request->og_title;
         $blog->meta_title = $request->meta_title;
         $blog->meta_description = $request->meta_description;
-        $blog->type = 1;
+        $blog->type = 2;
         $blog->save();
         if($blog->id){
-            return redirect()->route('blog.list')->with('success','New Blog Created');
+            return redirect()->route('news.list')->with('success','New News Created');
         }
         return back()->with('failed','Something Went Wrong');
     }
@@ -88,8 +85,8 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        $blog = Blog::find($id);
-        return view('admin.blog.edit',compact('blog'));
+        $news = Blog::find($id);
+        return view('admin.news.edit',compact('news'));
     }
 
     /**
@@ -104,7 +101,7 @@ class BlogController extends Controller
 
         $request->validate([
             'title' => 'required|min:6',
-            'description' => 'required|min:25',
+            'description' => 'required',
             'meta_title' => 'required',
             'meta_description' => 'required',
             'thumbnail' => 'required',
@@ -124,7 +121,7 @@ class BlogController extends Controller
         $blog->slug = $request->slug;
         $blog->og_title = $request->og_title;
         if($blog->save()){
-            return redirect()->route('blog.list')->with('success','Blog Updated');
+            return redirect()->route('news.list')->with('success','News Updated');
         }
         return back()->with('failed','Something Went Wrong');
     }
@@ -144,7 +141,7 @@ class BlogController extends Controller
     }
 
     public function front_end_view(){
-        $blogs = Blog::where('type','1')->get();
+        $blogs = Blog::all();
         return view('blog',compact('blogs'));
     }
 }

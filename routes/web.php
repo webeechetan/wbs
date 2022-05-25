@@ -8,6 +8,7 @@ use App\Http\Controllers\OurWorkController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\NewsController;
 
 
 Route::get('/', function () {
@@ -130,6 +131,14 @@ Route::group(['prefix' =>'/webeesite','middleware' => ['auth']],function () {
     Route::get('/gallery',[GalleryController::class,'index'])->name('gallery.list');
     Route::post('/gallery/save',[GalleryController::class,'store'])->name('gallery.store');
     Route::get('gallery/delete/{id}',[GalleryController::class,'destroy'])->name('gallery.delete');
+
+    // News
+
+    Route::get('/news',[NewsController::class,'index'])->name('news.list');
+    Route::get('/news/create',[NewsController::class,'create'])->name('news.create');
+    Route::post('/news/store',[NewsController::class,'store'])->name('news.store');
+    Route::get('/news/edit/{id}',[NewsController::class,'edit'])->name('news.edit');
+    Route::post('/news/update',[NewsController::class,'update'])->name('news.update');
 });
 
 Route::group(['prefix' =>'/webeesite','middleware' => ['guest']],function () {

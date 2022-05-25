@@ -55,14 +55,14 @@
                         </form>
                     </div>
                     <!-- end widget -->
-                    <div class="widget">
+                    {{-- <div class="widget">
                         <h4 class="title">CATEGORIES</h4>
                         <ul class="categories">
                             @foreach($categories as $category)
                                 <li><a href="#">{{ $category->name }}</a><span>{{ $category->blogs()->count() }}</span></li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> --}}
                     <!-- end widget -->
                 </aside>
             </div>

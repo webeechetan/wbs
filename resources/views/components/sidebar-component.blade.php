@@ -44,6 +44,13 @@
                 </li>
 
                 <li>
+                    <a href="{{ route('news.list') }}">
+                        <i class='bx bx-news' ></i>
+                        <span key="t-layouts">News</span>
+                    </a>
+                </li>
+
+                <li>
                     <a href="{{ route('blog.list') }}">
                         <i class='bx bx-unlink' ></i>
                         <span key="t-layouts">Meta</span>

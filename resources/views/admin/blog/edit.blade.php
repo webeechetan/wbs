@@ -51,25 +51,6 @@
                             </div>
 
                             <div class="form-group row mb-4">
-                                <label class="col-form-label col-lg-2">Category</label>
-                                <div class="col-lg-10">
-                                    <select name="category" class="form-control" required> 
-                                        <option value="">Category</option>
-                                        @foreach($categories as $category)
-                                            @if($blog->cat_id == $category->id)
-                                                <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
-                                            @else
-                                                <option value="{{ $category->id }}">{{ $category->name }}</option> 
-                                            @endif
-                                        @endforeach
-                                    </select>
-                                    @error('category_id')
-                                        <span class="text-danger">{{$message}}</span>
-                                    @enderror
-                                </div>
-                            </div>
-
-                            <div class="form-group row mb-4">
                                 <label class="col-form-label col-lg-2">Meta</label>
                                 <div class="col-lg-5">
                                     <input type="text" class="form-control" placeholder="Meta title" name="meta_title" required value="{{ $blog->meta_title }}">

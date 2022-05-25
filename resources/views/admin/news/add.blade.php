@@ -7,8 +7,8 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title mb-4">Blog</h4>
-                <form class="outer-repeater" method="post" action="{{ route('blog.store') }}" enctype="multipart/form-data">
+                <h4 class="card-title mb-4">News</h4>
+                <form class="outer-repeater" method="post" action="{{ route('news.store') }}" enctype="multipart/form-data">
                     @csrf
                     <div data-repeater-list="outer-group" class="outer">
                         <div data-repeater-item="" class="outer">
