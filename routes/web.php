@@ -9,10 +9,12 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\NewsController;
+use App\Models\Blog;
 
 
 Route::get('/', function () {
-    return view('home');
+    $news = Blog::where('type', '2')->take(3)->get();
+    return view('home', compact('news'));
 })->name('home');
 
 Route::get('/about-us', function () {
@@ -24,50 +26,50 @@ Route::get('/our-services', function () {
 })->name('services');
 Route::get('/digital-strategy-and-planning', function () {
     return view('digital-strategy-and-planning');
-})->name('digital-strategy-and-planning');   
+})->name('digital-strategy-and-planning');
 Route::get('/creative-strategy-and-web-graphics-design', function () {
     return view('creative-strategy-and-web-graphics-design');
-})->name('creative-strategy-and-web-graphics-design'); 
+})->name('creative-strategy-and-web-graphics-design');
 Route::get('/social-media-marketing', function () {
     return view('social-media-marketing');
-})->name('social-media-marketing'); 
+})->name('social-media-marketing');
 Route::get('/seo-and-search-engine-marketing', function () {
     return view('seo-and-search-engine-marketing');
-})->name('seo-and-search-engine-marketing'); 
+})->name('seo-and-search-engine-marketing');
 Route::get('/videos-gifs-and-content-marketing', function () {
     return view('videos-gifs-and-content-marketing');
-})->name('videos-gifs-and-content-marketing'); 
+})->name('videos-gifs-and-content-marketing');
 Route::get('/website-design-and-development', function () {
     return view('website-design-and-development');
-})->name('website-design-and-development'); 
+})->name('website-design-and-development');
 Route::get('/email-marketing', function () {
     return view('email-marketing');
-})->name('email-marketing'); 
+})->name('email-marketing');
 Route::get('/web-analytics', function () {
     return view('web-analytics');
-})->name('web-analytics'); 
+})->name('web-analytics');
 Route::get('/media-planning-and-buying', function () {
     return view('media-planning-and-buying');
-})->name('media-planning-and-buying'); 
+})->name('media-planning-and-buying');
 Route::get('/shopify-website-development', function () {
     return view('shopify-website-development');
-})->name('shopify-website-development'); 
+})->name('shopify-website-development');
 
-Route::get('/our-services', [ServicesController::class,'front_end_view'])->name('services');
-Route::get('/our-services/{title?}', [ServicesController::class,'show'])->name('services.view');
+Route::get('/our-services', [ServicesController::class, 'front_end_view'])->name('services');
+Route::get('/our-services/{title?}', [ServicesController::class, 'show'])->name('services.view');
 
-Route::get('/our-work',[OurWorkController::class,'front_end_view'])->name('our-work');
+Route::get('/our-work', [OurWorkController::class, 'front_end_view'])->name('our-work');
 
-Route::get('/blog', [BlogController::class,'front_end_view'])->name('blog');
-Route::get('/blog/{title?}', [BlogController::class,'show'])->name('blog.view');
+Route::get('/blog', [BlogController::class, 'front_end_view'])->name('blog');
+Route::get('/blog/{title?}', [BlogController::class, 'show'])->name('blog.view');
 
 Route::get('/blog-inner', function () {
     return view('blog-inner');
-})->name('blog-inner');  
+})->name('blog-inner');
 
 Route::get('/thankyou', function () {
     return view('thankyou');
-})->name('thankyou');  
+})->name('thankyou');
 
 Route::get('/get-in-touch', function () {
     return view('get-in-touch');
@@ -83,65 +85,68 @@ Route::get('/terms-conditions', function () {
     return view('terms-conditions');
 })->name('terms-conditions');
 
-Route::get('/portfolio-item/{work}',[OurWorkController::class,'view_work'])->name('view.work');
+Route::get('/portfolio-item/{work}', [OurWorkController::class, 'view_work'])->name('view.work');
 
 //---------Admin Route---------//
-Route::post('/gallery/ajax',[GalleryController::class,'gallery_list_ajax'])->name('gallery_list_ajax');
+Route::post('/gallery/ajax', [GalleryController::class, 'gallery_list_ajax'])->name('gallery_list_ajax');
 
-Route::group(['prefix' =>'/webeesite','middleware' => ['auth']],function () {
-    Route::get('/logout',[AuthController::class,'logout'])->name('logout');
-    Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('dashboard');
+Route::group(['prefix' => '/webeesite', 'middleware' => ['auth']], function () {
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
     // Cagtegory
-    Route::get('/category',[CategoryController::class,'index'])->name('category.list');
-    Route::post('/category/store',[CategoryController::class,'store'])->name('category.store');
-    Route::post('/category/update',[CategoryController::class,'update'])->name('category.update');
-    Route::get('/category/delete/{id}',[CategoryController::class,'destroy'])->name('category.delete');
+    Route::get('/category', [CategoryController::class, 'index'])->name('category.list');
+    Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
+    Route::post('/category/update', [CategoryController::class, 'update'])->name('category.update');
+    Route::get('/category/delete/{id}', [CategoryController::class, 'destroy'])->name('category.delete');
 
     //Our Works
 
-    Route::get('/our-works',[OurWorkController::class,'index'])->name('our-work.list');
-    Route::get('/our-work/create',[OurWorkController::class,'create'])->name('our-work.create');
-    Route::post('/our-work/store',[OurWorkController::class,'store'])->name('our-work.store');
-    Route::post('/our-work/remove_image',[OurWorkController::class,'remove_image'])->name('our-work.remove_image');
-    Route::get('/our-work/delete/{id}',[OurWorkController::class,'destroy'])->name('our-work.delete');
-    Route::get('/our-work/edit/{id}',[OurWorkController::class,'edit'])->name('our-work.edit');
-    Route::post('/our-work/update',[OurWorkController::class,'update'])->name('our-work.update');
+    Route::get('/our-works', [OurWorkController::class, 'index'])->name('our-work.list');
+    Route::get('/our-work/create', [OurWorkController::class, 'create'])->name('our-work.create');
+    Route::post('/our-work/store', [OurWorkController::class, 'store'])->name('our-work.store');
+    Route::post('/our-work/remove_image', [OurWorkController::class, 'remove_image'])->name('our-work.remove_image');
+    Route::get('/our-work/delete/{id}', [OurWorkController::class, 'destroy'])->name('our-work.delete');
+    Route::get('/our-work/edit/{id}', [OurWorkController::class, 'edit'])->name('our-work.edit');
+    Route::post('/our-work/update', [OurWorkController::class, 'update'])->name('our-work.update');
 
     //blogs
 
-    Route::get('/blogs',[BlogController::class,'index'])->name('blog.list');
-    Route::get('/blog/create',[BlogController::class,'create'])->name('blog.create');
-    Route::post('/blog/store',[BlogController::class,'store'])->name('blog.store');
-    Route::get('/blog/delete/{id}',[BlogController::class,'destroy'])->name('blog.delete');
-    Route::get('/blog/edit/{id}',[BlogController::class,'edit'])->name('blog.edit');
-    Route::post('/blog/update',[BlogController::class,'update'])->name('blog.update');
+    Route::get('/blogs', [BlogController::class, 'index'])->name('blog.list');
+    Route::get('/blog/create', [BlogController::class, 'create'])->name('blog.create');
+    Route::post('/blog/store', [BlogController::class, 'store'])->name('blog.store');
+    Route::get('/blog/delete/{id}', [BlogController::class, 'destroy'])->name('blog.delete');
+    Route::get('/blog/edit/{id}', [BlogController::class, 'edit'])->name('blog.edit');
+    Route::post('/blog/update', [BlogController::class, 'update'])->name('blog.update');
 
     ///Services
 
-    Route::get('/services',[ServicesController::class,'index'])->name('service.list');
-    Route::get('/services/create',[ServicesController::class,'create'])->name('service.create');
-    Route::post('/services/store',[ServicesController::class,'store'])->name('service.store');
-    Route::get('/services/edit/{id}',[ServicesController::class,'edit'])->name('service.edit');
-    Route::post('/services/update',[ServicesController::class,'update'])->name('service.update');
-    Route::get('/services/delete/{id}',[ServicesController::class,'destroy'])->name('service.delete');
+    Route::get('/services', [ServicesController::class, 'index'])->name('service.list');
+    Route::get('/services/create', [ServicesController::class, 'create'])->name('service.create');
+    Route::post('/services/store', [ServicesController::class, 'store'])->name('service.store');
+    Route::get('/services/edit/{id}', [ServicesController::class, 'edit'])->name('service.edit');
+    Route::post('/services/update', [ServicesController::class, 'update'])->name('service.update');
+    Route::get('/services/delete/{id}', [ServicesController::class, 'destroy'])->name('service.delete');
 
     ///Gallery
 
-    Route::get('/gallery',[GalleryController::class,'index'])->name('gallery.list');
-    Route::post('/gallery/save',[GalleryController::class,'store'])->name('gallery.store');
-    Route::get('gallery/delete/{id}',[GalleryController::class,'destroy'])->name('gallery.delete');
+    Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.list');
+    Route::post('/gallery/save', [GalleryController::class, 'store'])->name('gallery.store');
+    Route::get('gallery/delete/{id}', [GalleryController::class, 'destroy'])->name('gallery.delete');
 
     // News
 
-    Route::get('/news',[NewsController::class,'index'])->name('news.list');
-    Route::get('/news/create',[NewsController::class,'create'])->name('news.create');
-    Route::post('/news/store',[NewsController::class,'store'])->name('news.store');
-    Route::get('/news/edit/{id}',[NewsController::class,'edit'])->name('news.edit');
-    Route::post('/news/update',[NewsController::class,'update'])->name('news.update');
+    Route::get('/news', [NewsController::class, 'index'])->name('news.list');
+    Route::get('/news/create', [NewsController::class, 'create'])->name('news.create');
+    Route::post('/news/store', [NewsController::class, 'store'])->name('news.store');
+    Route::get('/news/edit/{id}', [NewsController::class, 'edit'])->name('news.edit');
+    Route::post('/news/update', [NewsController::class, 'update'])->name('news.update');
 });
 
-Route::group(['prefix' =>'/webeesite','middleware' => ['guest']],function () {
-    Route::get('/login',[AuthController::class,'login'])->name('login');
-    Route::post('/login',[AuthController::class,'authenticate'])->name('authentication');
+Route::group(['prefix' => '/webeesite', 'middleware' => ['guest']], function () {
+    Route::get('/login', [AuthController::class, 'login'])->name('login');
+    Route::post('/login', [AuthController::class, 'authenticate'])->name('authentication');
 });
+
+
+Route::get('/{title?}', [BlogController::class, 'show'])->name('post.view');

@@ -135,7 +135,7 @@
         $("#title").keyup(function(e){
             let title = $(this).val();
             let slug = title.split(' ').join('-');
-            $("#slug").val(slug);
+            slug = slug.toLowerCase();
         })
     });
 </script>

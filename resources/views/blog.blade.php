@@ -25,7 +25,7 @@
                                     <h3 class="post-title mb-2">{{ $blog->title }}</h3>
                                     <small class="post-date mb-3">21 April, 2022</small>
                                     <p class="post-intro">{{ Str::limit($blog->short_description,25) }}</p>
-                                    <a href="{{ route('blog.view') }}/{{ $blog->slug }}" class="post-link">READ MORE</a>
+                                    <a href="{{ route('post.view') }}/{{ $blog->slug }}" class="post-link">READ MORE</a>
                                 </div>
                             </div>
                         </div>
