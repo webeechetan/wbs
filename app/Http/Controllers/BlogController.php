@@ -77,7 +77,9 @@ class BlogController extends Controller
     {
         $blog = Blog::where('slug',$slug)->first();
         $related_blog = Blog::where('type', $blog->type)->take(5)->get();
-        return view('blog-inner',compact('blog','related_blog'));
+        $array = ['title'=>$blog->meta_title, 'meta_description'=>$blog->meta_description,'og_title'=>$blog->og_title,'og_image'=>$blog->og_image];
+        $meta = (object) $array;
+        return view('blog-inner',compact('blog','related_blog','meta'));
     }
 
     /**
@@ -141,10 +143,5 @@ class BlogController extends Controller
             return redirect()->route('blog.list')->with('success','Blog Deleted');
         }   
         return redirect()->route('blog.list')->with('failed','Something Went Wrong');
-    }
-
-    public function front_end_view(){
-        $blogs = Blog::where('type','1')->get();
-        return view('blog',compact('blogs'));
     }
 }

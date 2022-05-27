@@ -110,7 +110,8 @@
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="myExtraLargeModalLabel">Extra large modal</h5>
+                        <h5 class="modal-title" id="myExtraLargeModalLabel">Gallery</h5>
+                        <button type="button" class="btn btn-success btn-sm open_image_upload_modal" >Upload</button>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -118,9 +119,26 @@
                             
                         </div>
                     </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
+                </div>
+            </div>
+        </div>
+
+        {{-- Upload Image Modal --}}
+        <div class="modal fade image_upload_modal" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="myExtraLargeModalLabel">Upload New Image</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <input type="hidden" id="image_url" value="{{ asset('images') }}">
         <!-- JAVASCRIPT -->
         <script src="{{ asset('backend') }}/assets/libs/jquery/jquery.min.js"></script>
@@ -143,7 +161,4 @@
             });
         </script>
     </body>
-
-
-<!-- Mirrored from themesbrand.com/skote/layouts/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 May 2022 13:05:30 GMT -->
 </html>

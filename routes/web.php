@@ -10,21 +10,22 @@ use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\NewsController;
 use App\Models\Blog;
+use App\Http\Controllers\MetaDetails;
 
 
-Route::get('/', function () {
-    $news = Blog::where('type', '2')->take(3)->get();
-    return view('home', compact('news'));
-})->name('home');
+Route::get('/',[MetaDetails::class,'home'])->name('home');
 
-Route::get('/about-us', function () {
-    return view('about');
-})->name('about');
+Route::get('/about-us', [MetaDetails::class,'about'])->name('about');
 
 Route::get('/our-services', function () {
     return view('services');
 })->name('services');
+<<<<<<< HEAD
 Route::get('/our-services/digital-strategy-and-planning', function () {
+=======
+
+Route::get('/digital-strategy-and-planning', function () {
+>>>>>>> 611aa1447d0fd107deded4e6800462dd7e39fcba
     return view('digital-strategy-and-planning');
 })->name('digital-strategy-and-planning');
 Route::get('/creative-strategy-and-web-graphics-design', function () {
@@ -55,12 +56,12 @@ Route::get('/shopify-website-development', function () {
     return view('shopify-website-development');
 })->name('shopify-website-development');
 
-Route::get('/our-services', [ServicesController::class, 'front_end_view'])->name('services');
+Route::get('/our-services', [MetaDetails::class, 'our_services'])->name('services');
 Route::get('/our-services/{title?}', [ServicesController::class, 'show'])->name('services.view');
 
-Route::get('/our-work', [OurWorkController::class, 'front_end_view'])->name('our-work');
+Route::get('/our-work', [MetaDetails::class, 'our_work'])->name('our-work');
 
-Route::get('/blog', [BlogController::class, 'front_end_view'])->name('blog');
+Route::get('/blog', [MetaDetails::class, 'blog'])->name('blog');
 Route::get('/blog/{title?}', [BlogController::class, 'show'])->name('blog.view');
 
 Route::get('/blog-inner', function () {
@@ -141,6 +142,14 @@ Route::group(['prefix' => '/webeesite', 'middleware' => ['auth']], function () {
     Route::post('/news/store', [NewsController::class, 'store'])->name('news.store');
     Route::get('/news/edit/{id}', [NewsController::class, 'edit'])->name('news.edit');
     Route::post('/news/update', [NewsController::class, 'update'])->name('news.update');
+
+    //Meta 
+
+    Route::get('/meta', [MetaDetails::class, 'index'])->name('meta.list');
+    Route::get('/meta/create', [MetaDetails::class, 'create'])->name('meta.create');
+    Route::post('/meta/store', [MetaDetails::class, 'store'])->name('meta.store');
+    Route::get('/meta/edit/{id}', [MetaDetails::class, 'edit'])->name('meta.edit');
+    Route::post('/meta/update', [MetaDetails::class, 'update'])->name('meta.update');
 });
 
 Route::group(['prefix' => '/webeesite', 'middleware' => ['guest']], function () {

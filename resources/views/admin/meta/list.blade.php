@@ -9,8 +9,7 @@
     <div class="col-12">
        <div class="card">
            <div class="card-body">
-              <a href="{{ route('our-work.create') }}"><button type="button" class="btn btn-outline-primary waves-effect waves-light" >Add New</button></a>
-             <h4 class="card-title">Our Works</h4>
+             <h4 class="card-title">Meta</h4>
              <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                
                 <div class="row">
@@ -19,27 +18,29 @@
                          <thead>
                             <tr role="row">
                                <th>S.No</th>
-                               <th>Name</th>
-                               <th>Category</th>
-                               <th>Thumbnail</th>
+                               <th>Url</th>
+                               <th>Title</th>
+                               <th>Meta Title</th>
+                               <th>Meta Description</th>
+                               <th>OG Title</th>
+                               <th>OG Image</th>
                                <th>Actions</th>
                             </tr>
                          </thead>
                          <tbody>
-                            @foreach ($ourWork as $work)
+                            @foreach ($metas as $meta)
                             <tr>
-                                <td>{{ $work->id }}</td>
-                                <td>{{ $work->name }}</td>
+                                <td>{{ $meta->id }}</td>
+                                <td>{{ $meta->url }}</td>
+                                <td>{{ $meta->title }}</td>
+                                <td>{{ $meta->meta_title }}</td>
+                                <td>{{ $meta->meta_description }}</td>
+                                <td>{{ $meta->og_title }}</td>
                                 <td>
-                                    @foreach($work->category() as $category)
-                                        {{ $category->name }},
-                                     @endforeach</td>
-                                <td>
-                                    <img src="{{$work->images}}" height="125" width="200" >
+                                    <img src="{{$meta->og_image}}" height="125" width="200" >
                                 </td>
                                 <td>
-                                    <a href="{{ route('our-work.edit',$work->id) }}"><button type="button" class="btn btn-outline-info waves-effect waves-light " ><i class="mdi mdi-pencil d-block font-size-16"></i></button></a>
-                                    <a href="{{ route('our-work.delete',$work->id) }}"><button type="button" class="btn btn-outline-danger waves-effect waves-light"><i class="mdi mdi-delete d-block font-size-16"></i></button></a>
+                                    <a href="{{ route('meta.edit',$meta->id) }}"><button type="button" class="btn btn-outline-info waves-effect waves-light " ><i class="mdi mdi-pencil d-block font-size-16"></i></button></a>
                                 </td>
                             </tr>
                             @endforeach

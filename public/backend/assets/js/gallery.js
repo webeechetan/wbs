@@ -48,6 +48,11 @@ $(".open_gallery").click(function(){
     rand_number = Math.floor((Math.random() * 100000) + 1);
     let input = $(this).parent().find("input");
     $(input).attr("data-temp_input_selector","random_number"+rand_number);
-})
+});
+
+$(".open_image_upload_modal").click(function(){
+
+    
+});
 
 
