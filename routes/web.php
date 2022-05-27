@@ -20,12 +20,8 @@ Route::get('/about-us', [MetaDetails::class,'about'])->name('about');
 Route::get('/our-services', function () {
     return view('services');
 })->name('services');
-<<<<<<< HEAD
-Route::get('/our-services/digital-strategy-and-planning', function () {
-=======
 
 Route::get('/digital-strategy-and-planning', function () {
->>>>>>> 611aa1447d0fd107deded4e6800462dd7e39fcba
     return view('digital-strategy-and-planning');
 })->name('digital-strategy-and-planning');
 Route::get('/creative-strategy-and-web-graphics-design', function () {
