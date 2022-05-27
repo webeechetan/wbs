@@ -75,7 +75,9 @@ class MetaDetails extends Controller
 
     public function home(){
         $news = Blog::where('type', '2')->take(3)->get();
-        return view('home',['meta'=>$this->meta,'news'=>$news]);
+        $latest_news = Blog::where('type', '2')->orderBy('id','DESC')->take(1)->first();
+        // dd($latest_news);
+        return view('home',['meta'=>$this->meta,'news'=>$news,'latest_news'=>$latest_news]);
     }
 
     public function about(){
