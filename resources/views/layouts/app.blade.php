@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#282828" />
-    <title>WeBeeSocial | Creative Agency New Delhi | Digital Marketing Company</title>
+    <title>@yield('title')</title>
     <meta name="author" content="Themezinho">
-    <meta name="description" content="WeBeeSocial is a creative digital marketing agency in Delhi, India. We offer SEO, Performance and Social Media Marketing, Website design &amp; development services.">
+    <meta name="description" content="@yield('meta_description')">
     <meta name="keywords" content="WeBeeSocial is a creative digital marketing agency in Delhi, India. We offer SEO, Performance and Social Media Marketing, Website design &amp; development services.">
 
     <!-- SOCIAL MEDIA META -->
     <meta property="og:description" content="WeBeeSocial is a creative digital marketing agency in Delhi, India. We offer SEO, Performance and Social Media Marketing, Website design &amp; development services.">
-    <meta property="og:image" content="https://www.webeesocial.com/preview.png">
+    <meta property="og:image" content="@yield('og_image')">
     <meta property="og:site_name" content="agensy">
-    <meta property="og:title" content="agensy">
+    <meta property="og:title" content="@yield('og_title')">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.webeesocial.com">
 

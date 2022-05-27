@@ -1,4 +1,8 @@
 @extends('layouts.app')
+@section('title',$meta->title)
+@section('meta_description',$meta->meta_description)
+@section('og_title',$meta->og_title)
+@section('og_image',$meta->og_image)
 @section('content')
 <section>
     <div class="headlines">
@@ -34,11 +38,12 @@
     
                 <!-- end post -->
                 <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    {{-- <li class="page-item"><a class="page-link" href="#">Previous</a></li>
                     <li class="page-item"><a class="page-link" href="#">1</a></li>
                     <li class="page-item active"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
                     <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li> --}}
+                    {!! $blogs->links() !!}
                 </ul>
             </div>
             <!-- end col-8 -->

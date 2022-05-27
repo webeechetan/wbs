@@ -1,4 +1,8 @@
 @extends('layouts.app')
+@section('title',$meta->title)
+@section('meta_description',$meta->meta_description)
+@section('og_title',$meta->og_title)
+@section('og_image',$meta->og_image)
 @section('content')
 <section>
     <div class="headlines">

@@ -37,7 +37,7 @@ class OurWorkController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {       
+    {      
         $request->validate([
             'name' => 'required',
             'image' => 'required',
@@ -53,7 +53,7 @@ class OurWorkController extends Controller
         $ourWork->heading = json_encode($request->heading);
         $ourWork->meta_title = $request->meta_title;
         $ourWork->meta_description = $request->meta_description;
-        $ourWork->cat_id = $request->category_id;
+        $ourWork->cat_id = implode(',',$request->category_id,);
         $ourWork->images = $request->image;
         $ourWork->slug = $request->slug;
         $ourWork->og_image = $request->og_image;
@@ -98,6 +98,7 @@ class OurWorkController extends Controller
      */
     public function update(Request $request)
     {
+        
         $request->validate([
             'name' => 'required',
             'meta_title' => 'required',
@@ -112,7 +113,7 @@ class OurWorkController extends Controller
         $ourWork->heading = json_encode($request->heading);
         $ourWork->meta_title = $request->meta_title;
         $ourWork->meta_description = $request->meta_description;
-        $ourWork->cat_id = $request->category_id;
+        $ourWork->cat_id = implode(',',$request->category_id,);
         $ourWork->slug = $request->slug;
         $ourWork->og_image = $request->og_image;
         $ourWork->og_title = $request->og_title;
@@ -144,7 +145,9 @@ class OurWorkController extends Controller
 
     public function view_work($slug){
         $work = OurWork::where('slug', $slug)->first();
-        return view('portfolio-item', compact('work'));
+        $array = ['title'=>$work->meta_title, 'meta_description'=>$work->meta_description,'og_title'=>$work->og_title,'og_image'=>$work->og_image];
+        $meta = (object) $array;
+        return view('portfolio-item', compact('work','meta'));
     }
 
     public function remove_image(Request $request){

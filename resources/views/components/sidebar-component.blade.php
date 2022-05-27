@@ -51,7 +51,7 @@
                 </li>
 
                 <li>
-                    <a href="{{ route('blog.list') }}">
+                    <a href="{{ route('meta.list') }}">
                         <i class='bx bx-unlink' ></i>
                         <span key="t-layouts">Meta</span>
                     </a>

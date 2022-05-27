@@ -1,4 +1,8 @@
 @extends('layouts.app')
+@section('title',$meta->title)
+@section('meta_description',$meta->meta_description)
+@section('og_title',$meta->og_title)
+@section('og_image',$meta->og_image)
 @section('content')
 <section>
    <div class="headlines">
@@ -23,11 +27,15 @@
       <div class="row">
          @foreach ($ourWork as $work)
          
-         <div class="gallery-product col-sm-4 col-lg-3 filter {{$work->category->name}}">
+         <div class="gallery-product col-sm-4 col-lg-3 filter @foreach($work->category() as $category){{ $category->name }} @endforeach">
             <a href="{{ route('view.work',$work->slug) }}"><img src="{{ $work->images }}"  class="img-fluid"></a>
             <div class="content ">
                <h5><a href="{{ route('view.work',$work->slug) }}">{{$work->name}}</a></h5>
-               <p>{{$work->category->name}}</p>
+               <p>
+                  @foreach($work->category() as $category)
+                     {{ $category->name }},
+                  @endforeach
+               </p>
             </div>
          </div>
          @endforeach

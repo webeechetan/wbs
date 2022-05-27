@@ -15,6 +15,6 @@ class OurWork extends Model
     }
 
     public function category(){
-        return $this->belongsTo(Category::class,'cat_id');
+        return Category::whereIn('id',explode(',',$this->cat_id))->get();
     }
 }
