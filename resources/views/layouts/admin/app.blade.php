@@ -104,7 +104,24 @@
 
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
+        <!-- Gallery Modal-->
 
+        <div class="modal fade gallery_modal" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="myExtraLargeModalLabel">Extra large modal</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="images_list">
+                            
+                        </div>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <input type="hidden" id="image_url" value="{{ asset('images') }}">
         <!-- JAVASCRIPT -->
         <script src="{{ asset('backend') }}/assets/libs/jquery/jquery.min.js"></script>
         <script src="{{ asset('backend') }}/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -113,6 +130,7 @@
         <script src="{{ asset('backend') }}/assets/libs/node-waves/waves.min.js"></script>
         <script src="{{ asset('backend') }}/assets/libs/toastr/build/toastr.min.js"></script>
         <script src="{{ asset('backend') }}/assets/js/pages/bootstrap-toastr.init.js"></script>
+        <script src="{{ asset('backend') }}/assets/js/gallery.js"></script>
         @yield('footerScripts')
         @yield('script')
         <script>

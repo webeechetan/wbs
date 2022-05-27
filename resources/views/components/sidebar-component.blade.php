@@ -16,6 +16,13 @@
                 </li>
 
                 <li>
+                    <a href="{{ route('gallery.list') }}">
+                    <i class='bx bx-image'></i>
+                        <span key="t-dashboards">Gallery</span>
+                    </a>
+                </li>
+                
+                <li>
                     <a href="{{ route('category.list') }}">
                         <i class='bx bx-duplicate'></i>
                         <span key="t-layouts">Category</span>
@@ -33,6 +40,13 @@
                     <a href="{{ route('blog.list') }}">
                         <i class='bx bxs-book-content' ></i>
                         <span key="t-layouts">Blog</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('news.list') }}">
+                        <i class='bx bx-news' ></i>
+                        <span key="t-layouts">News</span>
                     </a>
                 </li>
 

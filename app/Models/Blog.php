@@ -11,10 +11,6 @@ class Blog extends Model
 {
     use HasFactory;
 
-    public function category(){
-        return $this->belongsTo(Category::class,'cat_id');
-    }
-
     public function getCreatedAtAttribute($value){
         return Carbon::parse($value)->format('d M Y');
     }

@@ -11,10 +11,10 @@
            <div class="card-body">
                <div class="row mb-4">
                    <div class="col-md-6">
-                        <h4 class="card-title">Blogs</h4>
+                        <h4 class="card-title">News</h4>
                    </div>
                    <div class="col-md-6 text-md-end">
-                    <a href="{{ route('blog.create') }}"><button type="button" class="btn btn-outline-primary waves-effect waves-light" ><i class="bx bx-plus-medical"></i> Add New</button></a>
+                    <a href="{{ route('news.create') }}"><button type="button" class="btn btn-outline-primary waves-effect waves-light" ><i class="bx bx-plus-medical"></i> Add New</button></a>
                    </div>
                </div>
              <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
@@ -32,23 +32,16 @@
                             </tr>
                          </thead>
                          <tbody>
-                            @foreach ($blogs as $blog)
+                            @foreach ($news as $news_row)
                             <tr>
-                                <td>{{ $blog->id }}</td>
-                                <td>{{ implode(' ', array_slice(explode(' ', $blog->title), 0, 10)); }}</td>
-                                <td><img height="100" width="200" src="{{ $blog->thumbnail }}"></td>
-                                <td><img height="100" width="200" src="{{ $blog->banner }}"></td>
-                                {{-- <td>
-                                    @php
-                                    $images = explode(",", $work->images);
-                                    @endphp
-                                    @foreach ($images as $image)
-                                        <img src="{{ asset('images')}}/{{$image}}" height="50" width="50" >
-                                    @endforeach
-                                </td> --}}
+                                <td>{{ $news_row->id }}</td>
+                                <td>{{ implode(' ', array_slice(explode(' ', $news_row->title), 0, 10)); }}</td>
+                                <td><img height="100" width="200" src="{{ $news_row->thumbnail }}"></td>
+                                <td><img height="100" width="200" src="{{ $news_row->banner }}"></td>
+            
                                 <td>
-                                    <a href="{{ route('blog.edit',$blog->id) }}"><button type="button" class="btn btn-outline-info waves-effect waves-light " ><i class="mdi mdi-pencil d-block font-size-16"></i></button></a>
-                                    <a href="{{ route('blog.delete',$blog->id) }}"><button type="button" class="btn btn-outline-danger waves-effect waves-light"><i class="mdi mdi-delete d-block font-size-16"></i></button></a>
+                                    <a href="{{ route('news.edit',$news_row->id) }}"><button type="button" class="btn btn-outline-info waves-effect waves-light " ><i class="mdi mdi-pencil d-block font-size-16"></i></button></a>
+                                    <a href="{{ route('blog.delete',$news_row->id) }}"><button type="button" class="btn btn-outline-danger waves-effect waves-light"><i class="mdi mdi-delete d-block font-size-16"></i></button></a>
                                 </td>
                             </tr>
                             @endforeach

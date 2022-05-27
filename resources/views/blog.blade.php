@@ -20,12 +20,12 @@
                     @foreach($blogs as $blog)
                         <div class="col-lg-6">
                             <div class="post wow fadeIn">
-                                <figure class="post-image"><img src="{{ asset('images') }}/{{ $blog->thumbnail }}" alt="Image"></figure>
+                                <figure class="post-image"><img src="{{ $blog->thumbnail }}" alt="Image"></figure>
                                 <div class="post-content">
                                     <h3 class="post-title mb-2">{{ $blog->title }}</h3>
                                     <small class="post-date mb-3">21 April, 2022</small>
                                     <p class="post-intro">{{ Str::limit($blog->short_description,25) }}</p>
-                                    <a href="{{ route('blog.view') }}/{{ $blog->slug }}" class="post-link">READ MORE</a>
+                                    <a href="{{ route('post.view') }}/{{ $blog->slug }}" class="post-link">READ MORE</a>
                                 </div>
                             </div>
                         </div>
@@ -55,14 +55,14 @@
                         </form>
                     </div>
                     <!-- end widget -->
-                    <div class="widget">
+                    {{-- <div class="widget">
                         <h4 class="title">CATEGORIES</h4>
                         <ul class="categories">
                             @foreach($categories as $category)
                                 <li><a href="#">{{ $category->name }}</a><span>{{ $category->blogs()->count() }}</span></li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> --}}
                     <!-- end widget -->
                 </aside>
             </div>

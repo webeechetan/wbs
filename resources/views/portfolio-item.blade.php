@@ -15,22 +15,27 @@
         <div class="container">
             <div class="row">
                 @php 
-                $description = json_decode($work->description);
+                    $description = json_decode($work->description);
+                    $heading = json_decode($work->heading);
+                    $i = 0;
                 @endphp
+
                 @foreach($description as $item)
-                <div class="col-sm-6 col-lg-4 mb-4 mb-sm-5">
-                    <div class="titles">
-                        {!! $item !!}
+                    <div class="col-sm-6 col-lg-4 mb-4 mb-sm-5">
+                        <div class="titles">
+                            <h6>{{ $heading[$i] }}</h6>
+                            {!! $item !!}
+                        </div>
                     </div>
-                </div>
+                    @php
+                        $i++;
+                    @endphp
                 @endforeach
             </div>
             <div class="row sec-space pb-0">
                 <div class="col-12">
                     <div class="design-reff">
-                        @foreach (explode(',',$work->images) as $image)
-                            <img src="{{ asset('images') }}/{{ $image }}" alt="image">
-                        @endforeach
+                        <img src="{{ $work->images }}" alt="image">
                     </div>
                 </div>
             </div>

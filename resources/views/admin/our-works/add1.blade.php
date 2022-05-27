@@ -31,25 +31,18 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row mb-4 mt-4">
-                                <label class="col-form-label col-lg-2">Short Description</label>
-                                <div class="col-lg-10">
-                                    <textarea id="short_description" name="short_description" class="form-control"  >{{ old('short_description') }}</textarea>
-                                    @error('short_description')
-                                        <span class="text-danger">{{$message}}</span>
-                                    @enderror
-                                </div>
-                            </div>
 
                             <div class="custom_row mt-2">
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label col-lg-2">Column 1</label>
                                     <div class="col-lg-10">
+                                        <input type="text" placeholder="Heading" name="heading[]" class="form-control mb-2">
                                         <textarea id="editor" name="section[]" class="form-control"  ></textarea>
                                         <div class="mt-3">
                                             <button type="button" class="btn btn-outline-danger waves-effect waves-light remove_section"><i class="mdi mdi-delete font-size-16"></i> Delete Column</button>
                                         </div>
                                     </div>
+                                    
                                 </div>
                             </div>
                             <div class="row">
@@ -76,7 +69,10 @@
                                 </div>
                                 <div class="col-lg-5">
                                     <span class="col-form-label col-lg-2">Thumbnail</span>
-                                    <input type="file" class="form-control" name="image" multiple >
+                                    <div class="input-group">
+                                        <div class="input-group-text open_gallery"><i class="bx bx-image-add"></i></div>
+                                        <input type="text" class="form-control" placeholder="Enter Thumbnail URL" name="image">
+                                    </div>
                                 </div>
                             </div>
 
@@ -103,7 +99,10 @@
                                 </div>
                                 <div class="col-lg-5">
                                     <label class="col-form-label col-lg-2">OG Image</label>
-                                    <input type="file" class="form-control" name="og_image" >
+                                    <div class="input-group">
+                                        <div class="input-group-text open_gallery"><i class="bx bx-image-add"></i></div>
+                                        <input type="text" class="form-control" placeholder="Enter OG-Image URL" name="og_image">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -153,6 +152,7 @@
                     <div class="form-group row mb-4">
                         <label class="col-form-label col-lg-2">Column ${section_count}</label>
                         <div class="col-lg-10">
+                            <input type="text" placeholder="Heading" name="heading[]" class="form-control mb-2">
                             <textarea data-rand_num='${rand_number}' id="ckEditor${section_count}" name="section[]" class="form-control ckEditor"  ></textarea>
                             <div class="mt-3">
                                 <button type="button" class="btn btn-outline-danger waves-effect waves-light remove_section"><i class="mdi mdi-delete font-size-16"></i> Delete Column</button>
@@ -184,6 +184,7 @@
     $("#title").keyup(function(e){
         let title = $(this).val();
         let slug = title.split(' ').join('-');
+        slug = slug.toLowerCase();
         $("#slug").val(slug);
     })
 </script>

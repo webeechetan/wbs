@@ -34,19 +34,21 @@
 
                             @php 
                                 $description = json_decode($work->description);
-                                $i = 1;
+                                $heading = json_decode($work->heading);
+                                $i = 0;
                             @endphp
                             <div class="custom_row mt-2">
                                 @foreach ($description as $item)
-                                <div class="form-group row mb-4">
-                                    <label class="col-form-label col-lg-2">Section {{ $i }}</label>
-                                    <div class="col-lg-10">
-                                        <textarea id="editor{{ $i }}" name="section[]" class="form-control ckEditor" >{{ $item }}</textarea>
-                                        <div class="text-center mt-1">
-                                            <button type="button" class="btn btn-outline-danger waves-effect waves-light remove_section"><i class="mdi mdi-delete d-block font-size-16"></i></button>
+                                    <div class="form-group row mb-4">
+                                        <label class="col-form-label col-lg-2">Column {{ $i }}</label>
+                                        <div class="col-lg-10">
+                                            <input type="text" placeholder="Heading" name="heading[]" class="form-control mb-2" value="{{ $heading[$i]}}">
+                                            <textarea id="editor{{ $i }}" name="section[]" class="form-control ckEditor" >{{ $item }}</textarea>
+                                            <div class="text-center mt-1">
+                                                <button type="button" class="btn btn-outline-danger waves-effect waves-light remove_section"><i class="mdi mdi-delete d-block font-size-16"></i></button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
                                 @php
                                     $i++;
                                 @endphp
@@ -55,15 +57,7 @@
                             <div class="text-center mb-4">
                                 <button type="button" class="btn btn-outline-success waves-effect waves-light add_more_section">Add More</button>
                             </div>
-                            <div class="form-group row mb-4 mt-4">
-                                <label class="col-form-label col-lg-2">Short Description</label>
-                                <div class="col-lg-10">
-                                    <textarea id="short_description" name="short_description" class="form-control"  >{{ $work->short_description }}</textarea>
-                                    @error('short_description')
-                                        <span class="text-danger">{{$message}}</span>
-                                    @enderror
-                                </div>
-                            </div>
+                        
 
                             <div class="form-group row mb-4">
                                 <label class="col-form-label col-lg-2">Category</label>
@@ -82,8 +76,10 @@
                                     @enderror
                                 </div>
                                 <div class="col-lg-5 text-center">
-                                    <input type="file" class="form-control" name="image"  >
-                                    <img src="{{ asset('images') }}/{{$work->images}}" class="rounded avatar-md mt-2">
+                                    <div class="input-group">
+                                        <div class="input-group-text open_gallery"><i class="bx bx-image-add"></i></div>
+                                        <input type="text" class="form-control" placeholder="Enter Thumbnail URL" name="image" value="{{ $work->images}}">
+                                    </div>
                                 </div>
                             </div>
 
@@ -110,10 +106,10 @@
                                 </div>
                                 <div class="col-lg-5">
                                     <label class="col-form-label col-lg-2">OG Image</label>
-                                    <input type="file" class="form-control" name="og_image" >
-                                    @if($work->og_image)
-                                        <img src="{{ asset('images') }}/{{$work->og_image}}" class="rounded avatar-md mt-2">
-                                    @endif
+                                    <div class="input-group">
+                                        <div class="input-group-text open_gallery"><i class="bx bx-image-add"></i></div>
+                                        <input type="text" class="form-control" placeholder="Enter OG-Image URL" name="og_image" value="{{ $work->og_image}}">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -167,6 +163,7 @@
                     <div class="form-group row mb-4">
                         <label class="col-form-label col-lg-2">Section ${section_count}</label>
                         <div class="col-lg-10">
+                            <input type="text" placeholder="Heading" name="heading[]" class="form-control mb-2" value="">
                             <textarea data-rand_num='${rand_number}' id="ckEditor${rand_number}" name="section[]" class="form-control ckEditor"  ></textarea>
                             <div class="text-center mt-1">
                                 <button type="button" class="btn btn-outline-danger waves-effect waves-light remove_section"><i class="mdi mdi-delete d-block font-size-16"></i></button>
@@ -212,6 +209,7 @@
     $("#title").keyup(function(e){
         let title = $(this).val();
         let slug = title.split(' ').join('-');
+        slug = slug.toLowerCase();
         $("#slug").val(slug);
     })
 </script>
