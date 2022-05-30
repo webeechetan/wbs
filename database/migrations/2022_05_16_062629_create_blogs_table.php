@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('og_image')->nullable();
             $table->longText('slug');
             $table->integer('type')->comment('1=Blog,2=News')->default('1');
+            $table->timestamp('publish_at')->useCurrent();
             $table->timestamps();
         });
     }

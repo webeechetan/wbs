@@ -14,4 +14,8 @@ class Blog extends Model
     public function getCreatedAtAttribute($value){
         return Carbon::parse($value)->format('d M Y');
     }
+
+    public function getPublishAtAttribute($value){
+        return Carbon::parse($value)->format('Y-m-d');
+    }
 }

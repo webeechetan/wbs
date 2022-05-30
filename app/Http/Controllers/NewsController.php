@@ -57,6 +57,9 @@ class NewsController extends Controller
         $blog->meta_title = $request->meta_title;
         $blog->meta_description = $request->meta_description;
         $blog->type = 2;
+        if($request->publish_at){
+            $blog->publish_at = $request->publish_at;
+        }
         $blog->save();
         if($blog->id){
             return redirect()->route('news.list')->with('success','New News Created');
@@ -120,6 +123,9 @@ class NewsController extends Controller
         $blog->short_description = $request->short_description;
         $blog->slug = $request->slug;
         $blog->og_title = $request->og_title;
+        if($request->publish_at){
+            $blog->publish_at = $request->publish_at;
+        }
         if($blog->save()){
             return redirect()->route('news.list')->with('success','News Updated');
         }

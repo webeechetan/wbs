@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('og_title')->nullable();
             $table->string('og_image')->nullable();
             $table->longText('slug');
+            $table->timestamp('publish_at')->useCurrent();
             $table->timestamps();
         });
     }
