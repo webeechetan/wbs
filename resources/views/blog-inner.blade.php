@@ -8,7 +8,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12 mb-4 mb-md-5">
-                <img src="{{ $blog->banner }}" width="100%" alt="{{ $blog->title }}">
+                @if($blog->banner)
+                    <img src="{{ $blog->banner }}" width="100%" alt="{{ $blog->title }}">
+                @endif
             </div>
         </div>
         <div class="row flex-column-reverse flex-lg-row">

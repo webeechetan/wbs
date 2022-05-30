@@ -41,8 +41,6 @@ class NewsController extends Controller
             'description' => 'required',
             'meta_title' => 'required',
             'meta_description' => 'required',
-            'thumbnail' => 'required',
-            'banner' => 'required',
             'short_description' => 'required|min:6'
         ]);
         $blog = new Blog();
@@ -110,8 +108,6 @@ class NewsController extends Controller
             'description' => 'required',
             'meta_title' => 'required',
             'meta_description' => 'required',
-            'thumbnail' => 'required',
-            'banner' => 'required',
             'short_description' => 'required|min:6'
         ]);
 

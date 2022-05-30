@@ -44,8 +44,6 @@ class BlogController extends Controller
             'description' => 'required|min:25',
             'meta_title' => 'required',
             'meta_description' => 'required',
-            'thumbnail' => 'required',
-            'banner' => 'required',
             'short_description' => 'required|min:6'
         ]);
         
@@ -117,8 +115,6 @@ class BlogController extends Controller
             'description' => 'required|min:25',
             'meta_title' => 'required',
             'meta_description' => 'required',
-            'thumbnail' => 'required',
-            'banner' => 'required',
             'short_description' => 'required|min:6'
         ]);
 
