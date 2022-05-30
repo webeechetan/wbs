@@ -11,6 +11,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\NewsController;
 use App\Models\Blog;
 use App\Http\Controllers\MetaDetails;
+use App\Http\Controllers\HomePageSliderController;
 
 
 Route::get('/',[MetaDetails::class,'home'])->name('home');
@@ -146,6 +147,15 @@ Route::group(['prefix' => '/webeesite', 'middleware' => ['auth']], function () {
     Route::post('/meta/store', [MetaDetails::class, 'store'])->name('meta.store');
     Route::get('/meta/edit/{id}', [MetaDetails::class, 'edit'])->name('meta.edit');
     Route::post('/meta/update', [MetaDetails::class, 'update'])->name('meta.update');
+
+    // Home Page Sliders
+
+    Route::get('/slide', [HomePageSliderController::class, 'index'])->name('slide.list');
+    Route::post('/slide/store', [HomePageSliderController::class, 'store'])->name('slide.store');
+    Route::get('/slide/edit/{id}', [HomePageSliderController::class, 'edit'])->name('slide.edit');
+    Route::post('/slide/update', [HomePageSliderController::class, 'update'])->name('slide.update');
+    Route::get('/slide/delete/{id}', [HomePageSliderController::class, 'destroy'])->name('slide.delete');
+    Route::get('/slide/change_status/{id}/{status}', [HomePageSliderController::class, 'change_status'])->name('slide.change_status');
 });
 
 Route::group(['prefix' => '/webeesite', 'middleware' => ['guest']], function () {

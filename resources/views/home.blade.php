@@ -19,54 +19,17 @@
 <section class="slider">
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" data-background="{{ asset('frontend') }}/images/home-slider/home_hero_slide4.jpg">
-                <div class="slide-inner">
-                    <figure><img src="{{ asset('frontend') }}/images/home-slider/home_hero_slide4_logo.png" alt="Messe Frankfurt"></figure>
-                    <h2>We’re also great at B2B campaigns! From <span>Autoexpo India</span> to the techtextil show, we’ve marketed them all</h2>
-                    <div class="link">
-                        <a href="#">SEE CASE STUDY</a>
+            @foreach ($slides as $slide)
+                <div class="swiper-slide" data-background="{{ asset('images') }}/{{ $slide->slide }}">
+                    <div class="slide-inner">
+                        <figure><img src="{{ asset('images') }}/{{ $slide->logo }}" alt="Messe Frankfurt"></figure>
+                        <h2>{{ $slide->description }}</h2>
+                        <div class="link">
+                            <a href="{{ $slide->link }}">SEE CASE STUDY</a>
+                        </div>
                     </div>
-                    <!-- end link -->
                 </div>
-                <!-- end slide-inner -->
-            </div>
-            <!-- end swiper-slide -->
-            <div class="swiper-slide" data-background="{{ asset('frontend') }}/images/home-slider/home_hero_slide1.jpg">
-                <div class="slide-inner">
-                    <figure><img src="{{ asset('frontend') }}/images/home-slider/home_hero_slide1_logo.png" alt="UNDP Logo"></figure>
-                    <h2>We kicked off 2022 with an informative campaign on COVID-19 precautions for the <span>United Nations</span></h2>
-                    <div class="link">
-                        <a href="#">SEE CASE STUDY</a>
-                    </div>
-                    <!-- end link -->
-                </div>
-                <!-- end slide-inner -->
-            </div>
-            <!-- end swiper-slide -->
-            <div class="swiper-slide" data-background="{{ asset('frontend') }}/images/home-slider/home_hero_slide2.jpg">
-                <div class="slide-inner">
-                    <figure><img src="{{ asset('frontend') }}/images/home-slider/home_hero_slide2_logo.png" alt="Lotus Logo"></figure>
-                    <h2>Making <span>Lotus Herbals</span> White Glow, glow on the internet was one hell of a roller coaster ride</h2>
-                    <div class="link">
-                        <a href="#">SEE CASE STUDY</a>
-                    </div>
-                    <!-- end link -->
-                </div>
-                <!-- end slide-inner -->
-            </div>
-            <!-- end swiper-slide -->
-            <div class="swiper-slide" data-background="{{ asset('frontend') }}/images/home-slider/home_hero_slide3.jpg">
-                <div class="slide-inner">
-                    <figure><img src="{{ asset('frontend') }}/images/home-slider/home_hero_slide3_logo.png" alt="Mahindra Kabira Logo"></figure>
-                    <h2>A unique festival where our <span>targeted campaigns</span> brought people together for celebrating Kabir at the ghats of Varanasi</h2>
-                    <div class="link">
-                        <a href="#">SEE CASE STUDY</a>
-                    </div>
-                    <!-- end link -->
-                </div>
-                <!-- end slide-inner -->
-            </div>
-            <!-- end swiper-slide -->
+            @endforeach
         </div>
         <!-- end swiper-wrapper -->
         <div class="swiper-pagination"></div>
@@ -304,12 +267,13 @@
         </div>
         <div class="row">
             <div class="col-12 mb-5 wow fadeInUp">
-                <div class="content-box selected titles">
-                    <h3 class="news-title"><a href="{{ route('home') }}/{{ $latest_news->slug }}">{{ $latest_news->title }}</a></h3>
-                    <span>{{ $latest_news->created_at }}</span>
-                    <div class="custom-link mt-4"><a href="{{ route('home') }}/{{ $latest_news->slug }}">Read More</a> <span></span> <i></i></div>
-                </div>
-                <!-- end content-box -->
+                @if($latest_news)
+                    <div class="content-box selected titles">
+                        <h3 class="news-title"><a href="{{ route('home') }}/{{ $latest_news->slug }}">{{ $latest_news->title }}</a></h3>
+                        <span>{{ $latest_news->created_at }}</span>
+                        <div class="custom-link mt-4"><a href="{{ route('home') }}/{{ $latest_news->slug }}">Read More</a> <span></span> <i></i></div>
+                    </div>
+                @endif
             </div>
             <!-- end col-12 -->
             @foreach ($news as $news_row)

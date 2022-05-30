@@ -57,6 +57,13 @@
                     </a>
                 </li>
 
+                <li>
+                    <a href="{{ route('slide.list') }}">
+                        <i class='bx bx-slideshow' ></i>
+                        <span key="t-layouts">Slider</span>
+                    </a>
+                </li>
+
             </ul>
         </div>
         <!-- Sidebar -->

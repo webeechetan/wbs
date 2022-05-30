@@ -77,8 +77,8 @@
                                     @enderror
                                 </div>
                                 <div class="col-lg-5">
-                                    <div class="input-group open_gallery">
-                                        <div class="input-group-text"><i class="bx bx-image-add"></i></div>
+                                    <div class="input-group">
+                                        <div class="input-group-text open_gallery"><i class="bx bx-image-add"></i></div>
                                         <input type="text" class="form-control" placeholder="Enter Banner URL" name="banner">
                                     </div>
                                     @error('banner')

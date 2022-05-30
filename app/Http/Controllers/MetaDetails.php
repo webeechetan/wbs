@@ -10,6 +10,7 @@ use App\Models\MetaDetail as Meta;
 use App\Models\Services;
 use App\Models\OurWork;
 use App\Models\Category;
+use App\Models\HomePageSlider;
 
 class MetaDetails extends Controller
 {
@@ -76,8 +77,8 @@ class MetaDetails extends Controller
     public function home(){
         $news = Blog::where('type', '2')->take(3)->get();
         $latest_news = Blog::where('type', '2')->orderBy('id','DESC')->take(1)->first();
-        // dd($latest_news);
-        return view('home',['meta'=>$this->meta,'news'=>$news,'latest_news'=>$latest_news]);
+        $slides = HomePageSlider::where('status', '1')->orderBy('sequence','ASC')->get();
+        return view('home',['meta'=>$this->meta,'news'=>$news,'latest_news'=>$latest_news,'slides'=>$slides]);
     }
 
     public function about(){
