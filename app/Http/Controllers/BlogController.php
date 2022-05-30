@@ -79,7 +79,11 @@ class BlogController extends Controller
      */
     public function show($slug)
     {
+        
         $blog = Blog::where('slug',$slug)->first();
+        if(!$blog){
+            abort(404);
+        }
         $related_blog = Blog::where('type', $blog->type)->take(5)->get();
         $array = ['title'=>$blog->meta_title, 'meta_description'=>$blog->meta_description,'og_title'=>$blog->og_title,'og_image'=>$blog->og_image];
         $meta = (object) $array;

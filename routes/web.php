@@ -163,5 +163,5 @@ Route::group(['prefix' => '/webeesite', 'middleware' => ['guest']], function () 
     Route::post('/login', [AuthController::class, 'authenticate'])->name('authentication');
 });
 
-
+ 
 Route::get('/{title?}', [BlogController::class, 'show'])->name('post.view');

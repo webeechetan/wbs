@@ -33,7 +33,7 @@
                             <h3 class="post-title">{{ $blog->title }}</h3>
                             <small class="post-date">{{ $blog->created_at }}</small>
                             <!-- <p class="post-intro">{!! Str::limit($blog->title,50) !!}</p> -->
-                            <a href="{{ route('blog.view') }}/{{ $blog->title }}" class="post-link">READ MORE</a>
+                            <a href="{{ route('blog.view') }}/{{ $blog->slug }}" class="post-link">READ MORE</a>
                         </div>
                     </div>
                 </div>
