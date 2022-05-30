@@ -102,6 +102,13 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label col-lg-2">Dates</label>
+                                <div class="col-lg-5">
+                                    <label class="col-form-label col-lg-2">Publish Date</label>
+                                    <input type="date" class="form-control" name="publish_at" value="{{ $blog->publish_at }}">
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <input type="hidden" name="id" value="{{ $blog->id }}">

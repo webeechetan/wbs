@@ -58,6 +58,9 @@ class OurWorkController extends Controller
         $ourWork->slug = $request->slug;
         $ourWork->og_image = $request->og_image;
         $ourWork->og_title = $request->og_title;
+        if($request->publish_at){
+            $ourWork->publish_at = $request->publish_at;
+        }
         $ourWork->save();
         if($ourWork->id){
             return redirect()->route('our-work.list')->with('success','New Record Created');
@@ -117,6 +120,9 @@ class OurWorkController extends Controller
         $ourWork->slug = $request->slug;
         $ourWork->og_image = $request->og_image;
         $ourWork->og_title = $request->og_title;
+        if($request->publish_at){
+            $ourWork->publish_at = $request->publish_at;
+        }
         if($ourWork->save()){
             return redirect()->route('our-work.list')->with('success','Updated Successfully');
         }

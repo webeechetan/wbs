@@ -100,6 +100,16 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label col-lg-2">Dates</label>
+                                <div class="col-lg-5">
+                                    <label class="col-form-label col-lg-2">Publish At</label>
+                                    <input type="date" class="form-control" name="publish_at" >
+                                    @error('publish_at')
+                                        <span class="text-danger">{{$message}}</span>
+                                    @enderror
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="row justify-content-end">
