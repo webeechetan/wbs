@@ -36,11 +36,12 @@
                                 $description = json_decode($work->description);
                                 $heading = json_decode($work->heading);
                                 $i = 0;
+                                $check = false;
                             @endphp
                             <div class="custom_row mt-2">
                                 @foreach ($description as $item)
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label col-lg-2">Column {{ $i }}</label>
+                                        <label class="col-form-label col-lg-2">Column {{ $i + 1 }}</label>
                                         <div class="col-lg-10">
                                             <input type="text" placeholder="Heading" name="heading[]" class="form-control mb-2" value="{{ $heading[$i]}}">
                                             <textarea id="editor{{ $i }}" name="section[]" class="form-control ckEditor" >{{ $item }}</textarea>
@@ -62,12 +63,22 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label col-lg-2">Category</label>
                                 <div class="col-lg-5">
-                                    <select name="category_id" class="form-control">
+                                    <select name="category_id" class="form-control" multiple>
                                         @foreach($categories as $category)
-                                            @if($work->cat_id == $category->id)
-                                            <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
+                                            @php
+                                                $check = false;
+                                            @endphp
+                                            @foreach(explode(',', $work->cat_id) as $saved_cat)
+                                                @if($category->id == $saved_cat)
+                                                    @php
+                                                        $check = true;
+                                                    @endphp
+                                                @endif
+                                            @endforeach
+                                            @if($check)
+                                                <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
                                             @else
-                                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
                                             @endif
                                         @endforeach
                                     </select>

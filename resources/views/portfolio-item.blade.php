@@ -36,13 +36,13 @@
                     @endphp
                 @endforeach
             </div>
-            <div class="row sec-space pb-0">
+            {{-- <div class="row sec-space pb-0">
                 <div class="col-12">
                     <div class="design-reff">
                         <img src="{{ $work->images }}" alt="image">
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
 @endsection

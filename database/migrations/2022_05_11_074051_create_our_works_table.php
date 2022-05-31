@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('our_works', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->unsignedBigInteger('cat_id');
+            $table->string('cat_id');
             $table->longText('description')->nullable();
             $table->longText('heading')->nullable();
             $table->longText('meta_title')->nullable();
