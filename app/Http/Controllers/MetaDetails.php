@@ -75,7 +75,7 @@ class MetaDetails extends Controller
     }
 
     public function home(){
-        $news = Blog::where('type', '2')->take(3)->get();
+        $news = Blog::where('type', '2')->orderBy('id','DESC')->take(3)->get();
         $latest_news = Blog::where('type', '2')->orderBy('id','DESC')->take(1)->first();
         $slides = HomePageSlider::where('status', '1')->orderBy('sequence','ASC')->get();
         return view('home',['meta'=>$this->meta,'news'=>$news,'latest_news'=>$latest_news,'slides'=>$slides]);

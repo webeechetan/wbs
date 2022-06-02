@@ -15,11 +15,16 @@
                             <div class="form-group row mb-4">
                                 <label for="taskname" class="col-form-label col-lg-2">Slide</label>
                                 <div class="col-lg-10">
-                                    <input id="" name="slide"  type="file" class="form-control" accept="image/*">
+                                    <div class="input-group">
+                                        <div class="input-group-text open_gallery">
+                                            <i class="bx bx-image-add"></i>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Enter Slide URL" name="slide" value="{{ $slide->slide}}">
+                                    </div>
                                     @error('slide')
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror
-                                    <img src="{{ asset('images') }}/{{ $slide->slide }}" width='250'>
+                                    <img src="{{ $slide->slide }}" width='250'>
                                 </div>
                             </div>
                             <div class="form-group row mb-4">
@@ -35,9 +40,14 @@
                             <div class="form-group row mb-4">
                                 <label for="taskname" class="col-form-label col-lg-2">Logo</label>
                                 <div class="col-lg-10">
-                                    <input name="logo" type="file" accept="image/*" class="form-control">
+                                    <div class="input-group">
+                                        <div class="input-group-text open_gallery">
+                                            <i class="bx bx-image-add"></i>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Enter Logo URL" name="logo" value="{{ $slide->logo}}">
+                                    </div>
                                     @if($slide->logo)
-                                        <img src="{{ asset('images') }}/{{ $slide->logo }}" width='120'>
+                                        <img src="{{ $slide->logo }}" width='120'>
                                     @endif
                                 </div>
                             </div>
@@ -53,6 +63,13 @@
                                 <label for="taskname" class="col-form-label col-lg-2">Link</label>
                                 <div class="col-lg-10">
                                     <input type="text" name="link" class="form-control" value="{{ $slide->link }}">
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label for="taskname" class="col-form-label col-lg-2">Link Text</label>
+                                <div class="col-lg-10">
+                                    <input type="text" name="link_text" class="form-control" value="{{ $slide->link_text }}">
                                 </div>
                             </div>
                           

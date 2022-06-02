@@ -40,11 +40,11 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|min:6',
-            'description' => 'required|min:25',
+            'title' => 'required',
+            'description' => 'required',
             'meta_title' => 'required',
             'meta_description' => 'required',
-            'short_description' => 'required|min:6'
+            'short_description' => 'required'
         ]);
         
         $blog = new Blog();
@@ -111,11 +111,11 @@ class BlogController extends Controller
     {
 
         $request->validate([
-            'title' => 'required|min:6',
-            'description' => 'required|min:25',
+            'title' => 'required',
+            'description' => 'required',
             'meta_title' => 'required',
             'meta_description' => 'required',
-            'short_description' => 'required|min:6'
+            'short_description' => 'required'
         ]);
 
         $blog = Blog::find($request->id);

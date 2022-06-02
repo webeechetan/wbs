@@ -27,7 +27,7 @@
                 @foreach($description as $item)
                     <div class="col-sm-6 col-lg-4 mb-4 mb-sm-5">
                         <div class="titles">
-                            <h6>{{ $heading[$i] }}</h6>
+                            <h5>{{ $heading[$i] }}</h5>
                             {!! $item !!}
                         </div>
                     </div>
@@ -36,13 +36,18 @@
                     @endphp
                 @endforeach
             </div>
-            {{-- <div class="row sec-space pb-0">
+            <div class="row sec-space pb-0">
                 <div class="col-12">
                     <div class="design-reff">
-                        <img src="{{ $work->images }}" alt="image">
+                        @php
+                            $gallery_images = explode(",", $work->gallery_images);
+                        @endphp
+                        @foreach ($gallery_images as $image)
+                            <img src="{{ asset('images') }}/{{ $image }}" alt="image">
+                        @endforeach
                     </div>
                 </div>
-            </div> --}}
+            </div>
         </div>
     </section>
 @endsection
