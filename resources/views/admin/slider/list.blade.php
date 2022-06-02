@@ -17,7 +17,7 @@
                 <div class="card text-center">
                     <div class="card-body">
                         <div class="mx-auto mb-4">
-                            <img src="{{ asset('images') }}/{{ $slide->slide }}" class="a me-2" height="120" width="200">
+                            <img src="{{ $slide->slide }}" class="a me-2" height="120" width="200">
                         </div>
                         <h2>{{ $slide->sequence }}</h2>
                     </div>
@@ -54,17 +54,24 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div>
-                        <label for="name">Slide</label>
-                        <input type="file" class="form-control"  required  name="slide" accept="image/*">
+                    <label for="name">Slide</label>
+                    <div class="input-group">
+                        <div class="input-group-text open_gallery">
+                            <i class="bx bx-image-add"></i>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Enter Slide URL" name="slide">
                     </div>
                     <div>
                         <label for="name">Sequence</label>
                         <input type="text" class="form-control" required name="sequence" placeholder="Sequence">
                     </div>
-                    <div>
-                        <label for="name">Logo</label>
-                        <input type="file" class="form-control"  name="logo" accept="image/*">
+
+                    <label for="name">Logo</label>
+                    <div class="input-group">
+                        <div class="input-group-text open_gallery">
+                            <i class="bx bx-image-add"></i>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Enter Logo URL" name="logo">
                     </div>
                     <div>
                         <label for="name">Description</label>
@@ -73,6 +80,10 @@
                     <div>
                         <label for="name">Link</label>
                         <input type="text" class="form-control"  name="link" placeholder="Link">
+                    </div>
+                    <div>
+                        <label for="name">Link Text</label>
+                        <input type="text" class="form-control"  name="link_text" placeholder="Link Text">
                     </div>
                 </div>
                 <div class="modal-footer">

@@ -29,7 +29,7 @@
                                 @endif
                                 <div class="post-content">
                                     <h3 class="post-title mb-2">{{ $blog->title }}</h3>
-                                    <small class="post-date mb-3">21 April, 2022</small>
+                                    <small class="post-date mb-3">{{ $blog->created_at }}</small>
                                     <p class="post-intro">{{ Str::limit($blog->short_description,25) }}</p>
                                     <a href="{{ route('post.view') }}/{{ $blog->slug }}" class="post-link">READ MORE</a>
                                 </div>

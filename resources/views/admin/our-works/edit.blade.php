@@ -63,7 +63,7 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label col-lg-2">Category</label>
                                 <div class="col-lg-5">
-                                    <select name="category_id" class="form-control" multiple>
+                                    <select name="category_id[]" class="form-control" multiple>
                                         @foreach($categories as $category)
                                             @php
                                                 $check = false;
@@ -131,6 +131,24 @@
                                     @error('publish_at')
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror
+                                </div>
+                                <div class="col-lg-5">
+                                    <label class="col-form-label col-lg-2">Images</label>
+                                    <input type="file" class="form-control" name="gallery_images[]" accept="images/*" multiple>
+                                    @error('publish_at')
+                                        <span class="text-danger">{{$message}}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label col-lg-2">Images</label>
+                                <div class="col-lg-10">
+                                    @foreach(explode(",",$work->gallery_images) as $image)
+                                        <span>
+                                        <img src="{{ asset('images') }}/{{ $image }}" class="avatar-lg">
+                                        <button class="btn btn-danger btn-sm"><i class="mdi mdi-delete d-block font-size-16 remove_image" data-image_name = '{{ $image }}' data-id = '{{ $work->id }}'></i></button>
+                                        </span>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -219,7 +237,8 @@
     $(".remove_image").click(function(){
         let image = $(this).data('image_name');
         let id = $(this).data('id');
-        $(this).parent().remove();
+        $(this).parent().parent().remove();
+        console.log(image)
         $.post("{{ route('our-work.remove_image') }}",{image,id},function( data,status){
             if(data.status == 'success'){
                 toastr["info"](data.msg);

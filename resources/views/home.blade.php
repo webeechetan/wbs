@@ -20,12 +20,12 @@
     <div class="swiper-container">
         <div class="swiper-wrapper">
             @foreach ($slides as $slide)
-                <div class="swiper-slide" data-background="{{ asset('images') }}/{{ $slide->slide }}">
+                <div class="swiper-slide" data-background="{{ $slide->slide }}">
                     <div class="slide-inner">
-                        <figure><img src="{{ asset('images') }}/{{ $slide->logo }}" alt="Messe Frankfurt"></figure>
+                        <figure><img src="{{ $slide->logo }}" alt="Messe Frankfurt"></figure>
                         <h2>{{ $slide->description }}</h2>
                         <div class="link">
-                            <a href="{{ $slide->link }}">SEE CASE STUDY</a>
+                            <a href="{{ $slide->link }}">{{ $slide->link_text }}</a>
                         </div>
                     </div>
                 </div>

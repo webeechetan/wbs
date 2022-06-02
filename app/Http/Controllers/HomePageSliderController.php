@@ -38,22 +38,18 @@ class HomePageSliderController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'slide' => 'mimes:jpeg,jpg,png,gif|required|max:10000',
+            'slide' => 'required',
             'sequence' => 'required|integer'
         ]);
 
-        $slide = uniqid().rand(1,50).'.'.$request->file('slide')->extension();
-        $request->file('slide')->move(public_path('images'),$slide);
+        
         $slider = new HomePageSlider();
-        $slider->slide = $slide;
+        $slider->slide = $request->slide;
         $slider->sequence = $request->sequence;
         $slider->status = 1;
-        if($request->hasFile('logo')){
-            $logo = uniqid().rand(1,50).'.'.$request->file('logo')->extension();
-            $request->file('logo')->move(public_path('images'),$logo);
-            $slider->logo = $logo;
-        }
+        $slider->logo = $request->logo;
         $slider->link = $request->link;
+        $slider->link_text = $request->link_text;
         $slider->description = $request->description;
         $slider->save();
         if($slider->id){
@@ -95,22 +91,15 @@ class HomePageSliderController extends Controller
     public function update(Request $request)
     {
         $request->validate([
-            'slide' => 'mimes:jpeg,jpg,png,gif|max:10000',
+            'slide' => 'required',
             'sequence' => 'required|integer'
         ]);
         $slide = HomePageSlider::find($request->id);
-        if($request->hasFile('slide')){
-            $image = uniqid().rand(1,50).'.'.$request->file('slide')->extension();
-            $request->file('slide')->move(public_path('images'),$image);
-            $slide->slide = $image;
-        }
+        $slide->slide = $request->slide;
         $slide->sequence  = $request->sequence;
-        if($request->hasFile('logo')){
-            $logo = uniqid().rand(1,50).'.'.$request->file('logo')->extension();
-            $request->file('logo')->move(public_path('images'),$logo);
-            $slide->logo = $logo;
-        }
+        $slide->logo = $request->logo;
         $slide->link = $request->link;
+        $slide->link_text = $request->link_text;
         $slide->description = $request->description;
         if($slide->save()){
             return redirect()->route('slide.list')->with('success','Slide Updated');
