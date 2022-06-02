@@ -114,6 +114,10 @@
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror
                                 </div>
+                                <div class="col-lg-5">
+                                    <label class="col-form-label col-lg-2">Images</label>
+                                    <input type="file" class="form-control" name="gallery_images[]" accept="images/*" multiple>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -41,7 +41,7 @@ class NewsController extends Controller
             'description' => 'required',
             'meta_title' => 'required',
             'meta_description' => 'required',
-            'short_description' => 'required|min:6'
+            'short_description' => 'required'
         ]);
         $blog = new Blog();
         $blog->title = $request->title;

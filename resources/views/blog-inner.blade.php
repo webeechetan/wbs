@@ -21,26 +21,28 @@
             </div>
         </div>
         <!-- end row -->
-        <div class="row">
-            <div class="col-12">
-                <div class="titles">
-                    <h3>Related Posts</h3>
-                </div>
-            </div>
-            @foreach($related_blog as $blog)
-                <div class="col-md-4">
-                    <div class="post wow fadeIn ">
-                        <figure class="post-image"><img src="{{ $blog->thumbnail }}" alt="Image"></figure>
-                        <div class="post-content">
-                            <h3 class="post-title">{{ $blog->title }}</h3>
-                            <small class="post-date">{{ $blog->created_at }}</small>
-                            <!-- <p class="post-intro">{!! Str::limit($blog->title,50) !!}</p> -->
-                            <a href="{{ route('blog.view') }}/{{ $blog->slug }}" class="post-link">READ MORE</a>
-                        </div>
+        @if($blog->type == '1')
+            <div class="row">
+                <div class="col-12">
+                    <div class="titles">
+                        <h3>Related Posts</h3>
                     </div>
                 </div>
-            @endforeach
-        </div>
+                @foreach($related_blog as $blog)
+                    <div class="col-md-4">
+                        <div class="post wow fadeIn ">
+                            <figure class="post-image"><img src="{{ $blog->thumbnail }}" alt="Image"></figure>
+                            <div class="post-content">
+                                <h3 class="post-title">{{ $blog->title }}</h3>
+                                <small class="post-date">{{ $blog->created_at }}</small>
+                                <!-- <p class="post-intro">{!! Str::limit($blog->title,50) !!}</p> -->
+                                <a href="{{ route('blog.view') }}/{{ $blog->slug }}" class="post-link">READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        @endif
     </div>
     <!-- end container -->
 </section>

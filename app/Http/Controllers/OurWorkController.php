@@ -37,7 +37,7 @@ class OurWorkController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {      
+    {     
         $request->validate([
             'name' => 'required',
             'image' => 'required',
@@ -45,8 +45,16 @@ class OurWorkController extends Controller
             'meta_description' => 'required',
             'category_id' => 'required',
         ]);
-        
-
+        $gallery_images = [];
+        if($request->hasfile('gallery_images'))
+         {
+            foreach($request->file('gallery_images') as $file)
+            {
+                $name = time().rand(1,100).'.'.$file->extension();
+                $file->move(public_path('images'), $name);  
+                $gallery_images[] = $name;  
+            }
+         }
         $ourWork = new OurWork();
         $ourWork->name = $request->name;
         $ourWork->description = json_encode($request->section);
@@ -61,6 +69,7 @@ class OurWorkController extends Controller
         if($request->publish_at){
             $ourWork->publish_at = $request->publish_at;
         }
+        $ourWork->gallery_images = implode(',',$gallery_images);
         $ourWork->save();
         if($ourWork->id){
             return redirect()->route('our-work.list')->with('success','New Record Created');
@@ -109,7 +118,18 @@ class OurWorkController extends Controller
             'category_id' => 'required',
             'image' => 'required'
         ]);
+        $gallery_images = [];
+        if($request->hasfile('gallery_images'))
+         {
+            foreach($request->file('gallery_images') as $file)
+            {
+                $name = time().rand(1,100).'.'.$file->extension();
+                $file->move(public_path('images'), $name);  
+                $gallery_images[] = $name;  
+            }
+         }
         $ourWork =  OurWork::find($request->id);
+        $old_gallery_images = explode(",",$ourWork->gallery_images);
         $ourWork->images = $request->image;
         $ourWork->name = $request->name;
         $ourWork->description = json_encode($request->section);
@@ -123,6 +143,8 @@ class OurWorkController extends Controller
         if($request->publish_at){
             $ourWork->publish_at = $request->publish_at;
         }
+        $new_gallery_images = array_merge($old_gallery_images,$gallery_images);
+        $ourWork->gallery_images = implode(',',$new_gallery_images);
         if($ourWork->save()){
             return redirect()->route('our-work.list')->with('success','Updated Successfully');
         }
@@ -162,14 +184,14 @@ class OurWorkController extends Controller
             'image' => 'required'
         ]);
         $ourWork = OurWork::find($request->id);
-        $images = explode(',', $ourWork->images);
+        $images = explode(',', $ourWork->gallery_images);
         $new_images = [];
         foreach ($images as $image){
             if($image!=$request->image){
                 $new_images[] = $image;
             }
         }
-        $ourWork->images = $new_images;
+        $ourWork->gallery_images = implode(",",$new_images);
         if($ourWork->save()){
             return response()->json(['msg'=>'Deleted Successfully','status'=>'success']);
         }
