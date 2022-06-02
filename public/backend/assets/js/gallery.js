@@ -1,6 +1,6 @@
 $(document).ready(function() {
     let rand_number = 0;
-    let url = "/gallery/ajax";
+    let url = "https://webeetest.com/wbs/public/gallery/ajax";
     let list = "<div class='row'>";
     let image_url = $("#image_url").val();
     $.post(url, {ajax:'true'}, function(data,status) {
@@ -25,6 +25,7 @@ $(document).ready(function() {
         }
         list += "</div>";
         $(".images_list").html(list);
+        console.log(data)
     });
 })
 

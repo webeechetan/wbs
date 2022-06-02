@@ -63,7 +63,7 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label col-lg-2">Category</label>
                                 <div class="col-lg-5">
-                                    <select name="category_id" class="form-control" multiple>
+                                    <select name="category_id[]" class="form-control" multiple>
                                         @foreach($categories as $category)
                                             @php
                                                 $check = false;
