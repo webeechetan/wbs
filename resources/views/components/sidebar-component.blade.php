@@ -9,7 +9,7 @@
                 <li class="menu-title" key="t-menu">Menu</li>
 
                 <li>
-                    <a href="javascript: void(0);">
+                    <a href="javascript: void(0);" class="mm-active">
                     <i class='bx bx-home-circle'></i>
                         <span key="t-dashboards">Dashboards</span>
                     </a>
