@@ -3,7 +3,7 @@
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="index.html" class="logo logo-dark">
+                <a href="javascript:;" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="{{ asset('frontend/images/logo-tm.png')}}" alt="" height="22">
                     </span>
@@ -12,7 +12,7 @@
                     </span>
                 </a>
 
-                <a href="index.html" class="logo logo-light">
+                <a href="javascript:;" class="logo logo-light">
                     <span class="logo-sm">
                         <img src="{{ asset('frontend/images/logo-white.png') }}" alt="Webeesocial Logo" width="125">
                     </span>
@@ -28,9 +28,9 @@
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="{{ asset('backend') }}/assets/images/users/avatar-1.jpg"
+                    <img class="rounded-circle header-profile-user" src="{{ asset('backend') }}/assets/images/users/profile-user.png"
                         alt="Header Avatar">
-                    <span class="d-none d-xl-inline-block ms-1" key="t-henry">Henry</span>
+                    <!-- <span class="d-none d-xl-inline-block ms-1" key="t-henry">Henry</span> -->
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">

@@ -5,18 +5,18 @@
 <link href="{{ asset('backend') }}/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />  
 @endsection
 @section('content')
+<div class="row mb-4 align-items-center">
+    <div class="col-md-6">
+        <h4 class="card-title">Blogs</h4>
+    </div>
+    <div class="col-md-6 text-md-end">
+        <a href="{{ route('blog.create') }}"><button type="button" class="btn btn-outline-primary waves-effect waves-light" ><i class="bx bx-plus-medical"></i> Add New</button></a>
+    </div>
+</div>
 <div class="row">
     <div class="col-12">
        <div class="card">
            <div class="card-body">
-               <div class="row mb-4">
-                   <div class="col-md-6">
-                        <h4 class="card-title">Blogs</h4>
-                   </div>
-                   <div class="col-md-6 text-md-end">
-                    <a href="{{ route('blog.create') }}"><button type="button" class="btn btn-outline-primary waves-effect waves-light" ><i class="bx bx-plus-medical"></i> Add New</button></a>
-                   </div>
-               </div>
              <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                
                 <div class="row">
@@ -46,9 +46,9 @@
                                         <img src="{{ asset('images')}}/{{$image}}" height="50" width="50" >
                                     @endforeach
                                 </td> --}}
-                                <td>
-                                    <a href="{{ route('blog.edit',$blog->id) }}"><button type="button" class="btn btn-outline-info waves-effect waves-light " ><i class="mdi mdi-pencil d-block font-size-16"></i></button></a>
-                                    <a href="{{ route('blog.delete',$blog->id) }}"><button type="button" class="btn btn-outline-danger waves-effect waves-light"><i class="mdi mdi-delete d-block font-size-16"></i></button></a>
+                                <td class="btn-actions">
+                                    <a href="{{ route('blog.edit',$blog->id) }}"><button type="button" class="btn btn-outline-info waves-effect waves-light " ><i class="mdi mdi-pencil d-block"></i></button></a>
+                                    <a href="{{ route('blog.delete',$blog->id) }}"><button type="button" class="btn btn-outline-danger waves-effect waves-light"><i class="mdi mdi-delete d-block"></i></button></a>
                                 </td>
                             </tr>
                             @endforeach

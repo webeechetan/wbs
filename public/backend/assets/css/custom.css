@@ -1,4 +1,51 @@
-
+:root {
+    --color-dark : #282828;
+    --primary: #51B174;
+    --primary-dark: #268549;
+    --secondry: #F7D600;
+}
+.btn {
+    border-radius: 0;
+    padding: 8px 20px;
+}
+.btn-outline-info {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+.btn-outline-info:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+.btn-actions .btn {
+    padding: 0;
+    width: 26px;
+    height: 26px;
+}
+.btn-actions .btn i {
+    font-size: 14px;
+}
+.table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before {
+    background-color: var(--primary);
+}
+body table.dataTable>tbody>tr.child span.dtr-title {
+    display: flex;
+}
+/* ----- Sidebar ----- */
+body[data-sidebar=dark] .vertical-menu, body[data-sidebar=dark] .navbar-brand-box {
+    background: var(--primary-dark);
+}
+body[data-sidebar=dark] #sidebar-menu ul li a, 
+body[data-sidebar=dark] #sidebar-menu ul li a i, 
+body[data-sidebar=dark] .menu-title {
+    color: #fff;
+}
+body[data-sidebar=dark] #sidebar-menu ul li a:hover, body[data-sidebar=dark] a.mm-active {
+    color: var(--primary) !important;
+    background: #fff;
+}
+body[data-sidebar=dark] #sidebar-menu ul li a:hover i, body[data-sidebar=dark] a.mm-active i {
+    color: var(--primary) !important;
+}
 /* ----- Card ----- */
 .card-title {
     font-size: 22px;

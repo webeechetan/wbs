@@ -2459,10 +2459,13 @@ only screen and (max-device-width: 767px) {
 	}
 	&-meta {
 		span {
-			color: $dark-grey;
-			font-size: 12px;
-			background-color: $light-grey;
-			padding: 2px 5px;
+			color: $primary;
+			font-size: 10px;
+			border: 1px solid $light-grey;
+			padding: 1px 5px;
+			&:not(:last-child) {
+				margin-right: 5px;
+			}
 		}
 	}
 }

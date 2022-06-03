@@ -3,11 +3,16 @@
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 @endsection
 @section('content')
+<div class="row mb-4 align-items-center">
+    <div class="col-md-6">
+        <h4 class="card-title">Edit News</h4>
+    </div>
+</div>
 <div class="row">
     <div class="col-lg-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title mb-4">News</h4>
+                <h4 class="card-title mb-4"></h4>
                 <form class="outer-repeater" method="post" action="{{ route('news.update') }}" enctype="multipart/form-data">
                     @csrf
                     <div data-repeater-list="outer-group" class="outer">
@@ -26,15 +31,6 @@
                                 <div class="col-lg-10">
                                     <input id="slug" name="slug" required type="text" class="form-control" placeholder="Enter Slug Here..."  value="{{ $news->slug }}">
                                     @error('slug')
-                                        <span class="text-danger">{{$message}}</span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label col-lg-2">Description</label>
-                                <div class="col-lg-10">
-                                    <textarea id="description" name="description" class="form-control"  >{{$news->description }}</textarea>
-                                    @error('description')
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror
                                 </div>
@@ -60,8 +56,8 @@
                                     @enderror
                                 </div>
                                 <div class="col-lg-5">
-                                    <label class="col-form-label col-lg-2">Url</label>
-                                    <input type="text" class="form-control" name="url" placeholder="Enter Read More Url" value="{{ $news->url}}">
+                                    <label class="col-form-label col-lg-2">Read More Link</label>
+                                    <input type="text" class="form-control" name="url" placeholder="Enter Read More Link" value="{{ $news->url}}">
                                     @error('url')
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror

@@ -5,14 +5,21 @@
 <link href="{{ asset('backend') }}/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />  
 @endsection
 @section('content')
+<div class="row mb-4 align-items-center">
+    <div class="col-md-6">
+        <h4 class="card-title">Categories</h4>
+    </div>
+    <div class="col-md-6 text-md-end">
+        <a href="javascript: void(0);">
+            <button type="button" class="btn btn-outline-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bx bx-plus-medical"></i> Add New</button>
+        </a>
+    </div>
+</div>
 <div class="row">
     <div class="col-12">
        <div class="card">
            <div class="card-body">
-              <button type="button" class="btn btn-outline-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#myModal">Add New</button>
-             <h4 class="card-title">Categories</h4>
              <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-               
                 <div class="row">
                    <div class="col-sm-12">
                       <table id="datatable" class="table table-bordered dt-responsive nowrap w-100 dataTable no-footer dtr-inline" role="grid" aria-describedby="datatable_info" style="width: 1182px;">
@@ -28,9 +35,9 @@
                             <tr>
                                 <td>{{ $category->id }}</td>
                                 <td>{{ $category->name }}</td>
-                                <td>
-                                    <button type="button" class="btn btn-outline-info waves-effect waves-light edit_category" data-category='{{ json_encode($category) }}' data-bs-toggle="modal" data-bs-target="#editCategoryModal"><i class="mdi mdi-pencil d-block font-size-16"></i></button>
-                                    <a href="{{ route('category.delete',$category->id) }}"><button type="button" class="btn btn-outline-danger waves-effect waves-light"><i class="mdi mdi-delete d-block font-size-16"></i></button></a>
+                                <td class="btn-actions">
+                                    <button type="button" class="btn btn-outline-info waves-effect waves-light edit_category" data-category='{{ json_encode($category) }}' data-bs-toggle="modal" data-bs-target="#editCategoryModal"><i class="mdi mdi-pencil d-block"></i></button>
+                                    <a href="{{ route('category.delete',$category->id) }}"><button type="button" class="btn btn-outline-danger waves-effect waves-light"><i class="mdi mdi-delete d-block "></i></button></a>
                                 </td>
                             </tr>
                             @endforeach
