@@ -19,10 +19,10 @@
 <section class="blog sec-space pt-0">
     <div class="container">
         <div class="row flex-column-reverse flex-lg-row">
-            <div class="col-lg-12">
+            <div class="col-12">
                 <div class="row">
                     @foreach($blogs as $blog)
-                        <div class="col-lg-4">
+                        <div class="col-md-6 col-lg-4">
                             <div class="post wow fadeIn">
                                 @if($blog->thumbnail)
                                     <figure class="post-image"><img src="{{ $blog->thumbnail }}" alt="Image"></figure>

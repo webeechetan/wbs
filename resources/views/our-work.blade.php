@@ -18,7 +18,7 @@
 <!-- end Our Work headline -->
 <section class="sec-space pt-0">
    <div class="container">
-      <div class="gallery-btns">
+      <div class="portfolio-btns">
          <button class="filter-button active" data-filter="all">All</button>
          @foreach ($categories as $category)
             <button class="filter-button" data-filter="{{$category->name}}">{{$category->name}}</button>
@@ -27,15 +27,15 @@
       <div class="row">
          @foreach ($ourWork as $work)
          
-         <div class="gallery-product col-sm-4 col-lg-3 filter @foreach($work->category() as $category){{ $category->name }} @endforeach">
+         <div class="portfolio-product col-sm-4 col-lg-3 filter @foreach($work->category() as $category){{ $category->name }} @endforeach">
             <a href="{{ route('view.work',$work->slug) }}"><img src="{{ $work->images }}"  class="img-fluid"></a>
-            <div class="content ">
+            <div class="content">
                <h5><a href="{{ route('view.work',$work->slug) }}">{{$work->name}}</a></h5>
-               <p>
+               <div class="portfolio-meta">
                   @foreach($work->category() as $category)
-                     {{ $category->name }},
+                     <span>{{ $category->name }}</span>
                   @endforeach
-               </p>
+               </div>
             </div>
          </div>
          @endforeach

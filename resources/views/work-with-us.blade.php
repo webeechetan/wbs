@@ -64,7 +64,7 @@
                     <h6>For enquiries and applications</h6>
                     <p>please send your resume along with a detailed cover letter to our HR team at</p>
                     <p class="align-items-center">
-                        <img src="{{ asset('frontend') }}/images/icon-mail.svg" width="24" alt="Email"> 
+                        <img src="{{ asset('frontend') }}/images/icon-mail.svg" width="14" alt="Email"> 
                         <a href="mailto:roshni.rastogi@webeesocial.com" class="ml-2"><b>hr@webeesocial.com</b></a>
                     </p>
                 </div>
@@ -73,7 +73,7 @@
                 <div class="titles">
                     <h6>For WBS CA applications, please send a mail to</h6>
                     <p class="align-items-center">
-                        <img src="{{ asset('frontend') }}/images/icon-mail.svg" width="24" alt="Email"> 
+                        <img src="{{ asset('frontend') }}/images/icon-mail.svg" width="14" alt="Email"> 
                         <a href="mailto:saurav.k@webeesocial.com" class="ml-2"><b>saurav.k@webeesocial.com</b></a>
                     </p>
                 </div>
