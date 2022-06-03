@@ -2458,8 +2458,12 @@ only screen and (max-device-width: 767px) {
 		}
 	}
 	&-meta {
-		color: $dark-grey;
-		font-size: 12px;
+		span {
+			color: $dark-grey;
+			font-size: 12px;
+			background-color: $light-grey;
+			padding: 2px 5px;
+		}
 	}
 }
 
