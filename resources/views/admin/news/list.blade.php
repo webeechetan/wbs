@@ -115,7 +115,7 @@
 @if(session('success'))
     <script>
         let msg = '{{ session()->get("success") }}';
-        toastr["info"](msg);
+        toastr["success"](msg);
     </script>
 @endif
 <script>
