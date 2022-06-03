@@ -275,13 +275,19 @@ ul.social-icons li:not(:last-child) {
 	background: transparent;
     border: none;
     border-radius: 0;
-    padding: 0 0 15px;
+    padding: 0;
+	margin: 0 0 15px;
 	.breadcrumb-item+.breadcrumb-item:before {
 		color: $grey;
+		font-size: 10px;
 	}
 	li a {
 		color: $dark-grey;
 		font-size: 12px;
+		&:hover {
+			text-decoration: none;
+			color: $primary;
+		}
 	}
 }
 /* CUSTOM ELEMENTS */

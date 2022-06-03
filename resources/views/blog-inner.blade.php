@@ -5,14 +5,14 @@
 @section('og_image',$meta->og_image)
 @section('content')
 <section class="blog blog-single sec-space pt-0">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12 mb-4 mb-md-5">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                         <li class="breadcrumb-item"><a href="{{ route('blog') }}">Blog</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('blog.view',$blog->slug) }}">{{ $blog->title }}</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:;">{{ $blog->title }}</a></li>
                     </ol>
                 </nav>
                 @if($blog->banner)
@@ -28,6 +28,8 @@
             </div>
         </div>
         <!-- end row -->
+    </div>
+    <div class="container">
         @if($blog->type == '1')
             <div class="row">
                 <div class="col-12">
