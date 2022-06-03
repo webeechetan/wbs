@@ -1424,7 +1424,6 @@
 		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
-		margin-bottom: 150px;
 
 		.post-image {
 			width: 100%;
@@ -2438,7 +2437,7 @@ only screen and (max-device-width: 767px) {
 		}
 	}
 }
-.gallery {
+.portfolio {
 	&-btns {
 		margin-bottom: 30px;
 		button:not(:last-child) {
@@ -2457,6 +2456,10 @@ only screen and (max-device-width: 767px) {
 				color: $primary;
 			}
 		}
+	}
+	&-meta {
+		color: $dark-grey;
+		font-size: 12px;
 	}
 }
 
