@@ -5,7 +5,7 @@
 @section('og_image',$meta->og_image)
 @section('content')
 <section class="blog blog-single sec-space pt-0">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-12 mb-4 mb-md-5">
                 <nav aria-label="breadcrumb">
