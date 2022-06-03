@@ -38,11 +38,9 @@ class NewsController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'description' => 'required',
         ]);
         $blog = new Blog();
         $blog->title = $request->title;
-        $blog->description = $request->description;
         $blog->short_description = $request->short_description;
         $blog->slug = $request->slug;
         $blog->url = $request->url;
@@ -97,12 +95,10 @@ class NewsController extends Controller
 
         $request->validate([
             'title' => 'required',
-            'description' => 'required'
         ]);
 
         $blog = Blog::find($request->id);
         $blog->title = $request->title;
-        $blog->description = $request->description;
         $blog->short_description = $request->short_description;
         $blog->slug = $request->slug;
         $blog->url = $request->url;
