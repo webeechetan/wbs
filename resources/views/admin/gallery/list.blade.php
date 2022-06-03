@@ -13,7 +13,7 @@
 <div class="row">
     @foreach($gallery as $file)
         <div class="col-xl-3 col-sm-3">
-            <div class="card text-center">
+            <div class="card text-center bg-light">
                 <div class="card-body">
                     <div class="mx-auto mb-4">
                         <img src="{{ asset('images') }}/{{ $file->image }}" class="a me-2" height="120" width="200">
@@ -49,7 +49,7 @@
                         <label for="name">Image </label>
                         <input type="file" class="form-control" name="image" accept="images/*">
                     </div>
-                    <div>
+                    <div class="mt-3">
                         <label for="name">Image Name</label>
                         <input type="text" class="form-control" name="name" placeholder="Name">
                     </div>
