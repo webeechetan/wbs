@@ -35,15 +35,6 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label col-lg-2">Description</label>
-                                <div class="col-lg-10">
-                                    <textarea id="description" name="description" class="form-control"  >{{$news->description }}</textarea>
-                                    @error('description')
-                                        <span class="text-danger">{{$message}}</span>
-                                    @enderror
-                                </div>
-                            </div>
 
                             <div class="form-group row mb-4">
                                 <label class="col-form-label col-lg-2">Short Description</label>
@@ -65,8 +56,8 @@
                                     @enderror
                                 </div>
                                 <div class="col-lg-5">
-                                    <label class="col-form-label col-lg-2">Url</label>
-                                    <input type="text" class="form-control" name="url" placeholder="Enter Read More Url" value="{{ $news->url}}">
+                                    <label class="col-form-label col-lg-2">Read More Link</label>
+                                    <input type="text" class="form-control" name="url" placeholder="Enter Read More Link" value="{{ $news->url}}">
                                     @error('url')
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror
