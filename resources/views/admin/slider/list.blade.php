@@ -59,7 +59,7 @@
                         </div>
                         <input type="text" class="form-control" placeholder="Enter Slide URL" name="slide">
                     </div>
-                    <div>
+                    <div class="my-3">
                         <label for="name">Sequence</label>
                         <input type="text" class="form-control" required name="sequence" placeholder="Sequence">
                     </div>
@@ -71,15 +71,15 @@
                         </div>
                         <input type="text" class="form-control" placeholder="Enter Logo URL" name="logo">
                     </div>
-                    <div>
+                    <div class="mt-3">
                         <label for="name">Description</label>
                         <textarea class="form-control" name="description"></textarea>
                     </div>
-                    <div>
+                    <div class="mt-3">
                         <label for="name">Link</label>
                         <input type="text" class="form-control"  name="link" placeholder="Link">
                     </div>
-                    <div>
+                    <div class="mt-3">
                         <label for="name">Link Text</label>
                         <input type="text" class="form-control"  name="link_text" placeholder="Link Text">
                     </div>
