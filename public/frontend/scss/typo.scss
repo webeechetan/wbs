@@ -273,10 +273,12 @@ ul.social-icons li:not(:last-child) {
 /* Breadcrumb */
 .breadcrumb {
 	background: transparent;
-    border-top: 1px solid $grey;
+    border: none;
     border-radius: 0;
-    border-bottom: 1px solid $grey;
-    padding: 15px 0;
+    padding: 0 0 15px;
+	.breadcrumb-item+.breadcrumb-item:before {
+		color: $grey;
+	}
 	li a {
 		color: $dark-grey;
 		font-size: 12px;
