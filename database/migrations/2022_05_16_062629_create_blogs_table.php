@@ -20,8 +20,8 @@ return new class extends Migration
             $table->longText('short_description');
             $table->string('meta_title');
             $table->longText('meta_description');
-            $table->string('thumbnail');
-            $table->string('banner');
+            $table->string('thumbnail')->nullable();
+            $table->string('banner')->nullable();
             $table->string('og_title')->nullable();
             $table->string('og_image')->nullable();
             $table->longText('slug');

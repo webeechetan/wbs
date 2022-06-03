@@ -124,7 +124,7 @@
     <header class="header">
         <nav class="navbar">
             <div class="inner">
-                <div class="logo"> <a href="index.php"><img src="{{ asset('frontend') }}/images/logo-tm.png" alt="Webeesocial Logo"></a> </div>
+                <div class="logo"> <a href="{{ route('home') }}"><img src="{{ asset('frontend') }}/images/logo-tm.png" alt="Webeesocial Logo"></a> </div>
                 <!-- end phone -->
                 <div class="main-menu">
                     <ul>
@@ -213,10 +213,10 @@
                     <div class="row align-items-center">
                         <div class="col-lg-8 mb-4 mb-lg-0">
                             <ul class="mb-2">
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">Our Work</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Get in touch</a></li>
+                                <li><a href="{{ route('services') }}">Our Services</a></li>
+                                <li><a href="{{ route('our-work') }}">Our Work</a></li>
+                                <li><a href="{{ route('blog') }}">Blog</a></li>
+                                <li><a href="{{ route('get-in-touch') }}">Get in touch</a></li>
                                 <li><a href="{{route('terms.conditions')}}">Terms & Conditions</a></li>
                                 <li><a href="{{route('privacy.policy')}}">Privacy Policy</a></li>
                             </ul>

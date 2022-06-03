@@ -36,8 +36,8 @@
                             <tr>
                                 <td>{{ $blog->id }}</td>
                                 <td>{{ implode(' ', array_slice(explode(' ', $blog->title), 0, 10)); }}</td>
-                                <td><img height="100" width="200" src="{{ $blog->thumbnail }}"></td>
-                                <td><img height="100" width="200" src="{{ $blog->banner }}"></td>
+                                <td>@if($blog->thumbnail)<img height="100" width="200" src="{{ $blog->thumbnail }}">@endif</td>
+                                <td>@if($blog->banner)<img height="100" width="200" src="{{ $blog->banner }}">@endif</td>
                                 {{-- <td>
                                     @php
                                     $images = explode(",", $work->images);

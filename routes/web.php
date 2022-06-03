@@ -11,6 +11,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\NewsController;
 use App\Models\Blog;
 use App\Http\Controllers\MetaDetails;
+use App\Http\Controllers\HomePageSliderController;
 
 
 Route::get('/',[MetaDetails::class,'home'])->name('home');
@@ -23,34 +24,34 @@ Route::get('/our-services', function () {
 
 Route::get('/digital-strategy-and-planning', function () {
     return view('digital-strategy-and-planning');
-})->name('digital-strategy-and-planning');
+})->name('digital.strategy.and.planning');
 Route::get('/creative-strategy-and-web-graphics-design', function () {
     return view('creative-strategy-and-web-graphics-design');
-})->name('creative-strategy-and-web-graphics-design');
+})->name('creative.strategy.and.web.graphics.design');
 Route::get('/social-media-marketing', function () {
     return view('social-media-marketing');
-})->name('social-media-marketing');
+})->name('social.media.marketing');
 Route::get('/seo-and-search-engine-marketing', function () {
     return view('seo-and-search-engine-marketing');
-})->name('seo-and-search-engine-marketing');
+})->name('seo.and.search.engine.marketing');
 Route::get('/videos-gifs-and-content-marketing', function () {
     return view('videos-gifs-and-content-marketing');
-})->name('videos-gifs-and-content-marketing');
+})->name('videos.gifs.and.content.marketing');
 Route::get('/website-design-and-development', function () {
     return view('website-design-and-development');
-})->name('website-design-and-development');
+})->name('website.design.and.development');
 Route::get('/email-marketing', function () {
     return view('email-marketing');
-})->name('email-marketing');
+})->name('email.marketing');
 Route::get('/web-analytics', function () {
     return view('web-analytics');
-})->name('web-analytics');
+})->name('web.analytics');
 Route::get('/media-planning-and-buying', function () {
     return view('media-planning-and-buying');
-})->name('media-planning-and-buying');
+})->name('media.planning.and.buying');
 Route::get('/shopify-website-development', function () {
     return view('shopify-website-development');
-})->name('shopify-website-development');
+})->name('shopify.website.development');
 
 Route::get('/our-services', [MetaDetails::class, 'our_services'])->name('services');
 Route::get('/our-services/{title?}', [ServicesController::class, 'show'])->name('services.view');
@@ -146,6 +147,15 @@ Route::group(['prefix' => '/webeesite', 'middleware' => ['auth']], function () {
     Route::post('/meta/store', [MetaDetails::class, 'store'])->name('meta.store');
     Route::get('/meta/edit/{id}', [MetaDetails::class, 'edit'])->name('meta.edit');
     Route::post('/meta/update', [MetaDetails::class, 'update'])->name('meta.update');
+
+    // Home Page Sliders
+
+    Route::get('/slide', [HomePageSliderController::class, 'index'])->name('slide.list');
+    Route::post('/slide/store', [HomePageSliderController::class, 'store'])->name('slide.store');
+    Route::get('/slide/edit/{id}', [HomePageSliderController::class, 'edit'])->name('slide.edit');
+    Route::post('/slide/update', [HomePageSliderController::class, 'update'])->name('slide.update');
+    Route::get('/slide/delete/{id}', [HomePageSliderController::class, 'destroy'])->name('slide.delete');
+    Route::get('/slide/change_status/{id}/{status}', [HomePageSliderController::class, 'change_status'])->name('slide.change_status');
 });
 
 Route::group(['prefix' => '/webeesite', 'middleware' => ['guest']], function () {
@@ -153,5 +163,5 @@ Route::group(['prefix' => '/webeesite', 'middleware' => ['guest']], function () 
     Route::post('/login', [AuthController::class, 'authenticate'])->name('authentication');
 });
 
-
+ 
 Route::get('/{title?}', [BlogController::class, 'show'])->name('post.view');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\HomePageSlider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File; 
 
 class HomePageSliderController extends Controller
 {
@@ -14,7 +15,8 @@ class HomePageSliderController extends Controller
      */
     public function index()
     {
-        //
+        $slides = HomePageSlider::all();
+        return view('admin.slider.list',compact('slides'));
     }
 
     /**
@@ -35,7 +37,25 @@ class HomePageSliderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'slide' => 'required',
+            'sequence' => 'required|integer'
+        ]);
+
+        
+        $slider = new HomePageSlider();
+        $slider->slide = $request->slide;
+        $slider->sequence = $request->sequence;
+        $slider->status = 1;
+        $slider->logo = $request->logo;
+        $slider->link = $request->link;
+        $slider->link_text = $request->link_text;
+        $slider->description = $request->description;
+        $slider->save();
+        if($slider->id){
+            return redirect()->route('slide.list')->with('success','Slide Created');
+        }
+
     }
 
     /**
@@ -55,9 +75,10 @@ class HomePageSliderController extends Controller
      * @param  \App\Models\HomePageSlider  $homePageSlider
      * @return \Illuminate\Http\Response
      */
-    public function edit(HomePageSlider $homePageSlider)
+    public function edit($id)
     {
-        //
+        $slide = HomePageSlider::find($id);
+        return view('admin.slider.edit',compact('slide'));
     }
 
     /**
@@ -67,9 +88,22 @@ class HomePageSliderController extends Controller
      * @param  \App\Models\HomePageSlider  $homePageSlider
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, HomePageSlider $homePageSlider)
+    public function update(Request $request)
     {
-        //
+        $request->validate([
+            'slide' => 'required',
+            'sequence' => 'required|integer'
+        ]);
+        $slide = HomePageSlider::find($request->id);
+        $slide->slide = $request->slide;
+        $slide->sequence  = $request->sequence;
+        $slide->logo = $request->logo;
+        $slide->link = $request->link;
+        $slide->link_text = $request->link_text;
+        $slide->description = $request->description;
+        if($slide->save()){
+            return redirect()->route('slide.list')->with('success','Slide Updated');
+        }
     }
 
     /**
@@ -78,8 +112,28 @@ class HomePageSliderController extends Controller
      * @param  \App\Models\HomePageSlider  $homePageSlider
      * @return \Illuminate\Http\Response
      */
-    public function destroy(HomePageSlider $homePageSlider)
+    public function destroy($id)
     {
-        //
+        $slide = HomePageSlider::find($id);
+        $logo_path = 'images/'.$slide->logo;
+        $slide_path = 'images/'.$slide->slide;
+
+        if(File::exists($slide_path)) {
+            File::delete($slide_path);
+        }
+        if(File::exists($logo_path)) {
+            File::delete($logo_path);
+        }
+        if(HomePageSlider::where('id',$id)->delete()){
+            return redirect()->route('slide.list')->with('success','Slide Deleted');
+        }
+    }
+
+    public function change_status($id,$status){
+        $slide = HomePageSlider::find($id);
+        $slide->status = $status;
+        if($slide->save()){
+            return redirect()->route('slide.list')->with('success','Status Changed');
+        }
     }
 }

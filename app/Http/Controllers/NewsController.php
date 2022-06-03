@@ -41,9 +41,7 @@ class NewsController extends Controller
             'description' => 'required',
             'meta_title' => 'required',
             'meta_description' => 'required',
-            'thumbnail' => 'required',
-            'banner' => 'required',
-            'short_description' => 'required|min:6'
+            'short_description' => 'required'
         ]);
         $blog = new Blog();
         $blog->title = $request->title;
@@ -76,6 +74,9 @@ class NewsController extends Controller
     public function show($slug)
     {
         $blog = Blog::where('slug',$slug)->first();
+        if(!$blog){
+            abort(404);
+        }
         $related_blog = Blog::where('type', $blog->type)->take(5)->get();
         return view('blog-inner',compact('blog','related_blog'));
     }
@@ -107,8 +108,6 @@ class NewsController extends Controller
             'description' => 'required',
             'meta_title' => 'required',
             'meta_description' => 'required',
-            'thumbnail' => 'required',
-            'banner' => 'required',
             'short_description' => 'required|min:6'
         ]);
 

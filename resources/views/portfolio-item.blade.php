@@ -5,6 +5,13 @@
 @section('og_image',$meta->og_image)
 @section('content')
 <section>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('our-work') }}">Our-Work</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('view.work',$work->slug) }}">{{ $work->name }}</a></li>
+        </ol>
+    </nav>
         <div class="headlines">
             <div class="container">
                 <div class="zikzak-container">
@@ -27,7 +34,7 @@
                 @foreach($description as $item)
                     <div class="col-sm-6 col-lg-4 mb-4 mb-sm-5">
                         <div class="titles">
-                            <h6>{{ $heading[$i] }}</h6>
+                            <h5>{{ $heading[$i] }}</h5>
                             {!! $item !!}
                         </div>
                     </div>
@@ -39,7 +46,12 @@
             <div class="row sec-space pb-0">
                 <div class="col-12">
                     <div class="design-reff">
-                        <img src="{{ $work->images }}" alt="image">
+                        @php
+                            $gallery_images = explode(",", $work->gallery_images);
+                        @endphp
+                        @foreach ($gallery_images as $image)
+                            <img src="{{ asset('images') }}/{{ $image }}" alt="image">
+                        @endforeach
                     </div>
                 </div>
             </div>

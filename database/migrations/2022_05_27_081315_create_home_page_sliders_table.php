@@ -15,6 +15,13 @@ return new class extends Migration
     {
         Schema::create('home_page_sliders', function (Blueprint $table) {
             $table->id();
+            $table->string('slide');
+            $table->integer('status')->define('1')->comment('1=Actice,2=Inactive');
+            $table->integer('sequence');
+            $table->longText('link')->nullable();
+            $table->longText('link_text')->nullable();
+            $table->longText('description')->nullable();
+            $table->string('logo')->nullable();
             $table->timestamps();
         });
     }

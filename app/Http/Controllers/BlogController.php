@@ -40,13 +40,11 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|min:6',
-            'description' => 'required|min:25',
+            'title' => 'required',
+            'description' => 'required',
             'meta_title' => 'required',
             'meta_description' => 'required',
-            'thumbnail' => 'required',
-            'banner' => 'required',
-            'short_description' => 'required|min:6'
+            'short_description' => 'required'
         ]);
         
         $blog = new Blog();
@@ -79,7 +77,11 @@ class BlogController extends Controller
      */
     public function show($slug)
     {
+        
         $blog = Blog::where('slug',$slug)->first();
+        if(!$blog){
+            abort(404);
+        }
         $related_blog = Blog::where('type', $blog->type)->take(5)->get();
         $array = ['title'=>$blog->meta_title, 'meta_description'=>$blog->meta_description,'og_title'=>$blog->og_title,'og_image'=>$blog->og_image];
         $meta = (object) $array;
@@ -109,13 +111,11 @@ class BlogController extends Controller
     {
 
         $request->validate([
-            'title' => 'required|min:6',
-            'description' => 'required|min:25',
+            'title' => 'required',
+            'description' => 'required',
             'meta_title' => 'required',
             'meta_description' => 'required',
-            'thumbnail' => 'required',
-            'banner' => 'required',
-            'short_description' => 'required|min:6'
+            'short_description' => 'required'
         ]);
 
         $blog = Blog::find($request->id);
