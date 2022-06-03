@@ -3,11 +3,16 @@
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 @endsection
 @section('content')
+<div class="row mb-4 align-items-center">
+    <div class="col-md-6">
+        <h4 class="card-title">Edit News</h4>
+    </div>
+</div>
 <div class="row">
     <div class="col-lg-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title mb-4">News</h4>
+                <h4 class="card-title mb-4"></h4>
                 <form class="outer-repeater" method="post" action="{{ route('news.update') }}" enctype="multipart/form-data">
                     @csrf
                     <div data-repeater-list="outer-group" class="outer">
@@ -117,7 +122,7 @@
                     <input type="hidden" name="id" value="{{ $news->id }}">
                     <div class="row justify-content-end">
                         <div class="col-lg-10">
-                            <button type="submit" class="btn btn-primary">Update Blog</button>
+                            <button type="submit" class="btn btn-primary">Update</button>
                         </div>
                     </div>
                 </form>
