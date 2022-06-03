@@ -26,24 +26,25 @@
                             <tr role="row">
                                <th>S.No</th>
                                <th>Title</th>
-                               {{-- <th>Thumbnail</th>
-                               <th>Banner</th> --}}
                                <th>Actions</th>
                             </tr>
                          </thead>
                          <tbody>
+                            @php
+                                $i=1;
+                            @endphp
                             @foreach ($news as $news_row)
                             <tr>
-                                <td>{{ $news_row->id }}</td>
+                                <td>{{ $i }}</td>
                                 <td>{{ implode(' ', array_slice(explode(' ', $news_row->title), 0, 10)); }}</td>
-                                {{-- <td>@if($news_row->thumbnail)<img height="100" width="200" src="{{ $news_row->thumbnail }}">@endif</td>
-                                <td>@if($news_row->banner)<img height="100" width="200" src="{{ $news_row->banner }}">@endif</td> --}}
-            
                                 <td class="btn-actions">
                                     <a href="{{ route('news.edit',$news_row->id) }}"><button type="button" class="btn btn-outline-info waves-effect waves-light " ><i class="mdi mdi-pencil d-block"></i></button></a>
                                     <a href="{{ route('blog.delete',$news_row->id) }}"><button type="button" class="btn btn-outline-danger waves-effect waves-light"><i class="mdi mdi-delete d-block"></i></button></a>
                                 </td>
                             </tr>
+                            @php
+                                $i++;
+                            @endphp
                             @endforeach
                          </tbody>
                       </table>

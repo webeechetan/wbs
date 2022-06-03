@@ -26,31 +26,25 @@
                             <tr role="row">
                                <th>S.No</th>
                                <th>Title</th>
-                               {{-- <th>Thumbnail</th> --}}
-                               {{-- <th>Banner</th> --}}
                                <th>Actions</th>
                             </tr>
                          </thead>
                          <tbody>
+                            @php
+                                $i=1;
+                            @endphp
                             @foreach ($blogs as $blog)
                             <tr>
-                                <td>{{ $blog->id }}</td>
+                                <td>{{ $i }}</td>
                                 <td>{{ implode(' ', array_slice(explode(' ', $blog->title), 0, 10)); }}</td>
-                                {{-- <td>@if($blog->thumbnail)<img height="100" width="200" src="{{ $blog->thumbnail }}">@endif</td> --}}
-                                {{-- <td>@if($blog->banner)<img height="100" width="200" src="{{ $blog->banner }}">@endif</td> --}}
-                                {{-- <td>
-                                    @php
-                                    $images = explode(",", $work->images);
-                                    @endphp
-                                    @foreach ($images as $image)
-                                        <img src="{{ asset('images')}}/{{$image}}" height="50" width="50" >
-                                    @endforeach
-                                </td> --}}
                                 <td class="btn-actions">
                                     <a href="{{ route('blog.edit',$blog->id) }}"><button type="button" class="btn btn-outline-info waves-effect waves-light " ><i class="mdi mdi-pencil d-block"></i></button></a>
                                     <a href="{{ route('blog.delete',$blog->id) }}"><button type="button" class="btn btn-outline-danger waves-effect waves-light"><i class="mdi mdi-delete d-block"></i></button></a>
                                 </td>
                             </tr>
+                            @php
+                                $i++;
+                            @endphp
                             @endforeach
                          </tbody>
                       </table>

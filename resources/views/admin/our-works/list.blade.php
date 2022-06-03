@@ -31,9 +31,12 @@
                             </tr>
                          </thead>
                          <tbody>
+                            @php
+                                $i=1;
+                            @endphp
                             @foreach ($ourWork as $work)
                             <tr>
-                                <td>{{ $work->id }}</td>
+                                <td>{{ $i }}</td>
                                 <td>{{ $work->name }}</td>
                                 <td>
                                     @foreach($work->category() as $category)
@@ -47,6 +50,9 @@
                                     <a href="{{ route('our-work.delete',$work->id) }}"><button type="button" class="btn btn-outline-danger waves-effect waves-light"><i class="mdi mdi-delete d-block"></i></button></a>
                                 </td>
                             </tr>
+                            @php
+                                $i++;
+                            @endphp
                             @endforeach
                          </tbody>
                       </table>

@@ -31,15 +31,21 @@
                             </tr>
                          </thead>
                          <tbody>
+                             @php
+                                $i=1;
+                             @endphp
                             @foreach ($categories as $category)
                             <tr>
-                                <td>{{ $category->id }}</td>
+                                <td>{{ $i }}</td>
                                 <td>{{ $category->name }}</td>
                                 <td class="btn-actions">
                                     <button type="button" class="btn btn-outline-info waves-effect waves-light edit_category" data-category='{{ json_encode($category) }}' data-bs-toggle="modal" data-bs-target="#editCategoryModal"><i class="mdi mdi-pencil d-block"></i></button>
                                     <a href="{{ route('category.delete',$category->id) }}"><button type="button" class="btn btn-outline-danger waves-effect waves-light"><i class="mdi mdi-delete d-block "></i></button></a>
                                 </td>
                             </tr>
+                             @php
+                                $i++;
+                             @endphp
                             @endforeach
                          </tbody>
                       </table>

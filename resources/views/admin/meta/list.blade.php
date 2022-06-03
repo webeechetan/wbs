@@ -32,9 +32,12 @@
                             </tr>
                          </thead>
                          <tbody>
+                            @php
+                                $i=1;
+                            @endphp
                             @foreach ($metas as $meta)
                             <tr>
-                                <td>{{ $meta->id }}</td>
+                                <td>{{ $i }}</td>
                                 <td>{{ $meta->url }}</td>
                                 <td>{{ $meta->title }}</td>
                                 <td>{{ $meta->meta_title }}</td>
@@ -47,6 +50,9 @@
                                     <a href="{{ route('meta.edit',$meta->id) }}"><button type="button" class="btn btn-outline-info waves-effect waves-light " ><i class="mdi mdi-pencil d-block font-size-16"></i></button></a>
                                 </td>
                             </tr>
+                            @php
+                                $i++;
+                            @endphp
                             @endforeach
                          </tbody>
                       </table>
