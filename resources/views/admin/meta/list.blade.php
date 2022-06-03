@@ -5,13 +5,17 @@
 <link href="{{ asset('backend') }}/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />  
 @endsection
 @section('content')
+<div class="row mb-4 align-items-center">
+    <div class="col-md-6">
+        <h4 class="card-title">Meta</h4>
+    </div>
+</div>
 <div class="row">
     <div class="col-12">
        <div class="card">
            <div class="card-body">
-             <h4 class="card-title">Meta</h4>
+             <h4 class="card-title"></h4>
              <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-               
                 <div class="row">
                    <div class="col-sm-12">
                       <table id="datatable" class="table table-bordered dt-responsive nowrap w-100 dataTable no-footer dtr-inline" role="grid" aria-describedby="datatable_info" style="width: 1182px;">
