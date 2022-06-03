@@ -366,7 +366,7 @@
             </div>
             <!-- end col-md-7 -->
             <div class="col-md-5">
-                <div class="custom-btn justify-content-center mt-4 mt-md-5"><a href="#">Our Work<span></span> <i></i></a></div>
+                <div class="custom-btn justify-content-center mt-4 mt-md-5"><a href="{{ route('our-work') }}">Our Work<span></span> <i></i></a></div>
                 <!-- end custom-btn -->
             </div>
         </div>
