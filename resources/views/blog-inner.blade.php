@@ -32,7 +32,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="titles">
-                        <h3>Related Posts</h3>
+                        <h5>Related Posts</h5>
                     </div>
                 </div>
                 @foreach($related_blog as $blog)

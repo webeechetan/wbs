@@ -8,7 +8,7 @@
     <div class="headlines">
         <div class="container">
             <div class="zikzak-container">
-                <h2 class="title-banner">Our <span class="text-primary">Blog</span></h2>
+                <h2 class="title-banner">Our Blog</span></h2>
             </div>
         </div>
         <!-- end container -->
@@ -19,10 +19,10 @@
 <section class="blog sec-space pt-0">
     <div class="container">
         <div class="row flex-column-reverse flex-lg-row">
-            <div class="col-lg-8">
+            <div class="col-lg-12">
                 <div class="row">
                     @foreach($blogs as $blog)
-                        <div class="col-lg-6">
+                        <div class="col-lg-4">
                             <div class="post wow fadeIn">
                                 @if($blog->thumbnail)
                                     <figure class="post-image"><img src="{{ $blog->thumbnail }}" alt="Image"></figure>
@@ -50,7 +50,7 @@
             </div>
             <!-- end col-8 -->
             
-            <div class="col-lg-4 mb-5 mb-lg-0">
+            {{-- <div class="col-lg-4 mb-5 mb-lg-0">
                 <aside class="sidebar">
                     <div class="widget">
                         <h4 class="title">SEARCH</h4>
@@ -61,18 +61,18 @@
                             </button>
                         </form>
                     </div>
-                    <!-- end widget -->
-                    {{-- <div class="widget">
+                    end widget 
+                    <div class="widget">
                         <h4 class="title">CATEGORIES</h4>
                         <ul class="categories">
                             @foreach($categories as $category)
                                 <li><a href="#">{{ $category->name }}</a><span>{{ $category->blogs()->count() }}</span></li>
                             @endforeach
                         </ul>
-                    </div> --}}
-                    <!-- end widget -->
+                    </div> 
+                     end widget
                 </aside>
-            </div>
+            </div> --}}
             <!-- end col-4 -->
         </div>
         <!-- end row -->
