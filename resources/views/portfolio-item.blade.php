@@ -5,6 +5,13 @@
 @section('og_image',$meta->og_image)
 @section('content')
 <section>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('our-work') }}">Our-Work</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('view.work',$work->slug) }}">{{ $work->name }}</a></li>
+        </ol>
+    </nav>
         <div class="headlines">
             <div class="container">
                 <div class="zikzak-container">
