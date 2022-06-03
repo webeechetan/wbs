@@ -33,7 +33,7 @@
                <h5><a href="{{ route('view.work',$work->slug) }}">{{$work->name}}</a></h5>
                <div class="portfolio-meta">
                   @foreach($work->category() as $category)
-                     {{ $category->name }}
+                     <span>{{ $category->name }}</span>
                   @endforeach
                </div>
             </div>
