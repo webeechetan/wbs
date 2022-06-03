@@ -26,8 +26,8 @@
                             <tr role="row">
                                <th>S.No</th>
                                <th>Title</th>
-                               <th>Thumbnail</th>
-                               <th>Banner</th>
+                               {{-- <th>Thumbnail</th>
+                               <th>Banner</th> --}}
                                <th>Actions</th>
                             </tr>
                          </thead>
@@ -36,8 +36,8 @@
                             <tr>
                                 <td>{{ $news_row->id }}</td>
                                 <td>{{ implode(' ', array_slice(explode(' ', $news_row->title), 0, 10)); }}</td>
-                                <td>@if($news_row->thumbnail)<img height="100" width="200" src="{{ $news_row->thumbnail }}">@endif</td>
-                                <td>@if($news_row->banner)<img height="100" width="200" src="{{ $news_row->banner }}">@endif</td>
+                                {{-- <td>@if($news_row->thumbnail)<img height="100" width="200" src="{{ $news_row->thumbnail }}">@endif</td>
+                                <td>@if($news_row->banner)<img height="100" width="200" src="{{ $news_row->banner }}">@endif</td> --}}
             
                                 <td>
                                     <a href="{{ route('news.edit',$news_row->id) }}"><button type="button" class="btn btn-outline-info waves-effect waves-light " ><i class="mdi mdi-pencil d-block font-size-16"></i></button></a>

@@ -21,7 +21,7 @@
                                <th>S.No</th>
                                <th>Name</th>
                                <th>Category</th>
-                               <th>Thumbnail</th>
+                               {{-- <th>Thumbnail</th> --}}
                                <th>Actions</th>
                             </tr>
                          </thead>
@@ -34,9 +34,9 @@
                                     @foreach($work->category() as $category)
                                         {{ $category->name }},
                                      @endforeach</td>
-                                <td>
+                                {{-- <td>
                                     <img src="{{$work->images}}" height="125" width="200" >
-                                </td>
+                                </td> --}}
                                 <td>
                                     <a href="{{ route('our-work.edit',$work->id) }}"><button type="button" class="btn btn-outline-info waves-effect waves-light " ><i class="mdi mdi-pencil d-block font-size-16"></i></button></a>
                                     <a href="{{ route('our-work.delete',$work->id) }}"><button type="button" class="btn btn-outline-danger waves-effect waves-light"><i class="mdi mdi-delete d-block font-size-16"></i></button></a>

@@ -26,8 +26,8 @@
                             <tr role="row">
                                <th>S.No</th>
                                <th>Title</th>
-                               <th>Thumbnail</th>
-                               <th>Banner</th>
+                               {{-- <th>Thumbnail</th> --}}
+                               {{-- <th>Banner</th> --}}
                                <th>Actions</th>
                             </tr>
                          </thead>
@@ -36,8 +36,8 @@
                             <tr>
                                 <td>{{ $blog->id }}</td>
                                 <td>{{ implode(' ', array_slice(explode(' ', $blog->title), 0, 10)); }}</td>
-                                <td>@if($blog->thumbnail)<img height="100" width="200" src="{{ $blog->thumbnail }}">@endif</td>
-                                <td>@if($blog->banner)<img height="100" width="200" src="{{ $blog->banner }}">@endif</td>
+                                {{-- <td>@if($blog->thumbnail)<img height="100" width="200" src="{{ $blog->thumbnail }}">@endif</td> --}}
+                                {{-- <td>@if($blog->banner)<img height="100" width="200" src="{{ $blog->banner }}">@endif</td> --}}
                                 {{-- <td>
                                     @php
                                     $images = explode(",", $work->images);
