@@ -9,7 +9,7 @@
                 <li class="menu-title" key="t-menu">Menu</li>
 
                 <li>
-                    <a href="javascript: void(0);" class="mm-active">
+                    <a href="javascript: void(0);" class="@if(Route::current()->getName()=='dashboard') waves-effect mm-active @endif">
                     <i class='bx bx-home-circle'></i>
                         <span key="t-dashboards">Dashboards</span>
                     </a>
@@ -58,7 +58,7 @@
                 </li>
 
                 <li>
-                    <a href="{{ route('slide.list') }}" class="@if(Route::current()->getName()=='slider.list') waves-effect mm-active @endif">
+                    <a href="{{ route('slide.list') }}" class="@if(Route::current()->getName()=='slide.list') waves-effect mm-active @endif">
                         <i class='bx bx-slideshow' ></i>
                         <span key="t-layouts">Slider</span>
                     </a>
