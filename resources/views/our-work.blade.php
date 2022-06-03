@@ -8,7 +8,7 @@
    <div class="headlines">
       <div class="container">
          <div class="zikzak-container">
-            <h2 class="title-banner">Our <span class="text-primary">Work</span></h2>
+            <h2 class="title-banner">Our Work</span></h2>
          </div>
       </div>
       <!-- end container -->

@@ -49,9 +49,14 @@
                         @php
                             $gallery_images = explode(",", $work->gallery_images);
                         @endphp
-                        @foreach ($gallery_images as $image)
-                            <img src="{{ asset('images') }}/{{ $image }}" alt="image">
-                        @endforeach
+                        <div class="row">
+                            @foreach ($gallery_images as $image)
+                            <div class="col-md-4">
+                                <img src="{{ asset('images') }}/{{ $image }}" alt="image">
+                            </div> 
+                            @endforeach
+                        </div>   
+                       
                     </div>
                 </div>
             </div>

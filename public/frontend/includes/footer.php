@@ -26,8 +26,8 @@
             <div class="col-12 wow fadeInUp">
                 <div class="sub-footer">
                     <ul>
-                        <li><a href="#">Term & Condutions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="terms.conditions.php">Term & Condutions</a></li>
+                        <li><a href="privacy-policy.php">Privacy Policy</a></li>
                     </ul>
                     <span>© 2022 Webeesocial - All rights Reserved</span>
                 </div>

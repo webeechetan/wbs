@@ -4,7 +4,7 @@
     <div class="headlines pb-0">
         <div class="container">
             <div class="zikzak-container">
-                <h2 class="title-banner mb-4">Get In <span class="text-primary">Touch</span></h2>
+                <h2 class="title-banner mb-4">Get In Touch</span></h2>
             </div>
         </div>
         <!-- end container -->
