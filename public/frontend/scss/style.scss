@@ -2463,6 +2463,9 @@ only screen and (max-device-width: 767px) {
 			font-size: 12px;
 			background-color: $light-grey;
 			padding: 2px 5px;
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
 		}
 	}
 }
