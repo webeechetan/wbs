@@ -3196,9 +3196,13 @@ body .slider {
     text-decoration: none; }
     .portfolio-product h5 a:hover {
       color: #51B174; }
-.portfolio-meta {
+.portfolio-meta span {
   color: #999;
-  font-size: 12px; }
+  font-size: 12px;
+  background-color: #f5f5f5;
+  padding: 2px 5px; }
+  .portfolio-meta span:not(:last-child) {
+    margin-right: 10px; }
 
 /* Our Work Inners */
 .design-reff img {
