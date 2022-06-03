@@ -39,12 +39,12 @@ body[data-sidebar=dark] #sidebar-menu ul li a i,
 body[data-sidebar=dark] .menu-title {
     color: #fff;
 }
-body[data-sidebar=dark] #sidebar-menu ul li a:hover, body[data-sidebar=dark] #sidebar-menu ul li a.mm-active {
+body[data-sidebar=dark] #sidebar-menu ul li a:hover, body[data-sidebar=dark] a.mm-active {
     color: var(--primary) !important;
     background: #fff;
 }
-body[data-sidebar=dark] #sidebar-menu ul li a:hover i, body[data-sidebar=dark] #sidebar-menu ul li a.mm-active i {
-    color: var(--primary);
+body[data-sidebar=dark] #sidebar-menu ul li a:hover i, body[data-sidebar=dark] a.mm-active i {
+    color: var(--primary) !important;
 }
 /* ----- Card ----- */
 .card-title {
