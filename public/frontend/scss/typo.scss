@@ -249,9 +249,9 @@ p {
 	flex-wrap: wrap;
 	align-items: flex-start;
 	img {
-		margin-top: 2px;
-		max-width: 20px;
-		max-height: 20px;
+		margin-top: 4px;
+		max-width: 14px;
+		max-height: 14px;
 	}
 	span {
 		flex: 1;
@@ -269,6 +269,18 @@ ul.social-icons {
 }
 ul.social-icons li:not(:last-child) {
 	margin-right: 20px;
+}
+/* Breadcrumb */
+.breadcrumb {
+	background: transparent;
+    border-top: 1px solid $grey;
+    border-radius: 0;
+    border-bottom: 1px solid $grey;
+    padding: 15px 0;
+	li a {
+		color: $dark-grey;
+		font-size: 12px;
+	}
 }
 /* CUSTOM ELEMENTS */
 .color-dark {
