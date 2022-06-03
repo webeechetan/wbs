@@ -37,23 +37,15 @@ class NewsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|min:6',
+            'title' => 'required',
             'description' => 'required',
-            'meta_title' => 'required',
-            'meta_description' => 'required',
-            'short_description' => 'required'
         ]);
         $blog = new Blog();
         $blog->title = $request->title;
         $blog->description = $request->description;
         $blog->short_description = $request->short_description;
         $blog->slug = $request->slug;
-        $blog->thumbnail = $request->thumbnail;
-        $blog->banner = $request->banner;
-        $blog->og_image = $request->og_image;
-        $blog->og_title = $request->og_title;
-        $blog->meta_title = $request->meta_title;
-        $blog->meta_description = $request->meta_description;
+        $blog->url = $request->url;
         $blog->type = 2;
         if($request->publish_at){
             $blog->publish_at = $request->publish_at;
@@ -104,24 +96,16 @@ class NewsController extends Controller
     {
 
         $request->validate([
-            'title' => 'required|min:6',
-            'description' => 'required',
-            'meta_title' => 'required',
-            'meta_description' => 'required',
-            'short_description' => 'required|min:6'
+            'title' => 'required',
+            'description' => 'required'
         ]);
 
         $blog = Blog::find($request->id);
-        $blog->thumbnail = $request->thumbnail;
-        $blog->banner = $request->banner;
-        $blog->og_image = $request->og_image;
         $blog->title = $request->title;
         $blog->description = $request->description;
-        $blog->meta_description = $request->meta_description;
-        $blog->meta_title = $request->meta_title;
         $blog->short_description = $request->short_description;
         $blog->slug = $request->slug;
-        $blog->og_title = $request->og_title;
+        $blog->url = $request->url;
         if($request->publish_at){
             $blog->publish_at = $request->publish_at;
         }

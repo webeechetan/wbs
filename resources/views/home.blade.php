@@ -269,9 +269,9 @@
             <div class="col-12 mb-5 wow fadeInUp">
                 @if($latest_news)
                     <div class="content-box selected titles">
-                        <h3 class="news-title"><a href="{{ route('home') }}/{{ $latest_news->slug }}">{{ $latest_news->title }}</a></h3>
+                        <h3 class="news-title"><a href="{{ $latest_news->url }}">{{ $latest_news->title }}</a></h3>
                         <span>{{ $latest_news->created_at }}</span>
-                        <div class="custom-link mt-4"><a href="{{ route('home') }}/{{ $latest_news->slug }}">Read More</a> <span></span> <i></i></div>
+                        <div class="custom-link mt-4"><a href="{{ $latest_news->url }}">Read More</a> <span></span> <i></i></div>
                     </div>
                 @endif
             </div>
@@ -280,9 +280,9 @@
                 <div class="col-lg-4 wow fadeInUp">
                     <div class="content-box h-100">
                         <small>News</small>
-                        <h3 class="news-title"><a href="{{ route('home') }}/{{ $news_row->slug }}">{{ $news_row->title }}</a></h3>
+                        <h3 class="news-title"><a href="{{ $news_row->url }}">{{ $news_row->title }}</a></h3>
                         <span>{{ $news_row->created_at }}</span>
-                        <div class="custom-link mt-4"><a href="{{ route('home') }}/{{ $news_row->slug }}">Read More</a> <span></span> <i></i></div>
+                        <div class="custom-link mt-4"><a href="{{ $news_row->url }}">Read More</a> <span></span> <i></i></div>
                     </div>
                 </div>
            @endforeach

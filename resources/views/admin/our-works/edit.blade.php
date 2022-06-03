@@ -45,8 +45,8 @@
                                         <div class="col-lg-10">
                                             <input type="text" placeholder="Heading" name="heading[]" class="form-control mb-2" value="{{ $heading[$i]}}">
                                             <textarea id="editor{{ $i }}" name="section[]" class="form-control ckEditor" >{{ $item }}</textarea>
-                                            <div class="text-center mt-1">
-                                                <button type="button" class="btn btn-outline-danger waves-effect waves-light remove_section"><i class="mdi mdi-delete d-block font-size-16"></i></button>
+                                            <div class="mt-3">
+                                                <button type="button" class="btn btn-outline-danger waves-effect waves-light remove_section"><i class="mdi mdi-delete font-size-16"></i> Delete Column</button>
                                             </div>
                                         </div>
                                     </div>
@@ -55,9 +55,14 @@
                                 @endphp
                                 @endforeach
                             </div>
-                            <div class="text-center mb-4">
-                                <button type="button" class="btn btn-outline-success waves-effect waves-light add_more_section">Add More</button>
-                            </div>
+                            <div class="row">
+                                <div class="col-lg-10 ms-auto">
+                                    <hr>
+                                    <div class="mb-3">
+                                        <button type="button" class="btn btn-outline-success waves-effect waves-light add_more_section"><i class="bx bx-plus-medical"></i> Add Column</button>
+                                    </div>
+                                </div>
+                            </div>    
                         
 
                             <div class="form-group row mb-4">
@@ -87,6 +92,7 @@
                                     @enderror
                                 </div>
                                 <div class="col-lg-5 text-center">
+                                <label class="col-form-label col-lg-2">Thumbnail</label>
                                     <div class="input-group">
                                         <div class="input-group-text open_gallery"><i class="bx bx-image-add"></i></div>
                                         <input type="text" class="form-control" placeholder="Enter Thumbnail URL" name="image" value="{{ $work->images}}">
@@ -200,12 +206,12 @@
         let rand_number = Math.floor((Math.random() * 1000) + 1);
         let section = `
                     <div class="form-group row mb-4">
-                        <label class="col-form-label col-lg-2">Section ${section_count}</label>
+                        <label class="col-form-label col-lg-2">Column ${section_count}</label>
                         <div class="col-lg-10">
                             <input type="text" placeholder="Heading" name="heading[]" class="form-control mb-2" value="">
                             <textarea data-rand_num='${rand_number}' id="ckEditor${rand_number}" name="section[]" class="form-control ckEditor"  ></textarea>
-                            <div class="text-center mt-1">
-                                <button type="button" class="btn btn-outline-danger waves-effect waves-light remove_section"><i class="mdi mdi-delete d-block font-size-16"></i></button>
+                            <div class="mt-3">
+                                <button type="button" class="btn btn-outline-danger waves-effect waves-light remove_section"><i class="mdi mdi-delete font-size-16"></i> Delete Column</button>
                             </div>
                         </div>
                     </div>

@@ -51,61 +51,18 @@
                             </div>
 
                             <div class="form-group row mb-4">
-                                <label class="col-form-label col-lg-2">Meta</label>
-                                <div class="col-lg-5">
-                                    <input type="text" class="form-control" placeholder="Meta title" name="meta_title" required>
-                                    @error('meta_title')
-                                        <span class="text-danger">{{$message}}</span>
-                                    @enderror
-                                </div>
-                                <div class="col-lg-5">
-                                    <textarea class="form-control" required name="meta_description" placeholder="Meta description"></textarea>
-                                    @error('meta_description')
-                                        <span class="text-danger">{{$message}}</span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label col-lg-2">Images</label>
-                                <div class="col-lg-5">
-                                    <div class="input-group">
-                                        <div class="input-group-text open_gallery"><i class="bx bx-image-add"></i></div>
-                                        <input type="text" class="form-control" placeholder="Enter Thumbnail URL" name="thumbnail">
-                                    </div>
-                                    @error('thumbnail')
-                                        <span class="text-danger">{{$message}}</span>
-                                    @enderror
-                                </div>
-                                <div class="col-lg-5">
-                                    <div class="input-group open_gallery">
-                                        <div class="input-group-text"><i class="bx bx-image-add"></i></div>
-                                        <input type="text" class="form-control" placeholder="Enter Banner URL" name="banner">
-                                    </div>
-                                    @error('banner')
-                                        <span class="text-danger">{{$message}}</span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label col-lg-2">OG</label>
-                                <div class="col-lg-5">
-                                    <label class="col-form-label col-lg-2">OG Title</label>
-                                    <input type="text" class="form-control" name="og_title" placeholder="OG Title">
-                                </div>
-                                <div class="col-lg-5">
-                                    <label class="col-form-label col-lg-2">OG Image</label>
-                                    <div class="input-group">
-                                        <div class="input-group-text open_gallery"><i class="bx bx-image-add"></i></div>
-                                        <input type="text" class="form-control" placeholder="Enter OG-Image URL" name="og_image">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row mb-4">
                                 <label class="col-form-label col-lg-2">Dates</label>
                                 <div class="col-lg-5">
                                     <label class="col-form-label col-lg-2">Publish At</label>
                                     <input type="date" class="form-control" name="publish_at" >
                                     @error('publish_at')
+                                        <span class="text-danger">{{$message}}</span>
+                                    @enderror
+                                </div>
+                                <div class="col-lg-5">
+                                    <label class="col-form-label col-lg-2">Url</label>
+                                    <input type="text" class="form-control" name="url" placeholder="Enter Read More Url">
+                                    @error('url')
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror
                                 </div>
