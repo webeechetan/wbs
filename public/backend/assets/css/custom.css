@@ -46,6 +46,9 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover, body[data-sidebar=dark] a.m
 body[data-sidebar=dark] #sidebar-menu ul li a:hover i, body[data-sidebar=dark] a.mm-active i {
     color: var(--primary) !important;
 }
+div .modal-content {
+    border: 0;
+}
 /* ----- Card ----- */
 .card-title {
     font-size: 22px;
