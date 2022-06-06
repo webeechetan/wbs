@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Gallery;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class GalleryController extends Controller
 {
@@ -106,5 +107,18 @@ class GalleryController extends Controller
 
     public function gallery_list_ajax(Request $request){
         return Gallery::all();
+    }
+
+    public function ajax_image_upload(Request $request){
+        $name = $request->file('image')->getClientOriginalName();
+        $image = time().rand(1,50).'.'.$request->file('image')->extension();
+        $request->file('image')->move(public_path('images'),$image);
+        $gallery = new Gallery();
+        $gallery->image = $image;
+        $gallery->name = $image;
+        $gallery->save();
+        if($gallery->id){
+            return response()->json(['msg'=>'Uploaded Successfully',"image"=>$image]);
+        }
     }
 }

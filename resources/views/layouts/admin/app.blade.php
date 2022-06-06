@@ -111,7 +111,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="myExtraLargeModalLabel">Gallery</h5>
-                        {{-- <button type="button" class="btn btn-success btn-sm open_image_upload_modal" >Upload</button> --}}
+                        <button type="button" class="btn btn-success btn-sm open_image_upload_modal" >Upload</button>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -125,7 +125,7 @@
 
         {{-- Upload Image Modal --}}
         <div class="modal fade image_upload_modal" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
+            <div class="modal-dialog modal-sm">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="myExtraLargeModalLabel">Upload New Image</h5>
@@ -133,13 +133,20 @@
                     </div>
                     <div class="modal-body">
                         <div class="">
-                            
+                             <form method="post" action="" enctype="multipart/form-data" id="upload_new_image">
+                                <div class="form-group">
+                                    <label class="col-form-label col-lg-2">Image</label>
+                                    <input type="file" name="image" accept="images/*" class="form-control">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Upload</button>
+                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <input type="hidden" id="image_url" value="{{ asset('images') }}">
+        <input type="hidden" name="site_url" id="site_url" value="{{ env('APP_URL') }}">
         <!-- JAVASCRIPT -->
         <script src="{{ asset('backend') }}/assets/libs/jquery/jquery.min.js"></script>
         <script src="{{ asset('backend') }}/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>

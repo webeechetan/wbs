@@ -87,6 +87,7 @@ Route::get('/portfolio-item/{work}', [OurWorkController::class, 'view_work'])->n
 
 //---------Admin Route---------//
 Route::post('/gallery/ajax', [GalleryController::class, 'gallery_list_ajax'])->name('gallery_list_ajax');
+Route::post('/gallery/ajax_image_upload', [GalleryController::class, 'ajax_image_upload'])->name('ajax_image_upload');
 
 Route::group(['prefix' => '/webeesite', 'middleware' => ['auth']], function () {
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
