@@ -70,7 +70,7 @@ $("#upload_new_image").submit(function(e){
         processData: false,
     }).done(function(response) {
         let input_setter = $('[data-temp_input_selector="random_number'+rand_number+'"]');
-        $(input_setter).val(image_url.value+'/'+response.image);
+        $(input_setter).val(site_url+'images/'+response.image);
         $(".image_upload_modal").modal('hide');
         $(".gallery_modal").modal('hide');
         refresh_gallery();
