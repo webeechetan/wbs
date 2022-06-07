@@ -5,7 +5,7 @@
 @section('og_image',$meta->og_image)
 @section('content')
 <section>
-    <div class="headlines">
+    <div class="headlines bg-light py-5">
         <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
