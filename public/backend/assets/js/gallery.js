@@ -1,6 +1,6 @@
 $(document).ready(function() {
     let rand_number = 0;
-    let url = "http://localhost/wbs/gallery/ajax";
+    let url = $("#site_url").val()+"gallery/ajax";
     let list = "<div class='row'>";
     let image_url = $("#image_url").val();
     $.post(url, {ajax:'true'}, function(data,status) {
