@@ -68,7 +68,14 @@
                                 </div>
                             </div>    
                         
-
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label col-lg-2">Images</label>
+                                <div class="col-lg-10">
+                                    <label class="col-form-label col-lg-2">Images</label>
+                                    <textarea name="gallery_images" id="gallery_images" >{{ $work->gallery_images }}</textarea>
+                                </div>
+                            </div>
+                            
                             <div class="form-group row mb-4">
                                 <label class="col-form-label col-lg-2">Category</label>
                                 <div class="col-lg-5">
@@ -142,24 +149,6 @@
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror
                                 </div>
-                                <div class="col-lg-5">
-                                    <label class="col-form-label col-lg-2">Images</label>
-                                    <input type="file" class="form-control" name="gallery_images[]" accept="images/*" multiple>
-                                    @error('publish_at')
-                                        <span class="text-danger">{{$message}}</span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label col-lg-2">Images</label>
-                                <div class="col-lg-10">
-                                    @foreach(explode(",",$work->gallery_images) as $image)
-                                        <span>
-                                        <img src="{{ asset('images') }}/{{ $image }}" class="avatar-lg">
-                                        <button class="btn btn-danger btn-sm"><i class="mdi mdi-delete d-block font-size-16 remove_image" data-image_name = '{{ $image }}' data-id = '{{ $work->id }}'></i></button>
-                                        </span>
-                                    @endforeach
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -176,8 +165,8 @@
 </div>
 @endsection
 @section('footerScripts')
-{{-- <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script> --}}
-<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+{{-- <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script> --}}
 @endsection
 
 @section('script')
@@ -191,19 +180,11 @@
     let section_count = {{ count($description) }} + 1;
     
     $(document).ready(function() {
-
+        $("#gallery_images").summernote();
         $('.ckEditor').each(function () {
             let id = $(this).attr('id');
-                ClassicEditor
-                .create( document.querySelector(`#${id}`))
-                .then( editor => {
-                        console.log( editor );
-                } )
-                .catch( error => {
-                        console.error( error );
-                } );
+            $(`#${id}`).summernote();    
         });
-
     });
 
     $(".add_more_section").click(function(){
@@ -226,14 +207,7 @@
             let id = $(this).attr('id');
             console.log(id)
             if($(this).data('rand_num')==rand_number){
-                ClassicEditor
-                .create( document.querySelector(`#${id}`))
-                .then( editor => {
-                        console.log( editor );
-                } )
-                .catch( error => {
-                        console.error( error );
-                } );
+               $(`#${id}`).summernote();
             }
         });
     })

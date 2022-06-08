@@ -47,17 +47,11 @@
             <div class="row sec-space pb-0">
                 <div class="col-12">
                     <div class="design-reff">
-                        @php
-                            $gallery_images = explode(",", $work->gallery_images);
-                        @endphp
                         <div class="row">
-                            @foreach ($gallery_images as $image)
                             <div class="col-md-4">
-                                <img src="{{ asset('images') }}/{{ $image }}" alt="image">
+                                {!! $work->gallery_images !!}
                             </div> 
-                            @endforeach
                         </div>   
-                        
                     </div>
                 </div>
             </div>
