@@ -1,4 +1,8 @@
 @extends('layouts.app')
+@section('title','Web Analytics | WebeeSocial')
+@section('meta_description','Build your brand with most effective Social Media platforms. At WeBeSocial weoffer custom social media marketing strategies for every brand &amp; campaign.')
+@section('og_title','Web Analytics | WebeeSocial')
+@section('og_image','https://www.webeesocial.com/wp-content/uploads/2018/10/DSP001.png')
 @section('content')
 <section class="blog blog-single sec-space pt-0">
     <div class="mb-4 mb-md-5"><img src="{{ asset('frontend') }}/images/web-analytics.jpg" alt=""></div>
