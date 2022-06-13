@@ -1,4 +1,8 @@
 @extends('layouts.app')
+@section('title','Top Rated Social Media Agency / Company in India | WeBeeSocial')
+@section('meta_description','Build your brand with most effective Social Media platforms. At WeBeSocial weoffer custom social media marketing strategies for every brand &amp; campaign.')
+@section('og_title','Top Rated Social Media Agency / Company in India | WeBeeSocial')
+@section('og_image','https://www.webeesocial.com/wp-content/uploads/2018/10/DSP001.png')
 @section('content')
 <section class="blog blog-single sec-space pt-0">
     <div class="mb-4 mb-md-5"><img src="{{ asset('frontend') }}/images/social-media-marketing.jpg" alt=""></div>

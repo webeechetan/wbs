@@ -1,4 +1,8 @@
 @extends('layouts.app')
+@section('title','Shopify Website Development in Delhi NCR | WeBeeSocial India')
+@section('meta_description','WeBeeSocial is India&#039;s leading Shopify Website Development in Delhi NCR. We innovate, build, develop, design and maintain your personalized Shopify e-commerce website!')
+@section('og_title','Shopify Website Development in Delhi NCR | WeBeeSocial India')
+@section('og_image','https://www.webeesocial.com/wp-content/uploads/2018/10/DSP001.png')
 @section('content')
 <section class="blog blog-single sec-space pt-0">
     <div class="mb-4 mb-md-5"><img src="{{ asset('frontend') }}/images/shopify-website-development.jpg" alt=""></div>

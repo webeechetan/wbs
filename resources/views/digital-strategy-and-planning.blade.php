@@ -1,4 +1,8 @@
 @extends('layouts.app')
+@section('title','Digital Strategy and Planning | WebeeSocial')
+@section('meta_description','We are a creatively inspired full service digital marketing agency from Delhi India. We create super-rich experiences online.')
+@section('og_title','Digital Strategy and Planning | WebeeSocial')
+@section('og_image','https://www.webeesocial.com/wp-content/uploads/2018/10/DSP001.png')
 @section('content')
 <section class="blog blog-single sec-space pt-0">
     <div class="mb-4 mb-md-5"><img src="{{ asset('frontend') }}/images/digital-strategy-and-planning.jpg" alt=""></div>

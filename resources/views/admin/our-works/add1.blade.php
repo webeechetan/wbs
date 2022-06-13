@@ -57,7 +57,13 @@
                                     </div>
                                 </div>
                             </div>                            
-
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label col-lg-2">Images</label>
+                                <div class="col-lg-10">
+                                    <label class="col-form-label col-lg-2">Images</label>
+                                    <textarea name="gallery_images" id="gallery_images" ></textarea>
+                                </div>
+                            </div>
                             <div class="form-group row mb-4 align-items-end">
                                 <label class="col-form-label col-lg-2">Category</label>
                                 <div class="col-lg-5">
@@ -118,10 +124,7 @@
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror
                                 </div>
-                                <div class="col-lg-5">
-                                    <label class="col-form-label col-lg-2">Images</label>
-                                    <input type="file" class="form-control" name="gallery_images[]" accept="images/*" multiple>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -137,8 +140,7 @@
 </div>
 @endsection
 @section('footerScripts')
-{{-- <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script> --}}
-<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 @endsection
 
 @section('script')
@@ -150,18 +152,17 @@
 @endif
 <script>
     let section_count = 2;
-    
+    var toolbar  =  {
+    toolbar: [
+    ['style', ['bold', 'italic', 'underline', 'clear']],
+    ['font', ['strikethrough', 'superscript', 'subscript']],
+    ['para', ['ul', 'ol', 'paragraph']],
+    ['height', ['height']]
+  ]
+};
     $(document).ready(function() {
-        // $('.summernote').summernote();
-        ClassicEditor
-        .create( document.querySelector( '#editor' ) )
-        .then( editor => {
-                console.log( editor );
-        } )
-        .catch( error => {
-                console.error( error );
-        } );
-
+        $('#editor').summernote(toolbar);
+        $("#gallery_images").summernote();
     });
 
     $(".add_more_section").click(function(){
@@ -184,14 +185,7 @@
             let id = $(this).attr('id');
             console.log($(this).data('is_editor'))
             if($(this).data('rand_num')==rand_number){
-                ClassicEditor
-                .create( document.querySelector(`#${id}`))
-                .then( editor => {
-                        console.log( editor );
-                } )
-                .catch( error => {
-                        console.error( error );
-                } );
+                $(`#${id}`).summernote(toolbar);
             }
         });
     })
