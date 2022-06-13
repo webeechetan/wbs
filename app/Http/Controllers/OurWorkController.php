@@ -41,8 +41,6 @@ class OurWorkController extends Controller
         $request->validate([
             'name' => 'required',
             'image' => 'required',
-            'meta_title' => 'required',
-            'meta_description' => 'required',
             'category_id' => 'required',
         ]);
         $ourWork = new OurWork();
@@ -103,8 +101,6 @@ class OurWorkController extends Controller
         
         $request->validate([
             'name' => 'required',
-            'meta_title' => 'required',
-            'meta_description' => 'required',
             'category_id' => 'required',
             'image' => 'required'
         ]);

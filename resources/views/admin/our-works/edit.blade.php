@@ -1,6 +1,12 @@
 @extends('layouts.admin.app')
 @section('headerScripts')
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<style>
+.note-group-select-from-files {
+    display: none;
+}
+</style>
 @endsection
 @section('content')
 <div class="row mb-4 align-items-center">
@@ -79,7 +85,7 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label col-lg-2">Category</label>
                                 <div class="col-lg-5">
-                                    <select name="category_id[]" class="form-control" multiple>
+                                    <select name="category_id[]" class="form-control multipe_tag_genetaer" multiple>
                                         @foreach($categories as $category)
                                             @php
                                                 $check = false;
@@ -120,7 +126,7 @@
                                     @enderror
                                 </div>
                                 <div class="col-lg-5">
-                                    <textarea class="form-control" name="meta_description" placeholder="Meta description"> {{ $work->meta_description }} </textarea>
+                                    <input type="text" class="form-control" name="meta_description" placeholder="Meta description" value="{{ $work->meta_description }}"> 
                                     @error('meta_description')
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror
@@ -166,7 +172,7 @@
 @endsection
 @section('footerScripts')
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-{{-- <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script> --}}
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 @endsection
 
 @section('script')
@@ -178,13 +184,32 @@
 @endif
 <script>
     let section_count = {{ count($description) }} + 1;
-    
+    let image_toolbar = {
+        toolbar: [
+            ['insert', ['picture']],
+            ['view', ['codeview']],
+    ]
+    };
+    var toolbar  =  {
+    toolbar: [
+        ['style', ['bold', 'italic', 'underline', 'clear']],
+        ['font', ['strikethrough', 'superscript', 'subscript']],
+        ['para', ['ul', 'ol', 'paragraph']],
+        ['height', ['height']]
+    ]
+    };
     $(document).ready(function() {
-        $("#gallery_images").summernote();
+        $("#gallery_images").summernote(image_toolbar);
         $('.ckEditor').each(function () {
             let id = $(this).attr('id');
-            $(`#${id}`).summernote();    
+            $(`#${id}`).summernote(toolbar);    
         });
+        $(document).ready(function() {
+            $('.multipe_tag_genetaer').select2();
+        });
+        $(".close").click(function() {
+            $('.note-modal').modal('hide');
+        })
     });
 
     $(".add_more_section").click(function(){
