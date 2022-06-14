@@ -37,22 +37,28 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'image' => 'mimes:jpeg,jpg,png,gif|required|max:10000'
-        ]);
+        // $request->validate([
+        //     'image' => 'mimes:jpeg,jpg,png,gif|required|max:10000'
+        // ]);
+        // dd($request->file('image'));
 
-        $gallery = new Gallery();
-        if($request->name){
-            $image = $request->name.rand(1,50).'.'.$request->file('image')->extension();
-            $request->file('image')->move(public_path('images'),$image);
-        }else{
-            $image = time().rand(1,50).'.'.$request->file('image')->extension();
-            $request->file('image')->move(public_path('images'),$image);
-        }
-        $gallery->name = $image;
-        $gallery->image = $image;
-        $gallery->save();
-        if($gallery->id){
+        if($request->hasfile('image'))
+         {
+            foreach($request->file('image') as $key => $file)
+            {
+                $name = $file->getClientOriginalName();
+                $existing_name = Gallery::where('image',$name)->first();
+                if($existing_name){
+                    $name = '1-'.$name;
+                }
+                $path = $file->move(public_path('images'),$name);
+                $gallery = new Gallery();
+                $gallery->name = $name;
+                $gallery->image = $name;
+                $gallery->save();
+            }
+         }
+        if(1){
             return redirect()->route('gallery.list')->with('success','Image Added');
         }
 
@@ -110,8 +116,10 @@ class GalleryController extends Controller
     }
 
     public function ajax_image_upload(Request $request){
-        $name = $request->file('image')->getClientOriginalName();
-        $image = time().rand(1,50).'.'.$request->file('image')->extension();
+        $image = $request->file('image')->getClientOriginalName();
+        if(Gallery::where('image', $image)->first()){
+            $image = '1-'.$image;
+        }
         $request->file('image')->move(public_path('images'),$image);
         $gallery = new Gallery();
         $gallery->image = $image;
