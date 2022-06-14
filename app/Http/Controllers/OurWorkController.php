@@ -48,7 +48,12 @@ class OurWorkController extends Controller
         $ourWork->description = json_encode($request->section);
         $ourWork->heading = json_encode($request->heading);
         $ourWork->meta_title = $request->meta_title;
-        $ourWork->meta_description = $request->meta_description;
+        if($request->meta_description){
+            $ourWork->meta_description = $request->meta_description;
+        }else{
+            $ourWork->meta_description = 'Our Work';
+        }
+
         $ourWork->cat_id = implode(',',$request->category_id,);
         $ourWork->images = $request->image;
         $ourWork->slug = $request->slug;

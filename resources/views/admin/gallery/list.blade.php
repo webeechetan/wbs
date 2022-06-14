@@ -47,11 +47,7 @@
                 <div class="modal-body">
                     <div>
                         <label for="name">Image </label>
-                        <input type="file" class="form-control" name="image" accept="images/*">
-                    </div>
-                    <div class="mt-3">
-                        <label for="name">Image Name</label>
-                        <input type="text" class="form-control" name="name" placeholder="Name">
+                        <input type="file" class="form-control" name="image[]" accept="image/*" multiple>
                     </div>
                 </div>
                 <div class="modal-footer">

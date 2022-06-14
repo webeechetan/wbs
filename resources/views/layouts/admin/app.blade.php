@@ -136,7 +136,7 @@
                              <form method="post" action="" enctype="multipart/form-data" id="upload_new_image">
                                 <div class="form-group">
                                     <label class="col-form-label col-lg-2">Image</label>
-                                    <input type="file" name="image" accept="images/*" class="form-control">
+                                    <input type="file" name="image" accept="image/*" class="form-control">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Upload</button>
                              </form>

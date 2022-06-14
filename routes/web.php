@@ -131,7 +131,7 @@ Route::group(['prefix' => '/webeesite', 'middleware' => ['auth']], function () {
 
     Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.list');
     Route::post('/gallery/save', [GalleryController::class, 'store'])->name('gallery.store');
-    Route::get('gallery/delete/{id}', [GalleryController::class, 'destroy'])->name('gallery.delete');
+    Route::get('gallery/delete/{id}', [GalleryController::class, 'destroy'])->name('gallery.delete'); 
 
     // News
 
