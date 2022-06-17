@@ -17,6 +17,7 @@
                 </nav>
                 <div class="zikzak-container">
                     <h2 class="title-banner">{{$work->name}}</h2>
+                    <p class="mb-0">Amyr is a first-of-its-kind fine jewellery brand, specifically</p>
                 </div>
             </div>
             <!-- end container -->
@@ -26,32 +27,32 @@
     <section class="sec-space pt-0">
         <div class="container">
             <div class="row">
-                @php 
-                    $description = json_decode($work->description);
-                    $heading = json_decode($work->heading);
-                    $i = 0;
-                @endphp
+                <div class="col-md-8">
+                    {!! $work->gallery_images !!}
+                </div>
+                <div class="col-md-4">
+                    <div class="accordion" id="accordionExample">
+                        @php 
+                            $description = json_decode($work->description);
+                            $heading = json_decode($work->heading);
+                            $i = 0;
+                        @endphp
 
-                @foreach($description as $item)
-                    <div class="col-sm-6 col-lg-4 mb-4 mb-sm-5">
-                        <div class="titles">
-                            <h5>{{ $heading[$i] }}</h5>
-                            {!! $item !!}
-                        </div>
-                    </div>
-                    @php
-                        $i++;
-                    @endphp
-                @endforeach
-            </div>
-            <div class="row sec-space pb-0">
-                <div class="col-12">
-                    <div class="design-reff">
-                        <div class="row">
-                            <div class="col-md-4">
-                                {!! $work->gallery_images !!}
-                            </div> 
-                        </div>   
+                        @foreach($description as $item)
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">{{ $heading[$i] }}</button>
+                                    </h5>
+                                </div>
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">{!! $item !!}</div>
+                                </div>
+                            </div>
+                            @php
+                                $i++;
+                            @endphp
+                        @endforeach
                     </div>
                 </div>
             </div>
