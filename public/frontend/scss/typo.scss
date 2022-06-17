@@ -591,3 +591,52 @@ body .slider {
 	opacity: 1;
 	transform: translateY(0);
 }
+
+/* Accordion */
+.accordion {
+	> .card {
+		border: 1px solid $primary;
+		border-radius: 0;
+		.card-header {
+			position: relative;
+			margin-bottom: inherit;
+			cursor: pointer;
+			padding: 15px 20px;
+			margin: 0;
+
+		}
+		&:first-of-type {
+			border-bottom: 1px solid $primary;
+		}
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+	.card {
+		&-header {
+			background-color: transparent;
+			border: none;
+			&:first-child {
+				border-radius: 0;
+			}
+		}
+		&-body {
+			font-size: 14px;
+			padding: 0 20px 15px;
+		}
+	}
+	&-btn {
+		position: absolute;
+		right: 20px;
+		top: 12px;
+	}
+	&-title {
+		font-weight: 700;
+		color: $primary;
+		&.show {
+			.accordion-btn {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}

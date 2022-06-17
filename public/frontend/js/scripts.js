@@ -372,5 +372,10 @@
   });
 });
 
+$(document).ready(function(){
+  $('.accordion-title').click(function(){
+    $(this).toggleClass('show');
+  });
+});
 
 })(jQuery);
