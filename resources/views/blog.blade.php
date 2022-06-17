@@ -19,24 +19,20 @@
 <section class="blog sec-space pt-0">
     <div class="container">
         <div class="row flex-column-reverse flex-lg-row">
-            <div class="col-12">
-                <div class="row">
-                    @foreach($blogs as $blog)
-                        <div class="col-md-6 col-lg-4">
-                            <div class="post wow fadeIn">
-                                @if($blog->thumbnail)
-                                    <figure class="post-image"><img src="{{ $blog->thumbnail }}" alt="Image"></figure>
-                                @endif
-                                <div class="post-content">
-                                    <h3 class="post-title mb-2">{{ $blog->title }}</h3>
-                                    <small class="post-date mb-3">{{ $blog->created_at }}</small>
-                                    <p class="post-intro">{{ Str::limit($blog->short_description,25) }}</p>
-                                    <a href="{{ route('post.view') }}/{{ $blog->slug }}" class="post-link">READ MORE</a>
-                                </div>
-                            </div>
+            <div class="col-md-8">
+                @foreach($blogs as $blog)
+                    <div class="post wow fadeIn">
+                        @if($blog->thumbnail)
+                            <figure class="post-image"><img src="{{ $blog->thumbnail }}" alt="Image"></figure>
+                        @endif
+                        <div class="post-content">
+                            <h3 class="post-title mb-2">{{ $blog->title }}</h3>
+                            <small class="post-date mb-3">{{ $blog->created_at }}</small>
+                            <p class="post-intro">{{ Str::limit($blog->short_description,25) }}</p>
+                            <a href="{{ route('post.view') }}/{{ $blog->slug }}" class="post-link">READ MORE</a>
                         </div>
-                    @endforeach
-                </div>
+                    </div>
+                @endforeach
     
                 <!-- end post -->
                 <ul class="pagination">
