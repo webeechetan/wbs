@@ -41,6 +41,16 @@
                                 </div>
                             </div>
 
+                            <div class="form-group row mb-4">
+                                <label for="taskname" class="col-form-label col-lg-2">Short Description</label>
+                                <div class="col-lg-10">
+                                    <input  name="short_description"  type="text" class="form-control" placeholder="Short Description"  value="{{ old('short_description') }}">
+                                    @error('short_description')
+                                    <span class="text-danger">{{$message}}</span>
+                                    @enderror
+                                </div>
+                            </div>
+
                             
                             <div class="custom_row mt-2">
                                 <div class="form-group row mb-4">
@@ -64,7 +74,7 @@
                                 </div>
                             </div>                            
                             <div class="form-group row mb-4">
-                                <label class="col-form-label col-lg-2">Images</label>
+                                <label class="col-form-label col-lg-2">Content</label>
                                 <div class="col-lg-10">
                                     <label class="col-form-label col-lg-2">Images</label>
                                     <textarea name="gallery_images" id="gallery_images" ></textarea>

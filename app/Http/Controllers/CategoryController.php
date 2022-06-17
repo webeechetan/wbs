@@ -41,6 +41,7 @@ class CategoryController extends Controller
         ]);
         $category = new Category();
         $category->name = $request->name;
+        $category->type = $request->type;
         $category->save();
         if($category->id){
             return back()->with('success','Category created successfully');
@@ -84,6 +85,7 @@ class CategoryController extends Controller
         ]);
         $category = Category::find($request->category_id);
         $category->name = $request->name;
+        $category->type = $request->type;
         $category->save();
         if($category->id){
             return back()->with('success','Category updated successfully');
