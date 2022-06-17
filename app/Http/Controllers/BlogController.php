@@ -28,7 +28,8 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('admin.blog.add');
+        $categories = Category::where('type','1')->get();
+        return view('admin.blog.add',compact('categories'));
     }
 
     /**
@@ -40,14 +41,15 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'meta_title' => 'required',
-            'meta_description' => 'required',
-            'short_description' => 'required'
+            'title' => 'required'
         ]);
         
         $blog = new Blog();
+        if(!$request->category_id){
+            $blog->cat_id = "1,";
+        }else{
+            $blog->cat_id = implode(',',$request->category_id,);
+        }
         $blog->title = $request->title;
         $blog->description = $request->description;
         $blog->short_description = $request->short_description;
@@ -97,7 +99,8 @@ class BlogController extends Controller
     public function edit($id)
     {
         $blog = Blog::find($id);
-        return view('admin.blog.edit',compact('blog'));
+        $categories = Category::where('type','1')->get();
+        return view('admin.blog.edit',compact('blog','categories'));
     }
 
     /**
@@ -112,15 +115,16 @@ class BlogController extends Controller
 
         $request->validate([
             'title' => 'required',
-            'description' => 'required',
-            'meta_title' => 'required',
-            'meta_description' => 'required',
-            'short_description' => 'required'
         ]);
 
         $blog = Blog::find($request->id);
         $blog->thumbnail = $request->thumbnail;
         $blog->banner = $request->banner;
+        if(!$request->category_id){
+            $blog->cat_id = "1,";
+        }else{
+            $blog->cat_id = implode(',',$request->category_id,);
+        }
         $blog->og_image = $request->og_image;
         $blog->title = $request->title;
         $blog->description = $request->description;

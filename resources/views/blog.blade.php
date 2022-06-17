@@ -50,18 +50,8 @@
             </div>
             <!-- end col-8 -->
             
-            {{-- <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="col-lg-4 mb-5 mb-lg-0">
                 <aside class="sidebar">
-                    <div class="widget">
-                        <h4 class="title">SEARCH</h4>
-                        <form class="searchbar">
-                            <input type="text" placeholder="Search on blog">
-                            <button type="submit">
-                                <img src="{{ asset('frontend') }}/images/search.svg" alt="search">
-                            </button>
-                        </form>
-                    </div>
-                    end widget 
                     <div class="widget">
                         <h4 class="title">CATEGORIES</h4>
                         <ul class="categories">
@@ -70,9 +60,8 @@
                             @endforeach
                         </ul>
                     </div> 
-                     end widget
                 </aside>
-            </div> --}}
+            </div>
             <!-- end col-4 -->
         </div>
         <!-- end row -->
