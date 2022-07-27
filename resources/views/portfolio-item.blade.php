@@ -6,17 +6,19 @@
 @section('content')
 <div class="our-work-template">
     <section>
-        <div class="container">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('our-work') }}">Our Work</a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('view.work',$work->slug) }}">{{ $work->name }}</a></li>
-                </ol>
-            </nav>
-            <div class="zikzak-container">
-                <h2 class="title-banner mb-3">{{$work->name}}</h2>
-                <p class="mb-0">Amyr is a first-of-its-kind fine jewellery brand, specifically</p>
+        <div class="headlines">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('our-work') }}">Our Work</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('view.work',$work->slug) }}">{{ $work->name }}</a></li>
+                    </ol>
+                </nav>
+                <div class="zikzak-container">
+                    <h2 class="title-banner">{{$work->name}}</h2>
+                    <p class="mb-0">{{ $work->short_description }}</p>
+                </div>
             </div>
         </div>
         <!-- end container -->
@@ -38,14 +40,11 @@
                         @foreach($description as $item)
                             <div class="card">
                                 <div class="card-header" id="headingOne">
-                                    <div class="accordion-title" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        {{ $heading[$i] }}
-                                        <div class="accordion-btn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/></svg>
-                                        </div>
-                                    </div>
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse{{$i}}" aria-expanded="true" aria-controls="collapseOne">{{ $heading[$i] }}</button>
+                                    </h5>
                                 </div>
-                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionMain">
+                                <div id="collapse{{$i}}" class="collapse @if($i==0) show @endif" aria-labelledby="headingOne" data-parent="#accordionExample">
                                     <div class="card-body">{!! $item !!}</div>
                                 </div>
                             </div>

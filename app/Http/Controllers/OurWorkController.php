@@ -26,7 +26,7 @@ class OurWorkController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
+        $categories = Category::where('type','2')->get();
         return view('admin.our-works.add1',compact('categories'));
     }
 
@@ -40,21 +40,30 @@ class OurWorkController extends Controller
     {     
         $request->validate([
             'name' => 'required',
-            'image' => 'required',
-            'category_id' => 'required',
         ]);
         $ourWork = new OurWork();
+        if(!$request->category_id){
+            $ourWork->cat_id = "1,";
+        }else{
+            $ourWork->cat_id = implode(',',$request->category_id,);
+        }
         $ourWork->name = $request->name;
         $ourWork->description = json_encode($request->section);
         $ourWork->heading = json_encode($request->heading);
         $ourWork->meta_title = $request->meta_title;
+        $ourWork->short_description = $request->short_description;
         if($request->meta_description){
             $ourWork->meta_description = $request->meta_description;
         }else{
             $ourWork->meta_description = 'Our Work';
         }
+        if($request->meta_title){
+            $ourWork->meta_title = $request->meta_title;
+        }else{
+            $ourWork->meta_title = 'Our Work';
+        }
 
-        $ourWork->cat_id = implode(',',$request->category_id,);
+        
         $ourWork->images = $request->image;
         $ourWork->slug = $request->slug;
         $ourWork->og_image = $request->og_image;
@@ -90,7 +99,7 @@ class OurWorkController extends Controller
     public function edit($id)
     {
         $work = OurWork::find($id);
-        $categories = Category::all();
+        $categories = Category::where('type','2')->get();
         return view('admin.our-works.edit',compact('work','categories'));
     }
 
@@ -106,8 +115,6 @@ class OurWorkController extends Controller
         
         $request->validate([
             'name' => 'required',
-            'category_id' => 'required',
-            'image' => 'required'
         ]);
         $ourWork =  OurWork::find($request->id);
         $old_gallery_images = explode(",",$ourWork->gallery_images);
@@ -116,6 +123,7 @@ class OurWorkController extends Controller
         $ourWork->description = json_encode($request->section);
         $ourWork->heading = json_encode($request->heading);
         $ourWork->meta_title = $request->meta_title;
+        $ourWork->short_description = $request->short_description;
         $ourWork->meta_description = $request->meta_description;
         $ourWork->cat_id = implode(',',$request->category_id,);
         $ourWork->slug = $request->slug;
@@ -147,7 +155,7 @@ class OurWorkController extends Controller
 
     public function front_end_view(){
         $ourWork = OurWork::all();
-        $categories = Category::all();
+        $categories = Category::where('type', '2')->get();
         return view('our-work',compact('ourWork','categories'));
     }
 

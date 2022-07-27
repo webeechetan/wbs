@@ -27,6 +27,7 @@
                             <tr role="row">
                                <th>S.No</th>
                                <th>Name</th>
+                               <th>Type</th>
                                <th>Actions</th>
                             </tr>
                          </thead>
@@ -38,6 +39,13 @@
                             <tr>
                                 <td>{{ $i }}</td>
                                 <td>{{ $category->name }}</td>
+                                <td>
+                                    @if($category->type==1)
+                                        Blog
+                                    @else
+                                        Our Work
+                                    @endif
+                                </td>
                                 <td class="btn-actions">
                                     <button type="button" class="btn btn-outline-info waves-effect waves-light edit_category" data-category='{{ json_encode($category) }}' data-bs-toggle="modal" data-bs-target="#editCategoryModal"><i class="mdi mdi-pencil d-block"></i></button>
                                     <a href="{{ route('category.delete',$category->id) }}"><button type="button" class="btn btn-outline-danger waves-effect waves-light"><i class="mdi mdi-delete d-block "></i></button></a>
@@ -70,6 +78,14 @@
                     <label for="name">Category Name</label>
                     <input type="text" class="form-control" name="name" placeholder="Category Name">
                 </div>
+                <div class="modal-body">
+                    <label for="name">Category Type</label>
+                    <select class="form-control" name="type" required>
+                        <option value="">Select Type</option>
+                        <option value="1">Blog</option>
+                        <option value="2">Our Work</option>
+                    </select>
+                </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary waves-effect" data-bs-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary waves-effect waves-light">Save</button>
@@ -91,7 +107,14 @@
                 <div class="modal-body">
                     <label for="name">Category Name</label>
                     <input type="text" class="form-control" name="name" id="name" placeholder="Category Name">
+                    <label for="name">Category Type</label>
+                    <select class="form-control" name="type" id="category" required>
+                        <option value="">Select Type</option>
+                        <option value="1">Blog</option>
+                        <option value="2">Our Work</option>
+                    </select>
                 </div>
+                
                 <input type="hidden" name="category_id" id="category_id">
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary waves-effect" data-bs-dismiss="modal">Close</button>
