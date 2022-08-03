@@ -16,6 +16,10 @@ use App\Http\Controllers\HomePageSliderController;
 
 Route::get('/',[MetaDetails::class,'home'])->name('home');
 
+Route::get('/home-new', function () {
+    return view('home-new');
+})->name('home-new');
+
 Route::get('/about-us', [MetaDetails::class,'about'])->name('about');
 
 Route::get('/our-services', function () {
