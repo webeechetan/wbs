@@ -74,8 +74,11 @@ a {
   transition: all 0.25s ease-in-out;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: inherit;
   color: #51B174;
+}
+a:active {
+  text-decoration: inherit;
 }
 
 a:active {
@@ -654,6 +657,49 @@ body .slider {
 .page-loaded .map {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Accordion */
+.accordion {
+  position: sticky;
+  top: 30px;
+}
+.accordion .card {
+  border: none;
+  border-radius: 0;
+}
+.accordion .card:not(:last-child) {
+  margin-bottom: 10px;
+}
+.accordion .card-header {
+  background-color: transparent;
+  border-bottom: none;
+  padding: 0;
+}
+.accordion .card-header a {
+  font-size: 22px;
+  font-weight: 700;
+  padding: 15px 20px;
+  display: block;
+  color: #fff;
+  background-color: #51B174;
+  border: 1px solid #51B174;
+}
+.accordion .card-header a:hover, .accordion .card-header a:focus {
+  outline: none;
+}
+.accordion .card-header:first-child {
+  border-radius: 0;
+}
+.accordion .card-body {
+  font-size: 14px;
+  border: 1px solid #51B174;
+  margin-top: 5px;
+}
+.accordion .card-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* PAGINATION */
@@ -1116,8 +1162,11 @@ a {
   transition: all 0.25s ease-in-out;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: inherit;
   color: #51B174;
+}
+a:active {
+  text-decoration: inherit;
 }
 
 a:active {
@@ -1696,6 +1745,49 @@ body .slider {
 .page-loaded .map {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Accordion */
+.accordion {
+  position: sticky;
+  top: 30px;
+}
+.accordion .card {
+  border: none;
+  border-radius: 0;
+}
+.accordion .card:not(:last-child) {
+  margin-bottom: 10px;
+}
+.accordion .card-header {
+  background-color: transparent;
+  border-bottom: none;
+  padding: 0;
+}
+.accordion .card-header a {
+  font-size: 22px;
+  font-weight: 700;
+  padding: 15px 20px;
+  display: block;
+  color: #fff;
+  background-color: #51B174;
+  border: 1px solid #51B174;
+}
+.accordion .card-header a:hover, .accordion .card-header a:focus {
+  outline: none;
+}
+.accordion .card-header:first-child {
+  border-radius: 0;
+}
+.accordion .card-body {
+  font-size: 14px;
+  border: 1px solid #51B174;
+  margin-top: 5px;
+}
+.accordion .card-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* ODOMETER */

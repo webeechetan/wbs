@@ -15,6 +15,9 @@ use App\Http\Controllers\HomePageSliderController;
 
 
 Route::get('/',[MetaDetails::class,'home'])->name('home');
+Route::get('/home-new', function () {
+    return view('home-new');
+});
 
 Route::get('/about-us', [MetaDetails::class,'about'])->name('about');
 
@@ -82,6 +85,11 @@ Route::get('/privacy-policy', function () {
 Route::get('/terms-conditions', function () {
     return view('terms-conditions');
 })->name('terms.conditions');
+
+
+Route::get('/portfolio-item-new', function () {
+    return view('portfolio-item-new');
+})->name('portfolio.item.new');
 
 Route::get('/portfolio-item/{work}', [OurWorkController::class, 'view_work'])->name('view.work');
 

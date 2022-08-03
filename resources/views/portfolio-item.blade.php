@@ -44,11 +44,11 @@
                     @endphp
                 @endforeach
             </div>
-            <div class="row sec-space pb-0">
+            <div class="row">
                 <div class="col-12">
                     <div class="design-reff">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-12">
                                 {!! $work->gallery_images !!}
                             </div> 
                         </div>   
