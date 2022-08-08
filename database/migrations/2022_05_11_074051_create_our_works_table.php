@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('cat_id');
             $table->longText('description')->nullable();
+            $table->longText('short_description')->nullable();
             $table->longText('heading')->nullable();
             $table->longText('meta_title')->nullable();
             $table->longText('meta_description')->nullable();

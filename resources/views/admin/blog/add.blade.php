@@ -1,6 +1,7 @@
 @extends('layouts.admin.app')
 @section('headerScripts')
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 @endsection
 @section('content')
 <div class="row">
@@ -109,6 +110,17 @@
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror
                                 </div>
+                                <div class="col-lg-5">
+                                    <label class="col-form-label col-lg-2">Category</label>
+                                    <select class="form-control multipe_tag_genetaer" name="category_id[]" multiple="multiple">
+                                        @foreach($categories as $category)
+                                            <option value="{{$category->id}}">{{ $category->name }}</option>
+                                        @endforeach
+                                    </select>
+                                    @error('publish_at')
+                                        <span class="text-danger">{{$message}}</span>
+                                    @enderror
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -125,6 +137,7 @@
 @endsection
 @section('footerScripts')
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 @endsection
 
 @section('script')
@@ -147,7 +160,8 @@
             let slug = title.split(' ').join('-');
             slug = slug.toLowerCase();
             $("#slug").val(slug);
-        })
+        });
+        $('.multipe_tag_genetaer').select2();
     });
 </script>
 @endsection

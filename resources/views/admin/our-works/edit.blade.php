@@ -40,7 +40,15 @@
                                     @enderror
                                 </div>
                             </div>
-                        
+                            <div class="form-group row mb-4">
+                                <label for="taskname" class="col-form-label col-lg-2">Short Description</label>
+                                <div class="col-lg-10">
+                                    <input  name="short_description"  type="text" class="form-control" placeholder="Short Description"  value="{{ $work->short_description }}">
+                                    @error('short_description')
+                                    <span class="text-danger">{{$message}}</span>
+                                    @enderror
+                                </div>
+                            </div>
 
                             @php 
                                 $description = json_decode($work->description);

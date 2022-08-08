@@ -92,13 +92,14 @@ class MetaDetails extends Controller
 
     public function our_work(){
         $ourWork = OurWork::all();
-        $categories = Category::all();
+        $categories = Category::where('type', '2')->get();
         return view('our-work',['meta'=>$this->meta,'ourWork'=>$ourWork,'categories'=>$categories]);
     }
 
     public function blog(){
+        $categories = Category::where('type','1')->get();
         $blogs = Blog::where('type','1')->simplePaginate(5);
-        return view('blog',['meta'=>$this->meta,'blogs'=>$blogs]);
+        return view('blog',['meta'=>$this->meta,'blogs'=>$blogs,'categories'=>$categories]);
     }
     
 }

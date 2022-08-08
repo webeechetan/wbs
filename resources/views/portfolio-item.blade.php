@@ -17,6 +17,7 @@
                 </nav>
                 <div class="zikzak-container">
                     <h2 class="title-banner">{{$work->name}}</h2>
+                    <p class="mb-0">{{ $work->short_description }}</p>
                 </div>
             </div>
             <!-- end container -->
@@ -26,12 +27,18 @@
     <section class="sec-space pt-0">
         <div class="container">
             <div class="row">
-                @php 
-                    $description = json_decode($work->description);
-                    $heading = json_decode($work->heading);
-                    $i = 0;
-                @endphp
+                <div class="col-md-8">
+                    {!! $work->gallery_images !!}
+                </div>
+                <div class="col-md-4">
+                    <div class="accordion" id="accordionExample">
+                        @php 
+                            $description = json_decode($work->description);
+                            $heading = json_decode($work->heading);
+                            $i = 0;
+                        @endphp
 
+<<<<<<< HEAD
                 @foreach($description as $item)
                     <div class="col-sm-6 col-lg-4 mb-4 mb-sm-5">
                         <div class="titles">
@@ -52,6 +59,23 @@
                                 {!! $work->gallery_images !!}
                             </div> 
                         </div>   
+=======
+                        @foreach($description as $item)
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse{{$i}}" aria-expanded="true" aria-controls="collapseOne">{{ $heading[$i] }}</button>
+                                    </h5>
+                                </div>
+                                <div id="collapse{{$i}}" class="collapse @if($i==0) show @endif" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">{!! $item !!}</div>
+                                </div>
+                            </div>
+                            @php
+                                $i++;
+                            @endphp
+                        @endforeach
+>>>>>>> c19ced16e952d05eedeecf3444e72d9fd2462003
                     </div>
                 </div>
             </div>

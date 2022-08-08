@@ -18,4 +18,8 @@ class Blog extends Model
     public function getPublishAtAttribute($value){
         return Carbon::parse($value)->format('Y-m-d');
     }
+
+    public function category(){
+        return Category::whereIn('id',explode(',',$this->cat_id))->get();
+    }
 }
