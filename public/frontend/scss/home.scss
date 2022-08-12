@@ -1,0 +1,71 @@
+// Variables
+$primary: #51B174;
+$dark-grey: #999;
+
+body {
+    padding-left: 0;
+    padding-right: 0;
+}
+ul.meta {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+ul.meta li {
+    font-size: 14px;
+    color: $primary;
+}
+ul.meta li:not(:last-child) {
+    margin-right: 20px;
+}
+/* ----- Banner ----- */
+.title-banner {
+    font-weight: 400;
+}
+.titles h2 {
+    font-weight: 400;
+}
+/* ----- Homepage -----*/
+.home-banner-text {
+    display: flex;
+    align-items: center;
+    
+    .title-banner {
+        margin-left: 30px;
+    }
+}
+
+/* ----- Recent Work ----- */
+.rec_work {
+    overflow: hidden;
+    &-inner {
+        display: flex;
+        align-items: center;
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    &_title {
+        margin-right: 10%;
+    }
+    &_slider {
+        &-inner {
+            display: flex;
+        }
+        &-item {
+            width: 450px;
+            padding-right: 30px;
+            &-title {
+                font-size: 1.4em;
+                margin-bottom: 15px;
+            }
+            &-desc {
+                color: $dark-grey;
+            }
+            &-bottom {
+                padding-top: 20px;
+            }
+        }
+    }
+}

@@ -300,7 +300,7 @@
     // MASONRY
     var $container = $('.layout1 ul').imagesLoaded(function () {
       $container.isotope({
-        itemSelector: '.layout1 ul li',
+        rec_work_itemelector: '.layout1 ul li',
         layoutMode: 'masonry'
       });
     });
@@ -374,3 +374,22 @@
 
 
 })(jQuery);
+
+
+// Gsap Animation
+gsap.registerPlugin(ScrollTrigger);
+
+let rec_work_item = gsap.utils.toArray(".rec_work_slider-item");
+
+let scrollTween = gsap.to(rec_work_item, {
+  xPercent: -100 * (rec_work_item.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".rec_work",
+    pin: true,
+    scrub: 0.1,
+    snap: 1 / (rec_work_item.length - 1),
+    end: "+=3000",
+    markers: true
+  }
+});
