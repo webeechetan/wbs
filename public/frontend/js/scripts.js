@@ -380,21 +380,58 @@ $(document).ready(function(){
 
 })(jQuery);
 
+// Same Height Js
+var matchHeight = function () {
+	
+	function init() {
+		eventListeners();
+		matchHeight();
+	}
+	
+	function eventListeners(){
+		$(window).on('resize', function() {
+			matchHeight();
+		});
+	}
+	
+	function matchHeight(){
+		var groupName = $('[data-height]');
+		var groupHeights = [];
+		
+		groupName.css('min-height', 'auto');
+		
+		groupName.each(function() {
+			groupHeights.push($(this).outerHeight());
+		});
+		
+		var maxHeight = Math.max.apply(null, groupHeights);
+		groupName.css('min-height', maxHeight);
+	};
+	
+	return {
+		init: init
+	};
+	
+} ();
+
+$(document).ready(function() {
+	matchHeight.init();
+});
 
 // Gsap Animation
 gsap.registerPlugin(ScrollTrigger);
 
 let rec_work_item = gsap.utils.toArray(".rec_work_slider-item");
 
-let scrollTween = gsap.to(rec_work_item, {
-  xPercent: -100 * (rec_work_item.length - 1),
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".rec_work",
-    pin: true,
-    scrub: 0.1,
-    snap: 1 / (rec_work_item.length - 1),
-    end: "+=3000",
-    markers: true
-  }
-});
+// let scrollTween = gsap.to(rec_work_item, {
+//   xPercent: -100 * (rec_work_item.length - 1),
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: ".rec_work",
+//     pin: true,
+//     scrub: 0.1,
+//     snap: 1 / (rec_work_item.length - 1),
+//     end: "+=2000",
+//     markers: true
+//   }
+// });

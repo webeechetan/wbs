@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +38,7 @@
     <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/style.css">
     <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/app.css">
 
-    <!-- Home New Css -->
+    <!-- Home New Css -->   
     <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/home.css">
 
     <!-- Google Fonts -->
@@ -92,7 +91,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="home-banner-text">
-                        <img src="http://localhost/github/wbs/frontend/images/new-home/banner_img.jpg" alt="">
+                        <img src="http://localhost/github/wbs/frontend/images/new-home/banner_img.jpg" alt="Webeesocial | We create super - rich experiences online!">
                         <h2 class="title-banner">We create super - rich <span class="text-primary"><b>experiences</b></span> online!</h2>
                     </div>
                 </div>
@@ -102,11 +101,11 @@
 
     <!-- Recent Works -->
     <section class="rec_work sec-space pt-0">
-        <div class="container">
+        <div class="container-fluid">
             <div class="rec_work-inner">
                 <div class="rec_work_title">
                     <div>
-                        <div class="titles"><h2>Recent <br/><b>work</b></h2></div>
+                        <h2 class="title-big mb-4 mb-md-5">Recent <br/><b>work</b></h2>
                         <div class="custom-link"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
                     </div>
                 </div>
@@ -173,7 +172,48 @@
             </div>
         </div>
     </section>
-    <div style="height: 2000000px;"></div>
+    
+    <!-- What We do -->
+    <section class="whatWe sec-space pt-0">
+        <div class="whatWe-ani">
+            <div class="whatWe-ani-text"><h2><span>Digital</span><span>Strategy</span><span>Social Media Marketing</span></h2></div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center mb-4 mb-md-5">
+                <div class="col-md-5">
+                    <h2 class="title-big">What We <b>do?</b></h2>
+                </div>
+                <div class="col-md-7 text-center">
+                    <img src="http://localhost/github/wbs/frontend/images/new-home/what-we-do-home.jpg" alt="Webeesocial | What We do?">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <div class="titles">
+                            <h5>Digital.</h5>
+                            <h6 class="font-weight-400 mb-4">We create super-rich experiences online!</h6>
+                            <p>WeBeeSocial is a full-scale Digital Marketing Agency based out of New Delhi, India. We mix our years of experience and knowledge to create solutions for our clients which are not only performance driven, but also creative.  We are running kick-ass digital campaigns for our clients, even as you read this!</p>
+                        </div>
+                        <div class="custom-link"><a href="about-us.php">About Us</a> <span></span> <i></i></div>
+                        <!-- end custom-btn -->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <div class="titles">
+                            <h5>And More Digital.</h5>
+                            <h6 class="font-weight-400 mb-4">Marketing brands with care</h6>
+                            <p>What is marketing if it is not performance driven?</p>
+                            <p>We create digital experiences which stick with audiences and also reach the end objective. Trust us with making your brand visible and desired, with highly focused performance marketing.</p>
+                        </div> 
+                        <div class="custom-link"><a href="our-services.php">Our Services</a> <span></span> <i></i></div>
+                        <!-- end custom-btn -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 <!-- JS FILES -->
@@ -192,25 +232,3 @@
     
 </body>
 </html>
-=======
-@extends('layouts.app')
-@section('content')
-
-<!-- Home Banner -->
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="">
-                    <div class="">
-                        <img src="images/" alt="">
-                    </div>
-                    <h2>We create super - rich <span class="text-primary">experiences</span> online!</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-@endsection
->>>>>>> e14e77c1a8522a17729412e3cab45290f0e8710e

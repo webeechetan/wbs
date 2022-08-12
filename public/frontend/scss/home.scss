@@ -20,6 +20,15 @@ ul.meta li {
 ul.meta li:not(:last-child) {
     margin-right: 20px;
 }
+.container-fluid {
+    width: 1600px;
+}
+.title {
+    &-big {
+        font-size: 7em;
+        font-weight: 400;
+    }
+}
 /* ----- Banner ----- */
 .title-banner {
     font-weight: 400;
@@ -63,9 +72,26 @@ ul.meta li:not(:last-child) {
             &-desc {
                 color: $dark-grey;
             }
+            &-top {
+                display: flex;
+                align-items: flex-end;
+                img {
+                    width: 100%;
+                }
+            }
             &-bottom {
                 padding-top: 20px;
             }
+        }
+    }
+}
+/* ----- What We Do ----- */
+.whatWe {
+    &-ani {
+        position: relative;
+        overflow: hidden;
+        &-text {
+            position: absolute;
         }
     }
 }
