@@ -19,6 +19,10 @@ Route::get('/home-new', function () {
     return view('home-new');
 });
 
+Route::get('/home-new', function () {
+    return view('home-new');
+})->name('home-new');
+
 Route::get('/about-us', [MetaDetails::class,'about'])->name('about');
 
 Route::get('/our-services', function () {

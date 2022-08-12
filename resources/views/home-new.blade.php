@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -191,3 +192,25 @@
     
 </body>
 </html>
+=======
+@extends('layouts.app')
+@section('content')
+
+<!-- Home Banner -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="">
+                    <div class="">
+                        <img src="images/" alt="">
+                    </div>
+                    <h2>We create super - rich <span class="text-primary">experiences</span> online!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@endsection
+>>>>>>> e14e77c1a8522a17729412e3cab45290f0e8710e

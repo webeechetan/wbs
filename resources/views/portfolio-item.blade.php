@@ -20,18 +20,17 @@
                     <p class="mb-0">{{ $work->short_description }}</p>
                 </div>
             </div>
-            <!-- end container -->
         </div>
-        <!-- end headlines -->
+        <!-- end container -->
     </section>
-    <section class="sec-space pt-0">
+    <section class="sec-space">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
                     {!! $work->gallery_images !!}
                 </div>
                 <div class="col-md-4">
-                    <div class="accordion" id="accordionExample">
+                    <div class="accordion" id="accordionMain">
                         @php 
                             $description = json_decode($work->description);
                             $heading = json_decode($work->heading);

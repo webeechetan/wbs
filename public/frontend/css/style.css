@@ -688,6 +688,27 @@ body .slider {
 .accordion .card-header a:hover, .accordion .card-header a:focus {
   outline: none;
 }
+.accordion > .card {
+  border: 1px solid #51B174;
+  border-radius: 0;
+}
+.accordion > .card .card-header {
+  position: relative;
+  margin-bottom: inherit;
+  cursor: pointer;
+  padding: 15px 20px;
+  margin: 0;
+}
+.accordion > .card:first-of-type {
+  border-bottom: 1px solid #51B174;
+}
+.accordion > .card:not(:last-child) {
+  margin-bottom: 10px;
+}
+.accordion .card-header {
+  background-color: transparent;
+  border: none;
+}
 .accordion .card-header:first-child {
   border-radius: 0;
 }
@@ -695,11 +716,24 @@ body .slider {
   font-size: 14px;
   border: 1px solid #51B174;
   margin-top: 5px;
+  padding: 0 20px 15px;
 }
 .accordion .card-body ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+.accordion-btn {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+}
+.accordion-title {
+  font-weight: 700;
+  color: #51B174;
+}
+.accordion-title.show .accordion-btn {
+  transform: rotate(180deg);
 }
 
 /* PAGINATION */
@@ -1776,6 +1810,27 @@ body .slider {
 .accordion .card-header a:hover, .accordion .card-header a:focus {
   outline: none;
 }
+.accordion > .card {
+  border: 1px solid #51B174;
+  border-radius: 0;
+}
+.accordion > .card .card-header {
+  position: relative;
+  margin-bottom: inherit;
+  cursor: pointer;
+  padding: 15px 20px;
+  margin: 0;
+}
+.accordion > .card:first-of-type {
+  border-bottom: 1px solid #51B174;
+}
+.accordion > .card:not(:last-child) {
+  margin-bottom: 10px;
+}
+.accordion .card-header {
+  background-color: transparent;
+  border: none;
+}
 .accordion .card-header:first-child {
   border-radius: 0;
 }
@@ -1783,11 +1838,24 @@ body .slider {
   font-size: 14px;
   border: 1px solid #51B174;
   margin-top: 5px;
+  padding: 0 20px 15px;
 }
 .accordion .card-body ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+.accordion-btn {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+}
+.accordion-title {
+  font-weight: 700;
+  color: #51B174;
+}
+.accordion-title.show .accordion-btn {
+  transform: rotate(180deg);
 }
 
 /* ODOMETER */
