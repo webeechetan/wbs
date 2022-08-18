@@ -93,6 +93,8 @@
                     <div class="home-banner-text">
                         <img src="http://localhost/github/wbs/frontend/images/new-home/banner_img.jpg" alt="">
                         <h2 class="title-banner">We create super - rich <span class="text-primary"><b>experiences</b></span> online!</h2>
+                        <img src="http://localhost/github/wbs/frontend/images/new-home/banner_img.jpg" alt="Webeesocial | We create super - rich experiences online!">
+                        <h2 class="title-banner">We create super - rich <span class="text-primary" data-ticker="text-move"><b>experiences</b></span> online!</h2>
                     </div>
                 </div>
             </div>
@@ -187,6 +189,48 @@
                     <h5 class="text-primary">Insights, Metrics and Analytics - Everything is connected!</h5>
                     <p>In a digital world where everything’s connected, we believe that the approach to digital communications has to be joined-up too. Our approach combines creativity & technology and blends a diverse.</p>
                     <div class="custom-link"><a href="#">Know More</a> <span></span> <i></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos Section -->
+    <section class="client_ani-sec">
+        <div class="client_ani">
+            <div class="client_ani-row">
+                <div class="client_ani-row-inner">
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                </div>
+                <div class="client_ani-row-inner">
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                </div>
+            </div>
+            <div class="client_ani-row">
+                <div class="client_ani-row-inner">
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                </div>
+                <div class="client_ani-row-inner">
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
                 </div>
             </div>
         </div>
