@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/style.css">
     <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/app.css">
 
-    <!-- Home New Css -->   
+    <!-- Home New Css -->
     <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/home.css">
 
     <!-- Google Fonts -->
@@ -91,7 +91,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="home-banner-text">
-                        <img src="http://localhost/github/wbs/frontend/images/new-home/banner_img.jpg" alt="Webeesocial | We create super - rich experiences online!">
+                        <img src="http://localhost/github/wbs/frontend/images/new-home/banner_img.jpg" alt="">
                         <h2 class="title-banner">We create super - rich <span class="text-primary"><b>experiences</b></span> online!</h2>
                     </div>
                 </div>
@@ -101,11 +101,11 @@
 
     <!-- Recent Works -->
     <section class="rec_work sec-space pt-0">
-        <div class="container-fluid">
+        <div class="container">
             <div class="rec_work-inner">
                 <div class="rec_work_title">
                     <div>
-                        <h2 class="title-big mb-4 mb-md-5">Recent <br/><b>work</b></h2>
+                        <div class="titles"><h2>Recent <br/><b>work</b></h2></div>
                         <div class="custom-link"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
                     </div>
                 </div>
@@ -172,48 +172,27 @@
             </div>
         </div>
     </section>
-    
-    <!-- What We do -->
-    <section class="whatWe sec-space pt-0">
-        <div class="whatWe-ani">
-            <div class="whatWe-ani-text"><h2><span>Digital</span><span>Strategy</span><span>Social Media Marketing</span></h2></div>
-        </div>
-        <div class="container">
-            <div class="row align-items-center mb-4 mb-md-5">
-                <div class="col-md-5">
-                    <h2 class="title-big">What We <b>do?</b></h2>
-                </div>
-                <div class="col-md-7 text-center">
-                    <img src="http://localhost/github/wbs/frontend/images/new-home/what-we-do-home.jpg" alt="Webeesocial | What We do?">
-                </div>
-            </div>
+
+    <!-- Integrated Digital Solutions -->
+    <section class="sec-space">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6">
-                    <div>
-                        <div class="titles">
-                            <h5>Digital.</h5>
-                            <h6 class="font-weight-400 mb-4">We create super-rich experiences online!</h6>
-                            <p>WeBeeSocial is a full-scale Digital Marketing Agency based out of New Delhi, India. We mix our years of experience and knowledge to create solutions for our clients which are not only performance driven, but also creative.  We are running kick-ass digital campaigns for our clients, even as you read this!</p>
-                        </div>
-                        <div class="custom-link"><a href="about-us.php">About Us</a> <span></span> <i></i></div>
-                        <!-- end custom-btn -->
-                    </div>
+                <div class="col-md-3">
+                    <img src="http://localhost/github/wbs/frontend/images/new-home/solutions_img.jpg" alt="">
                 </div>
-                <div class="col-md-6">
-                    <div>
-                        <div class="titles">
-                            <h5>And More Digital.</h5>
-                            <h6 class="font-weight-400 mb-4">Marketing brands with care</h6>
-                            <p>What is marketing if it is not performance driven?</p>
-                            <p>We create digital experiences which stick with audiences and also reach the end objective. Trust us with making your brand visible and desired, with highly focused performance marketing.</p>
-                        </div> 
-                        <div class="custom-link"><a href="our-services.php">Our Services</a> <span></span> <i></i></div>
-                        <!-- end custom-btn -->
+                <div class="col-md-9">
+                    <div class="titles">
+                        <h2>Integrated Digital Solutions</h2>
                     </div>
+                    <h5 class="text-primary">Insights, Metrics and Analytics - Everything is connected!</h5>
+                    <p>In a digital world where everything’s connected, we believe that the approach to digital communications has to be joined-up too. Our approach combines creativity & technology and blends a diverse.</p>
+                    <div class="custom-link"><a href="#">Know More</a> <span></span> <i></i></div>
                 </div>
             </div>
         </div>
     </section>
+
+
 
 
 <!-- JS FILES -->
@@ -222,9 +201,11 @@
 <script src="http://localhost/github/wbs/frontend/js/imagesloaded.pkgd.min.js"></script>
 <script src="http://localhost/github/wbs/frontend/js/isotope.min.js"></script>
 <script src="http://localhost/github/wbs/frontend/js/swiper.min.js"></script>
+<!-- Gsap & Scrollmagic -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
 <script src="http://localhost/github/wbs/frontend/js/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+
 <script src="http://localhost/github/wbs/frontend/js/odometer.min.js"></script>
 <script src="http://localhost/github/wbs/frontend/js/fancybox.min.js"></script>
 <script src="http://localhost/github/wbs/frontend/js/wow.min.js"></script>
