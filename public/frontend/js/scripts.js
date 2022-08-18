@@ -418,6 +418,15 @@ $(document).ready(function() {
 	matchHeight.init();
 });
 
+// Ticker
+$(document).ready(function(){
+  let hero_text_move = ['experiences','inovation','digital'];
+  function ticker_verticle() {
+    let element = $('body').find('[data-ticker="text-move"]');
+    console.log(element);
+  }
+});
+
 // Gsap Animation
 gsap.registerPlugin(ScrollTrigger);
 

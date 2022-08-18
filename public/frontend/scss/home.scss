@@ -87,11 +87,44 @@ ul.meta li:not(:last-child) {
 }
 /* ----- What We Do ----- */
 .whatWe {
+    overflow: hidden;
     &-ani {
         position: relative;
-        overflow: hidden;
         &-text {
             position: absolute;
+            -webkit-animation: ticker--vertical 45s linear infinite;
+            animation: ticker--vertical 45s linear infinite;
+            display: block;
+            h2 {
+                display: block;
+                left: 10%;
+                position: relative;
+                transform: rotate(-90deg) translate(-100%);
+                transform-origin: top left;
+                white-space: nowrap;
+                span:not(:last-child) {
+                    margin-right: 50px;
+                }
+            }
         }
     }
 }
+
+/* ----- Client Logos ----- */
+.client_ani {
+    overflow: hidden;
+    &-row {
+        width: 200vw;
+        display: flex;
+        &-inner {
+            display: flex;
+        }
+    }
+    &-column {
+        width: 230px;
+        max-width: 100%;
+        margin: 15px 30px;
+    }
+}
+
+/* -----  ----- */
