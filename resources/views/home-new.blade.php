@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#282828" />
@@ -86,7 +86,7 @@
     </header>
 
     <!-- Banner Section -->
-    <section class="sec-space">
+    <section class="sec-space pb-0">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -100,7 +100,7 @@
     </section>
 
     <!-- Recent Works -->
-    <section class="rec_work sec-space pt-0">
+    <section class="rec_work sec-space">
         <div class="container-fluid">
             <div class="rec_work-inner">
                 <div class="rec_work_title">
@@ -176,7 +176,12 @@
     <!-- What We do -->
     <section class="whatWe sec-space pt-0">
         <div class="whatWe-ani">
-            <div class="whatWe-ani-text"><h2><span>Digital</span><span>Strategy</span><span>Social Media Marketing</span></h2></div>
+            <div class="whatWe-ani-text ticker-y">
+                <div class="ticker-y-item">
+                    <h3><span>Digital</span><span>Strategy</span><span>Social Media Marketing</span></h3>
+                    <h3><span>Digital</span><span>Strategy</span><span>Social Media Marketing</span></h3>
+                </div>
+            </div>
         </div>
         <div class="container">
             <div class="row align-items-center mb-4 mb-md-5">
