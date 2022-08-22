@@ -25,7 +25,8 @@ ul.meta li:not(:last-child) {
 }
 
 .title-big {
-  font-size: 7em;
+  font-size: 6.4em;
+  line-height: 1.1em;
   font-weight: 400;
 }
 
@@ -64,15 +65,16 @@ ul.meta li:not(:last-child) {
   display: flex;
 }
 .rec_work_slider-item {
-  width: 450px;
+  width: 500px;
   padding-right: 30px;
 }
 .rec_work_slider-item-title {
-  font-size: 1.4em;
-  margin-bottom: 15px;
+  font-size: 1.5em;
+  line-height: 1.6em;
+  margin: 15px 0;
 }
 .rec_work_slider-item-desc {
-  color: #999;
+  margin-bottom: 25px;
 }
 .rec_work_slider-item-top {
   display: flex;
@@ -100,7 +102,7 @@ ul.meta li:not(:last-child) {
 }
 .whatWe-ani-text h2 {
   display: block;
-  left: 10%;
+  left: 15px;
   position: relative;
   transform: rotate(-90deg) translate(-100%);
   transform-origin: top left;
@@ -122,7 +124,6 @@ ul.meta li:not(:last-child) {
   display: flex;
 }
 .client_ani-column {
-  width: 230px;
   max-width: 100%;
   margin: 15px 30px;
 }

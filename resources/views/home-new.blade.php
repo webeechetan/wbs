@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#282828" />
@@ -252,6 +252,23 @@
                     <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
                     <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
                     <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrated Digital Solutions -->
+    <section class="sec-space">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="http://localhost/github/wbs/frontend/images/new-home/solutions_img.jpg" alt="">
+                </div>
+                <div class="col-md-9">
+                    <h2 class="title-big mb-4 mb-md-5">Integrated Digital <b>Solutions</b></h2>
+                    <h4 class="text-primary mb-4">Insights, Metrics and Analytics - Everything is connected!</h4>
+                    <p>In a digital world where everything’s connected, we believe that the approach to digital communications has to be joined-up too. Our approach combines creativity & technology and blends a diverse.</p>
+                    <div class="custom-link mt-4"><a href="#">Know More</a> <span></span> <i></i></div>
                 </div>
             </div>
         </div>
