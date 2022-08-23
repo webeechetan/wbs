@@ -86,13 +86,13 @@
     </header>
 
     <!-- Banner Section -->
-    <section class="sec-space overflow-hidden pb-0">
+    <section class="overflow-hidden">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="home-banner-text">
                         <img src="http://localhost/github/wbs/frontend/images/new-home/banner_img.jpg" alt="Webeesocial | We create super - rich experiences online!">
-                        <h2 class="title-big">We create super - rich <span class="text-primary" data-ticker="text-move"><b>experiences</b></span> online!</h2>
+                        <h2 class="title-big">We create super - rich <span class="text-primary"><b class="typed-text"></b><b class="cursor">&nbsp;</b></span> online!</h2>
                     </div>
                 </div>
             </div>
@@ -100,65 +100,63 @@
     </section>
 
     <!-- Recent Works -->
-    <section class="rec_work sec-space">
+    <section class="float_sec sec-space">
         <div class="container">
-            <div class="rec_work-inner">
-                <div class="rec_work_title">
-                    <div>
-                        <h2 class="title-big mb-4 mb-md-5">Recent <br/><b>work</b></h2>
-                        <div class="custom-link"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
-                    </div>
+            <div class="float_sec-inner">
+                <div class="float_sec_title">
+                    <h2 class="title-big mb-4 mb-md-5">Recent <br/><b>work</b></h2>
+                    <div class="custom-link"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
                 </div>
-                <div class="rec_work_slider">
+                <div class="float_sec_slider">
                     <div>
-                        <div class="rec_work_slider-container" style="width: 500%;">
-                            <div class="rec_work_slider-inner">
-                                <div class="rec_work_slider-item">
-                                    <div class="rec_work_slider-item-top" data-height="sameHeight">
+                        <div class="float_sec_slider-container" style="width: 500%;">
+                            <div class="float_sec_slider-inner">
+                                <div class="float_sec_slider-item">
+                                    <div class="float_sec_slider-item-top" data-height="sameHeight">
                                         <img src="http://localhost/github/wbs/frontend/images/new-home/work_img1.jpg" alt="">
                                     </div>
-                                    <div class="rec_work_slider-item-bottom">
-                                        <h4 class="rec_work_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
-                                        <div class="rec_work_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
+                                    <div class="float_sec_slider-item-bottom">
+                                        <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                        <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
                                         <ul class="meta">
                                             <li>Digital campaigns</li>
                                             <li>Social media</li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="rec_work_slider-item">
-                                    <div class="rec_work_slider-item-top" data-height="sameHeight">
+                                <div class="float_sec_slider-item">
+                                    <div class="float_sec_slider-item-top" data-height="sameHeight">
                                         <img src="http://localhost/github/wbs/frontend/images/new-home/work_img2.jpg" alt="">
                                     </div>
-                                    <div class="rec_work_slider-item-bottom">
-                                        <h4 class="rec_work_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
-                                        <div class="rec_work_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
+                                    <div class="float_sec_slider-item-bottom">
+                                        <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                        <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
                                         <ul class="meta">
                                             <li>Digital campaigns</li>
                                             <li>Social media</li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="rec_work_slider-item">
-                                    <div class="rec_work_slider-item-top" data-height="sameHeight">
+                                <div class="float_sec_slider-item">
+                                    <div class="float_sec_slider-item-top" data-height="sameHeight">
                                         <img src="http://localhost/github/wbs/frontend/images/new-home/work_img1.jpg" alt="">
                                     </div>
-                                    <div class="rec_work_slider-item-bottom">
-                                        <h4 class="rec_work_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
-                                        <div class="rec_work_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
+                                    <div class="float_sec_slider-item-bottom">
+                                        <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                        <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
                                         <ul class="meta">
                                             <li>Digital campaigns</li>
                                             <li>Social media</li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="rec_work_slider-item">
-                                    <div class="rec_work_slider-item-top" data-height="sameHeight">
+                                <div class="float_sec_slider-item">
+                                    <div class="float_sec_slider-item-top" data-height="sameHeight">
                                         <img src="http://localhost/github/wbs/frontend/images/new-home/work_img1.jpg" alt="">
                                     </div>
-                                    <div class="rec_work_slider-item-bottom">
-                                        <h4 class="rec_work_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
-                                        <div class="rec_work_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
+                                    <div class="float_sec_slider-item-bottom">
+                                        <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                        <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
                                         <ul class="meta">
                                             <li>Digital campaigns</li>
                                             <li>Social media</li>
@@ -338,6 +336,192 @@
                     <h4 class="text-primary mb-4">Insights, Metrics and Analytics - Everything is connected!</h4>
                     <p>In a digital world where everything’s connected, we believe that the approach to digital communications has to be joined-up too. Our approach combines creativity & technology and blends a diverse.</p>
                     <div class="custom-link mt-4"><a href="#">Know More</a> <span></span> <i></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Works -->
+    <section class="float_sec sec-space pt-0">
+        <div class="container">
+            <div class="float_sec-inner">
+                <div class="float_sec_title text-center">
+                    <h2 class="title-big mb-4 mb-md-5">Awards</h2>
+                    <img src="http://localhost/github/wbs/frontend/images/new-home/awards_left_img.jpg" alt="">
+                </div>
+                <div class="float_sec_slider">
+                    <div>
+                        <div class="float_sec_slider-container" style="width: 500%;">
+                            <div class="float_sec_slider-inner">
+                                <div class="float_sec_slider-item">
+                                    <div class="float_sec_slider-item-top" data-height="sameHeight">
+                                        <img src="http://localhost/github/wbs/frontend/images/new-home/award_img1.jpg" alt="">
+                                    </div>
+                                    <div class="float_sec_slider-item-bottom">
+                                        <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
+                                        <div class="float_sec_slider-item-desc"><p>Awarded by Agency Reporter</p></div>
+                                        <ul class="meta">
+                                            <li>February 2022</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="float_sec_slider-item">
+                                    <div class="float_sec_slider-item-top" data-height="sameHeight">
+                                        <img src="http://localhost/github/wbs/frontend/images/new-home/award_img2.jpg" alt="">
+                                    </div>
+                                    <div class="float_sec_slider-item-bottom">
+                                        <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
+                                        <div class="float_sec_slider-item-desc"><p>Awarded by Agency Reporter</p></div>
+                                        <ul class="meta">
+                                            <li>February 2022</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="float_sec_slider-item">
+                                    <div class="float_sec_slider-item-top" data-height="sameHeight">
+                                        <img src="http://localhost/github/wbs/frontend/images/new-home/award_img1.jpg" alt="">
+                                    </div>
+                                    <div class="float_sec_slider-item-bottom">
+                                        <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
+                                        <div class="float_sec_slider-item-desc"><p>Awarded by Agency Reporter</p></div>
+                                        <ul class="meta">
+                                            <li>February 2022</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="float_sec_slider-item">
+                                    <div class="float_sec_slider-item-top" data-height="sameHeight">
+                                        <img src="http://localhost/github/wbs/frontend/images/new-home/award_img2.jpg" alt="">
+                                    </div>
+                                    <div class="float_sec_slider-item-bottom">
+                                        <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
+                                        <div class="float_sec_slider-item-desc"><p>Awarded by Agency Reporter</p></div>
+                                        <ul class="meta">
+                                            <li>February 2022</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="related-articles">
+        <div class="related-articles-container">
+            <div class="related-articles__column related-articles__column--title-one">
+                <div class="related-articles__title-container">
+                    <div class="related-articles__title-rotate-outer">
+                        <div class="related-articles__title-rotate-inner">
+                            <h2 class="related-articles__title"><span>Latest</span><span class="related-articles__desktop-content"> <b>news</b></span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="related-articles__column related-articles__column--title-two">
+                <div class="related-articles__title-container">
+                    <div class="related-articles__title-rotate-outer">
+                        <div class="related-articles__title-rotate-inner">
+                            <h2 class="related-articles__title"> <b>news</b></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="related-articles__column related-articles__column--list">
+                <ul>
+                    <li>
+                        <div class="opinion-article-card">
+                            <div class="opinion-article-card__column opinion-article-card__column--image">
+                                <div class="opinion-article-card__aspect-ratio image">
+                                    <img src="http://localhost/github/wbs/frontend/images/new-home/Brompton_Thumb_3_4.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="opinion-article-card__column opinion-article-card__column--content">
+                                <h3 class="opinion-article-card__column--content-title">F.R.I.E.N.D.S. – We saw it. And we saw it again.</h3>
+                                <p>The classic comic timing and the impeccable cast of the sitcom has captured</p>
+                                <div class="custom-link mt-4"><a href="#">Read More</a> <span></span> <i></i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="opinion-article-card">
+                            <div class="opinion-article-card__column opinion-article-card__column--image">
+                                <div class="opinion-article-card__aspect-ratio image">
+                                    <img src="http://localhost/github/wbs/frontend/images/new-home/Brompton_Thumb_3_4.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="opinion-article-card__column opinion-article-card__column--content">
+                                <h3 class="opinion-article-card__column--content-title">F.R.I.E.N.D.S. – We saw it. And we saw it again.</h3>
+                                <p>The classic comic timing and the impeccable cast of the sitcom has captured</p>
+                                <div class="custom-link mt-4"><a href="#">Read More</a> <span></span> <i></i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="opinion-article-card">
+                            <div class="opinion-article-card__column opinion-article-card__column--image">
+                                <div class="opinion-article-card__aspect-ratio image">
+                                    <img src="http://localhost/github/wbs/frontend/images/new-home/Brompton_Thumb_3_4.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="opinion-article-card__column opinion-article-card__column--content">
+                                <h3 class="opinion-article-card__column--content-title">F.R.I.E.N.D.S. – We saw it. And we saw it again.</h3>
+                                <p>The classic comic timing and the impeccable cast of the sitcom has captured</p>
+                                <div class="custom-link mt-4"><a href="#">Read More</a> <span></span> <i></i></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Testimonials -->
+    <section class="sec-space">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 mb-4 mb-md-5">
+                    <h2 class="title-big">Our <b>Testimonials</b></h2>
+                </div>
+                <div class="col-12">
+                    <div class="testimonials_slider single_slider">
+                        <div class="testimonials_slider-item">
+                            <div class="testimonials_slider-content">
+                                <div class="testimonials_slider-content-title">Webeesocial has been a fantastic partner in helping us define and optimize our digital objectives at ACMA</div>
+                                <div class="testimonials_slider-content-meta">Harkaran Malhotra | Deputy Director, ACMA</div>
+                            </div>
+                            <div class="testimonials_slider-right">
+                                <a href="#">
+                                    <div class="testimonials_slider-right-column testimonials_slider-right-img"><img src="http://localhost/github/wbs/frontend/images/new-home/testimonial_img1.png" alt=""></div>
+                                    <div class="testimonials_slider-right-column testimonials_slider-right-blank-circle"></div>
+                                    <div class="testimonials_slider-right-column testimonials_slider-right-arrow"><img src="http://localhost/github/wbs/frontend/images/new-home/testimonial_arrow-right.png" alt=""></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations -->
+    <section class="sec-space pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="location_img" data-height="location_img_height"><img src="http://localhost/github/wbs/frontend/images/new-home/address_delhi.jpg" alt=""></div>
+                    <h6 class="mt-4">Innov8 Old Fort, Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, 110017</h6>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="location_img" data-height="location_img_height"><img src="http://localhost/github/wbs/frontend/images/new-home/address_dubai.jpg" alt=""></div>
+                    <h6 class="mt-4">1102, Clover Bay Tower, Marasi Drive, Business Bay, Dubai, UAE Dubai</h6>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="location_img" data-height="location_img_height"><img src="http://localhost/github/wbs/frontend/images/new-home/address_can.jpg" alt=""></div>
+                    <h6 class="mt-4">40 Pintail Crescent, North York, ON M3A 2Y7, Canada</h6>
                 </div>
             </div>
         </div>
