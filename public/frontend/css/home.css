@@ -20,14 +20,21 @@ ul.meta li:not(:last-child) {
   margin-right: 20px;
 }
 
-.container-fluid {
-  width: 1600px;
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1400px;
+  }
 }
 
 .title-big {
-  font-size: 6.4em;
+  font-size: 6em;
   line-height: 1.1em;
   font-weight: 400;
+}
+@media (max-width: 1600px) {
+  .title-big {
+    font-size: 5em;
+  }
 }
 
 /* ----- Banner ----- */
@@ -43,6 +50,9 @@ ul.meta li:not(:last-child) {
 .home-banner-text {
   display: flex;
   align-items: center;
+}
+.home-banner-text img {
+  transform: translateX(-25px);
 }
 .home-banner-text .title-banner {
   margin-left: 30px;
@@ -84,50 +94,151 @@ ul.meta li:not(:last-child) {
   width: 100%;
 }
 .rec_work_slider-item-bottom {
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 /* ----- What We Do ----- */
 .whatWe {
   overflow: hidden;
 }
-.whatWe-ani {
-  position: relative;
+.whatWe-content {
+  margin-left: 10%;
 }
-.whatWe-ani-text {
+.whatWe .whatWeAni-container {
+  background: #fff;
+  height: 30px;
+  margin-right: -1px;
+  position: relative;
+  width: 100vw;
+}
+.whatWe .whatWeAni-container > div {
+  left: 0;
+  padding: 7px 0;
   position: absolute;
-  -webkit-animation: ticker--vertical 45s linear infinite;
-  animation: ticker--vertical 45s linear infinite;
-  display: block;
+  top: 0;
+  width: 100%;
 }
-.whatWe-ani-text h2 {
-  display: block;
-  left: 15px;
-  position: relative;
-  transform: rotate(-90deg) translate(-100%);
-  transform-origin: top left;
+@media (min-width: 768px) {
+  .whatWe .whatWeAni-container {
+    float: left;
+    height: auto;
+    width: 75px;
+  }
+}
+@media (min-width: 768px) {
+  .whatWe .whatWeAni-rotate-outer {
+    display: table;
+  }
+}
+.whatWe .whatWeAni-rotate-outer > div {
+  -webkit-animation: ticker--horizontal 40s linear infinite;
+  animation: ticker--horizontal 40s linear infinite;
+  display: inline-flex;
+}
+@media (min-width: 768px) {
+  .whatWe .whatWeAni-rotate-outer > div {
+    -webkit-animation: ticker--vertical 40s linear infinite;
+    animation: ticker--vertical 40s linear infinite;
+    display: block;
+  }
+}
+.whatWe .whatWeAni-rotate-inner {
+  display: inline-block;
+}
+@media (min-width: 768px) {
+  .whatWe .whatWeAni-rotate-inner {
+    padding: 50% 0;
+  }
+}
+.whatWe .whatWeAni-title {
+  float: left;
+  letter-spacing: 0.09em;
   white-space: nowrap;
+  font-size: 32px;
 }
-.whatWe-ani-text h2 span:not(:last-child) {
-  margin-right: 50px;
+@media (min-width: 768px) {
+  .whatWe .whatWeAni-title {
+    display: block;
+    left: 0.09em;
+    line-height: 100%;
+    margin-top: -50%;
+    position: relative;
+    transform: rotate(-90deg) translate(-100%);
+    transform-origin: top left;
+    white-space: nowrap;
+  }
 }
 
+@-webkit-keyframes ticker--horizontal {
+  0% {
+    transform: translateZ(0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+@keyframes ticker--horizontal {
+  0% {
+    transform: translateZ(0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+@-webkit-keyframes ticker--vertical {
+  0% {
+    transform: translateZ(0);
+  }
+  to {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+@keyframes ticker--vertical {
+  0% {
+    transform: translateZ(0);
+  }
+  to {
+    transform: translate3d(0, -50%, 0);
+  }
+}
 /* ----- Client Logos ----- */
 .client_ani {
   overflow: hidden;
 }
 .client_ani-row {
+  -webkit-animation: ticker-kf-even 40s linear infinite;
+  animation: ticker-kf-even 40s linear infinite;
+  display: flex;
   width: 200vw;
-  display: flex;
 }
-.client_ani-row-inner {
+.client_ani-row-list {
   display: flex;
+  text-align: center;
+  width: 100%;
 }
 .client_ani-column {
-  max-width: 100%;
-  margin: 15px 30px;
+  margin: 30px;
+}
+.client_ani-column img {
+  max-width: 175px;
+  max-height: 70px;
 }
 
-/* -----  ----- */
+@-webkit-keyframes ticker-kf-even {
+  0% {
+    transform: translate3d(-100vw, 0, 0);
+  }
+  to {
+    transform: translateZ(0);
+  }
+}
+@keyframes ticker-kf-even {
+  0% {
+    transform: translate3d(-100vw, 0, 0);
+  }
+  to {
+    transform: translateZ(0);
+  }
+}
 
 /*# sourceMappingURL=home.css.map */

@@ -86,13 +86,13 @@
     </header>
 
     <!-- Banner Section -->
-    <section class="sec-space">
+    <section class="sec-space overflow-hidden pb-0">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="home-banner-text">
                         <img src="http://localhost/github/wbs/frontend/images/new-home/banner_img.jpg" alt="Webeesocial | We create super - rich experiences online!">
-                        <h2 class="title-banner">We create super - rich <span class="text-primary" data-ticker="text-move"><b>experiences</b></span> online!</h2>
+                        <h2 class="title-big">We create super - rich <span class="text-primary" data-ticker="text-move"><b>experiences</b></span> online!</h2>
                     </div>
                 </div>
             </div>
@@ -100,8 +100,8 @@
     </section>
 
     <!-- Recent Works -->
-    <section class="rec_work sec-space pt-0">
-        <div class="container-fluid">
+    <section class="rec_work sec-space">
+        <div class="container">
             <div class="rec_work-inner">
                 <div class="rec_work_title">
                     <div>
@@ -174,41 +174,56 @@
     </section>
     
     <!-- What We do -->
-    <section class="whatWe sec-space pt-0">
-        <div class="whatWe-ani">
-            <div class="whatWe-ani-text"><h2><span>Digital</span><span>Strategy</span><span>Social Media Marketing</span></h2></div>
-        </div>
+    <section class="whatWe">
         <div class="container">
-            <div class="row align-items-center mb-4 mb-md-5">
-                <div class="col-md-5">
-                    <h2 class="title-big">What We <b>do?</b></h2>
-                </div>
-                <div class="col-md-7 text-center">
-                    <img src="http://localhost/github/wbs/frontend/images/new-home/what-we-do-home.jpg" alt="Webeesocial | What We do?">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
+            <div class="whatWeAni">
+                <div class="whatWeAni-container">
                     <div>
-                        <div class="titles">
-                            <h5>Digital.</h5>
-                            <h6 class="font-weight-400 mb-4">We create super-rich experiences online!</h6>
-                            <p>WeBeeSocial is a full-scale Digital Marketing Agency based out of New Delhi, India. We mix our years of experience and knowledge to create solutions for our clients which are not only performance driven, but also creative.  We are running kick-ass digital campaigns for our clients, even as you read this!</p>
+                        <div class="whatWeAni-rotate-outer">
+                            <div>
+                                <div class="whatWeAni-rotate-inner">
+                                    <h4 class="whatWeAni-title">Digital • Strategy • Social Media Marketing • Digital • Strategy • Social Media Marketing •</h4>
+                                </div>
+                                <div class="whatWeAni-rotate-inner">
+                                    <h4 class="whatWeAni-title">Digital • Strategy • Social Media Marketing • Digital • Strategy • Social Media Marketing •</h4>
+                                </div>
+                            </div>
                         </div>
-                        <div class="custom-link"><a href="about-us.php">About Us</a> <span></span> <i></i></div>
-                        <!-- end custom-btn -->
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div>
-                        <div class="titles">
-                            <h5>And More Digital.</h5>
-                            <h6 class="font-weight-400 mb-4">Marketing brands with care</h6>
-                            <p>What is marketing if it is not performance driven?</p>
-                            <p>We create digital experiences which stick with audiences and also reach the end objective. Trust us with making your brand visible and desired, with highly focused performance marketing.</p>
-                        </div> 
-                        <div class="custom-link"><a href="our-services.php">Our Services</a> <span></span> <i></i></div>
-                        <!-- end custom-btn -->
+            </div>
+            <div class="whatWe-content">
+                <div class="row align-items-center mb-4 mb-md-5">
+                    <div class="col-md-6">
+                        <h2 class="title-big">What We <b>do?</b></h2>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="http://localhost/github/wbs/frontend/images/new-home/what-we-do-home.jpg" alt="Webeesocial | What We do?">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div>
+                            <div class="titles">
+                                <h5>Digital.</h5>
+                                <h6 class="font-weight-400 mb-4">We create super-rich experiences online!</h6>
+                                <p>WeBeeSocial is a full-scale Digital Marketing Agency based out of New Delhi, India. We mix our years of experience and knowledge to create solutions for our clients which are not only performance driven, but also creative.  We are running kick-ass digital campaigns for our clients, even as you read this!</p>
+                            </div>
+                            <div class="custom-link"><a href="about-us.php">About Us</a> <span></span> <i></i></div>
+                            <!-- end custom-btn -->
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <div class="titles">
+                                <h5>And More Digital.</h5>
+                                <h6 class="font-weight-400 mb-4">Marketing brands with care</h6>
+                                <p>What is marketing if it is not performance driven?</p>
+                                <p>We create digital experiences which stick with audiences and also reach the end objective. Trust us with making your brand visible and desired, with highly focused performance marketing.</p>
+                            </div> 
+                            <div class="custom-link"><a href="our-services.php">Our Services</a> <span></span> <i></i></div>
+                            <!-- end custom-btn -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -216,42 +231,96 @@
     </section>
 
     <!-- Client Logos Section -->
-    <section class="client_ani-sec">
+    <section class="client_ani-sec sec-space">
         <div class="client_ani">
             <div class="client_ani-row">
-                <div class="client_ani-row-inner">
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                <div class="client_ani-row-list" data-client-list-id="1">
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/acma-black.png" alt="Acma Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/lotus-black.png" alt="Lotus Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/iiht-black.png" alt="IIHT Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/cbre-black.png" alt="CBRE Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/govt-black.png" alt="Govt Logo"></figure>
                 </div>
-                <div class="client_ani-row-inner">
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                <div class="client_ani-row-list" data-client-list-id="1">
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/acma-black.png" alt="Acma Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/lotus-black.png" alt="Lotus Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/iiht-black.png" alt="IIHT Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/cbre-black.png" alt="CBRE Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/govt-black.png" alt="Govt Logo"></figure>
                 </div>
             </div>
             <div class="client_ani-row">
-                <div class="client_ani-row-inner">
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                <div class="client_ani-row-list" data-client-list-id="2">
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mtv-black.png" alt="Mtv Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/messe-frankfurt-black.png" alt="Messe frankfurt Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/oupont-black.png" alt="Oupont Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/usaid-black.png" alt="Usaid Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/bpcl-black.png" alt="Bharat Petroleum Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/max-black.png" alt="Max Healthcare Logo"></figure>
                 </div>
-                <div class="client_ani-row-inner">
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                <div class="client_ani-row-list" data-client-list-id="2">
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mtv-black.png" alt="Mtv Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/messe-frankfurt-black.png" alt="Messe frankfurt Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/oupont-black.png" alt="Oupont Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/usaid-black.png" alt="Usaid Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/bpcl-black.png" alt="Bharat Petroleum Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/max-black.png" alt="Max Healthcare Logo"></figure>
+                </div>
+            </div>
+            <div class="client_ani-row">
+                <div class="client_ani-row-list" data-client-list-id="3">
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/solo-black.png" alt="Solo Expenses Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/oriflame-black.png" alt="Oriflame Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/bbc-black.png" alt="BBC Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/beds4u-black.png" alt="Beds4u Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/nasscom-black.png" alt="Nasscom Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/ozone-black.png" alt="Ozone Logo"></figure>
+                </div>
+                <div class="client_ani-row-list" data-client-list-id="3">
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/solo-black.png" alt="Solo Expenses Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/oriflame-black.png" alt="Oriflame Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/bbc-black.png" alt="BBC Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/beds4u-black.png" alt="Beds4u Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/nasscom-black.png" alt="Nasscom Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/ozone-black.png" alt="Ozone Logo"></figure>
+                </div>
+            </div>
+            <div class="client_ani-row">
+                <div class="client_ani-row-list" data-client-list-id="4">
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/shemford-black.png" alt="Shemford Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/ccc-black.png" alt="CCC Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/colors-black.png" alt="Colors Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/sos-black.png" alt="SOS Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/ok-play-black.png" alt="Ok Play Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/tci-black.png" alt="TCI Logo"></figure>
+                </div>
+                <div class="client_ani-row-list" data-client-list-id="4">
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/shemford-black.png" alt="Shemford Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/ccc-black.png" alt="CCC Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/colors-black.png" alt="Colors Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/sos-black.png" alt="SOS Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/ok-play-black.png" alt="Ok Play Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/tci-black.png" alt="TCI Logo"></figure>
+                </div>
+            </div>
+            <div class="client_ani-row">
+                <div class="client_ani-row-list" data-client-list-id="5">
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/goethe-black.png" alt="Goethe Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/teamwork-black.png" alt="Teamwork Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/aston-black.png" alt="Aston University Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/bare-body-black.png" alt="Bare Body Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/PFI-black.png" alt="PFI Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/jagat-pharma-black.png" alt="Jagat Pharma Logo"></figure>
+                </div>
+                <div class="client_ani-row-list" data-client-list-id="5">
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/goethe-black.png" alt="Goethe Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/teamwork-black.png" alt="Teamwork Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/aston-black.png" alt="Aston University Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/bare-body-black.png" alt="Bare Body Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/PFI-black.png" alt="PFI Logo"></figure>
+                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/jagat-pharma-black.png" alt="Jagat Pharma Logo"></figure>
                 </div>
             </div>
         </div>
@@ -281,9 +350,11 @@
 <script src="http://localhost/github/wbs/frontend/js/imagesloaded.pkgd.min.js"></script>
 <script src="http://localhost/github/wbs/frontend/js/isotope.min.js"></script>
 <script src="http://localhost/github/wbs/frontend/js/swiper.min.js"></script>
+<!-- Gsap -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
 <script src="http://localhost/github/wbs/frontend/js/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+
 <script src="http://localhost/github/wbs/frontend/js/odometer.min.js"></script>
 <script src="http://localhost/github/wbs/frontend/js/fancybox.min.js"></script>
 <script src="http://localhost/github/wbs/frontend/js/wow.min.js"></script>

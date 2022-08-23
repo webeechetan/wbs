@@ -20,14 +20,19 @@ ul.meta li {
 ul.meta li:not(:last-child) {
     margin-right: 20px;
 }
-.container-fluid {
-    width: 1600px;
+.container {
+    @media (min-width: 1600px) {
+        max-width: 1400px;
+    }
 }
 .title {
     &-big {
-        font-size: 6.4em;
+        font-size: 6em;
         line-height: 1.1em;
         font-weight: 400;
+        @media (max-width: 1600px) {
+            font-size: 5em;
+        }
     }
 }
 /* ----- Banner ----- */
@@ -41,6 +46,9 @@ ul.meta li:not(:last-child) {
 .home-banner-text {
     display: flex;
     align-items: center;
+    img {
+        transform: translateX(-25px);
+    }
     
     .title-banner {
         margin-left: 30px;
@@ -82,7 +90,7 @@ ul.meta li:not(:last-child) {
                 }
             }
             &-bottom {
-                padding-top: 20px;
+                padding-top: 30px;
             }
         }
     }
@@ -90,42 +98,120 @@ ul.meta li:not(:last-child) {
 /* ----- What We Do ----- */
 .whatWe {
     overflow: hidden;
-    &-ani {
-        position: relative;
-        &-text {
-            position: absolute;
-            -webkit-animation: ticker--vertical 45s linear infinite;
-            animation: ticker--vertical 45s linear infinite;
-            display: block;
-            h2 {
+    &-content {
+        margin-left: 10%;
+    }
+    .whatWeAni {
+        &-container {
+            background: #fff;
+            height: 30px;
+            margin-right: -1px;
+            position: relative;
+            width: 100vw;
+            >div {
+                left: 0;
+                padding: 7px 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                @media (min-width: 768px) {
+                    // padding: 0 11.5px;
+                }
+            }
+            @media (min-width: 768px) {
+                float: left;
+                height: auto;
+                width: 75px;
+            }
+        }
+        &-rotate {
+            &-outer {
+                @media (min-width: 768px) {
+                    display: table;
+                }
+                >div {
+                    -webkit-animation: ticker--horizontal 40s linear infinite;
+                    animation: ticker--horizontal 40s linear infinite;
+                    display: inline-flex;
+                    @media (min-width: 768px) {
+                        -webkit-animation: ticker--vertical 40s linear infinite; 
+                        animation: ticker--vertical 40s linear infinite;
+                        display: block;
+                    }
+                }
+            }
+            &-inner {
+                display: inline-block;
+                @media (min-width: 768px) {
+                    padding: 50% 0;
+                }
+            }
+        }
+        &-title {
+            float: left;
+            letter-spacing: .09em;
+            white-space: nowrap;
+            font-size: 32px;
+            @media (min-width: 768px) {
                 display: block;
-                left: 15px;
+                left: 0.09em;
+                line-height: 100%;
+                margin-top: -50%;
                 position: relative;
                 transform: rotate(-90deg) translate(-100%);
                 transform-origin: top left;
                 white-space: nowrap;
-                span:not(:last-child) {
-                    margin-right: 50px;
-                }
             }
         }
     }
+}
+@-webkit-keyframes ticker--horizontal {
+    0% { transform: translateZ(0); }
+    to { transform: translate3d(-50%, 0, 0); }
+}
+@keyframes ticker--horizontal {
+    0% { transform: translateZ(0); }
+    to { transform: translate3d(-50%, 0, 0); }
+}
+@-webkit-keyframes ticker--vertical {
+    0% { transform: translateZ(0); }
+    to { transform: translate3d(0, -50%, 0); }
+}
+@keyframes ticker--vertical {
+    0% { transform: translateZ(0); }
+    to { transform: translate3d(0, -50%, 0); }
 }
 
 /* ----- Client Logos ----- */
 .client_ani {
     overflow: hidden;
     &-row {
-        width: 200vw;
+        -webkit-animation: ticker-kf-even 40s linear infinite;
+        animation: ticker-kf-even 40s linear infinite;
         display: flex;
-        &-inner {
+        width: 200vw;
+        &-list {
             display: flex;
+            text-align: center;
+            width: 100%;
         }
     }
     &-column {
-        max-width: 100%;
-        margin: 15px 30px;
+        margin: 30px;
+        
+        img {
+            max-width: 175px;
+            max-height: 70px;
+        }
     }
 }
 
-/* -----  ----- */
+@-webkit-keyframes ticker-kf-even {
+    0% { transform: translate3d(-100vw, 0, 0); }
+    to { transform: translateZ(0); }
+}
+
+@keyframes ticker-kf-even {
+    0% { transform: translate3d(-100vw, 0, 0); }
+    to { transform: translateZ(0); }
+}
