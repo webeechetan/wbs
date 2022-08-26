@@ -45,8 +45,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="page-loaded color-undefined">
-<div id="smooth-wrapper">
-    <div id="smooth-content">
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -102,7 +100,7 @@
     </section>
 
     <!-- Recent Works -->
-    <section class="float_sec sec-space">
+    <section class="rec_sec float_sec sec-space">
         <div class="container">
             <div class="float_sec-inner">
                 <div class="float_sec_title">
@@ -111,14 +109,14 @@
                 </div>
                 <div class="float_sec_slider">
                     <div>
-                        <div class="float_sec_slider-container" style="width: 500%;">
-                            <div class="float_sec_slider-inner">
-                                <div class="float_sec_slider-item">
+                        <div class="float_sec_slider-container swiper_grid_3">
+                            <div class="float_sec_slider-inner swiper-wrapper">
+                                <div class="float_sec_slider-item swiper-slide">
                                     <div class="float_sec_slider-item-top" data-height="sameHeight">
-                                        <img src="http://localhost/github/wbs/frontend/images/new-home/work_img1.jpg" alt="">
+                                        <a href="#"><img src="http://localhost/github/wbs/frontend/images/new-home/work_img1.jpg" alt=""></a>
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
-                                        <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                        <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
                                         <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
                                         <ul class="meta">
                                             <li>Digital campaigns</li>
@@ -126,12 +124,12 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="float_sec_slider-item">
+                                <div class="float_sec_slider-item swiper-slide">
                                     <div class="float_sec_slider-item-top" data-height="sameHeight">
-                                        <img src="http://localhost/github/wbs/frontend/images/new-home/work_img2.jpg" alt="">
+                                        <a href="#"><img src="http://localhost/github/wbs/frontend/images/new-home/work_img2.jpg" alt=""></a>
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
-                                        <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                        <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
                                         <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
                                         <ul class="meta">
                                             <li>Digital campaigns</li>
@@ -139,12 +137,12 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="float_sec_slider-item">
+                                <div class="float_sec_slider-item swiper-slide">
                                     <div class="float_sec_slider-item-top" data-height="sameHeight">
-                                        <img src="http://localhost/github/wbs/frontend/images/new-home/work_img1.jpg" alt="">
+                                        <a href="#"><img src="http://localhost/github/wbs/frontend/images/new-home/work_img1.jpg" alt=""></a>
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
-                                        <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                        <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
                                         <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
                                         <ul class="meta">
                                             <li>Digital campaigns</li>
@@ -152,17 +150,22 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="float_sec_slider-item">
+                                <div class="float_sec_slider-item swiper-slide">
                                     <div class="float_sec_slider-item-top" data-height="sameHeight">
-                                        <img src="http://localhost/github/wbs/frontend/images/new-home/work_img1.jpg" alt="">
+                                        <a href="#"><img src="http://localhost/github/wbs/frontend/images/new-home/work_img2.jpg" alt=""></a>
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
-                                        <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                        <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
                                         <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
                                         <ul class="meta">
                                             <li>Digital campaigns</li>
                                             <li>Social media</li>
                                         </ul>
+                                    </div>
+                                </div>
+                                <div class="float_sec_slider-item swiper-slide">
+                                    <div class="float_sec_slider-item-more" data-height="sameHeight">
+                                        <div class="custom-link"><a href="#">See all projects</a> <span></span> <i></i></div>
                                     </div>
                                 </div>
                             </div>
@@ -175,55 +178,51 @@
     
     <!-- What We do -->
     <section class="whatWe">
-        <div class="container">
-            <div class="whatWeAni">
-                <div class="whatWeAni-container">
-                    <div>
-                        <div class="whatWeAni-rotate-outer">
-                            <div>
-                                <div class="whatWeAni-rotate-inner">
-                                    <h4 class="whatWeAni-title">Digital • Strategy • Social Media Marketing • Digital • Strategy • Social Media Marketing •</h4>
-                                </div>
-                                <div class="whatWeAni-rotate-inner">
-                                    <h4 class="whatWeAni-title">Digital • Strategy • Social Media Marketing • Digital • Strategy • Social Media Marketing •</h4>
-                                </div>
+        <div class="whatWeAni">
+            <div class="whatWeAni-container">
+                <div>
+                    <div class="whatWeAni-rotate-outer">
+                        <div>
+                            <div class="whatWeAni-rotate-inner">
+                                <h4 class="whatWeAni-title">Digital • Strategy • Social Media Marketing • Digital • Strategy • Social Media Marketing •</h4>
+                            </div>
+                            <div class="whatWeAni-rotate-inner">
+                                <h4 class="whatWeAni-title">Digital • Strategy • Social Media Marketing • Digital • Strategy • Social Media Marketing •</h4>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="container-fluid">
             <div class="whatWe-content">
                 <div class="row align-items-center mb-4 mb-md-5">
                     <div class="col-md-6">
-                        <h2 class="title-big">What We <b>do?</b></h2>
+                        <h2 class="title-big">What We <br/><b>do?</b></h2>
                     </div>
                     <div class="col-md-6">
-                        <img src="http://localhost/github/wbs/frontend/images/new-home/what-we-do-home.jpg" alt="Webeesocial | What We do?">
+                        <img src="http://localhost/github/wbs/frontend/images/new-home/what-we-do-home.jpg" width="300" alt="Webeesocial | What We do?">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <div>
-                            <div class="titles">
-                                <h5>Digital.</h5>
-                                <h6 class="font-weight-400 mb-4">We create super-rich experiences online!</h6>
-                                <p>WeBeeSocial is a full-scale Digital Marketing Agency based out of New Delhi, India. We mix our years of experience and knowledge to create solutions for our clients which are not only performance driven, but also creative.  We are running kick-ass digital campaigns for our clients, even as you read this!</p>
-                            </div>
-                            <div class="custom-link"><a href="about-us.php">About Us</a> <span></span> <i></i></div>
-                            <!-- end custom-btn -->
+                        <div class="titles">
+                            <h5>Digital.</h5>
+                            <h6 class="font-weight-400 mb-4">We create super-rich experiences online!</h6>
+                            <p>WeBeeSocial is a full-scale Digital Marketing Agency based out of New Delhi, India. We mix our years of experience and knowledge to create solutions for our clients which are not only performance driven, but also creative.  We are running kick-ass digital campaigns for our clients, even as you read this!</p>
                         </div>
+                        <div class="custom-link"><a href="about-us.php">About Us</a> <span></span> <i></i></div>
+                        <!-- end custom-btn -->
                     </div>
                     <div class="col-md-6">
-                        <div>
-                            <div class="titles">
-                                <h5>And More Digital.</h5>
-                                <h6 class="font-weight-400 mb-4">Marketing brands with care</h6>
-                                <p>What is marketing if it is not performance driven?</p>
-                                <p>We create digital experiences which stick with audiences and also reach the end objective. Trust us with making your brand visible and desired, with highly focused performance marketing.</p>
-                            </div> 
-                            <div class="custom-link"><a href="our-services.php">Our Services</a> <span></span> <i></i></div>
-                            <!-- end custom-btn -->
-                        </div>
+                        <div class="titles">
+                            <h5>And More Digital.</h5>
+                            <h6 class="font-weight-400 mb-4">Marketing brands with care</h6>
+                            <p>What is marketing if it is not performance driven?</p>
+                            <p>We create digital experiences which stick with audiences and also reach the end objective. Trust us with making your brand visible and desired, with highly focused performance marketing.</p>
+                        </div> 
+                        <div class="custom-link"><a href="our-services.php">Our Services</a> <span></span> <i></i></div>
+                        <!-- end custom-btn -->
                     </div>
                 </div>
             </div>
@@ -327,7 +326,7 @@
     </section>
 
     <!-- Integrated Digital Solutions -->
-    <section class="sec-space pt-0">
+    <section>
         <div class="container">
             <div class="single_slider">
                 <div class="swiper-wrapper">
@@ -365,7 +364,7 @@
     </section>
 
     <!-- Awards Works -->
-    <section class="float_sec sec-space pt-0">
+    <section class="awards_sec sec-space">
         <div class="container">
             <div class="float_sec-inner">
                 <div class="float_sec_title text-center">
@@ -374,11 +373,11 @@
                 </div>
                 <div class="float_sec_slider">
                     <div>
-                        <div class="float_sec_slider-container" style="width: 500%;">
-                            <div class="float_sec_slider-inner">
-                                <div class="float_sec_slider-item">
+                        <div class="float_sec_slider-container swiper_grid_3">
+                            <div class="float_sec_slider-inner swiper-wrapper">
+                                <div class="float_sec_slider-item swiper-slide">
                                     <div class="float_sec_slider-item-top">
-                                        <img src="http://localhost/github/wbs/frontend/images/new-home/award_img1.jpg" alt="">
+                                        <img src="http://localhost/github/wbs/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
                                         <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
@@ -388,9 +387,9 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="float_sec_slider-item">
+                                <div class="float_sec_slider-item swiper-slide">
                                     <div class="float_sec_slider-item-top">
-                                        <img src="http://localhost/github/wbs/frontend/images/new-home/award_img2.jpg" alt="">
+                                        <img src="http://localhost/github/wbs/frontend/images/new-home/award_img2.jpg" class="border-round" alt="">
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
                                         <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
@@ -400,9 +399,9 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="float_sec_slider-item">
+                                <div class="float_sec_slider-item swiper-slide">
                                     <div class="float_sec_slider-item-top">
-                                        <img src="http://localhost/github/wbs/frontend/images/new-home/award_img1.jpg" alt="">
+                                        <img src="http://localhost/github/wbs/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
                                         <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
@@ -412,9 +411,9 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="float_sec_slider-item">
+                                <div class="float_sec_slider-item swiper-slide">
                                     <div class="float_sec_slider-item-top">
-                                        <img src="http://localhost/github/wbs/frontend/images/new-home/award_img2.jpg" alt="">
+                                        <img src="http://localhost/github/wbs/frontend/images/new-home/award_img2.jpg" class="border-round" alt="">
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
                                         <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
@@ -611,12 +610,12 @@
     <footer class="footer sec-space pb-0">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 wow fadeInUp">
+                <div class="col-lg-4">
                     <figure class="logo mb-3"><img src="http://localhost/github/wbs/frontend/images/logo-white.png" alt="Webeesocial Logo"></figure>
                     <p>We are a full service creative digital marketing agency based in New Delhi. We combine our years of experience in creating integrated marketing solutions with creative output to generate a rich digital experience for businesses. We live by our motto – “We create super-rich experiences online!”</p>
                 </div>
                 <!-- end col-5 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp">
+                <div class="col-lg-4 col-md-6">
                     <div class="titles">
                         <h6>Our Offices</h6>
                     </div>
@@ -626,7 +625,7 @@
                     <address class="icon-list"><img src="http://localhost/github/wbs/frontend/images/icon-map-white-marker.svg" alt="Location"> <span>CA North York, ON M3A 2Y7, Canada</span></address>
                 </div>
                 <!-- end col-4 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp">
+                <div class="col-lg-4 col-md-6">
                     <div class="titles">
                         <h6>Connect With Us</h6>
                     </div>
@@ -653,7 +652,7 @@
                     <img src="http://localhost/github/wbs/frontend/images/Google-partners-logo.jpg" width="200" alt="Google Partner Logo">
                 </div>
                 <!-- end col-3 -->
-                <div class="col-12 wow fadeInUp">
+                <div class="col-12">
                     <div class="sub-footer">
                         <div class="row align-items-center">
                             <div class="col-lg-8 mb-4 mb-lg-0">
@@ -679,8 +678,6 @@
         <!-- end container -->
     </footer>
     <!-- end footer -->
-    </div>
-</div>
 
 
 <!-- JS FILES -->
@@ -690,7 +687,7 @@
 <script src="http://localhost/github/wbs/frontend/js/isotope.min.js"></script>
 <script src="http://localhost/github/wbs/frontend/js/swiper.min.js"></script>
 <!-- Gsap -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
 <script src="http://localhost/github/wbs/frontend/js/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
 

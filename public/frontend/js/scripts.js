@@ -80,6 +80,17 @@
       },
     });
 
+    let swiper_grid_3 = new Swiper('.swiper_grid_3', {
+      speed: 1000,
+      slidesPerView: '1',
+      spaceBetween: 30,
+    });
+
+    let rec_slider = new Swiper('.rec_sec .swiper_grid_3', {
+      speed: 1000,
+      slidesPerView: '1',
+      spaceBetween: 30,
+    });
 
     // PAGE TRANSITION
     $('body a').on('click', function (e) {
@@ -442,30 +453,47 @@ $(document).ready(function() {
 });
 
 // Gsap Animation
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger);
 
-// Smooth Scroll
-let smoother = ScrollSmoother.create({
-  wrapper: '#smooth-wrapper',
-  content: '#smooth-content',
-  smooth: 2,
-  effects: true
+let rec_float_sec_item = gsap.utils.toArray(".rec_sec .float_sec_slider-item");
+
+let scrollTween_slider = gsap.to(rec_float_sec_item, {
+  xPercent: -100 * (rec_float_sec_item.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".rec_sec",
+    pin: true,
+    scrub: 0.1,
+    start: 'top bottom',
+    end: "+=2000"
+    // markers: true
+  }
 });
 
-let rec_work_item = gsap.utils.toArray(".float_sec_slider-item");
-
-// let scrollTween = gsap.to(rec_work_item, {
-//   xPercent: -100 * (rec_work_item.length - 1),
-//   ease: "none",
-//   scrollTrigger: {
-//     trigger: ".rec_work",
-//     pin: true,
-//     scrub: 0.1,
-//     snap: 1 / (rec_work_item.length - 1),
-//     end: "+=2000",
-//     markers: true
-//   }
-// });
+let aw_float_sec_item = gsap.utils.toArray(".awards_sec .float_sec_slider-item");
+gsap.to(aw_float_sec_item, {
+  xPercent: -100 * (aw_float_sec_item.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".awards_sec",
+    pin: true,
+    start: 'top 5%',
+    scrub: 0.1,
+    end: "+=2000",
+    // markers: true
+  }
+});
+gsap.to('.awards_sec', {
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".awards_sec",
+    // pin: true,
+    scrub: 0.1,
+    start: 'top 5%',
+    end: "+=1500",
+    markers: true
+  }
+});
 
 // Banner Typing Effect
 const typedTextSpan = document.querySelector(".typed-text");
@@ -513,7 +541,7 @@ document.addEventListener("DOMContentLoaded", function() { // On DOM Load initia
 // Curve Path Animation
 let ctasvgText = gsap.utils.toArray("#masterTextPath");
 
-let scrollTween = gsap.to(ctasvgText, {
+gsap.to(ctasvgText, {
   scrollTrigger: {
     trigger: ".moveable_path",
     scrub: 1,
@@ -525,43 +553,7 @@ let scrollTween = gsap.to(ctasvgText, {
   }
 });
 
-// Prallax Effect
-(function() {
-  // Contains the items you want to parallax.
-  let parallaxContainer = document.getElementById('parallax-effect');
-  
-  // The elements you want to parallax.
-  let parallaxItems = document.getElementsByClassName('parallax');
-  
-  // Use this value to adjust the amount of parallax in response to mouse movement.
-  let fixer = 0.0030;
-  
-  document.addEventListener("mousemove", function(event){
-      
-      // get the mouseX - negative on left, positive on right
-      let pageX =  event.pageX - (parallaxContainer.getBoundingClientRect().width * 0.5);
-      // same here, get the y. use console.log(pageY) to see the values
-      let pageY =  event.pageY - (parallaxContainer.getBoundingClientRect().height * 0.5);  
-      
-      // Use Attribute data-speed="value"
-      for (i = 0; i < parallaxItems.length; i++) {
-        let item = parallaxItems[i];
-        let speedX = item.getAttribute("data-speed-x");
-        let speedY = item.getAttribute("data-speed-y");
-          
-        // Instead of using 'TweenLite.set' you can use 'TweenLite.to' which results in a smoother initial transition (when the mouse enters) at the cost of some preformance. 
-        // Change the '+' to '-' if you want to invert the parallax motion in relation to the mouse movement.
-        TweenLite.set(item, {
-            x: (item.offsetLeft + pageX * speedX ) * fixer,
-            y: (item.offsetTop + pageY * speedY) * fixer
-        });
-      }
-  });
-})();
-
 // Cursor hover effect
-console.clear();
-
 var background = $('.mousemove_hover_container')[0].getBoundingClientRect();
 var isMouseOver = false;
 var square = $('.mousemove_hover_item');
@@ -614,6 +606,5 @@ function prlx(target, mvmt) {
 }
 
 $(window).on('resize scroll', function(){
-  console.log("resized")
   background = $('.mousemove_hover_container')[0].getBoundingClientRect();
 });

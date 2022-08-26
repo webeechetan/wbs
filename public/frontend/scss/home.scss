@@ -31,6 +31,12 @@ ul.meta li:not(:last-child) {
 h6 {
     line-height: 1.8em;
 }
+p {
+    line-height: 1.6em;
+}
+.border-round {
+    border-radius: 50%;
+}
 .custom-link {
     display: inline-flex;
 }
@@ -80,26 +86,20 @@ h6 {
 /* ----- Recent Work ----- */
 .float_sec {
     overflow: hidden;
+    &_title {
+        padding-right: 10%;
+    }
     &-inner {
         display: flex;
         align-items: center;
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-    &_title {
-        margin-right: 10%;
     }
     &_slider {
-        &-inner {
-            display: flex;
-        }
+        width: 400px;
         &-item {
-            width: 400px;
-            padding-right: 40px;
             &-title {
                 font-size: 1.4em;
-                line-height: 1.5em;
-                margin: 15px 0;
+                line-height: 1.4em;
+                margin-bottom: 15px;
             }
             &-desc {
                 margin-bottom: 25px;
@@ -114,14 +114,45 @@ h6 {
             &-bottom {
                 padding-top: 30px;
             }
+            &-more {
+                width: 100%;
+                background-color: $secondary;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                a {
+                    &:hover {
+                        color: $color-dark;
+                    }
+                }
+            }
         }
+        @media (max-width: 1440px) {
+            width: 300px;
+        }
+    }
+}
+/* ----- Awards ----- */
+.awards_sec {
+    overflow: hidden;
+    .float_sec {
+        &_slider {
+            &-item-bottom {
+                text-align: center;
+                .meta {
+                    justify-content: center;
+                }
+            }
+        }   
     }
 }
 /* ----- What We Do ----- */
 .whatWe {
     overflow: hidden;
-    &-content {
-        margin-left: 15%;
+    .container-fluid {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 0 0 150px;
     }
     .whatWeAni {
         &-container {
@@ -131,7 +162,7 @@ h6 {
             position: relative;
             width: 100vw;
             >div {
-                left: 0;
+                left: 50%;
                 padding: 7px 0;
                 position: absolute;
                 top: 0;
@@ -205,8 +236,8 @@ h6 {
 .client_ani {
     overflow: hidden;
     &-row {
-        -webkit-animation: ticker-kf-even 45s linear infinite;
-        animation: ticker-kf-even 45s linear infinite;
+        -webkit-animation: ticker-kf-even 80s linear infinite;
+        animation: ticker-kf-even 80s linear infinite;
         display: flex;
         width: 200vw;
         &-list {
@@ -215,8 +246,8 @@ h6 {
             width: 100%;
         }
         &:nth-of-type(odd) {
-            -webkit-animation: ticker-kf 45s linear infinite;
-            animation: ticker-kf 45s linear infinite;
+            -webkit-animation: ticker-kf 80s linear infinite;
+            animation: ticker-kf 80s linear infinite;
         }
     }
     &-column {
