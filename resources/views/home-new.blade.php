@@ -45,6 +45,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="page-loaded color-undefined">
+<div id="smooth-wrapper">
+    <div id="smooth-content">
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -325,18 +327,39 @@
     </section>
 
     <!-- Integrated Digital Solutions -->
-    <section class="sec-space">
+    <section class="sec-space pt-0">
         <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="http://localhost/github/wbs/frontend/images/new-home/solutions_img.jpg" alt="">
+            <div class="single_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="http://localhost/github/wbs/frontend/images/new-home/solutions_img.jpg" alt="">
+                            </div>
+                            <div class="col-md-9">
+                                <h2 class="title-big mb-4 mb-md-5">Integrated Digital <b>Solutions</b></h2>
+                                <h4 class="text-primary mb-4">Insights, Metrics and Analytics - Everything is connected!</h4>
+                                <p>In a digital world where everything’s connected, we believe that the approach to digital communications has to be joined-up too. Our approach combines creativity & technology and blends a diverse.</p>
+                                <div class="custom-link mt-4"><a href="#">Know More</a> <span></span> <i></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="http://localhost/github/wbs/frontend/images/new-home/solutions_img_2.jpg" alt="">
+                            </div>
+                            <div class="col-md-9">
+                                <h2 class="title-big mb-4 mb-md-5">Strategy, Creativity & <b>Results</b>!</h2>
+                                <h4 class="text-primary mb-4">Our approach is backed by strategy, creativity and optimised for results.</h4>
+                                <p>We understand that each client and each project we undertake is different and so we have developed a repeatable process that we know works. Our methodology puts the user</p>
+                                <div class="custom-link mt-4"><a href="#">Know More</a> <span></span> <i></i></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-9">
-                    <h2 class="title-big mb-4 mb-md-5">Integrated Digital <b>Solutions</b></h2>
-                    <h4 class="text-primary mb-4">Insights, Metrics and Analytics - Everything is connected!</h4>
-                    <p>In a digital world where everything’s connected, we believe that the approach to digital communications has to be joined-up too. Our approach combines creativity & technology and blends a diverse.</p>
-                    <div class="custom-link mt-4"><a href="#">Know More</a> <span></span> <i></i></div>
-                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
@@ -354,7 +377,7 @@
                         <div class="float_sec_slider-container" style="width: 500%;">
                             <div class="float_sec_slider-inner">
                                 <div class="float_sec_slider-item">
-                                    <div class="float_sec_slider-item-top" data-height="sameHeight">
+                                    <div class="float_sec_slider-item-top">
                                         <img src="http://localhost/github/wbs/frontend/images/new-home/award_img1.jpg" alt="">
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
@@ -366,7 +389,7 @@
                                     </div>
                                 </div>
                                 <div class="float_sec_slider-item">
-                                    <div class="float_sec_slider-item-top" data-height="sameHeight">
+                                    <div class="float_sec_slider-item-top">
                                         <img src="http://localhost/github/wbs/frontend/images/new-home/award_img2.jpg" alt="">
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
@@ -378,7 +401,7 @@
                                     </div>
                                 </div>
                                 <div class="float_sec_slider-item">
-                                    <div class="float_sec_slider-item-top" data-height="sameHeight">
+                                    <div class="float_sec_slider-item-top">
                                         <img src="http://localhost/github/wbs/frontend/images/new-home/award_img1.jpg" alt="">
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
@@ -390,7 +413,7 @@
                                     </div>
                                 </div>
                                 <div class="float_sec_slider-item">
-                                    <div class="float_sec_slider-item-top" data-height="sameHeight">
+                                    <div class="float_sec_slider-item-top">
                                         <img src="http://localhost/github/wbs/frontend/images/new-home/award_img2.jpg" alt="">
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
@@ -480,24 +503,41 @@
     </section>
 
     <!-- Our Testimonials -->
-    <section class="sec-space">
+    <section class="sec-space pb-0">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7 mb-4 mb-md-5">
+                <div class="col-lg-7 mb-4">
                     <h2 class="title-big">Our <b>Testimonials</b></h2>
                 </div>
                 <div class="col-12">
-                    <div class="testimonials_slider single_slider">
+                    <div class="testimonials_slider">
                         <div class="testimonials_slider-item">
-                            <div class="testimonials_slider-content">
-                                <div class="testimonials_slider-content-title">Webeesocial has been a fantastic partner in helping us define and optimize our digital objectives at ACMA</div>
-                                <div class="testimonials_slider-content-meta">Harkaran Malhotra | Deputy Director, ACMA</div>
+                            <div class="testimonials_slider-content testimonials_swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="testimonials_slider-content-title">Webeesocial has been a fantastic partner in helping us define and optimize our digital objectives at ACMA</div>
+                                        <div class="testimonials_slider-content-meta">Harkaran Malhotra | Deputy Director, ACMA</div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testimonials_slider-content-title">Webeesocial has been a fantastic partner in helping us define and optimize our digital objectives at ACMA</div>
+                                        <div class="testimonials_slider-content-meta">Harkaran Malhotra | Deputy Director, ACMA</div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testimonials_slider-content-title">Webeesocial has been a fantastic partner in helping us define and optimize our digital objectives at ACMA</div>
+                                        <div class="testimonials_slider-content-meta">Harkaran Malhotra | Deputy Director, ACMA</div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="testimonials_slider-right">
-                                <a href="#">
-                                    <div class="testimonials_slider-right-column testimonials_slider-right-img"><img src="http://localhost/github/wbs/frontend/images/new-home/testimonial_img1.png" alt=""></div>
+                                <div class="testimonials_slider-right-next">
+                                    <div class="testimonials_slider-right-column testimonials_slider-right-img">
+                                        <img src="http://localhost/github/wbs/frontend/images/new-home/testimonial_img1.png" alt="">
+                                    </div>
                                     <div class="testimonials_slider-right-column testimonials_slider-right-blank-circle"></div>
-                                    <div class="testimonials_slider-right-column testimonials_slider-right-arrow"><img src="http://localhost/github/wbs/frontend/images/new-home/testimonial_arrow-right.png" alt=""></div>
+                                    <div class="testimonials_slider-right-column testimonials_slider-right-arrow">
+                                        <img src="http://localhost/github/wbs/frontend/images/new-home/testimonial_arrow-right.png" alt="">
+                                        <span>Next</span>
+                                    </div>
                                 </a>
                             </div>
                         </div>
@@ -508,24 +548,139 @@
     </section>
 
     <!-- Locations -->
-    <section class="sec-space pt-0">
+    <section class="sec-space">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 text-center">
-                    <div class="location_img" data-height="location_img_height"><img src="http://localhost/github/wbs/frontend/images/new-home/address_delhi.jpg" alt=""></div>
+                    <div class="location_img"><img src="http://localhost/github/wbs/frontend/images/new-home/address_delhi.jpg" alt=""></div>
                     <h6 class="mt-4">Innov8 Old Fort, Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, 110017</h6>
                 </div>
                 <div class="col-md-4 text-center">
-                    <div class="location_img" data-height="location_img_height"><img src="http://localhost/github/wbs/frontend/images/new-home/address_dubai.jpg" alt=""></div>
+                    <div class="location_img"><img src="http://localhost/github/wbs/frontend/images/new-home/address_dubai.jpg" alt=""></div>
                     <h6 class="mt-4">1102, Clover Bay Tower, Marasi Drive, Business Bay, Dubai, UAE Dubai</h6>
                 </div>
                 <div class="col-md-4 text-center">
-                    <div class="location_img" data-height="location_img_height"><img src="http://localhost/github/wbs/frontend/images/new-home/address_can.jpg" alt=""></div>
+                    <div class="location_img"><img src="http://localhost/github/wbs/frontend/images/new-home/address_can.jpg" alt=""></div>
                     <h6 class="mt-4">40 Pintail Crescent, North York, ON M3A 2Y7, Canada</h6>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- CTA Section -->
+    <section class="bottom_cta overflow-hidden">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="bottom_cta-left sec-space pt-0">
+                        <h2 class="title-big"><b>Ready to discuss</b> your project?</h2>
+                        <a href="#" class="get_in_touch_btn mousemove_hover_container">
+                            <div class="get_in_touch_btn_arrow"><img src="http://localhost/github/wbs/frontend/images/new-home/arrow-green.png" alt=""></div>
+                            <div class="get_in_touch_circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2300 500">
+                                    <defs>
+                                        <path x="0" y="15" d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
+                                            <animateTransform attributeName="transform" begin="0s" dur="30s" type="rotate" from="0 250 250" to="360 250 250" repeatCount="indefinite"/>
+                                        </path>
+                                    </defs>
+                                    <text textLength="1220">
+                                        <textPath xlink:href="#textcircle">Lets get in touch  • Lets get in touch  •</textPath>
+                                    </text>
+                                </svg>
+                            </div>
+                            <div class="get_in_touch_btn_cursor mousemove_hover_item">Get in <br>touch</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="moveable_path">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 0 1000 510">
+                            <defs><path id="master" d="M50,600 Q80,80 450,360 T800 120" stroke="#282828" stroke-width="120" fill="none"></path></defs>
+                            <use xlink:href="#master" opacity="1"></use>
+                            <text id="mainText" fill="#fff">
+                                <textPath id="masterTextPath" xlink:href="#master">Stay Upadated &nbsp;&nbsp;&nbsp; Thanks for Scrolling</textPath>
+                            </text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer sec-space pb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 wow fadeInUp">
+                    <figure class="logo mb-3"><img src="http://localhost/github/wbs/frontend/images/logo-white.png" alt="Webeesocial Logo"></figure>
+                    <p>We are a full service creative digital marketing agency based in New Delhi. We combine our years of experience in creating integrated marketing solutions with creative output to generate a rich digital experience for businesses. We live by our motto – “We create super-rich experiences online!”</p>
+                </div>
+                <!-- end col-5 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp">
+                    <div class="titles">
+                        <h6>Our Offices</h6>
+                    </div>
+                    <address class="icon-list"><img src="http://localhost/github/wbs/frontend/images/icon-map-white-marker.svg" alt="Location"> <span>Sector 22, Dwarka, New Delhi 110075</span></address>
+                    <address class="icon-list"><img src="http://localhost/github/wbs/frontend/images/icon-map-white-marker.svg" alt="Location"> <span>Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, Delhi 110017</span></address>
+                    <address class="icon-list"><img src="http://localhost/github/wbs/frontend/images/icon-map-white-marker.svg" alt="Location"> <span>AE Clover Bay Tower, Marasi Drive, Business Bay, Dubai, UAE P. O. Box - 391483</span></address>
+                    <address class="icon-list"><img src="http://localhost/github/wbs/frontend/images/icon-map-white-marker.svg" alt="Location"> <span>CA North York, ON M3A 2Y7, Canada</span></address>
+                </div>
+                <!-- end col-4 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp">
+                    <div class="titles">
+                        <h6>Connect With Us</h6>
+                    </div>
+                    <address>Contact us <a href="get-in-touch" class="text-link"><b>here</b></a></address>
+                    <address class="mb-4">
+                        <div class="titles mb-0">
+                            <h6 class="mb-2">Write to us</h6>
+                        </div>
+                        <a href="mailto:saurav.k@webeesocial.com">saurav.k@webeesocial.com</a>
+                    </address>
+                    <address class="mb-4">
+                        <div class="titles mb-0">
+                            <h6 class="mb-2">Follow us:</h6>
+                        </div>
+                        <ul class="social-icons">
+                            <li><a href="https://www.facebook.com/webeesocial/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://twitter.com/webeesocial" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/webeesocial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/webeesocial/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCDT0KsuN4ytOlEwX_tZxAqA" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="https://www.behance.net/webeesocial/" target="_blank"><i class="fab fa-behance"></i></a></li>
+                        </ul>
+                    </address>
+                    <img src="http://localhost/github/wbs/frontend/images/Google-partners-logo.jpg" width="200" alt="Google Partner Logo">
+                </div>
+                <!-- end col-3 -->
+                <div class="col-12 wow fadeInUp">
+                    <div class="sub-footer">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8 mb-4 mb-lg-0">
+                                <ul class="mb-2">
+                                    <li><a href="http://localhost/github/wbs/our-services">Our Services</a></li>
+                                    <li><a href="http://localhost/github/wbs/our-work">Our Work</a></li>
+                                    <li><a href="http://localhost/github/wbs/blog">Blog</a></li>
+                                    <li><a href="http://localhost/github/wbs/get-in-touch">Get in touch</a></li>
+                                    <li><a href="http://localhost/github/wbs/terms-conditions">Terms & Conditions</a></li>
+                                    <li><a href="http://localhost/github/wbs/privacy-policy">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 text-lg-right">
+                                <span>© 2022 Webeesocial - All rights Reserved</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end sub-footer -->
+                </div>
+                <!-- end col-12 -->
+            </div>
+        </div>
+        <!-- end container -->
+    </footer>
+    <!-- end footer -->
+    </div>
+</div>
 
 
 <!-- JS FILES -->

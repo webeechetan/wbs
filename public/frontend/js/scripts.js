@@ -55,7 +55,30 @@
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-    })
+    });
+
+    let testimonials_content_swiper = new Swiper('.testimonials_swiper', {
+      loop: true,
+      speed: 1000,
+      navigation: {
+        nextEl: ".testimonials_slider-right-arrow",
+      },
+    });
+
+    let single_slider = new Swiper('.single_slider', {
+      loop: true,
+      speed: 1000,
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
 
 
     // PAGE TRANSITION
@@ -419,7 +442,15 @@ $(document).ready(function() {
 });
 
 // Gsap Animation
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+// Smooth Scroll
+let smoother = ScrollSmoother.create({
+  wrapper: '#smooth-wrapper',
+  content: '#smooth-content',
+  smooth: 2,
+  effects: true
+});
 
 let rec_work_item = gsap.utils.toArray(".float_sec_slider-item");
 
@@ -477,4 +508,112 @@ function erase() {
 
 document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
   if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+
+// Curve Path Animation
+let ctasvgText = gsap.utils.toArray("#masterTextPath");
+
+let scrollTween = gsap.to(ctasvgText, {
+  scrollTrigger: {
+    trigger: ".moveable_path",
+    scrub: 1,
+    start: "center bottom"
+    // markers: true
+  },
+  attr: {
+    startOffset: 400
+  }
+});
+
+// Prallax Effect
+(function() {
+  // Contains the items you want to parallax.
+  let parallaxContainer = document.getElementById('parallax-effect');
+  
+  // The elements you want to parallax.
+  let parallaxItems = document.getElementsByClassName('parallax');
+  
+  // Use this value to adjust the amount of parallax in response to mouse movement.
+  let fixer = 0.0030;
+  
+  document.addEventListener("mousemove", function(event){
+      
+      // get the mouseX - negative on left, positive on right
+      let pageX =  event.pageX - (parallaxContainer.getBoundingClientRect().width * 0.5);
+      // same here, get the y. use console.log(pageY) to see the values
+      let pageY =  event.pageY - (parallaxContainer.getBoundingClientRect().height * 0.5);  
+      
+      // Use Attribute data-speed="value"
+      for (i = 0; i < parallaxItems.length; i++) {
+        let item = parallaxItems[i];
+        let speedX = item.getAttribute("data-speed-x");
+        let speedY = item.getAttribute("data-speed-y");
+          
+        // Instead of using 'TweenLite.set' you can use 'TweenLite.to' which results in a smoother initial transition (when the mouse enters) at the cost of some preformance. 
+        // Change the '+' to '-' if you want to invert the parallax motion in relation to the mouse movement.
+        TweenLite.set(item, {
+            x: (item.offsetLeft + pageX * speedX ) * fixer,
+            y: (item.offsetTop + pageY * speedY) * fixer
+        });
+      }
+  });
+})();
+
+// Cursor hover effect
+console.clear();
+
+var background = $('.mousemove_hover_container')[0].getBoundingClientRect();
+var isMouseOver = false;
+var square = $('.mousemove_hover_item');
+var mouse = {x: 0, y: 0, moved: false};
+
+$('.mousemove_hover_item').each(function(i,element) {
+    
+  var activeSquare = $(this),
+      squareData = activeSquare[0].getBoundingClientRect();
+
+  $(element).hover(over, out);
+
+  $(element).mousemove(function(element) {
+    mouse.moved = true;
+    mouse.x = element.clientX - background.left;
+    mouse.y = element.clientY - background.top;
+    prlx(activeSquare, -75);
+  });
+
+  // sets square back to normal position 
+  function returnToNormal(i, element) {
+    console.log("WORKING");
+    TweenMax.to(activeSquare, 0.3, {
+      delay: 0.2,
+      x: squareData.x - "50vw",
+      y: squareData.y - "50vh",
+    });
+  }
+  
+  function over (i, element) {
+  console.log("mouse is over");
+  isMouseOver = true;
+  TweenMax.to(this, 0.3, {opacity: 1});
+}
+
+function out (i, element) {
+  console.log("mouse is not over");
+  isMouseOver = false;
+  returnToNormal(i, element);
+  TweenMax.to(this, 0.3, {opacity: 0});
+}
+})
+
+// call parallax function
+function prlx(target, mvmt) {
+  TweenMax.to(target, 0.3, {
+    x: (mouse.x - background.width / 2) / background.width * mvmt,
+    y: (mouse.y - background.height / 2) / background.height * mvmt,
+  });
+}
+
+$(window).on('resize scroll', function(){
+  console.log("resized")
+  background = $('.mousemove_hover_container')[0].getBoundingClientRect();
 });
