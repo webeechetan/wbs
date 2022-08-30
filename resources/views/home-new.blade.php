@@ -23,23 +23,23 @@
     <meta name="twitter:image" content="https://www.webeesocial.com/preview.png">
 
     <!-- FAVICON FILES -->
-    <link href="http://localhost/github/wbs/frontend/images/Favicon.png" rel="apple-touch-icon">
-    <link href="http://localhost/github/wbs/frontend/images/Favicon.png" rel="shortcut icon">
+    <link href="{{ asset('') }}/frontend/images/Favicon.png" rel="apple-touch-icon">
+    <link href="{{ asset('') }}/frontend/images/Favicon.png" rel="shortcut icon">
 
     <!-- FONT AWESOME CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS FILES -->
-    <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/animate.min.css">
-    <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/odometer.min.css">
-    <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/fancybox.min.css">
-    <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/swiper.min.css">
-    <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/style.css">
-    <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/app.css">
+    <link rel="stylesheet" href="{{ asset('') }}/frontend/css/animate.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}/frontend/css/odometer.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}/frontend/css/fancybox.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}/frontend/css/swiper.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}/frontend/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}/frontend/css/style.css">
+    <link rel="stylesheet" href="{{ asset('') }}/frontend/css/app.css">
 
     <!-- Home New Css -->   
-    <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/home.css">
+    <link rel="stylesheet" href="{{ asset('') }}/frontend/css/home.css">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -91,7 +91,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="home-banner-text">
-                        <img src="http://localhost/github/wbs/frontend/images/new-home/banner_img.jpg" alt="Webeesocial | We create super - rich experiences online!">
+                        <img src="{{ asset('') }}/frontend/images/new-home/banner_img.jpg" alt="Webeesocial | We create super - rich experiences online!">
                         <h2 class="title-big">We create super - rich <span class="text-primary"><b class="typed-text"></b><b class="cursor">&nbsp;</b></span> online!</h2>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                             <div class="float_sec_slider-inner swiper-wrapper">
                                 <div class="float_sec_slider-item swiper-slide">
                                     <div class="float_sec_slider-item-top" data-height="sameHeight">
-                                        <a href="#"><img src="http://localhost/github/wbs/frontend/images/new-home/work_img1.jpg" alt=""></a>
+                                        <a href="#"><img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt=""></a>
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
                                         <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
@@ -128,7 +128,7 @@
                                 </div>
                                 <div class="float_sec_slider-item swiper-slide">
                                     <div class="float_sec_slider-item-top" data-height="sameHeight">
-                                        <a href="#"><img src="http://localhost/github/wbs/frontend/images/new-home/work_img2.jpg" alt=""></a>
+                                        <a href="#"><img src="{{ asset('') }}/frontend/images/new-home/work_img2.jpg" alt=""></a>
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
                                         <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
@@ -141,7 +141,7 @@
                                 </div>
                                 <div class="float_sec_slider-item swiper-slide">
                                     <div class="float_sec_slider-item-top" data-height="sameHeight">
-                                        <a href="#"><img src="http://localhost/github/wbs/frontend/images/new-home/work_img1.jpg" alt=""></a>
+                                        <a href="#"><img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt=""></a>
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
                                         <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
@@ -154,7 +154,7 @@
                                 </div>
                                 <div class="float_sec_slider-item swiper-slide">
                                     <div class="float_sec_slider-item-top" data-height="sameHeight">
-                                        <a href="#"><img src="http://localhost/github/wbs/frontend/images/new-home/work_img2.jpg" alt=""></a>
+                                        <a href="#"><img src="{{ asset('') }}/frontend/images/new-home/work_img2.jpg" alt=""></a>
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
                                         <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
@@ -204,7 +204,7 @@
                         <h2 class="title-big d-sm-none">What We <b>do?</b></h2>
                     </div>
                     <div class="col-sm-6">
-                        <img src="http://localhost/github/wbs/frontend/images/new-home/what-we-do-home.jpg" width="300" alt="Webeesocial | What We do?">
+                        <img src="{{ asset('') }}/frontend/images/new-home/what-we-do-home.jpg" width="300" alt="Webeesocial | What We do?">
                     </div>
                 </div>
                 <div class="row">
@@ -237,92 +237,92 @@
         <div class="client_ani">
             <div class="client_ani-row">
                 <div class="client_ani-row-list" data-client-list-id="1">
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/acma-black.png" alt="Acma Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/lotus-black.png" alt="Lotus Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/iiht-black.png" alt="IIHT Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/cbre-black.png" alt="CBRE Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/govt-black.png" alt="Govt Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/acma-black.png" alt="Acma Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/lotus-black.png" alt="Lotus Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/iiht-black.png" alt="IIHT Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/cbre-black.png" alt="CBRE Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/govt-black.png" alt="Govt Logo"></figure>
                 </div>
                 <div class="client_ani-row-list" data-client-list-id="1">
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/acma-black.png" alt="Acma Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/lotus-black.png" alt="Lotus Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/iiht-black.png" alt="IIHT Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/cbre-black.png" alt="CBRE Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/govt-black.png" alt="Govt Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/acma-black.png" alt="Acma Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/lotus-black.png" alt="Lotus Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/iiht-black.png" alt="IIHT Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/cbre-black.png" alt="CBRE Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/govt-black.png" alt="Govt Logo"></figure>
                 </div>
             </div>
             <div class="client_ani-row">
                 <div class="client_ani-row-list" data-client-list-id="2">
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mtv-black.png" alt="Mtv Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/messe-frankfurt-black.png" alt="Messe frankfurt Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/oupont-black.png" alt="Oupont Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/usaid-black.png" alt="Usaid Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/bpcl-black.png" alt="Bharat Petroleum Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/max-black.png" alt="Max Healthcare Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mtv-black.png" alt="Mtv Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/messe-frankfurt-black.png" alt="Messe frankfurt Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/oupont-black.png" alt="Oupont Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/usaid-black.png" alt="Usaid Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/bpcl-black.png" alt="Bharat Petroleum Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/max-black.png" alt="Max Healthcare Logo"></figure>
                 </div>
                 <div class="client_ani-row-list" data-client-list-id="2">
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mtv-black.png" alt="Mtv Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/messe-frankfurt-black.png" alt="Messe frankfurt Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/oupont-black.png" alt="Oupont Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/usaid-black.png" alt="Usaid Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/bpcl-black.png" alt="Bharat Petroleum Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/max-black.png" alt="Max Healthcare Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mtv-black.png" alt="Mtv Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/messe-frankfurt-black.png" alt="Messe frankfurt Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/oupont-black.png" alt="Oupont Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/usaid-black.png" alt="Usaid Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/bpcl-black.png" alt="Bharat Petroleum Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/max-black.png" alt="Max Healthcare Logo"></figure>
                 </div>
             </div>
             <div class="client_ani-row">
                 <div class="client_ani-row-list" data-client-list-id="3">
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/solo-black.png" alt="Solo Expenses Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/oriflame-black.png" alt="Oriflame Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/bbc-black.png" alt="BBC Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/beds4u-black.png" alt="Beds4u Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/nasscom-black.png" alt="Nasscom Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/ozone-black.png" alt="Ozone Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/solo-black.png" alt="Solo Expenses Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/oriflame-black.png" alt="Oriflame Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/bbc-black.png" alt="BBC Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/beds4u-black.png" alt="Beds4u Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/nasscom-black.png" alt="Nasscom Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/ozone-black.png" alt="Ozone Logo"></figure>
                 </div>
                 <div class="client_ani-row-list" data-client-list-id="3">
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/solo-black.png" alt="Solo Expenses Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/oriflame-black.png" alt="Oriflame Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/bbc-black.png" alt="BBC Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/beds4u-black.png" alt="Beds4u Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/nasscom-black.png" alt="Nasscom Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/ozone-black.png" alt="Ozone Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/solo-black.png" alt="Solo Expenses Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/oriflame-black.png" alt="Oriflame Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/bbc-black.png" alt="BBC Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/beds4u-black.png" alt="Beds4u Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/nasscom-black.png" alt="Nasscom Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/ozone-black.png" alt="Ozone Logo"></figure>
                 </div>
             </div>
             <div class="client_ani-row">
                 <div class="client_ani-row-list" data-client-list-id="4">
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/shemford-black.png" alt="Shemford Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/ccc-black.png" alt="CCC Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/colors-black.png" alt="Colors Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/sos-black.png" alt="SOS Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/ok-play-black.png" alt="Ok Play Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/tci-black.png" alt="TCI Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/shemford-black.png" alt="Shemford Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/ccc-black.png" alt="CCC Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/colors-black.png" alt="Colors Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/sos-black.png" alt="SOS Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/ok-play-black.png" alt="Ok Play Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/tci-black.png" alt="TCI Logo"></figure>
                 </div>
                 <div class="client_ani-row-list" data-client-list-id="4">
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/shemford-black.png" alt="Shemford Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/ccc-black.png" alt="CCC Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/colors-black.png" alt="Colors Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/sos-black.png" alt="SOS Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/ok-play-black.png" alt="Ok Play Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/tci-black.png" alt="TCI Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/shemford-black.png" alt="Shemford Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/ccc-black.png" alt="CCC Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/colors-black.png" alt="Colors Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/sos-black.png" alt="SOS Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/ok-play-black.png" alt="Ok Play Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/tci-black.png" alt="TCI Logo"></figure>
                 </div>
             </div>
             <div class="client_ani-row">
                 <div class="client_ani-row-list" data-client-list-id="5">
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/goethe-black.png" alt="Goethe Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/teamwork-black.png" alt="Teamwork Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/aston-black.png" alt="Aston University Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/bare-body-black.png" alt="Bare Body Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/PFI-black.png" alt="PFI Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/jagat-pharma-black.png" alt="Jagat Pharma Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/goethe-black.png" alt="Goethe Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/teamwork-black.png" alt="Teamwork Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/aston-black.png" alt="Aston University Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/bare-body-black.png" alt="Bare Body Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/PFI-black.png" alt="PFI Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/jagat-pharma-black.png" alt="Jagat Pharma Logo"></figure>
                 </div>
                 <div class="client_ani-row-list" data-client-list-id="5">
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/goethe-black.png" alt="Goethe Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/teamwork-black.png" alt="Teamwork Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/aston-black.png" alt="Aston University Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/bare-body-black.png" alt="Bare Body Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/PFI-black.png" alt="PFI Logo"></figure>
-                    <figure class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/jagat-pharma-black.png" alt="Jagat Pharma Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/goethe-black.png" alt="Goethe Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/teamwork-black.png" alt="Teamwork Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/aston-black.png" alt="Aston University Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/bare-body-black.png" alt="Bare Body Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/PFI-black.png" alt="PFI Logo"></figure>
+                    <figure class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/jagat-pharma-black.png" alt="Jagat Pharma Logo"></figure>
                 </div>
             </div>
         </div>
@@ -336,7 +336,7 @@
                     <div class="swiper-slide">
                         <div class="row">
                             <div class="col-md-3 col-sm-4">
-                                <img src="http://localhost/github/wbs/frontend/images/new-home/solutions_img.jpg" alt="">
+                                <img src="{{ asset('') }}/frontend/images/new-home/solutions_img.jpg" alt="">
                             </div>
                             <div class="col-md-9 col-sm-8">
                                 <h2 class="title-big mb-4 mb-md-5">Integrated Digital <b>Solutions</b></h2>
@@ -349,7 +349,7 @@
                     <div class="swiper-slide">
                         <div class="row">
                             <div class="col-md-3 col-sm-4">
-                                <img src="http://localhost/github/wbs/frontend/images/new-home/solutions_img_2.jpg" alt="">
+                                <img src="{{ asset('') }}/frontend/images/new-home/solutions_img_2.jpg" alt="">
                             </div>
                             <div class="col-md-9 col-sm-8">
                                 <h2 class="title-big mb-4 mb-md-5">Strategy, Creativity & <b>Results</b>!</h2>
@@ -374,7 +374,7 @@
                 <div class="float_sec_title text-center">
                     <div>
                         <h2 class="title-big mb-lg-5">Awards</h2>
-                        <img src="http://localhost/github/wbs/frontend/images/new-home/awards_left_img.jpg" class="d-none d-lg-inline-block" alt="">
+                        <img src="{{ asset('') }}/frontend/images/new-home/awards_left_img.jpg" class="d-none d-lg-inline-block" alt="">
                     </div>
                 </div>
                 <div class="float_sec_slider">
@@ -383,7 +383,7 @@
                             <div class="float_sec_slider-inner swiper-wrapper">
                                 <div class="float_sec_slider-item swiper-slide">
                                     <div class="float_sec_slider-item-top">
-                                        <img src="http://localhost/github/wbs/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
+                                        <img src="{{ asset('') }}/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
                                         <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
@@ -395,7 +395,7 @@
                                 </div>
                                 <div class="float_sec_slider-item swiper-slide">
                                     <div class="float_sec_slider-item-top">
-                                        <img src="http://localhost/github/wbs/frontend/images/new-home/award_img2.jpg" class="border-round" alt="">
+                                        <img src="{{ asset('') }}/frontend/images/new-home/award_img2.jpg" class="border-round" alt="">
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
                                         <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
@@ -407,7 +407,7 @@
                                 </div>
                                 <div class="float_sec_slider-item swiper-slide">
                                     <div class="float_sec_slider-item-top">
-                                        <img src="http://localhost/github/wbs/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
+                                        <img src="{{ asset('') }}/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
                                         <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
@@ -419,7 +419,7 @@
                                 </div>
                                 <div class="float_sec_slider-item swiper-slide">
                                     <div class="float_sec_slider-item-top">
-                                        <img src="http://localhost/github/wbs/frontend/images/new-home/award_img2.jpg" class="border-round" alt="">
+                                        <img src="{{ asset('') }}/frontend/images/new-home/award_img2.jpg" class="border-round" alt="">
                                     </div>
                                     <div class="float_sec_slider-item-bottom">
                                         <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
@@ -464,7 +464,7 @@
                         <div class="opinion-article-card">
                             <div class="opinion-article-card__column opinion-article-card__column--image">
                                 <div class="opinion-article-card__aspect-ratio image">
-                                    <img src="http://localhost/github/wbs/frontend/images/new-home/Brompton_Thumb_3_4.webp" alt="">
+                                    <img src="{{ asset('') }}/frontend/images/new-home/Brompton_Thumb_3_4.webp" alt="">
                                 </div>
                             </div>
                             <div class="opinion-article-card__column opinion-article-card__column--content">
@@ -478,7 +478,7 @@
                         <div class="opinion-article-card">
                             <div class="opinion-article-card__column opinion-article-card__column--image">
                                 <div class="opinion-article-card__aspect-ratio image">
-                                    <img src="http://localhost/github/wbs/frontend/images/new-home/Brompton_Thumb_3_4.webp" alt="">
+                                    <img src="{{ asset('') }}/frontend/images/new-home/Brompton_Thumb_3_4.webp" alt="">
                                 </div>
                             </div>
                             <div class="opinion-article-card__column opinion-article-card__column--content">
@@ -492,7 +492,7 @@
                         <div class="opinion-article-card">
                             <div class="opinion-article-card__column opinion-article-card__column--image">
                                 <div class="opinion-article-card__aspect-ratio image">
-                                    <img src="http://localhost/github/wbs/frontend/images/new-home/Brompton_Thumb_3_4.webp" alt="">
+                                    <img src="{{ asset('') }}/frontend/images/new-home/Brompton_Thumb_3_4.webp" alt="">
                                 </div>
                             </div>
                             <div class="opinion-article-card__column opinion-article-card__column--content">
@@ -537,11 +537,11 @@
                             <div class="testimonials_slider-right">
                                 <div class="testimonials_slider-right-next">
                                     <div class="testimonials_slider-right-column testimonials_slider-right-img">
-                                        <img src="http://localhost/github/wbs/frontend/images/new-home/testimonial_img1.png" alt="">
+                                        <img src="{{ asset('') }}/frontend/images/new-home/testimonial_img1.png" alt="">
                                     </div>
                                     <div class="testimonials_slider-right-column testimonials_slider-right-blank-circle"></div>
                                     <div class="testimonials_slider-right-column testimonials_slider-right-arrow">
-                                        <img src="http://localhost/github/wbs/frontend/images/new-home/testimonial_arrow-right.png" alt="">
+                                        <img src="{{ asset('') }}/frontend/images/new-home/testimonial_arrow-right.png" alt="">
                                         <span>Next</span>
                                     </div>
                                 </a>
@@ -559,15 +559,15 @@
             <div class="location_slider overflow-hidden text-center">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="location_img"><img src="http://localhost/github/wbs/frontend/images/new-home/address_delhi.jpg" alt=""></div>
+                        <div class="location_img"><img src="{{ asset('') }}/frontend/images/new-home/address_delhi.jpg" alt=""></div>
                         <h6 class="mt-4">Innov8 Old Fort, Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, 110017</h6>
                     </div>
                     <div class="swiper-slide">
-                        <div class="location_img"><img src="http://localhost/github/wbs/frontend/images/new-home/address_dubai.jpg" alt=""></div>
+                        <div class="location_img"><img src="{{ asset('') }}/frontend/images/new-home/address_dubai.jpg" alt=""></div>
                         <h6 class="mt-4">1102, Clover Bay Tower, Marasi Drive, Business Bay, Dubai, UAE Dubai</h6>
                     </div>
                     <div class="swiper-slide">
-                        <div class="location_img"><img src="http://localhost/github/wbs/frontend/images/new-home/address_can.jpg" alt=""></div>
+                        <div class="location_img"><img src="{{ asset('') }}/frontend/images/new-home/address_can.jpg" alt=""></div>
                         <h6 class="mt-4">40 Pintail Crescent, North York, ON M3A 2Y7, Canada</h6>
                     </div>
                 </div>
@@ -584,7 +584,7 @@
                     <div class="bottom_cta-left sec-space pt-0 text-center text-md-left">
                         <h2 class="title-big"><b>Ready to discuss</b> your project?</h2>
                         <a href="#" class="get_in_touch_btn mousemove_hover_container">
-                            <div class="get_in_touch_btn_arrow"><img src="http://localhost/github/wbs/frontend/images/new-home/arrow-green.png" alt=""></div>
+                            <div class="get_in_touch_btn_arrow"><img src="{{ asset('') }}/frontend/images/new-home/arrow-green.png" alt=""></div>
                             <div class="get_in_touch_circle">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2300 500">
                                     <defs>
@@ -621,7 +621,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <figure class="logo mb-3"><img src="http://localhost/github/wbs/frontend/images/logo-white.png" alt="Webeesocial Logo"></figure>
+                    <figure class="logo mb-3"><img src="{{ asset('') }}/frontend/images/logo-white.png" alt="Webeesocial Logo"></figure>
                     <p>We are a full service creative digital marketing agency based in New Delhi. We combine our years of experience in creating integrated marketing solutions with creative output to generate a rich digital experience for businesses. We live by our motto – “We create super-rich experiences online!”</p>
                 </div>
                 <!-- end col-5 -->
@@ -629,10 +629,10 @@
                     <div class="titles">
                         <h6>Our Offices</h6>
                     </div>
-                    <address class="icon-list"><img src="http://localhost/github/wbs/frontend/images/icon-map-white-marker.svg" alt="Location"> <span>Sector 22, Dwarka, New Delhi 110075</span></address>
-                    <address class="icon-list"><img src="http://localhost/github/wbs/frontend/images/icon-map-white-marker.svg" alt="Location"> <span>Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, Delhi 110017</span></address>
-                    <address class="icon-list"><img src="http://localhost/github/wbs/frontend/images/icon-map-white-marker.svg" alt="Location"> <span>AE Clover Bay Tower, Marasi Drive, Business Bay, Dubai, UAE P. O. Box - 391483</span></address>
-                    <address class="icon-list"><img src="http://localhost/github/wbs/frontend/images/icon-map-white-marker.svg" alt="Location"> <span>CA North York, ON M3A 2Y7, Canada</span></address>
+                    <address class="icon-list"><img src="{{ asset('') }}/frontend/images/icon-map-white-marker.svg" alt="Location"> <span>Sector 22, Dwarka, New Delhi 110075</span></address>
+                    <address class="icon-list"><img src="{{ asset('') }}/frontend/images/icon-map-white-marker.svg" alt="Location"> <span>Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, Delhi 110017</span></address>
+                    <address class="icon-list"><img src="{{ asset('') }}/frontend/images/icon-map-white-marker.svg" alt="Location"> <span>AE Clover Bay Tower, Marasi Drive, Business Bay, Dubai, UAE P. O. Box - 391483</span></address>
+                    <address class="icon-list"><img src="{{ asset('') }}/frontend/images/icon-map-white-marker.svg" alt="Location"> <span>CA North York, ON M3A 2Y7, Canada</span></address>
                 </div>
                 <!-- end col-4 -->
                 <div class="col-lg-4 col-md-6">
@@ -659,7 +659,7 @@
                             <li><a href="https://www.behance.net/webeesocial/" target="_blank"><i class="fab fa-behance"></i></a></li>
                         </ul>
                     </address>
-                    <img src="http://localhost/github/wbs/frontend/images/Google-partners-logo.jpg" width="200" alt="Google Partner Logo">
+                    <img src="{{ asset('') }}/frontend/images/Google-partners-logo.jpg" width="200" alt="Google Partner Logo">
                 </div>
                 <!-- end col-3 -->
                 <div class="col-12">
@@ -667,12 +667,12 @@
                         <div class="row align-items-center">
                             <div class="col-lg-8 mb-4 mb-lg-0">
                                 <ul class="mb-2">
-                                    <li><a href="http://localhost/github/wbs/our-services">Our Services</a></li>
-                                    <li><a href="http://localhost/github/wbs/our-work">Our Work</a></li>
-                                    <li><a href="http://localhost/github/wbs/blog">Blog</a></li>
-                                    <li><a href="http://localhost/github/wbs/get-in-touch">Get in touch</a></li>
-                                    <li><a href="http://localhost/github/wbs/terms-conditions">Terms & Conditions</a></li>
-                                    <li><a href="http://localhost/github/wbs/privacy-policy">Privacy Policy</a></li>
+                                    <li><a href="{{ asset('') }}/our-services">Our Services</a></li>
+                                    <li><a href="{{ asset('') }}/our-work">Our Work</a></li>
+                                    <li><a href="{{ asset('') }}/blog">Blog</a></li>
+                                    <li><a href="{{ asset('') }}/get-in-touch">Get in touch</a></li>
+                                    <li><a href="{{ asset('') }}/terms-conditions">Terms & Conditions</a></li>
+                                    <li><a href="{{ asset('') }}/privacy-policy">Privacy Policy</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-4 text-lg-right">
@@ -691,20 +691,20 @@
 
 
 <!-- JS FILES -->
-<script src="http://localhost/github/wbs/frontend/js/jquery.min.js"></script>
-<script src="http://localhost/github/wbs/frontend/js/bootstrap.min.js"></script>
-<script src="http://localhost/github/wbs/frontend/js/imagesloaded.pkgd.min.js"></script>
-<script src="http://localhost/github/wbs/frontend/js/isotope.min.js"></script>
-<script src="http://localhost/github/wbs/frontend/js/swiper.min.js"></script>
+<script src="{{ asset('') }}/frontend/js/jquery.min.js"></script>
+<script src="{{ asset('') }}/frontend/js/bootstrap.min.js"></script>
+<script src="{{ asset('') }}/frontend/js/imagesloaded.pkgd.min.js"></script>
+<script src="{{ asset('') }}/frontend/js/isotope.min.js"></script>
+<script src="{{ asset('') }}/frontend/js/swiper.min.js"></script>
 <!-- Gsap -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
-<script src="http://localhost/github/wbs/frontend/js/TweenMax.min.js"></script>
+<script src="{{ asset('') }}/frontend/js/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
 
-<script src="http://localhost/github/wbs/frontend/js/odometer.min.js"></script>
-<script src="http://localhost/github/wbs/frontend/js/fancybox.min.js"></script>
-<script src="http://localhost/github/wbs/frontend/js/wow.min.js"></script>
-<script src="http://localhost/github/wbs/frontend/js/scripts.js"></script>
+<script src="{{ asset('') }}/frontend/js/odometer.min.js"></script>
+<script src="{{ asset('') }}/frontend/js/fancybox.min.js"></script>
+<script src="{{ asset('') }}/frontend/js/wow.min.js"></script>
+<script src="{{ asset('') }}/frontend/js/scripts.js"></script>
     
 </body>
 </html>
