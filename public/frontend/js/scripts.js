@@ -63,6 +63,10 @@
       navigation: {
         nextEl: ".testimonials_slider-right-arrow",
       },
+      pagination: {
+        el: ".testimonials_slider-pagination",
+        clickable: true,
+      },
     });
 
     let single_slider = new Swiper('.single_slider', {
@@ -78,18 +82,42 @@
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      pagination: {
+        el: ".single_slider-pagination",
+        clickable: true,
+      },
     });
 
     let swiper_grid_3 = new Swiper('.swiper_grid_3', {
       speed: 1000,
-      slidesPerView: '1',
+      slidesPerView: '3',
       spaceBetween: 30,
+      allowTouchMove: false,
+      breakpoints: {
+        1399: {
+          slidesPerView: 2,
+        },
+        991: {
+          allowTouchMove: true,
+        },
+      },
     });
 
-    let rec_slider = new Swiper('.rec_sec .swiper_grid_3', {
-      speed: 1000,
-      slidesPerView: '1',
+    let location_slider = new Swiper('.location_slider', {
+      slidesPerView: '3',
       spaceBetween: 30,
+      pagination: {
+        el: ".slider-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        991: {
+          slidesPerView: 2,
+        },
+        575: {
+          slidesPerView: 1,
+        },
+      },
     });
 
     // PAGE TRANSITION
@@ -457,43 +485,68 @@ gsap.registerPlugin(ScrollTrigger);
 
 let rec_float_sec_item = gsap.utils.toArray(".rec_sec .float_sec_slider-item");
 
-let scrollTween_slider = gsap.to(rec_float_sec_item, {
-  xPercent: -100 * (rec_float_sec_item.length - 1),
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".rec_sec",
-    pin: true,
-    scrub: 0.1,
-    start: 'top bottom',
-    end: "+=2000"
-    // markers: true
-  }
-});
-
 let aw_float_sec_item = gsap.utils.toArray(".awards_sec .float_sec_slider-item");
-gsap.to(aw_float_sec_item, {
-  xPercent: -100 * (aw_float_sec_item.length - 1),
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".awards_sec",
-    pin: true,
-    start: 'top 5%',
-    scrub: 0.1,
-    end: "+=2000",
-    // markers: true
+
+$( window ).resize( function() {
+  
+  if ( window.matchMedia( '(max-width: 991px)' ).matches ) {
+    
+  } else if ( window.matchMedia( '(max-width: 1399px)' ).matches ) {
+    
+    let scrollTween_slider = gsap.to(rec_float_sec_item, {
+      xPercent: -85 * (rec_float_sec_item.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".rec_sec",
+        pin: true,
+        scrub: 0.1,
+        end: "+=1500"
+        // markers: true
+      }
+    });
+    gsap.to(aw_float_sec_item, {
+      xPercent: -85 * (aw_float_sec_item.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".awards_sec",
+        pin: true,
+        start: 'top 5%',
+        scrub: 0.1,
+        end: "+=1000"
+        // markers: true
+      }
+    });
+    
+  } else {
+    
+    let scrollTween_slider = gsap.to(rec_float_sec_item, {
+      xPercent: -70 * (rec_float_sec_item.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".rec_sec",
+        pin: true,
+        scrub: 0.1,
+        end: "+=1500"
+        // markers: true
+      }
+    });
+    gsap.to(aw_float_sec_item, {
+      xPercent: -70 * (aw_float_sec_item.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".awards_sec",
+        pin: true,
+        start: 'top 5%',
+        scrub: 0.1,
+        end: "+=1000"
+        // markers: true
+      }
+    });
+    
   }
-});
-gsap.to('.awards_sec', {
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".awards_sec",
-    // pin: true,
-    scrub: 0.1,
-    start: 'top 5%',
-    end: "+=1500",
-    markers: true
-  }
-});
+
+} );
+$( window ).resize();
 
 // Banner Typing Effect
 const typedTextSpan = document.querySelector(".typed-text");

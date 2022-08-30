@@ -100,12 +100,14 @@
     </section>
 
     <!-- Recent Works -->
-    <section class="rec_sec float_sec sec-space">
-        <div class="container">
+    <section class="rec_sec float_sec">
+        <div class="float_sec_main">
             <div class="float_sec-inner">
                 <div class="float_sec_title">
-                    <h2 class="title-big mb-4 mb-md-5">Recent <br/><b>work</b></h2>
-                    <div class="custom-link"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
+                    <div>
+                        <h2 class="title-big mb-lg-5">Recent <b>work</b></h2>
+                        <div class="custom-link"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
+                    </div>
                 </div>
                 <div class="float_sec_slider">
                     <div>
@@ -165,7 +167,7 @@
                                 </div>
                                 <div class="float_sec_slider-item swiper-slide">
                                     <div class="float_sec_slider-item-more" data-height="sameHeight">
-                                        <div class="custom-link"><a href="#">See all projects</a> <span></span> <i></i></div>
+                                        <div class="custom-link"><a href="#">See all</a> <span></span> <i></i></div>
                                     </div>
                                 </div>
                             </div>
@@ -197,15 +199,16 @@
         <div class="container-fluid">
             <div class="whatWe-content">
                 <div class="row align-items-center mb-4 mb-md-5">
-                    <div class="col-md-6">
-                        <h2 class="title-big">What We <br/><b>do?</b></h2>
+                    <div class="col-sm-6">
+                        <h2 class="title-big d-none d-sm-block">What We <br/><b>do?</b></h2>
+                        <h2 class="title-big d-sm-none">What We <b>do?</b></h2>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-sm-6">
                         <img src="http://localhost/github/wbs/frontend/images/new-home/what-we-do-home.jpg" width="300" alt="Webeesocial | What We do?">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-sm-6">
                         <div class="titles">
                             <h5>Digital.</h5>
                             <h6 class="font-weight-400 mb-4">We create super-rich experiences online!</h6>
@@ -214,7 +217,7 @@
                         <div class="custom-link"><a href="about-us.php">About Us</a> <span></span> <i></i></div>
                         <!-- end custom-btn -->
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-sm-6">
                         <div class="titles">
                             <h5>And More Digital.</h5>
                             <h6 class="font-weight-400 mb-4">Marketing brands with care</h6>
@@ -332,10 +335,10 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-3 col-sm-4">
                                 <img src="http://localhost/github/wbs/frontend/images/new-home/solutions_img.jpg" alt="">
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-md-9 col-sm-8">
                                 <h2 class="title-big mb-4 mb-md-5">Integrated Digital <b>Solutions</b></h2>
                                 <h4 class="text-primary mb-4">Insights, Metrics and Analytics - Everything is connected!</h4>
                                 <p>In a digital world where everything’s connected, we believe that the approach to digital communications has to be joined-up too. Our approach combines creativity & technology and blends a diverse.</p>
@@ -345,10 +348,10 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-3 col-sm-4">
                                 <img src="http://localhost/github/wbs/frontend/images/new-home/solutions_img_2.jpg" alt="">
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-md-9 col-sm-8">
                                 <h2 class="title-big mb-4 mb-md-5">Strategy, Creativity & <b>Results</b>!</h2>
                                 <h4 class="text-primary mb-4">Our approach is backed by strategy, creativity and optimised for results.</h4>
                                 <p>We understand that each client and each project we undertake is different and so we have developed a repeatable process that we know works. Our methodology puts the user</p>
@@ -359,17 +362,20 @@
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
+                <div class="single_slider-pagination text-center mt-3 d-xl-none"></div>
             </div>
         </div>
     </section>
 
     <!-- Awards Works -->
     <section class="awards_sec sec-space">
-        <div class="container">
+        <div class="float_sec_main">
             <div class="float_sec-inner">
                 <div class="float_sec_title text-center">
-                    <h2 class="title-big mb-4 mb-md-5">Awards</h2>
-                    <img src="http://localhost/github/wbs/frontend/images/new-home/awards_left_img.jpg" alt="">
+                    <div>
+                        <h2 class="title-big mb-lg-5">Awards</h2>
+                        <img src="http://localhost/github/wbs/frontend/images/new-home/awards_left_img.jpg" class="d-none d-lg-block" alt="">
+                    </div>
                 </div>
                 <div class="float_sec_slider">
                     <div>
@@ -502,9 +508,9 @@
     </section>
 
     <!-- Our Testimonials -->
-    <section class="sec-space pb-0">
+    <section class="sec-space pb-0 overflow-hidden">
         <div class="container">
-            <div class="row">
+            <div class="row text-center">
                 <div class="col-lg-7 mb-4">
                     <h2 class="title-big">Our <b>Testimonials</b></h2>
                 </div>
@@ -526,6 +532,7 @@
                                         <div class="testimonials_slider-content-meta">Harkaran Malhotra | Deputy Director, ACMA</div>
                                     </div>
                                 </div>
+                                <div class="testimonials_slider-pagination"></div>
                             </div>
                             <div class="testimonials_slider-right">
                                 <div class="testimonials_slider-right-next">
@@ -549,19 +556,22 @@
     <!-- Locations -->
     <section class="sec-space">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <div class="location_img"><img src="http://localhost/github/wbs/frontend/images/new-home/address_delhi.jpg" alt=""></div>
-                    <h6 class="mt-4">Innov8 Old Fort, Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, 110017</h6>
+            <div class="location_slider overflow-hidden text-center">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="location_img"><img src="http://localhost/github/wbs/frontend/images/new-home/address_delhi.jpg" alt=""></div>
+                        <h6 class="mt-4">Innov8 Old Fort, Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, 110017</h6>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="location_img"><img src="http://localhost/github/wbs/frontend/images/new-home/address_dubai.jpg" alt=""></div>
+                        <h6 class="mt-4">1102, Clover Bay Tower, Marasi Drive, Business Bay, Dubai, UAE Dubai</h6>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="location_img"><img src="http://localhost/github/wbs/frontend/images/new-home/address_can.jpg" alt=""></div>
+                        <h6 class="mt-4">40 Pintail Crescent, North York, ON M3A 2Y7, Canada</h6>
+                    </div>
                 </div>
-                <div class="col-md-4 text-center">
-                    <div class="location_img"><img src="http://localhost/github/wbs/frontend/images/new-home/address_dubai.jpg" alt=""></div>
-                    <h6 class="mt-4">1102, Clover Bay Tower, Marasi Drive, Business Bay, Dubai, UAE Dubai</h6>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div class="location_img"><img src="http://localhost/github/wbs/frontend/images/new-home/address_can.jpg" alt=""></div>
-                    <h6 class="mt-4">40 Pintail Crescent, North York, ON M3A 2Y7, Canada</h6>
-                </div>
+                <div class="slider-pagination d-lg-none"></div>
             </div>
         </div>
     </section>
@@ -571,7 +581,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="bottom_cta-left sec-space pt-0">
+                    <div class="bottom_cta-left sec-space pt-0 text-center text-md-left">
                         <h2 class="title-big"><b>Ready to discuss</b> your project?</h2>
                         <a href="#" class="get_in_touch_btn mousemove_hover_container">
                             <div class="get_in_touch_btn_arrow"><img src="http://localhost/github/wbs/frontend/images/new-home/arrow-green.png" alt=""></div>
