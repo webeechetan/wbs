@@ -23,23 +23,23 @@
     <meta name="twitter:image" content="https://www.webeesocial.com/preview.png">
 
     <!-- FAVICON FILES -->
-    <link href="http://localhost/github/wbs/frontend/images/Favicon.png" rel="apple-touch-icon">
-    <link href="http://localhost/github/wbs/frontend/images/Favicon.png" rel="shortcut icon">
+    <link href="{{ asset('') }}/frontend/images/Favicon.png" rel="apple-touch-icon">
+    <link href="{{ asset('') }}/frontend/images/Favicon.png" rel="shortcut icon">
 
     <!-- FONT AWESOME CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS FILES -->
-    <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/animate.min.css">
-    <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/odometer.min.css">
-    <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/fancybox.min.css">
-    <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/swiper.min.css">
-    <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/style.css">
-    <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/app.css">
+    <link rel="stylesheet" href="{{ asset('') }}/frontend/css/animate.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}/frontend/css/odometer.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}/frontend/css/fancybox.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}/frontend/css/swiper.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}/frontend/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}/frontend/css/style.css">
+    <link rel="stylesheet" href="{{ asset('') }}/frontend/css/app.css">
 
     <!-- Home New Css -->   
-    <link rel="stylesheet" href="http://localhost/github/wbs/frontend/css/home.css">
+    <link rel="stylesheet" href="{{ asset('') }}/frontend/css/home.css">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -91,7 +91,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="home-banner-text">
-                        <img src="http://localhost/github/wbs/frontend/images/new-home/banner_img.jpg" alt="Webeesocial | We create super - rich experiences online!">
+                        <img src="{{ asset('') }}/frontend/images/new-home/banner_img.jpg" alt="Webeesocial | We create super - rich experiences online!">
                         <h2 class="title-banner">We create super - rich <span class="text-primary" data-ticker="text-move"><b>experiences</b></span> online!</h2>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                             <div class="rec_work_slider-inner">
                                 <div class="rec_work_slider-item">
                                     <div class="rec_work_slider-item-top" data-height="sameHeight">
-                                        <img src="http://localhost/github/wbs/frontend/images/new-home/work_img1.jpg" alt="">
+                                        <img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt="">
                                     </div>
                                     <div class="rec_work_slider-item-bottom">
                                         <h4 class="rec_work_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
@@ -128,7 +128,7 @@
                                 </div>
                                 <div class="rec_work_slider-item">
                                     <div class="rec_work_slider-item-top" data-height="sameHeight">
-                                        <img src="http://localhost/github/wbs/frontend/images/new-home/work_img2.jpg" alt="">
+                                        <img src="{{ asset('') }}/frontend/images/new-home/work_img2.jpg" alt="">
                                     </div>
                                     <div class="rec_work_slider-item-bottom">
                                         <h4 class="rec_work_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
@@ -141,7 +141,7 @@
                                 </div>
                                 <div class="rec_work_slider-item">
                                     <div class="rec_work_slider-item-top" data-height="sameHeight">
-                                        <img src="http://localhost/github/wbs/frontend/images/new-home/work_img1.jpg" alt="">
+                                        <img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt="">
                                     </div>
                                     <div class="rec_work_slider-item-bottom">
                                         <h4 class="rec_work_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
@@ -154,7 +154,7 @@
                                 </div>
                                 <div class="rec_work_slider-item">
                                     <div class="rec_work_slider-item-top" data-height="sameHeight">
-                                        <img src="http://localhost/github/wbs/frontend/images/new-home/work_img1.jpg" alt="">
+                                        <img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt="">
                                     </div>
                                     <div class="rec_work_slider-item-bottom">
                                         <h4 class="rec_work_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
@@ -184,7 +184,7 @@
                     <h2 class="title-big">What We <b>do?</b></h2>
                 </div>
                 <div class="col-md-7 text-center">
-                    <img src="http://localhost/github/wbs/frontend/images/new-home/what-we-do-home.jpg" alt="Webeesocial | What We do?">
+                    <img src="{{ asset('') }}/frontend/images/new-home/what-we-do-home.jpg" alt="Webeesocial | What We do?">
                 </div>
             </div>
             <div class="row">
@@ -220,38 +220,38 @@
         <div class="client_ani">
             <div class="client_ani-row">
                 <div class="client_ani-row-inner">
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
                 </div>
                 <div class="client_ani-row-inner">
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
                 </div>
             </div>
             <div class="client_ani-row">
                 <div class="client_ani-row-inner">
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
                 </div>
                 <div class="client_ani-row-inner">
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
-                    <div class="client_ani-column"><img src="http://localhost/github/wbs/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
+                    <div class="client_ani-column"><img src="{{ asset('') }}/frontend/images/client-logos/mahindra-black.png" alt="Mahindra Rise"></div>
                 </div>
             </div>
         </div>
@@ -259,18 +259,18 @@
 
 
 <!-- JS FILES -->
-<script src="http://localhost/github/wbs/frontend/js/jquery.min.js"></script>
-<script src="http://localhost/github/wbs/frontend/js/bootstrap.min.js"></script>
-<script src="http://localhost/github/wbs/frontend/js/imagesloaded.pkgd.min.js"></script>
-<script src="http://localhost/github/wbs/frontend/js/isotope.min.js"></script>
-<script src="http://localhost/github/wbs/frontend/js/swiper.min.js"></script>
+<script src="{{ asset('') }}/frontend/js/jquery.min.js"></script>
+<script src="{{ asset('') }}/frontend/js/bootstrap.min.js"></script>
+<script src="{{ asset('') }}/frontend/js/imagesloaded.pkgd.min.js"></script>
+<script src="{{ asset('') }}/frontend/js/isotope.min.js"></script>
+<script src="{{ asset('') }}/frontend/js/swiper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-<script src="http://localhost/github/wbs/frontend/js/TweenMax.min.js"></script>
+<script src="{{ asset('') }}/frontend/js/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
-<script src="http://localhost/github/wbs/frontend/js/odometer.min.js"></script>
-<script src="http://localhost/github/wbs/frontend/js/fancybox.min.js"></script>
-<script src="http://localhost/github/wbs/frontend/js/wow.min.js"></script>
-<script src="http://localhost/github/wbs/frontend/js/scripts.js"></script>
+<script src="{{ asset('') }}/frontend/js/odometer.min.js"></script>
+<script src="{{ asset('') }}/frontend/js/fancybox.min.js"></script>
+<script src="{{ asset('') }}/frontend/js/wow.min.js"></script>
+<script src="{{ asset('') }}/frontend/js/scripts.js"></script>
     
 </body>
 </html>
