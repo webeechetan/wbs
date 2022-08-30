@@ -55,8 +55,70 @@
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-    })
+    });
 
+    let testimonials_content_swiper = new Swiper('.testimonials_swiper', {
+      loop: true,
+      speed: 1000,
+      navigation: {
+        nextEl: ".testimonials_slider-right-arrow",
+      },
+      pagination: {
+        el: ".testimonials_slider-pagination",
+        clickable: true,
+      },
+    });
+
+    let single_slider = new Swiper('.single_slider', {
+      loop: true,
+      speed: 1000,
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: ".single_slider-pagination",
+        clickable: true,
+      },
+    });
+
+    let swiper_grid_3 = new Swiper('.swiper_grid_3', {
+      speed: 1000,
+      slidesPerView: '3',
+      spaceBetween: 30,
+      allowTouchMove: false,
+      breakpoints: {
+        1399: {
+          slidesPerView: 2,
+        },
+        991: {
+          allowTouchMove: true,
+        },
+      },
+    });
+
+    let location_slider = new Swiper('.location_slider', {
+      slidesPerView: '3',
+      spaceBetween: 30,
+      pagination: {
+        el: ".slider-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        991: {
+          slidesPerView: 2,
+        },
+        575: {
+          slidesPerView: 1,
+        },
+      },
+    });
 
     // PAGE TRANSITION
     $('body a').on('click', function (e) {
@@ -418,29 +480,184 @@ $(document).ready(function() {
 	matchHeight.init();
 });
 
-// Ticker
-$(document).ready(function(){
-  let hero_text_move = ['experiences','inovation','digital'];
-  function ticker_verticle() {
-    let element = $('body').find('[data-ticker="text-move"]');
-    console.log(element);
-  }
-});
-
 // Gsap Animation
 gsap.registerPlugin(ScrollTrigger);
 
-let rec_work_item = gsap.utils.toArray(".rec_work_slider-item");
+let rec_float_sec_item = gsap.utils.toArray(".rec_sec .float_sec_slider-item");
 
-// let scrollTween = gsap.to(rec_work_item, {
-//   xPercent: -100 * (rec_work_item.length - 1),
-//   ease: "none",
-//   scrollTrigger: {
-//     trigger: ".rec_work",
-//     pin: true,
-//     scrub: 0.1,
-//     snap: 1 / (rec_work_item.length - 1),
-//     end: "+=2000",
-//     markers: true
-//   }
-// });
+let aw_float_sec_item = gsap.utils.toArray(".awards_sec .float_sec_slider-item");
+
+$( window ).resize( function() {
+  
+  if ( window.matchMedia( '(max-width: 991px)' ).matches ) {
+    
+  } else if ( window.matchMedia( '(max-width: 1399px)' ).matches ) {
+    
+    let scrollTween_slider = gsap.to(rec_float_sec_item, {
+      xPercent: -85 * (rec_float_sec_item.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".rec_sec",
+        pin: true,
+        scrub: 0.1,
+        end: "+=1500"
+        // markers: true
+      }
+    });
+    gsap.to(aw_float_sec_item, {
+      xPercent: -85 * (aw_float_sec_item.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".awards_sec",
+        pin: true,
+        start: 'top 5%',
+        scrub: 0.1,
+        end: "+=1000"
+        // markers: true
+      }
+    });
+    
+  } else {
+    
+    let scrollTween_slider = gsap.to(rec_float_sec_item, {
+      xPercent: -70 * (rec_float_sec_item.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".rec_sec",
+        pin: true,
+        scrub: 0.1,
+        end: "+=1500"
+        // markers: true
+      }
+    });
+    gsap.to(aw_float_sec_item, {
+      xPercent: -70 * (aw_float_sec_item.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".awards_sec",
+        pin: true,
+        start: 'top 5%',
+        scrub: 0.1,
+        end: "+=1000"
+        // markers: true
+      }
+    });
+    
+  }
+
+} );
+$( window ).resize();
+
+// Banner Typing Effect
+const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
+
+const textArray = ["experiences", "experiences", "experiences"];
+const typingDelay = 100;
+const erasingDelay = 100;
+const newTextDelay = 1000; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+  	setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+	if (charIndex > 0) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+  if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+
+// Curve Path Animation
+let ctasvgText = gsap.utils.toArray("#masterTextPath");
+
+gsap.to(ctasvgText, {
+  scrollTrigger: {
+    trigger: ".moveable_path",
+    scrub: 1,
+    start: "center bottom"
+    // markers: true
+  },
+  attr: {
+    startOffset: 400
+  }
+});
+
+// Cursor hover effect
+var background = $('.mousemove_hover_container')[0].getBoundingClientRect();
+var isMouseOver = false;
+var square = $('.mousemove_hover_item');
+var mouse = {x: 0, y: 0, moved: false};
+
+$('.mousemove_hover_item').each(function(i,element) {
+    
+  var activeSquare = $(this),
+      squareData = activeSquare[0].getBoundingClientRect();
+
+  $(element).hover(over, out);
+
+  $(element).mousemove(function(element) {
+    mouse.moved = true;
+    mouse.x = element.clientX - background.left;
+    mouse.y = element.clientY - background.top;
+    prlx(activeSquare, -75);
+  });
+
+  // sets square back to normal position 
+  function returnToNormal(i, element) {
+    console.log("WORKING");
+    TweenMax.to(activeSquare, 0.3, {
+      delay: 0.2,
+      x: squareData.x - "50vw",
+      y: squareData.y - "50vh",
+    });
+  }
+  
+  function over (i, element) {
+  console.log("mouse is over");
+  isMouseOver = true;
+  TweenMax.to(this, 0.3, {opacity: 1});
+}
+
+function out (i, element) {
+  console.log("mouse is not over");
+  isMouseOver = false;
+  returnToNormal(i, element);
+  TweenMax.to(this, 0.3, {opacity: 0});
+}
+})
+
+// call parallax function
+function prlx(target, mvmt) {
+  TweenMax.to(target, 0.3, {
+    x: (mouse.x - background.width / 2) / background.width * mvmt,
+    y: (mouse.y - background.height / 2) / background.height * mvmt,
+  });
+}
+
+$(window).on('resize scroll', function(){
+  background = $('.mousemove_hover_container')[0].getBoundingClientRect();
+});
