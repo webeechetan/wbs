@@ -784,7 +784,7 @@ p {
   grid-gap: 30px;
   align-items: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .testimonials_slider-item {
     grid-template-columns: 1fr;
   }
@@ -799,7 +799,7 @@ p {
 .testimonials_slider-right {
   text-align: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .testimonials_slider-right {
     display: none;
   }

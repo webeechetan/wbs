@@ -656,7 +656,7 @@ p {
         grid-template-columns: 1fr 1fr;
         grid-gap: 30px;
         align-items: center;
-        @media (max-width: 767px) {
+        @media (max-width: 991px) {
             grid-template-columns: 1fr;
         }
     }
@@ -669,7 +669,7 @@ p {
     }
     &-right {
         text-align: center;
-        @media (max-width: 767px) {
+        @media (max-width: 991px) {
             display: none;
         }
         &-column {

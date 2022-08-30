@@ -510,7 +510,7 @@
     <!-- Our Testimonials -->
     <section class="sec-space pb-0 overflow-hidden">
         <div class="container">
-            <div class="row text-center">
+            <div class="row text-center text-lg-left">
                 <div class="col-lg-7 mb-4">
                     <h2 class="title-big">Our <b>Testimonials</b></h2>
                 </div>
