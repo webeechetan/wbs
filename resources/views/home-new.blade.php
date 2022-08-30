@@ -374,7 +374,7 @@
                 <div class="float_sec_title text-center">
                     <div>
                         <h2 class="title-big mb-lg-5">Awards</h2>
-                        <img src="http://localhost/github/wbs/frontend/images/new-home/awards_left_img.jpg" class="d-none d-lg-block" alt="">
+                        <img src="http://localhost/github/wbs/frontend/images/new-home/awards_left_img.jpg" class="d-none d-lg-inline-block" alt="">
                     </div>
                 </div>
                 <div class="float_sec_slider">
