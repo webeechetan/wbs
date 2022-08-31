@@ -88,17 +88,30 @@
       },
     });
 
-    let swiper_grid_3 = new Swiper('.swiper_grid_3', {
+    let rec_sec_slider = new Swiper('.rec_sec_slider', {
       speed: 1000,
       slidesPerView: '3',
       spaceBetween: 30,
       allowTouchMove: false,
+      pagination: {
+        el: ".rec_sec_slider-pagination",
+        clickable: true,
+      },
       breakpoints: {
         1399: {
           slidesPerView: 2,
         },
         991: {
+          slidesPerView: 3,
           allowTouchMove: true,
+        },
+        767: {
+          slidesPerView: 2,
+          allowTouchMove: true,
+        },
+        575: {
+          allowTouchMove: true,
+          slidesPerView: 1,
         },
       },
     });

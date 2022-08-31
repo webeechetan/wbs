@@ -89,10 +89,10 @@
     <section class="overflow-hidden">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 text-center text-md-left">
                     <div class="home-banner-text">
                         <img src="{{ asset('') }}/frontend/images/new-home/banner_img.jpg" alt="Webeesocial | We create super - rich experiences online!">
-                        <h2 class="title-big">We create super - rich <span class="text-primary"><b class="typed-text"></b><b class="cursor">&nbsp;</b></span> online!</h2>
+                        <h2 class="title-big">We create <span class="d-flex justify-content-center d-md-inline-flex">super - rich</span> <span class="text-primary"><b class="typed-text"></b><b class="cursor">&nbsp;</b></span> <span class="d-flex justify-content-center d-md-inline-flex">online!</span></h2>
                     </div>
                 </div>
             </div>
@@ -106,13 +106,13 @@
                 <div class="float_sec_title">
                     <div>
                         <h2 class="title-big mb-lg-5">Recent <b>work</b></h2>
-                        <div class="custom-link"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
+                        <div class="custom-link d-none d-lg-block"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
                     </div>
                 </div>
                 <div class="float_sec_slider">
                     <div>
-                        <div class="float_sec_slider-container swiper_grid_3">
-                            <div class="float_sec_slider-inner swiper-wrapper">
+                        <div class="rec_sec_slider float_sec_slider-container swiper_grid_3">
+                            <div class="float_sec_slider-inner text-center text-md-left swiper-wrapper">
                                 <div class="float_sec_slider-item swiper-slide">
                                     <div class="float_sec_slider-item-top" data-height="sameHeight">
                                         <a href="#"><img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt=""></a>
@@ -171,8 +171,12 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="rec_sec_slider-pagination text-center mt-3 d-lg-none"></div>
                         </div>
                     </div>
+                </div>
+                <div class="text-center mt-4 d-lg-none">
+                    <div class="custom-link"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
                 </div>
             </div>
         </div>
@@ -197,9 +201,9 @@
             </div>
         </div>
         <div class="container-fluid">
-            <div class="whatWe-content">
+            <div class="whatWe-content text-center text-md-left">
                 <div class="row align-items-center mb-4 mb-md-5">
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
                         <h2 class="title-big d-none d-sm-block">What We <br/><b>do?</b></h2>
                         <h2 class="title-big d-sm-none">What We <b>do?</b></h2>
                     </div>
@@ -208,7 +212,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 mb-5 mb-md-0">
                         <div class="titles">
                             <h5>Digital.</h5>
                             <h6 class="font-weight-400 mb-4">We create super-rich experiences online!</h6>
@@ -331,18 +335,18 @@
     <!-- Integrated Digital Solutions -->
     <section>
         <div class="container">
-            <div class="single_slider">
+            <div class="single_slider int_slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="row">
                             <div class="col-md-3 col-sm-4">
                                 <img src="{{ asset('') }}/frontend/images/new-home/solutions_img.jpg" alt="">
                             </div>
-                            <div class="col-md-9 col-sm-8">
+                            <div class="col-md-9 col-sm-8 mt-3 mt-sm-0">
                                 <h2 class="title-big mb-4 mb-md-5">Integrated Digital <b>Solutions</b></h2>
                                 <h4 class="text-primary mb-4">Insights, Metrics and Analytics - Everything is connected!</h4>
                                 <p>In a digital world where everything’s connected, we believe that the approach to digital communications has to be joined-up too. Our approach combines creativity & technology and blends a diverse.</p>
-                                <div class="custom-link mt-4"><a href="#">Know More</a> <span></span> <i></i></div>
+                                <div class="custom-link mt-3 mt-md-4"><a href="#">Know More</a> <span></span> <i></i></div>
                             </div>
                         </div>
                     </div>
@@ -351,11 +355,11 @@
                             <div class="col-md-3 col-sm-4">
                                 <img src="{{ asset('') }}/frontend/images/new-home/solutions_img_2.jpg" alt="">
                             </div>
-                            <div class="col-md-9 col-sm-8">
+                            <div class="col-md-9 col-sm-8 mt-3 mt-sm-0">
                                 <h2 class="title-big mb-4 mb-md-5">Strategy, Creativity & <b>Results</b>!</h2>
                                 <h4 class="text-primary mb-4">Our approach is backed by strategy, creativity and optimised for results.</h4>
                                 <p>We understand that each client and each project we undertake is different and so we have developed a repeatable process that we know works. Our methodology puts the user</p>
-                                <div class="custom-link mt-4"><a href="#">Know More</a> <span></span> <i></i></div>
+                                <div class="custom-link mt-3 mt-md-4"><a href="#">Know More</a> <span></span> <i></i></div>
                             </div>
                         </div>
                     </div>
@@ -511,7 +515,7 @@
     <section class="sec-space pb-0 overflow-hidden">
         <div class="container">
             <div class="row text-center text-lg-left">
-                <div class="col-lg-7 mb-4">
+                <div class="col-lg-7 mb-3 mb-md-4">
                     <h2 class="title-big">Our <b>Testimonials</b></h2>
                 </div>
                 <div class="col-12">
