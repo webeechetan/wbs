@@ -383,7 +383,7 @@
                 </div>
                 <div class="float_sec_slider">
                     <div>
-                        <div class="float_sec_slider-container swiper_grid_3">
+                        <div class="float_sec_slider-container awards_sec_slider">
                             <div class="float_sec_slider-inner swiper-wrapper">
                                 <div class="float_sec_slider-item swiper-slide">
                                     <div class="float_sec_slider-item-top">
@@ -434,6 +434,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="awards_sec_slider-pagination text-center mt-3 d-lg-none"></div>
                         </div>
                     </div>
                 </div>

@@ -410,6 +410,10 @@ p {
             align-items: center;
             width: 100%;
         }
+        @media (max-width: 991px) {
+            -webkit-animation: ticker-kf-even 30s linear infinite;
+            animation: ticker-kf-even 30s linear infinite;
+        }
         @media (max-width: 767px) {
             -webkit-animation: ticker-kf-even 15s linear infinite;
             animation: ticker-kf-even 15s linear infinite;
@@ -417,6 +421,10 @@ p {
         &:nth-of-type(odd) {
             -webkit-animation: ticker-kf 80s linear infinite;
             animation: ticker-kf 80s linear infinite;
+            @media (max-width: 991px) {
+                -webkit-animation: ticker-kf 30s linear infinite;
+                animation: ticker-kf 30s linear infinite;
+            }
             @media (max-width: 767px) {
                 -webkit-animation: ticker-kf 15s linear infinite;
                 animation: ticker-kf 15s linear infinite;
@@ -820,6 +828,9 @@ p {
 
 /* ----- Location ----- */
 .location_img {
+    @media (max-width: 991px) {
+        margin-top: -40px;
+    }
     @media (max-width: 767px) {
         margin-top: -50px;
     }
@@ -941,8 +952,9 @@ p {
     @media (max-width: 767px) {
         position: inherit;
         max-width: 100%;
-        right: inherit;
+        right: 0;
         left: 0;
+        margin: auto;
         svg {
             width: 115%;
             margin-top: -30%;
