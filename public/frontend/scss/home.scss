@@ -187,10 +187,6 @@ p {
     }
     &_title {
         > div {
-            width: 400px;
-            max-width: 100%;
-            margin-left: auto;
-            padding: 0 15px;
             @media (max-width: 991px) {
                 width: 100%;
                 text-align: center;
@@ -207,12 +203,14 @@ p {
         }
     }
     &_slider {
+        width: 500%;
         overflow: hidden;
         padding-right: 30px;
         @media (max-width: 991px) {
             padding: 0 15px;
         }
         &-item {
+            max-width: 350px;
             &-title {
                 font-size: 1.4em;
                 line-height: 1.4em;

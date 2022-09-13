@@ -50,7 +50,7 @@
         <div class="container">
             <nav class="navbar">
                 <div class="inner">
-                    <div class="logo"> <a href="https://webeetest.com/wbs"><img src="https://webeetest.com/wbs/frontend/images/logo-tm.png" alt="Webeesocial Logo"></a> </div>
+                    <div class="logo"> <a href="https://webeetest.com/wbs"><img src="https://webeetest.com/wbs/frontend/images/logo-tm.png" alt="Webeesocial Logo"></a></div>
                     <!-- end phone -->
                     <div class="main-menu">
                         <ul>
@@ -101,82 +101,84 @@
 
     <!-- Recent Works -->
     <section class="rec_sec float_sec">
-        <div class="float_sec_main">
-            <div class="float_sec-inner">
-                <div class="float_sec_title">
-                    <div>
-                        <h2 class="title-big mb-lg-5">Recent <b>work</b></h2>
-                        <div class="custom-link d-none d-lg-block"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
-                    </div>
-                </div>
-                <div class="float_sec_slider">
-                    <div>
-                        <div class="rec_sec_slider float_sec_slider-container swiper_grid_3">
-                            <div class="float_sec_slider-inner text-center text-md-left swiper-wrapper">
-                                <div class="float_sec_slider-item swiper-slide">
-                                    <div class="float_sec_slider-item-top" data-height="sameHeight">
-                                        <a href="#"><img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt=""></a>
-                                    </div>
-                                    <div class="float_sec_slider-item-bottom">
-                                        <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
-                                        <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
-                                        <ul class="meta">
-                                            <li>Digital campaigns</li>
-                                            <li>Social media</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="float_sec_slider-item swiper-slide">
-                                    <div class="float_sec_slider-item-top" data-height="sameHeight">
-                                        <a href="#"><img src="{{ asset('') }}/frontend/images/new-home/work_img2.jpg" alt=""></a>
-                                    </div>
-                                    <div class="float_sec_slider-item-bottom">
-                                        <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
-                                        <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
-                                        <ul class="meta">
-                                            <li>Digital campaigns</li>
-                                            <li>Social media</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="float_sec_slider-item swiper-slide">
-                                    <div class="float_sec_slider-item-top" data-height="sameHeight">
-                                        <a href="#"><img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt=""></a>
-                                    </div>
-                                    <div class="float_sec_slider-item-bottom">
-                                        <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
-                                        <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
-                                        <ul class="meta">
-                                            <li>Digital campaigns</li>
-                                            <li>Social media</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="float_sec_slider-item swiper-slide">
-                                    <div class="float_sec_slider-item-top" data-height="sameHeight">
-                                        <a href="#"><img src="{{ asset('') }}/frontend/images/new-home/work_img2.jpg" alt=""></a>
-                                    </div>
-                                    <div class="float_sec_slider-item-bottom">
-                                        <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
-                                        <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
-                                        <ul class="meta">
-                                            <li>Digital campaigns</li>
-                                            <li>Social media</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="float_sec_slider-item swiper-slide">
-                                    <div class="float_sec_slider-item-more" data-height="sameHeight">
-                                        <div class="custom-link"><a href="#">See all</a> <span></span> <i></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="rec_sec_slider-pagination text-center mt-3 d-lg-none"></div>
+        <div class="container">
+            <div class="float_sec_main">
+                <div class="float_sec-inner">
+                    <div class="float_sec_title">
+                        <div>
+                            <h2 class="title-big mb-lg-5">Recent <b>work</b></h2>
+                            <div class="custom-link d-none d-lg-flex"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
                         </div>
                     </div>
-                </div>
-                <div class="text-center mt-4 d-lg-none">
-                    <div class="custom-link"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
+                    <div class="float_sec_slider">
+                        <div>
+                            <div class="rec_sec_slider float_sec_slider-container swiper_grid_3">
+                                <div class="float_sec_slider-inner text-center text-md-left swiper-wrapper">
+                                    <div class="float_sec_slider-item swiper-slide">
+                                        <div class="float_sec_slider-item-top" data-height="sameHeight">
+                                            <a href="#"><img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt=""></a>
+                                        </div>
+                                        <div class="float_sec_slider-item-bottom">
+                                            <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
+                                            <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
+                                            <ul class="meta">
+                                                <li>Digital campaigns</li>
+                                                <li>Social media</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="float_sec_slider-item swiper-slide">
+                                        <div class="float_sec_slider-item-top" data-height="sameHeight">
+                                            <a href="#"><img src="{{ asset('') }}/frontend/images/new-home/work_img2.jpg" alt=""></a>
+                                        </div>
+                                        <div class="float_sec_slider-item-bottom">
+                                            <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
+                                            <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
+                                            <ul class="meta">
+                                                <li>Digital campaigns</li>
+                                                <li>Social media</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="float_sec_slider-item swiper-slide">
+                                        <div class="float_sec_slider-item-top" data-height="sameHeight">
+                                            <a href="#"><img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt=""></a>
+                                        </div>
+                                        <div class="float_sec_slider-item-bottom">
+                                            <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
+                                            <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
+                                            <ul class="meta">
+                                                <li>Digital campaigns</li>
+                                                <li>Social media</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="float_sec_slider-item swiper-slide">
+                                        <div class="float_sec_slider-item-top" data-height="sameHeight">
+                                            <a href="#"><img src="{{ asset('') }}/frontend/images/new-home/work_img2.jpg" alt=""></a>
+                                        </div>
+                                        <div class="float_sec_slider-item-bottom">
+                                            <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
+                                            <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
+                                            <ul class="meta">
+                                                <li>Digital campaigns</li>
+                                                <li>Social media</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="float_sec_slider-item swiper-slide">
+                                        <div class="float_sec_slider-item-more" data-height="sameHeight">
+                                            <div class="custom-link"><a href="#">See all</a> <span></span> <i></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec_sec_slider-pagination text-center mt-3 d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4 d-lg-none">
+                        <div class="custom-link"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
+                    </div>
                 </div>
             </div>
         </div>
