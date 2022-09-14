@@ -86,7 +86,7 @@
     </header>
 
     <!-- Banner Section -->
-    <section class="overflow-hidden">
+    <section class="home-banner sec-space">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center text-md-left">
@@ -99,88 +99,89 @@
         </div>
     </section>
 
+    <!-- Word Divider -->
+    <div class="word_divider word_divider_left">
+        <h2>Work</h2>
+    </div>
+
     <!-- Recent Works -->
-    <section class="rec_sec float_sec">
+    <section class="rec_sec float_sec sec-space pt-0">
+        <div>
         <div class="container">
-            <div class="float_sec_main">
-                <div class="float_sec-inner">
-                    <div class="float_sec_title">
-                        <div>
-                            <h2 class="title-big mb-lg-5">Recent <b>work</b></h2>
-                            <div class="custom-link d-none d-lg-flex"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
-                        </div>
-                    </div>
-                    <div class="float_sec_slider">
-                        <div>
-                            <div class="rec_sec_slider float_sec_slider-container swiper_grid_3">
-                                <div class="float_sec_slider-inner text-center text-md-left swiper-wrapper">
-                                    <div class="float_sec_slider-item swiper-slide">
-                                        <div class="float_sec_slider-item-top" data-height="sameHeight">
-                                            <a href="#"><img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt=""></a>
-                                        </div>
-                                        <div class="float_sec_slider-item-bottom">
-                                            <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
-                                            <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
-                                            <ul class="meta">
-                                                <li>Digital campaigns</li>
-                                                <li>Social media</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="float_sec_slider-item swiper-slide">
-                                        <div class="float_sec_slider-item-top" data-height="sameHeight">
-                                            <a href="#"><img src="{{ asset('') }}/frontend/images/new-home/work_img2.jpg" alt=""></a>
-                                        </div>
-                                        <div class="float_sec_slider-item-bottom">
-                                            <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
-                                            <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
-                                            <ul class="meta">
-                                                <li>Digital campaigns</li>
-                                                <li>Social media</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="float_sec_slider-item swiper-slide">
-                                        <div class="float_sec_slider-item-top" data-height="sameHeight">
-                                            <a href="#"><img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt=""></a>
-                                        </div>
-                                        <div class="float_sec_slider-item-bottom">
-                                            <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
-                                            <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
-                                            <ul class="meta">
-                                                <li>Digital campaigns</li>
-                                                <li>Social media</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="float_sec_slider-item swiper-slide">
-                                        <div class="float_sec_slider-item-top" data-height="sameHeight">
-                                            <a href="#"><img src="{{ asset('') }}/frontend/images/new-home/work_img2.jpg" alt=""></a>
-                                        </div>
-                                        <div class="float_sec_slider-item-bottom">
-                                            <h4 class="float_sec_slider-item-title"><a href="#">360 Campaign for Automotive Engineering Show</a></h4>
-                                            <div class="float_sec_slider-item-desc"><p>Messe Frankfurt is the world’s largest trade fair, congress and event organiser....</p></div>
-                                            <ul class="meta">
-                                                <li>Digital campaigns</li>
-                                                <li>Social media</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="float_sec_slider-item swiper-slide">
-                                        <div class="float_sec_slider-item-more" data-height="sameHeight">
-                                            <div class="custom-link"><a href="#">See all</a> <span></span> <i></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rec_sec_slider-pagination text-center mt-3 d-lg-none"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center mt-4 d-lg-none">
-                        <div class="custom-link"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
-                    </div>
+            <div class="float_sec_title">
+                <div>
+                    <h2 class="title-big mb-lg-5">Recent <b>work</b></h2>
+                    <div class="custom-link d-none d-lg-flex"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
                 </div>
             </div>
+        </div>
+        <div class="float_sec_main">
+            <div class="float_sec-inner">
+                <div class="float_sec_slider">
+                    <div class="rec_sec_slider float_sec_slider-container swiper_grid_3">
+                        <div class="float_sec_slider-inner text-center text-md-left swiper-wrapper">
+                            <div class="float_sec_slider-item swiper-slide">
+                                <a href="#" class="float_sec_slider-item-inner" data-height="sameHeight">
+                                    <img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt="">
+                                    <div>
+                                        <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                        <ul class="meta">
+                                            <li>Digital campaigns</li>
+                                            <li>Social media</li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="float_sec_slider-item swiper-slide">
+                                <a href="#" class="float_sec_slider-item-inner" data-height="sameHeight">
+                                    <img src="{{ asset('') }}/frontend/images/new-home/work_img2.jpg" alt="">
+                                    <div>
+                                        <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                        <ul class="meta">
+                                            <li>Digital campaigns</li>
+                                            <li>Social media</li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="float_sec_slider-item swiper-slide">
+                                <a href="#" class="float_sec_slider-item-inner" data-height="sameHeight">
+                                    <img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt="">
+                                    <div>
+                                        <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                        <ul class="meta">
+                                            <li>Digital campaigns</li>
+                                            <li>Social media</li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="float_sec_slider-item swiper-slide">
+                                <a href="#" class="float_sec_slider-item-inner" data-height="sameHeight">
+                                    <img src="{{ asset('') }}/frontend/images/new-home/work_img2.jpg" alt="">
+                                    <div>
+                                        <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                        <ul class="meta">
+                                            <li>Digital campaigns</li>
+                                            <li>Social media</li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="float_sec_slider-item swiper-slide">
+                                <div class="float_sec_slider-item-more" data-height="sameHeight">
+                                    <div class="custom-link"><a href="#">See all</a> <span></span> <i></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rec_sec_slider-pagination text-center mt-3 d-lg-none"></div>
+                    </div>
+                </div>
+                <div class="text-center mt-4 d-lg-none">
+                    <div class="custom-link"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
+                </div>
+            </div>
+        </div>
         </div>
     </section>
     
@@ -375,68 +376,72 @@
 
     <!-- Awards Works -->
     <section class="awards_sec sec-space">
-        <div class="float_sec_main">
-            <div class="float_sec-inner">
-                <div class="float_sec_title text-center">
+        <div>
+            <div class="container">
+                <div class="awards_sec_title text-center">
                     <div>
                         <h2 class="title-big mb-lg-5">Awards</h2>
                         <img src="{{ asset('') }}/frontend/images/new-home/awards_left_img.jpg" class="d-none d-lg-inline-block" alt="">
                     </div>
                 </div>
-                <div class="float_sec_slider">
-                    <div>
-                        <div class="float_sec_slider-container awards_sec_slider">
-                            <div class="float_sec_slider-inner swiper-wrapper">
-                                <div class="float_sec_slider-item swiper-slide">
-                                    <div class="float_sec_slider-item-top">
-                                        <img src="{{ asset('') }}/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
+            </div>
+            <div class="float_sec_main">
+                <div class="float_sec-inner">
+                    <div class="float_sec_slider">
+                        <div>
+                            <div class="float_sec_slider-container awards_sec_slider">
+                                <div class="float_sec_slider-inner swiper-wrapper">
+                                    <div class="float_sec_slider-item swiper-slide">
+                                        <a href="#" class="float_sec_slider-item-inner">
+                                            <img src="{{ asset('') }}/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
+                                            <div>
+                                                <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
+                                                <div class="float_sec_slider-item-desc"><p>Awarded by Agency Reporter</p></div>
+                                                <ul class="meta">
+                                                    <li>February 2022</li>
+                                                </ul>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="float_sec_slider-item-bottom">
-                                        <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
-                                        <div class="float_sec_slider-item-desc"><p>Awarded by Agency Reporter</p></div>
-                                        <ul class="meta">
-                                            <li>February 2022</li>
-                                        </ul>
+                                    <div class="float_sec_slider-item swiper-slide">
+                                        <a href="#" class="float_sec_slider-item-inner">
+                                            <img src="{{ asset('') }}/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
+                                            <div>
+                                                <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
+                                                <div class="float_sec_slider-item-desc"><p>Awarded by Agency Reporter</p></div>
+                                                <ul class="meta">
+                                                    <li>February 2022</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="float_sec_slider-item swiper-slide">
+                                        <a href="#" class="float_sec_slider-item-inner">
+                                            <img src="{{ asset('') }}/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
+                                            <div>
+                                                <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
+                                                <div class="float_sec_slider-item-desc"><p>Awarded by Agency Reporter</p></div>
+                                                <ul class="meta">
+                                                    <li>February 2022</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="float_sec_slider-item swiper-slide">
+                                        <a href="#" class="float_sec_slider-item-inner">
+                                            <img src="{{ asset('') }}/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
+                                            <div>
+                                                <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
+                                                <div class="float_sec_slider-item-desc"><p>Awarded by Agency Reporter</p></div>
+                                                <ul class="meta">
+                                                    <li>February 2022</li>
+                                                </ul>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="float_sec_slider-item swiper-slide">
-                                    <div class="float_sec_slider-item-top">
-                                        <img src="{{ asset('') }}/frontend/images/new-home/award_img2.jpg" class="border-round" alt="">
-                                    </div>
-                                    <div class="float_sec_slider-item-bottom">
-                                        <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
-                                        <div class="float_sec_slider-item-desc"><p>Awarded by Agency Reporter</p></div>
-                                        <ul class="meta">
-                                            <li>February 2022</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="float_sec_slider-item swiper-slide">
-                                    <div class="float_sec_slider-item-top">
-                                        <img src="{{ asset('') }}/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
-                                    </div>
-                                    <div class="float_sec_slider-item-bottom">
-                                        <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
-                                        <div class="float_sec_slider-item-desc"><p>Awarded by Agency Reporter</p></div>
-                                        <ul class="meta">
-                                            <li>February 2022</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="float_sec_slider-item swiper-slide">
-                                    <div class="float_sec_slider-item-top">
-                                        <img src="{{ asset('') }}/frontend/images/new-home/award_img2.jpg" class="border-round" alt="">
-                                    </div>
-                                    <div class="float_sec_slider-item-bottom">
-                                        <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
-                                        <div class="float_sec_slider-item-desc"><p>Awarded by Agency Reporter</p></div>
-                                        <ul class="meta">
-                                            <li>February 2022</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <div class="awards_sec_slider-pagination text-center mt-3 d-lg-none"></div>
                             </div>
-                            <div class="awards_sec_slider-pagination text-center mt-3 d-lg-none"></div>
                         </div>
                     </div>
                 </div>

@@ -90,17 +90,16 @@
 
     let rec_sec_slider = new Swiper('.rec_sec_slider', {
       speed: 1000,
-      slidesPerView: '3',
+      slidesPerView: '2',
       spaceBetween: 30,
-      allowTouchMove: false,
+      mousewheel: {
+        enabled: true,
+      },
       pagination: {
         el: ".rec_sec_slider-pagination",
         clickable: true,
       },
       breakpoints: {
-        1399: {
-          slidesPerView: 2,
-        },
         991: {
           slidesPerView: 3,
           allowTouchMove: true,
@@ -120,7 +119,7 @@
       speed: 1000,
       slidesPerView: '3',
       spaceBetween: 30,
-      allowTouchMove: false,
+      mousewheel: true,
       pagination: {
         el: ".awards_sec_slider-pagination",
         clickable: true,
@@ -524,70 +523,37 @@ $(document).ready(function() {
 // Gsap Animation
 gsap.registerPlugin(ScrollTrigger);
 
-let rec_float_sec_item = gsap.utils.toArray(".rec_sec .float_sec_slider-item");
-
-let aw_float_sec_item = gsap.utils.toArray(".awards_sec .float_sec_slider-item");
-
-$( window ).resize( function() {
-  
-  if ( window.matchMedia( '(max-width: 991px)' ).matches ) {
-    
-  } else if ( window.matchMedia( '(max-width: 1399px)' ).matches ) {
-    
-    let scrollTween_slider = gsap.to(rec_float_sec_item, {
-      xPercent: -85 * (rec_float_sec_item.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".rec_sec",
-        pin: true,
-        scrub: 0.1,
-        end: "+=1500"
-        // markers: true
-      }
-    });
-    gsap.to(aw_float_sec_item, {
-      xPercent: -85 * (aw_float_sec_item.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".awards_sec",
-        pin: true,
-        start: 'top 5%',
-        scrub: 0.1,
-        end: "+=1000"
-        // markers: true
-      }
-    });
-    
-  } else {
-    
-    let scrollTween_slider = gsap.to(rec_float_sec_item, {
-      xPercent: -70 * (rec_float_sec_item.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".rec_sec",
-        pin: true,
-        scrub: 0.1,
-        end: "+=1500"
-        // markers: true
-      }
-    });
-    gsap.to(aw_float_sec_item, {
-      xPercent: -70 * (aw_float_sec_item.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".awards_sec",
-        pin: true,
-        start: 'top 5%',
-        scrub: 0.1,
-        end: "+=1000"
-        // markers: true
-      }
-    });
-    
+// Title Divider
+word_divider = $('.word_divider');
+gsap.to(word_divider, {
+  x : 70,
+  ease: 0.05,
+  scrollTrigger: {
+    trigger: ".word_divider",
+    scrub: 0.1,
+    start: "center bottom",
+    end: 800
+    // markers: true
   }
+});
 
-} );
-$( window ).resize();
+let proxy = { skew: 0 },
+  skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"), // fast
+  clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees. 
+
+ScrollTrigger.create({
+  onUpdate: (self) => {
+    let skew = clamp(self.getVelocity() / -300);
+    // only do something if the skew is MORE severe. Remember, we're always tweening back to 0, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller skew.
+    if (Math.abs(skew) > Math.abs(proxy.skew)) {
+      proxy.skew = skew;
+      gsap.to(proxy, {skew: 0, duration: 0.8, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew)});
+    }
+  }
+});
+
+// make the right edge "stick" to the scroll bar. force3D: true improves performance
+gsap.set(".skewElem", {transformOrigin: "right center", force3D: true});
 
 // Banner Typing Effect
 const typedTextSpan = document.querySelector(".typed-text");
