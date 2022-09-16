@@ -21,6 +21,9 @@ ul.meta {
         &:not(:last-child) {
             margin-right: 20px;
         }
+        @media (max-width: 575px) {
+            font-size: 12px;
+        }
     }
 }
 .text-center {
@@ -31,9 +34,6 @@ ul.meta {
     }
 }
 .container {
-    @media (min-width: 1240px) {
-        max-width: 1140px;
-    }
     @media (min-width: 1600px) {
         max-width: 1400px;
     }
@@ -104,14 +104,35 @@ p {
 }
 .word_divider {
     position: absolute;
-    margin-top: -100px;
-    &_left {
-        transform: translateX(-150px);
-    }
+    width: 100%;
+    margin-top: -5%;
+    overflow: hidden;
     h2 {
         font-size: 12em;
+        line-height: 100%;
         opacity: 0.1;
         font-weight: 600;
+    }
+    &_left {
+        h2 {
+            transform: translateX(-150px);
+        }
+    }
+    &_right {
+        text-align: right;
+        h2 {
+            transform: translateX(150px);
+        }
+    }
+    @media (max-width: 1400px) {
+        h2 {
+            font-size: 9em;
+        }
+    }
+    @media (max-width: 1199px) {
+        h2 {
+            font-size: 6em;
+        }
     }
 }
 /* ----- Header ----- */
@@ -127,18 +148,6 @@ p {
         display: flex;
         align-items: center;
         position: relative;
-        &:after {
-            content: "";
-            width: 56%;
-            height: calc(100% - 50px);
-            background: url(../images/new-home/dot_patt.png) repeat left top;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 30px;
-            margin: auto;
-            z-index: -9;
-        }
     }
     &-banner-text {
         display: flex;
@@ -200,7 +209,8 @@ p {
 
 /* ----- Recent Work ----- */
 .float_sec {
-    > div {
+    position: relative;
+    .rec_sec_wrap {
         position: relative;
         overflow: hidden;
     }
@@ -211,20 +221,47 @@ p {
         bottom: 0;
         display: flex;
         align-items: center;
+        @media (max-width: 1199px) {
+            width: 300px;
+        }
+        @media (max-width: 991px) {
+            position: inherit;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 575px) {
+            justify-content: center;
+        }
     }
     &_slider {
         &-container {
             overflow: hidden;
             width: 60%;
             margin-left: auto;
-            padding-right: 30px;
+            @media (max-width: 991px) {
+                width: 100%;
+                padding: 0 30px;
+            }
+            @media (max-width: 575px) {
+                padding: 0 20px;
+            }
         }
         &-item {
+            padding-right: 30px;
+            @media (max-width: 991px) {
+                padding: 0 10px;
+            }
             &-title {
                 font-size: 1.2em;
                 line-height: 1.4em;
                 margin-bottom: 15px;
                 color: $color-dark;
+                @media (max-width: 991px) {
+                    font-size: 1em;
+                }
+                @media (max-width: 575px) {
+                    font-size: 0.9em;
+                }
             }
             &-inner {
                 display: flex;
@@ -247,6 +284,11 @@ p {
                     transition: all 0.3s ease;
                     opacity: 0;
                     visibility: hidden;
+                    @media (max-width: 991px) {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0);
+                    }
                 }
                 &:hover {
                     .float_sec_slider-item-title {
@@ -279,47 +321,17 @@ p {
         }
     }
 }
-/* ----- Awards ----- */
-.awards_sec {
-    > div {
-        position: relative;
-        overflow: hidden;
-    }
-    &_title {
-        width: 400px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        display: flex;
-        align-items: center;
-    }
-    .float_sec_slider-item {
-        text-align: center;
-        &-inner {
-            display: block;
-            > div {
-                position: inherit;
-                transform: inherit;
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-        ul.meta {
-            justify-content: center;
-        }
-    }
-}
 /* ----- What We Do ----- */
 .whatWe {
     overflow: hidden;
-    .container-fluid {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 0 15px 0 150px;
-        @media (max-width: 991px) {
-            padding: 0 15px 0 100px;
+    .container {
+        @media (max-width: 1439px) {
+            padding-left: 150px;
         }
-        @media (max-width: 767px) {
+        @media (max-width: 1199px) {
+            padding-left: 100px;
+        }
+        @media (max-width: 575px) {
             padding: 0 15px;
         }
     }
@@ -355,12 +367,7 @@ p {
                 }
             }
             @media (max-width: 767px) {
-                height: 60px;
-            }
-            @media (min-width: 768px) {
-                float: left;
-                height: auto;
-                width: 75px;
+                display: none;
             }
         }
         &-rotate {
@@ -504,23 +511,54 @@ p {
 }
 
 /* ----- Integrated Digital Solutions ----- */
-.int_slider {
-    .swiper-slide {
-        img {
-            max-height: 250px;
-        }
-        @media (max-width: 767px) {
-            h4 {
-                font-size: 1.2em;
-                line-height: normal;
+.int {
+    &_slider {
+        .swiper-slide {
+            @media (max-width: 767px) {
+                img {
+                    max-height: 250px;
+                }
+                h4 {
+                    font-size: 1.2em;
+                    line-height: normal;
+                }
             }
-        }
-        @media (max-width: 575px) {
-            text-align: center;
+            @media (max-width: 575px) {
+                text-align: center;
+            }
         }
     }
 }
-
+/* ----- Awards ----- */
+.awards_sec {
+    > div {
+        position: relative;
+        overflow: hidden;
+    }
+    &_title {
+        width: 400px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+    .float_sec_slider-item {
+        text-align: center;
+        &-inner {
+            display: block;
+            > div {
+                position: inherit;
+                transform: inherit;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        ul.meta {
+            justify-content: center;
+        }
+    }
+}
 /* ----- Solutions ----- */
 .single_slider {
     overflow: hidden;

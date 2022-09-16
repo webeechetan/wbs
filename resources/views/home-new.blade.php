@@ -99,94 +99,97 @@
         </div>
     </section>
 
-    <!-- Word Divider -->
-    <div class="word_divider word_divider_left">
-        <h2>Work</h2>
-    </div>
-
     <!-- Recent Works -->
     <section class="rec_sec float_sec sec-space pt-0">
-        <div>
-        <div class="container">
-            <div class="float_sec_title">
-                <div>
-                    <h2 class="title-big mb-lg-5">Recent <b>work</b></h2>
-                    <div class="custom-link d-none d-lg-flex"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
-                </div>
-            </div>
+        <!-- Word Divider -->
+        <div class="word_divider word_divider_left" data-attr="1">
+            <h2>Work</h2>
         </div>
-        <div class="float_sec_main">
-            <div class="float_sec-inner">
-                <div class="float_sec_slider">
-                    <div class="rec_sec_slider float_sec_slider-container swiper_grid_3">
-                        <div class="float_sec_slider-inner text-center text-md-left swiper-wrapper">
-                            <div class="float_sec_slider-item swiper-slide">
-                                <a href="#" class="float_sec_slider-item-inner" data-height="sameHeight">
-                                    <img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt="">
-                                    <div>
-                                        <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
-                                        <ul class="meta">
-                                            <li>Digital campaigns</li>
-                                            <li>Social media</li>
-                                        </ul>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="float_sec_slider-item swiper-slide">
-                                <a href="#" class="float_sec_slider-item-inner" data-height="sameHeight">
-                                    <img src="{{ asset('') }}/frontend/images/new-home/work_img2.jpg" alt="">
-                                    <div>
-                                        <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
-                                        <ul class="meta">
-                                            <li>Digital campaigns</li>
-                                            <li>Social media</li>
-                                        </ul>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="float_sec_slider-item swiper-slide">
-                                <a href="#" class="float_sec_slider-item-inner" data-height="sameHeight">
-                                    <img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt="">
-                                    <div>
-                                        <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
-                                        <ul class="meta">
-                                            <li>Digital campaigns</li>
-                                            <li>Social media</li>
-                                        </ul>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="float_sec_slider-item swiper-slide">
-                                <a href="#" class="float_sec_slider-item-inner" data-height="sameHeight">
-                                    <img src="{{ asset('') }}/frontend/images/new-home/work_img2.jpg" alt="">
-                                    <div>
-                                        <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
-                                        <ul class="meta">
-                                            <li>Digital campaigns</li>
-                                            <li>Social media</li>
-                                        </ul>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="float_sec_slider-item swiper-slide">
-                                <div class="float_sec_slider-item-more" data-height="sameHeight">
-                                    <div class="custom-link"><a href="#">See all</a> <span></span> <i></i></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rec_sec_slider-pagination text-center mt-3 d-lg-none"></div>
+        <div class="rec_sec_wrap">
+            <div class="container">
+                <div class="float_sec_title">
+                    <div>
+                        <h2 class="title-big mb-lg-5">Recent <b>work</b></h2>
+                        <div class="custom-link d-none d-lg-flex"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
                     </div>
                 </div>
-                <div class="text-center mt-4 d-lg-none">
-                    <div class="custom-link"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
+            </div>
+            <div class="float_sec_main">
+                <div class="float_sec-inner">
+                    <div class="float_sec_slider">
+                        <div class="rec_sec_slider float_sec_slider-container swiper_grid_3">
+                            <div class="float_sec_slider-inner swiper-wrapper">
+                                <div class="float_sec_slider-item swiper-slide">
+                                    <a href="#" class="float_sec_slider-item-inner" data-height="sameHeight">
+                                        <img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt="">
+                                        <div>
+                                            <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                            <ul class="meta">
+                                                <li>Digital campaigns</li>
+                                                <li>Social media</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="float_sec_slider-item swiper-slide">
+                                    <a href="#" class="float_sec_slider-item-inner" data-height="sameHeight">
+                                        <img src="{{ asset('') }}/frontend/images/new-home/work_img2.jpg" alt="">
+                                        <div>
+                                            <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                            <ul class="meta">
+                                                <li>Digital campaigns</li>
+                                                <li>Social media</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="float_sec_slider-item swiper-slide">
+                                    <a href="#" class="float_sec_slider-item-inner" data-height="sameHeight">
+                                        <img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt="">
+                                        <div>
+                                            <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                            <ul class="meta">
+                                                <li>Digital campaigns</li>
+                                                <li>Social media</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="float_sec_slider-item swiper-slide">
+                                    <a href="#" class="float_sec_slider-item-inner" data-height="sameHeight">
+                                        <img src="{{ asset('') }}/frontend/images/new-home/work_img2.jpg" alt="">
+                                        <div>
+                                            <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                            <ul class="meta">
+                                                <li>Digital campaigns</li>
+                                                <li>Social media</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="float_sec_slider-item swiper-slide">
+                                    <div class="float_sec_slider-item-more" data-height="sameHeight">
+                                        <div class="custom-link"><a href="#">See all</a> <span></span> <i></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec_sec_slider-pagination text-center mt-3 d-lg-none"></div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4 d-lg-none">
+                        <div class="custom-link"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
     </section>
-    
+
     <!-- What We do -->
     <section class="whatWe">
+        <!-- Word Divider -->
+        <div class="word_divider word_divider_right" data-attr="2">
+            <h2>Digital</h2>
+        </div>
         <div class="whatWeAni">
             <div class="whatWeAni-container">
                 <div>
@@ -203,7 +206,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container">
             <div class="whatWe-content text-center text-md-left">
                 <div class="row align-items-center mb-4 mb-md-5">
                     <div class="col-sm-6 mb-3 mb-sm-0">
@@ -211,7 +214,7 @@
                         <h2 class="title-big d-sm-none">What We <b>do?</b></h2>
                     </div>
                     <div class="col-sm-6">
-                        <img src="{{ asset('') }}/frontend/images/new-home/what-we-do-home.jpg" width="300" alt="Webeesocial | What We do?">
+                        <img src="{{ asset('') }}/frontend/images/new-home/what-we-do-home.png" width="300" alt="Webeesocial | What We do?">
                     </div>
                 </div>
                 <div class="row">
@@ -336,13 +339,13 @@
     </section>
 
     <!-- Integrated Digital Solutions -->
-    <section>
+    <section class="int_sec">
         <div class="container">
             <div class="single_slider int_slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="row">
-                            <div class="col-md-3 col-sm-4">
+                            <div class="col-md-3 col-sm-4 text-center">
                                 <img src="{{ asset('') }}/frontend/images/new-home/solutions_img.jpg" alt="">
                             </div>
                             <div class="col-md-9 col-sm-8 mt-3 mt-sm-0">
@@ -355,7 +358,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="row">
-                            <div class="col-md-3 col-sm-4">
+                            <div class="col-md-3 col-sm-4 text-center">
                                 <img src="{{ asset('') }}/frontend/images/new-home/solutions_img_2.jpg" alt="">
                             </div>
                             <div class="col-md-9 col-sm-8 mt-3 mt-sm-0">

@@ -91,19 +91,13 @@
     let rec_sec_slider = new Swiper('.rec_sec_slider', {
       speed: 1000,
       slidesPerView: '2',
-      spaceBetween: 30,
-      // mousewheel: true,
+      allowTouchMove: false,
       pagination: {
         el: ".rec_sec_slider-pagination",
         clickable: true,
       },
       breakpoints: {
         991: {
-          slidesPerView: 3,
-          allowTouchMove: true,
-        },
-        767: {
-          slidesPerView: 2,
           allowTouchMove: true,
         },
         575: {
@@ -117,10 +111,13 @@
       speed: 1000,
       slidesPerView: '3',
       spaceBetween: 30,
-      mousewheel: true,
       pagination: {
         el: ".awards_sec_slider-pagination",
         clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
       breakpoints: {
         1399: {
@@ -518,46 +515,55 @@ $(document).ready(function() {
 	matchHeight.init();
 });
 
+const res_small = window.matchMedia("(max-width: 767px)");
+const res_medium = window.matchMedia("(min-width: 768px) and (max-width: 991px)");
+
 // Gsap Animation
 gsap.registerPlugin(ScrollTrigger);
 
 let rec_float_sec_item = gsap.utils.toArray(".rec_sec .float_sec_slider-item");
 
-let scrollTween_slider = gsap.to(rec_float_sec_item, {
-  xPercent: -100 * (rec_float_sec_item.length - 1),
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".rec_sec",
-    pin: true,
-    scrub: 0.1,
-    end: "+=1500"
-    // markers: true
-  }
-});
-gsap.to(aw_float_sec_item, {
-  xPercent: -85 * (aw_float_sec_item.length - 1),
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".awards_sec",
-    pin: true,
-    start: 'top 5%',
-    scrub: 0.1,
-    end: "+=1000"
-    // markers: true
-  }
-});
+if(document.querySelector("body").clientWidth > "768" && document.querySelector("body").clientWidth < "991"){
+  
+} else if(document.querySelector("body").clientWidth < "767"){
+  
+} else if(document.querySelector("body").clientWidth > "992"){
+  let scrollTween_slider = gsap.to(rec_float_sec_item, {
+    xPercent: -100 * (rec_float_sec_item.length - 2),
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".rec_sec",
+      pin: true,
+      start: "center 50%",
+      endTrigger: ".whatWe",
+      scrub: 0,
+      snap: 1 / (rec_float_sec_item.length - 2),
+      end: "+1500"
+    }
+  }); 
+}
+
+
 
 // Title Divider
-word_divider = $('.word_divider');
-gsap.to(word_divider, {
-  x : 70,
+gsap.to(".word_divider[data-attr='1'] h2", {
+  x: 0,
   ease: 0.05,
   scrollTrigger: {
-    trigger: ".word_divider",
+    trigger: ".word_divider[data-attr='1']",
+    scrub: 0.1,
+    start: "center 50%",
+    end: "+800"
+  }
+});
+gsap.to(".word_divider[data-attr='2'] h2", {
+  x: -0,
+  ease: 0.05,
+  scrollTrigger: {
+    trigger: ".word_divider[data-attr='2']",
     scrub: 0.1,
     start: "center bottom",
-    end: 800
-    // markers: true
+    end: "+800"
   }
 });
 
