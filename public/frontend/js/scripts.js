@@ -92,9 +92,7 @@
       speed: 1000,
       slidesPerView: '2',
       spaceBetween: 30,
-      mousewheel: {
-        enabled: true,
-      },
+      // mousewheel: true,
       pagination: {
         el: ".rec_sec_slider-pagination",
         clickable: true,
@@ -114,7 +112,7 @@
         },
       },
     });
-
+    
     let awards_sec_slider = new Swiper('.awards_sec_slider', {
       speed: 1000,
       slidesPerView: '3',
@@ -522,6 +520,32 @@ $(document).ready(function() {
 
 // Gsap Animation
 gsap.registerPlugin(ScrollTrigger);
+
+let rec_float_sec_item = gsap.utils.toArray(".rec_sec .float_sec_slider-item");
+
+let scrollTween_slider = gsap.to(rec_float_sec_item, {
+  xPercent: -100 * (rec_float_sec_item.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".rec_sec",
+    pin: true,
+    scrub: 0.1,
+    end: "+=1500"
+    // markers: true
+  }
+});
+gsap.to(aw_float_sec_item, {
+  xPercent: -85 * (aw_float_sec_item.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".awards_sec",
+    pin: true,
+    start: 'top 5%',
+    scrub: 0.1,
+    end: "+=1000"
+    // markers: true
+  }
+});
 
 // Title Divider
 word_divider = $('.word_divider');
