@@ -115,13 +115,13 @@ p {
     }
     &_left {
         h2 {
-            transform: translateX(-150px);
+            transform: translateX(-100px);
         }
     }
     &_right {
         text-align: right;
         h2 {
-            transform: translateX(150px);
+            transform: translateX(100px);
         }
     }
     @media (max-width: 1400px) {
@@ -138,7 +138,9 @@ p {
 /* ----- Header ----- */
 .navbar {
     .inner {
-        padding-bottom: 0;
+        @media (min-width: 992px) {
+            padding-bottom: 0;
+        }
     }
 }
 /* ----- Banner ----- */
@@ -148,6 +150,9 @@ p {
         display: flex;
         align-items: center;
         position: relative;
+        @media (max-width: 991px) {
+            min-height: inherit;
+        }
     }
     &-banner-text {
         display: flex;
@@ -228,8 +233,6 @@ p {
             position: inherit;
             width: 100%;
             margin-bottom: 30px;
-        }
-        @media (max-width: 575px) {
             justify-content: center;
         }
     }
@@ -331,7 +334,7 @@ p {
         @media (max-width: 1199px) {
             padding-left: 100px;
         }
-        @media (max-width: 575px) {
+        @media (max-width: 767px) {
             padding: 0 15px;
         }
     }
@@ -352,15 +355,13 @@ p {
             margin-right: -1px;
             position: relative;
             width: 100vw;
+            z-index: -9;
             >div {
-                left: 50%;
+                left: 5px;
                 padding: 7px 0;
                 position: absolute;
                 top: 0;
                 width: 100%;
-                @media (max-width: 991px) {
-                    left: 25%;
-                }
                 @media (max-width: 767px) {
                     left: 0;
                     opacity: 0.2;
@@ -542,20 +543,34 @@ p {
         bottom: 0;
         display: flex;
         align-items: center;
-    }
-    .float_sec_slider-item {
-        text-align: center;
-        &-inner {
-            display: block;
-            > div {
-                position: inherit;
-                transform: inherit;
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-        ul.meta {
+        @media (max-width: 991px) {
+            position: inherit;
+            width: 100%;
+            margin-bottom: 30px;
             justify-content: center;
+        }
+    }
+    .float_sec_slider {
+        &-item {
+            text-align: center;
+            &-inner {
+                display: block;
+                > div {
+                    position: inherit;
+                    transform: inherit;
+                    opacity: 1;
+                    visibility: visible;
+                    padding: 15px 0 0;
+                    margin: 0;
+                    width: 100%;
+                }
+                &:hover, &:focus, &:active {
+                    text-decoration: none;
+                }
+            }
+            ul.meta {
+                justify-content: center;
+            }
         }
     }
 }

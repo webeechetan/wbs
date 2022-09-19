@@ -110,29 +110,18 @@
     let awards_sec_slider = new Swiper('.awards_sec_slider', {
       speed: 1000,
       slidesPerView: '3',
-      spaceBetween: 30,
       pagination: {
         el: ".awards_sec_slider-pagination",
         clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
       },
       breakpoints: {
         1399: {
           slidesPerView: 2,
         },
         991: {
-          slidesPerView: 3,
-          allowTouchMove: true,
-        },
-        767: {
           slidesPerView: 2,
-          allowTouchMove: true,
         },
         575: {
-          allowTouchMove: true,
           slidesPerView: 1,
         },
       },
@@ -527,7 +516,7 @@ if(document.querySelector("body").clientWidth > "768" && document.querySelector(
   
 } else if(document.querySelector("body").clientWidth < "767"){
   
-} else if(document.querySelector("body").clientWidth > "992"){
+} else if(document.querySelector("body").clientWidth > "991"){
   let scrollTween_slider = gsap.to(rec_float_sec_item, {
     xPercent: -100 * (rec_float_sec_item.length - 2),
     ease: "none",
@@ -543,8 +532,6 @@ if(document.querySelector("body").clientWidth > "768" && document.querySelector(
   }); 
 }
 
-
-
 // Title Divider
 gsap.to(".word_divider[data-attr='1'] h2", {
   x: 0,
@@ -557,7 +544,7 @@ gsap.to(".word_divider[data-attr='1'] h2", {
   }
 });
 gsap.to(".word_divider[data-attr='2'] h2", {
-  x: -0,
+  x: -10,
   ease: 0.05,
   scrollTrigger: {
     trigger: ".word_divider[data-attr='2']",
@@ -567,6 +554,7 @@ gsap.to(".word_divider[data-attr='2'] h2", {
   }
 });
 
+// Skew Effects
 let proxy = { skew: 0 },
   skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"), // fast
   clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees. 

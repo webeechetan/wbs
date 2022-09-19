@@ -207,7 +207,7 @@
             </div>
         </div>
         <div class="container">
-            <div class="whatWe-content text-center text-md-left">
+            <div class="whatWe-content text-center text-sm-left">
                 <div class="row align-items-center mb-4 mb-md-5">
                     <div class="col-sm-6 mb-3 mb-sm-0">
                         <h2 class="title-big d-none d-sm-block">What We <br/><b>do?</b></h2>
@@ -443,7 +443,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="awards_sec_slider-pagination text-center mt-3 d-lg-none"></div>
+                                <div class="awards_sec_slider-pagination text-center mt-3"></div>
                             </div>
                         </div>
                     </div>
