@@ -523,7 +523,7 @@ if(document.querySelector("body").clientWidth > "768" && document.querySelector(
     scrollTrigger: {
       trigger: ".rec_sec",
       pin: true,
-      start: "center 50%",
+      start: "center 55%",
       endTrigger: ".whatWe",
       scrub: 0,
       snap: 1 / (rec_float_sec_item.length - 2),
