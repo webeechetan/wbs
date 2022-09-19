@@ -4,6 +4,23 @@ body {
   font-weight: 400;
 }
 
+.sec-space {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+@media (max-width: 1199px) {
+  .sec-space {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .sec-space {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
 ul.meta {
   list-style-type: none;
   display: flex;
@@ -150,6 +167,12 @@ p {
   display: flex;
   align-items: center;
   position: relative;
+}
+@media (min-width: 992px) {
+  .home-banner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 @media (max-width: 991px) {
   .home-banner {

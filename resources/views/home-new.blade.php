@@ -244,6 +244,9 @@
 
     <!-- Client Logos Section -->
     <section class="client_ani-sec sec-space">
+        <div class="container">
+            <h2 class="title-big text-center mb-4 mb-md-5">Our <b>Clients</b></h2>
+        </div>
         <div class="client_ani">
             <div class="client_ani-row">
                 <div class="client_ani-row-list" data-client-list-id="1">
@@ -571,6 +574,7 @@
     <!-- Locations -->
     <section class="sec-space">
         <div class="container">
+            <h2 class="title-big text-center mb-4 mb-md-0">Our <b>Offices</b></h2>
             <div class="location_slider overflow-hidden text-center">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
