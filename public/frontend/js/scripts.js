@@ -110,6 +110,7 @@
     let awards_sec_slider = new Swiper('.awards_sec_slider', {
       speed: 1000,
       slidesPerView: '3',
+      spaceBetween: 30,
       pagination: {
         el: ".awards_sec_slider-pagination",
         clickable: true,
@@ -510,15 +511,15 @@ const res_medium = window.matchMedia("(min-width: 768px) and (max-width: 991px)"
 // Gsap Animation
 gsap.registerPlugin(ScrollTrigger);
 
-let rec_float_sec_item = gsap.utils.toArray(".rec_sec .float_sec_slider-item");
+let rec_sec_item = gsap.utils.toArray(".rec_sec_slider-item");
 
 if(document.querySelector("body").clientWidth > "768" && document.querySelector("body").clientWidth < "991"){
   
 } else if(document.querySelector("body").clientWidth < "767"){
   
 } else if(document.querySelector("body").clientWidth > "991"){
-  let scrollTween_slider = gsap.to(rec_float_sec_item, {
-    xPercent: -100 * (rec_float_sec_item.length - 2),
+  let scrollTween_slider = gsap.to(rec_sec_item, {
+    xPercent: -100 * (rec_sec_item.length - 2),
     ease: "none",
     scrollTrigger: {
       trigger: ".rec_sec",
@@ -526,7 +527,7 @@ if(document.querySelector("body").clientWidth > "768" && document.querySelector(
       start: "center 55%",
       endTrigger: ".whatWe",
       scrub: 0,
-      snap: 1 / (rec_float_sec_item.length - 2),
+      snap: 1 / (rec_sec_item.length - 2),
       end: "+1500"
     }
   }); 

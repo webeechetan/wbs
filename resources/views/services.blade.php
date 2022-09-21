@@ -4,18 +4,18 @@
 @section('og_title',$meta->og_title)
 @section('og_image',$meta->og_image)
 @section('content')
-<section>
-   <div class="headlines">
-      <div class="container">
-         <div class="zikzak-container">
-            <h2 class="title-banner">Our Services</span></h2>
-         </div>
-      </div>
-      <!-- end container -->
+
+<section class="pb-4">
+    <div class="container">
+        <h2 class="title-big">Our <b>Services</b></h2>
    </div>
-   <!-- end headlines -->
 </section>
-<section class="services sec-space pt-0">
+<!-- end hero title -->
+<section class="page-header">
+    <img src="{{ asset('frontend') }}/images/about_banner.jpg" width="100%" alt="About Us">
+</section>
+<!-- page header end -->
+<section class="services sec-space">
     <div class="container">
         <div class="row">
             <div class="col-md-4 sec-space pt-0">

@@ -163,25 +163,26 @@
     <!-- end footer bottom -->
     </main>
 <!-- end work-with-us -->
-<footer class="footer bg-light-grey sec-space pb-0">
+<!-- Footer -->
+<footer class="footer sec-space pb-0">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 wow fadeInUp">
-                <figure class="logo mb-3"><img src="{{ asset('frontend') }}/images/logo.png" alt="Webeesocial Logo"></figure>
+            <div class="col-lg-4">
+                <figure class="logo mb-3"><img src="{{ asset('') }}/frontend/images/logo-white.png" alt="Webeesocial Logo"></figure>
                 <p>We are a full service creative digital marketing agency based in New Delhi. We combine our years of experience in creating integrated marketing solutions with creative output to generate a rich digital experience for businesses. We live by our motto – “We create super-rich experiences online!”</p>
             </div>
             <!-- end col-5 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp">
+            <div class="col-lg-4 col-md-6">
                 <div class="titles">
                     <h6>Our Offices</h6>
                 </div>
-                <address class="icon-list"><img src="{{ asset('frontend') }}/images/icon-map-marker.svg" alt="Location"> <span>Sector 22, Dwarka, New Delhi 110075</span></address>
-                <address class="icon-list"><img src="{{ asset('frontend') }}/images/icon-map-marker.svg" alt="Location"> <span>Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, Delhi 110017</span></address>
-                <address class="icon-list"><img src="{{ asset('frontend') }}/images/icon-map-marker.svg" alt="Location"> <span>AE Clover Bay Tower, Marasi Drive, Business Bay, Dubai, UAE P. O. Box - 391483</span></address>
-                <address class="icon-list"><img src="{{ asset('frontend') }}/images/icon-map-marker.svg" alt="Location"> <span>CA North York, ON M3A 2Y7, Canada</span></address>
+                <address class="icon-list"><img src="{{ asset('') }}/frontend/images/icon-map-white-marker.svg" alt="Location"> <span>Sector 22, Dwarka, New Delhi 110075</span></address>
+                <address class="icon-list"><img src="{{ asset('') }}/frontend/images/icon-map-white-marker.svg" alt="Location"> <span>Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, Delhi 110017</span></address>
+                <address class="icon-list"><img src="{{ asset('') }}/frontend/images/icon-map-white-marker.svg" alt="Location"> <span>AE Clover Bay Tower, Marasi Drive, Business Bay, Dubai, UAE P. O. Box - 391483</span></address>
+                <address class="icon-list"><img src="{{ asset('') }}/frontend/images/icon-map-white-marker.svg" alt="Location"> <span>CA North York, ON M3A 2Y7, Canada</span></address>
             </div>
             <!-- end col-4 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp">
+            <div class="col-lg-4 col-md-6">
                 <div class="titles">
                     <h6>Connect With Us</h6>
                 </div>
@@ -205,20 +206,20 @@
                         <li><a href="https://www.behance.net/webeesocial/" target="_blank"><i class="fab fa-behance"></i></a></li>
                     </ul>
                 </address>
-                <img src="{{ asset('frontend') }}/images/Google-partners-logo.jpg" width="200" alt="Google Partner Logo">
+                <img src="{{ asset('') }}/frontend/images/Google-partners-logo.jpg" width="200" alt="Google Partner Logo">
             </div>
             <!-- end col-3 -->
-            <div class="col-12 wow fadeInUp">
+            <div class="col-12">
                 <div class="sub-footer">
                     <div class="row align-items-center">
                         <div class="col-lg-8 mb-4 mb-lg-0">
                             <ul class="mb-2">
-                                <li><a href="{{ route('services') }}">Our Services</a></li>
-                                <li><a href="{{ route('our-work') }}">Our Work</a></li>
-                                <li><a href="{{ route('blog') }}">Blog</a></li>
-                                <li><a href="{{ route('get-in-touch') }}">Get in touch</a></li>
-                                <li><a href="{{route('terms.conditions')}}">Terms & Conditions</a></li>
-                                <li><a href="{{route('privacy.policy')}}">Privacy Policy</a></li>
+                                <li><a href="{{ asset('') }}/our-services">Our Services</a></li>
+                                <li><a href="{{ asset('') }}/our-work">Our Work</a></li>
+                                <li><a href="{{ asset('') }}/blog">Blog</a></li>
+                                <li><a href="{{ asset('') }}/get-in-touch">Get in touch</a></li>
+                                <li><a href="{{ asset('') }}/terms-conditions">Terms & Conditions</a></li>
+                                <li><a href="{{ asset('') }}/privacy-policy">Privacy Policy</a></li>
                             </ul>
                         </div>
                         <div class="col-lg-4 text-lg-right">

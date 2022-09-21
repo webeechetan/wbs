@@ -44,7 +44,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body class="page-loaded color-undefined">
+<body class="page-loaded home color-undefined">
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -86,11 +86,11 @@
     </header>
 
     <!-- Banner Section -->
-    <section class="home-banner sec-space">
+    <section class="hero-banner sec-space">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center text-md-left">
-                    <div class="home-banner-text">
+                    <div class="hero-banner-text">
                         <img src="{{ asset('') }}/frontend/images/new-home/banner_img.jpg" alt="Webeesocial | We create super - rich experiences online!">
                         <h2 class="title-big">We create <span class="d-flex justify-content-center d-md-inline-flex">super - rich</span> <span class="text-primary"><b class="typed-text"></b><b class="cursor">&nbsp;</b></span> <span class="d-flex justify-content-center d-md-inline-flex">online!</span></h2>
                     </div>
@@ -100,30 +100,30 @@
     </section>
 
     <!-- Recent Works -->
-    <section class="rec_sec float_sec sec-space pt-0">
+    <section class="rec_sec sec-space pt-0">
         <!-- Word Divider -->
         <div class="word_divider word_divider_left" data-attr="1">
             <h2>Work</h2>
         </div>
         <div class="rec_sec_wrap">
             <div class="container">
-                <div class="float_sec_title">
+                <div class="rec_sec_title">
                     <div>
                         <h2 class="title-big mb-lg-5">Recent <b>work</b></h2>
                         <div class="custom-link d-none d-lg-flex"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
                     </div>
                 </div>
             </div>
-            <div class="float_sec_main">
-                <div class="float_sec-inner">
-                    <div class="float_sec_slider">
-                        <div class="rec_sec_slider float_sec_slider-container swiper_grid_3">
-                            <div class="float_sec_slider-inner swiper-wrapper">
-                                <div class="float_sec_slider-item swiper-slide">
-                                    <a href="#" class="float_sec_slider-item-inner" data-height="sameHeight">
+            <div class="rec_sec_main">
+                <div class="rec_sec-inner">
+                    <div class="rec_sec_slider">
+                        <div class="rec_sec_slider rec_sec_slider-container swiper_grid_3">
+                            <div class="rec_sec_slider-inner swiper-wrapper">
+                                <div class="rec_sec_slider-item swiper-slide">
+                                    <a href="#" class="rec_sec_slider-item-inner" data-height="sameHeight">
                                         <img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt="">
                                         <div>
-                                            <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                            <h4 class="rec_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
                                             <ul class="meta">
                                                 <li>Digital campaigns</li>
                                                 <li>Social media</li>
@@ -131,11 +131,11 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="float_sec_slider-item swiper-slide">
-                                    <a href="#" class="float_sec_slider-item-inner" data-height="sameHeight">
+                                <div class="rec_sec_slider-item swiper-slide">
+                                    <a href="#" class="rec_sec_slider-item-inner" data-height="sameHeight">
                                         <img src="{{ asset('') }}/frontend/images/new-home/work_img2.jpg" alt="">
                                         <div>
-                                            <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                            <h4 class="rec_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
                                             <ul class="meta">
                                                 <li>Digital campaigns</li>
                                                 <li>Social media</li>
@@ -143,11 +143,11 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="float_sec_slider-item swiper-slide">
-                                    <a href="#" class="float_sec_slider-item-inner" data-height="sameHeight">
+                                <div class="rec_sec_slider-item swiper-slide">
+                                    <a href="#" class="rec_sec_slider-item-inner" data-height="sameHeight">
                                         <img src="{{ asset('') }}/frontend/images/new-home/work_img1.jpg" alt="">
                                         <div>
-                                            <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                            <h4 class="rec_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
                                             <ul class="meta">
                                                 <li>Digital campaigns</li>
                                                 <li>Social media</li>
@@ -155,11 +155,11 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="float_sec_slider-item swiper-slide">
-                                    <a href="#" class="float_sec_slider-item-inner" data-height="sameHeight">
+                                <div class="rec_sec_slider-item swiper-slide">
+                                    <a href="#" class="rec_sec_slider-item-inner" data-height="sameHeight">
                                         <img src="{{ asset('') }}/frontend/images/new-home/work_img2.jpg" alt="">
                                         <div>
-                                            <h4 class="float_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
+                                            <h4 class="rec_sec_slider-item-title">360 Campaign for Automotive Engineering Show</h4>
                                             <ul class="meta">
                                                 <li>Digital campaigns</li>
                                                 <li>Social media</li>
@@ -167,8 +167,8 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="float_sec_slider-item swiper-slide">
-                                    <div class="float_sec_slider-item-more" data-height="sameHeight">
+                                <div class="rec_sec_slider-item swiper-slide">
+                                    <div class="rec_sec_slider-item-more" data-height="sameHeight">
                                         <div class="custom-link"><a href="#">See all</a> <span></span> <i></i></div>
                                     </div>
                                 </div>
@@ -177,7 +177,7 @@
                         </div>
                     </div>
                     <div class="text-center mt-4 d-lg-none">
-                        <div class="custom-link"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
+                        <div class="custom-link justify-content-center"><a href="about-us.php">See all projects</a> <span></span> <i></i></div>
                     </div>
                 </div>
             </div>
@@ -353,7 +353,7 @@
                             </div>
                             <div class="col-md-9 col-sm-8 mt-3 mt-sm-0">
                                 <h2 class="title-big mb-4 mb-md-5">Integrated Digital <b>Solutions</b></h2>
-                                <h4 class="text-primary mb-4">Insights, Metrics and Analytics - Everything is connected!</h4>
+                                <h6 class="text-primary mb-4">Insights, Metrics and Analytics - Everything is connected!</h6>
                                 <p>In a digital world where everything’s connected, we believe that the approach to digital communications has to be joined-up too. Our approach combines creativity & technology and blends a diverse.</p>
                                 <div class="custom-link mt-3 mt-md-4"><a href="#">Know More</a> <span></span> <i></i></div>
                             </div>
@@ -366,7 +366,7 @@
                             </div>
                             <div class="col-md-9 col-sm-8 mt-3 mt-sm-0">
                                 <h2 class="title-big mb-4 mb-md-5">Strategy, Creativity & <b>Results</b>!</h2>
-                                <h4 class="text-primary mb-4">Our approach is backed by strategy, creativity and optimised for results.</h4>
+                                <h6 class="text-primary mb-4">Our approach is backed by strategy, creativity and optimised for results.</h6>
                                 <p>We understand that each client and each project we undertake is different and so we have developed a repeatable process that we know works. Our methodology puts the user</p>
                                 <div class="custom-link mt-3 mt-md-4"><a href="#">Know More</a> <span></span> <i></i></div>
                             </div>
@@ -391,65 +391,51 @@
                     </div>
                 </div>
             </div>
-            <div class="float_sec_main">
-                <div class="float_sec-inner">
-                    <div class="float_sec_slider">
-                        <div>
-                            <div class="float_sec_slider-container awards_sec_slider">
-                                <div class="float_sec_slider-inner swiper-wrapper">
-                                    <div class="float_sec_slider-item swiper-slide">
-                                        <a href="#" class="float_sec_slider-item-inner">
-                                            <img src="{{ asset('') }}/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
-                                            <div>
-                                                <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
-                                                <div class="float_sec_slider-item-desc"><p>Awarded by Agency Reporter</p></div>
-                                                <ul class="meta">
-                                                    <li>February 2022</li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="float_sec_slider-item swiper-slide">
-                                        <a href="#" class="float_sec_slider-item-inner">
-                                            <img src="{{ asset('') }}/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
-                                            <div>
-                                                <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
-                                                <div class="float_sec_slider-item-desc"><p>Awarded by Agency Reporter</p></div>
-                                                <ul class="meta">
-                                                    <li>February 2022</li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="float_sec_slider-item swiper-slide">
-                                        <a href="#" class="float_sec_slider-item-inner">
-                                            <img src="{{ asset('') }}/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
-                                            <div>
-                                                <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
-                                                <div class="float_sec_slider-item-desc"><p>Awarded by Agency Reporter</p></div>
-                                                <ul class="meta">
-                                                    <li>February 2022</li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="float_sec_slider-item swiper-slide">
-                                        <a href="#" class="float_sec_slider-item-inner">
-                                            <img src="{{ asset('') }}/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
-                                            <div>
-                                                <h4 class="float_sec_slider-item-title">India’s Fastest Growing Social Media Agency</h4>
-                                                <div class="float_sec_slider-item-desc"><p>Awarded by Agency Reporter</p></div>
-                                                <ul class="meta">
-                                                    <li>February 2022</li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="awards_sec_slider-pagination text-center mt-3"></div>
+            <div class="awards_sec_right">
+                <div class="awards_sec_slider-container awards_sec_slider">
+                    <div class="awards_sec_slider-inner swiper-wrapper">
+                        <div class="awards_sec_slider-item swiper-slide">
+                            <img src="{{ asset('') }}/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
+                            <div>
+                                <h6>India’s Fastest Growing Social Media Agency</h6>
+                                <p>Awarded by Agency Reporter</p>
+                                <ul class="meta">
+                                    <li>February 2022</li>
+                                </ul>
                             </div>
                         </div>
+                        <div class="awards_sec_slider-item swiper-slide">
+                            <img src="{{ asset('') }}/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
+                            <div>
+                                <h6>India’s Fastest Growing Social Media Agency</h6>
+                                <p>Awarded by Agency Reporter</p>
+                                <ul class="meta">
+                                    <li>February 2022</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="awards_sec_slider-item swiper-slide">
+                            <img src="{{ asset('') }}/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
+                            <div>
+                                <h6>India’s Fastest Growing Social Media Agency</h6>
+                                <p>Awarded by Agency Reporter</p>
+                                <ul class="meta">
+                                    <li>February 2022</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="awards_sec_slider-item swiper-slide">
+                            <img src="{{ asset('') }}/frontend/images/new-home/award_img1.jpg" class="border-round" alt="">
+                            <div>
+                                <h6>India’s Fastest Growing Social Media Agency</h6>
+                                <p>Awarded by Agency Reporter</p>
+                                <ul class="meta">
+                                    <li>February 2022</li>
+                                </ul>
+                            </div>
+                        </div>     
                     </div>
+                    <div class="awards_sec_slider-pagination text-center mt-3"></div>
                 </div>
             </div>
         </div>
@@ -579,15 +565,15 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="location_img"><img src="{{ asset('') }}/frontend/images/new-home/address_delhi.jpg" alt=""></div>
-                        <h6 class="mt-4">Innov8 Old Fort, Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, 110017</h6>
+                        <p class="mt-4 font-weight-600">Innov8 Old Fort, Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, 110017</p>
                     </div>
                     <div class="swiper-slide">
                         <div class="location_img"><img src="{{ asset('') }}/frontend/images/new-home/address_dubai.jpg" alt=""></div>
-                        <h6 class="mt-4">1102, Clover Bay Tower, Marasi Drive, Business Bay, Dubai, UAE Dubai</h6>
+                        <p class="mt-4 font-weight-600">1102, Clover Bay Tower, Marasi Drive, Business Bay, Dubai, UAE Dubai</p>
                     </div>
                     <div class="swiper-slide">
                         <div class="location_img"><img src="{{ asset('') }}/frontend/images/new-home/address_can.jpg" alt=""></div>
-                        <h6 class="mt-4">40 Pintail Crescent, North York, ON M3A 2Y7, Canada</h6>
+                        <p class="mt-4 font-weight-600">40 Pintail Crescent, North York, <br/>ON M3A 2Y7, Canada</p>
                     </div>
                 </div>
                 <div class="slider-pagination d-lg-none"></div>
