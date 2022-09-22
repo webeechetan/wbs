@@ -23,7 +23,7 @@
                 <div class="card-icon-top">
                     <figure class="card-icon-img"><img src="{{ asset('frontend') }}/images/icons/digital-strategy.png"></figure>
                     <div class="titles">
-                        <h6 class="font-weight-700">Digital Strategy & Planning</h6>
+                        <h6 class="font-weight-600">Digital Strategy & Planning</h6>
                     </div>
                 </div>
                 <div class="card-icon-content">
@@ -38,7 +38,7 @@
                     <div class="card-icon-top">
                         <figure class="card-icon-img"><img src="{{ asset('frontend') }}/images/icons/creative-strategy.png"></figure>
                         <div class="titles">
-                            <h6 class="font-weight-700">Creative Strategy and Web Graphics Design</h6>
+                            <h6 class="font-weight-600">Creative Strategy and Web Graphics Design</h6>
                         </div>
                     </div>
                     <div class="card-icon-content">
@@ -53,7 +53,7 @@
                 <div class="card-icon-top">
                     <figure class="card-icon-img"><img src="{{ asset('frontend') }}/images/icons/social-media.png"></figure>
                     <div class="titles">
-                        <h6 class="font-weight-700">Social Media Marketing</h6>
+                        <h6 class="font-weight-600">Social Media Marketing</h6>
                     </div>
                 </div>
                 <div class="card-icon-content">
@@ -68,7 +68,7 @@
                 <div class="card-icon-top">
                     <figure class="card-icon-img"><img src="{{ asset('frontend') }}/images/icons/content-marketing.png"></figure>
                     <div class="titles">
-                        <h6 class="font-weight-700">Videos, GIFs and Content Marketing</h6>
+                        <h6 class="font-weight-600">Videos, GIFs and Content Marketing</h6>
                     </div>
                 </div>
                 <div class="card-icon-content">
@@ -83,7 +83,7 @@
                 <div class="card-icon-top">
                     <figure class="card-icon-img"><img src="{{ asset('frontend') }}/images/icons/web-design.png"></figure>
                     <div class="titles">
-                        <h6 class="font-weight-700">Website Design and Development</h6>
+                        <h6 class="font-weight-600">Website Design and Development</h6>
                     </div>
                 </div>
                 <div class="card-icon-content">
@@ -98,7 +98,7 @@
                 <div class="card-icon-top">
                     <figure class="card-icon-img"><img src="{{ asset('frontend') }}/images/icons/seo-sem.png"></figure>
                     <div class="titles">
-                        <h6 class="font-weight-700">SEO and Search Engine Marketing</h6>
+                        <h6 class="font-weight-600">SEO and Search Engine Marketing</h6>
                     </div>
                 </div>
                 <div class="card-icon-content">
@@ -113,7 +113,7 @@
                 <div class="card-icon-top">
                     <figure class="card-icon-img"><img src="{{ asset('frontend') }}/images/icons/email-marketing.png"></figure>
                     <div class="titles">
-                        <h6 class="font-weight-700">Email Marketing</h6>
+                        <h6 class="font-weight-600">Email Marketing</h6>
                     </div>
                 </div>
                 <div class="card-icon-content">
@@ -128,7 +128,7 @@
                 <div class="card-icon-top">
                     <figure class="card-icon-img"><img src="{{ asset('frontend') }}/images/icons/web-analytics.png"></figure>
                     <div class="titles">
-                        <h6 class="font-weight-700">Web Analytics</h6>
+                        <h6 class="font-weight-600">Web Analytics</h6>
                     </div>
                 </div>
                 <div class="card-icon-content">
@@ -145,7 +145,7 @@
                <div class="card-icon-top">
                   <figure class="card-icon-img"><img src="{{ asset('frontend') }}/images/icons/media-planning.png"></figure>
                   <div class="titles">
-                     <h6 class="font-weight-700">Media Planning and Buying</h6>
+                     <h6 class="font-weight-600">Media Planning and Buying</h6>
                   </div>
                </div>
                <div class="card-icon-content">
@@ -160,7 +160,7 @@
                <div class="card-icon-top">
                   <figure class="card-icon-img"><img src="{{ asset('frontend') }}/images/icons/shopify-development.png"></figure>
                   <div class="titles">
-                     <h6 class="font-weight-700">Shopify Website & Development</h6>
+                     <h6 class="font-weight-600">Shopify Website & Development</h6>
                   </div>
                </div>
                <div class="card-icon-content">

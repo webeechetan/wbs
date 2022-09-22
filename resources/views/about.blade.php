@@ -249,7 +249,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="titles mb-md-0 wow fadeInUp">
-                    <h3 class="mb-0">We live by our motto – “We create super-rich experiences online<span class="text-primary">!</span>”</h3>
+                    <h3 class="mb-0">We live by our motto – “<b>We create super-rich experiences online</b><span class="text-primary">!</span>”</h3>
                 </div>
                 <!-- end career -->
             </div>
