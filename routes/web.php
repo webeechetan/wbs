@@ -12,16 +12,11 @@ use App\Http\Controllers\NewsController;
 use App\Models\Blog;
 use App\Http\Controllers\MetaDetails;
 use App\Http\Controllers\HomePageSliderController;
-
+use App\Models\MetaDetail;
 
 Route::get('/',[MetaDetails::class,'home'])->name('home');
-Route::get('/home-new', function () {
-    return view('home-new');
-});
 
-Route::get('/home-new', function () {
-    return view('home-new');
-})->name('home-new');
+Route::get('/home-new', [MetaDetails::class,'home'])->name('home-new');
 
 Route::get('/about-us', [MetaDetails::class,'about'])->name('about');
 
