@@ -2762,6 +2762,34 @@ body.home {
 			bottom: 0;
 		}
 	}
+	&-leader {
+		figure {
+			margin-bottom: 0;
+		}
+		&-title {
+			font-size: 1.7em;
+			font-weight: 700;
+			margin-bottom: 15px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			small {
+				text-align: right;
+				font-size: 14px;
+				letter-spacing: 1px;
+				font-weight: 700;
+				text-transform: uppercase;
+				margin-left: auto;
+				display: inline-block;
+				padding: 0 0 3px;
+				color: $primary;
+				border-bottom: 2px solid $primary;
+			}
+		}
+		&-text {
+			padding: 30px;
+		}
+	}
 }
 /* POST STICKY */
 .post-sticky {

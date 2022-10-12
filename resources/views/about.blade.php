@@ -21,7 +21,7 @@
         <div class="row align-items-center">
             <div class="col-md-6 p-md-0">
                 <figure class="project-image reveal-effect mb-0 masker wow w-100"> 
-                    <img src="{{ asset('frontend') }}/images/about_img4.jpg" width="100%" alt="Image">
+                    <img src="{{ asset('frontend') }}/images/digital-solutions.jpg" width="100%" alt="Integrated Digital Solutions">
                 </figure>
             </div>
             <div class="col-md-6 pl-md-5 pr-md-0">
@@ -114,29 +114,29 @@
 <!-- Team -->
 <section>
     <div class="container">
-        <div class="row text-center">
+        <div class="row">
             <div class="col-12 mb-4 mb-md-5">
                 <h2 class="title-big">The <b>Leadership</b><h2>
             </div>
             <div class="col-md-6">
                 <div class="card-leader">
                     <div class="card-leader-head">
-                        <figure class="bg-design-1"><img src="{{ asset('frontend') }}/images/team-1.png"></figure>
-                        <div class="card-leader-title">
-                            <p><span class="font-weight-700">Soumya Sharma</span><br/><span class="text-primary">Co-Founder & CEO</span></p>
-                            <p>Soumya sharma is the Co-Founder & CEO of WebeeSocial. She also heads the Creative Department of the agency. Before setting up WeBeeSocial, she spearheaded some of the biggest campaigns for brands like Huawei, Intel, Ford, Dabur etc.</p>
-                        </div>
+                        <figure><img src="{{ asset('frontend') }}/images/new-home/boss_img1.jpg" width="100%" alt=""></figure>
+                    </div>
+                    <div class="card-leader-text">
+                        <div class="card-leader-title"><span>Soumya Sharma</span> <small>Co-Founder & CEO</small></div>
+                        <p>Soumya sharma is the Co-Founder & CEO of WebeeSocial. She also heads the Creative Department of the agency. Before setting up WeBeeSocial, she spearheaded some of the biggest campaigns for brands like Huawei, Intel, Ford, Dabur etc.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="card-leader">
                     <div class="card-leader-head">
-                        <figure><img src="{{ asset('frontend') }}/images/team-2.png"></figure>
-                        <div class="card-leader-title">
-                            <p><span class="font-weight-700">Shubhendu Jha</span><br/><span class="text-primary">Co-Founder & MD</span></p>
-                            <p>Shubhendu Jha is the Co-Founder & MD of WebeeSocial. He also heads the Client Servicing Department of the agency. Before setting up WeBeeSocial, he was working with brands like airtel, Dabur, Honda, Adidas etc. which made him proficient in different verticals.</p>
-                        </div>
+                        <figure><img src="{{ asset('frontend') }}/images/new-home/boss_img2.jpg" width="100%"></figure>
+                    </div>
+                    <div class="card-leader-text">
+                        <div class="card-leader-title"><span>Shubhendu Jha</span><small class="text-primary">Co-Founder & MD</small></div>
+                        <p>Shubhendu Jha is the Co-Founder & MD of WebeeSocial. He also heads the Client Servicing Department of the agency. Before setting up WeBeeSocial, he was working with brands like airtel, Dabur, Honda, Adidas etc. which made him proficient in different verticals.</p>
                     </div>
                 </div>
             </div>
