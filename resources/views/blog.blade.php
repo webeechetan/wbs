@@ -19,7 +19,7 @@
         <div class="row flex-column-reverse flex-lg-row">
             <div class="col-md-8">
                 @foreach($blogs as $blog)
-                    <div class="post wow fadeIn">
+                    <div class="post wow fadeIn d-none">
                         @if($blog->thumbnail)
                             <figure class="post-image"><img src="{{ $blog->thumbnail }}" alt="Image"></figure>
                         @endif
