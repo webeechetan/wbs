@@ -28,7 +28,7 @@
                 <div class="project-box">
                     <figure class="project-image reveal-effect masker wow">
                         <a href="#">
-                            <img src="http://agensy.themezinho.net/wp-content/uploads/2020/03/works02.jpg" alt="">
+                            <img src="{{ asset('frontend') }}/images/works02.jpg" alt="">
                         </a>
                     </figure>
                     <div class="project-content">
@@ -43,7 +43,7 @@
                 <div class="project-box">
                     <figure class="project-image reveal-effect masker wow">
                         <a href="#">
-                            <img src="http://agensy.themezinho.net/wp-content/uploads/2020/03/works02.jpg" alt="">
+                            <img src="{{ asset('frontend') }}/images/works02.jpg" alt="">
                         </a>
                     </figure>
                     <div class="project-content">
@@ -58,7 +58,7 @@
                 <div class="project-box">
                     <figure class="project-image reveal-effect masker wow">
                         <a href="#">
-                            <img src="http://agensy.themezinho.net/wp-content/uploads/2020/03/works02.jpg" alt="">
+                            <img src="{{ asset('frontend') }}/images/works02.jpg" alt="">
                         </a>
                     </figure>
                     <div class="project-content">
@@ -73,7 +73,7 @@
                 <div class="project-box">
                     <figure class="project-image reveal-effect masker wow">
                         <a href="#">
-                            <img src="http://agensy.themezinho.net/wp-content/uploads/2020/03/works02.jpg" alt="">
+                            <img src="{{ asset('frontend') }}/images/works02.jpg" alt="">
                         </a>
                     </figure>
                     <div class="project-content">
