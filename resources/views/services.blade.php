@@ -5,17 +5,89 @@
 @section('og_image',$meta->og_image)
 @section('content')
 
-<section class="pb-4">
+<section class="inner-banner">
     <div class="container">
         <h2 class="title-big">Our <b>Services</b></h2>
    </div>
 </section>
 <!-- end hero title -->
-<section class="page-header">
+<section>
     <img src="{{ asset('frontend') }}/images/about_banner.jpg" width="100%" alt="About Us">
 </section>
 <!-- page header end -->
-<section class="services sec-space">
+<section class="layout1 sec-space">
+    <div class="container">
+        <ul class="works">
+            <li>
+                <div class="wow fadeInUp">
+                    <h2 class="font-weight-400">Explore our all <b>services</b></h2>
+                    <p><strong>Adding new features. Working to help your section business grow. We’re constantly refining our product.</strong></p>
+                </div>
+            </li>
+            <li>
+                <div class="project-box">
+                    <figure class="project-image reveal-effect masker wow">
+                        <a href="#">
+                            <img src="http://agensy.themezinho.net/wp-content/uploads/2020/03/works02.jpg" alt="">
+                        </a>
+                    </figure>
+                    <div class="project-content">
+                        <h5><a href="http://agensy.themezinho.net/portfolio/moments-matter-event-studio/"> Digital Strategy & Planning </a></h5>
+                        <p>“We leverage our years of experience to create the correct strategy and plans for your business which helps to grow your brand and revenue.</p>
+                        <div class="custom-link"><a href="http://localhost/github/wbs/our-services/digital-strategy-and-planning">Read More</a> <span></span> <i></i></div>
+                    </div>
+                </div>
+                <!-- end project-box -->
+            </li>
+            <li>
+                <div class="project-box">
+                    <figure class="project-image reveal-effect masker wow">
+                        <a href="#">
+                            <img src="http://agensy.themezinho.net/wp-content/uploads/2020/03/works02.jpg" alt="">
+                        </a>
+                    </figure>
+                    <div class="project-content">
+                        <h5><a href="http://agensy.themezinho.net/portfolio/moments-matter-event-studio/"> Digital Strategy & Planning </a></h5>
+                        <p>“We leverage our years of experience to create the correct strategy and plans for your business which helps to grow your brand and revenue.</p>
+                        <div class="custom-link"><a href="http://localhost/github/wbs/our-services/digital-strategy-and-planning">Read More</a> <span></span> <i></i></div>
+                    </div>
+                </div>
+                <!-- end project-box -->
+            </li>
+            <li>
+                <div class="project-box">
+                    <figure class="project-image reveal-effect masker wow">
+                        <a href="#">
+                            <img src="http://agensy.themezinho.net/wp-content/uploads/2020/03/works02.jpg" alt="">
+                        </a>
+                    </figure>
+                    <div class="project-content">
+                        <h5><a href="http://agensy.themezinho.net/portfolio/moments-matter-event-studio/"> Digital Strategy & Planning </a></h5>
+                        <p>“We leverage our years of experience to create the correct strategy and plans for your business which helps to grow your brand and revenue.</p>
+                        <div class="custom-link"><a href="http://localhost/github/wbs/our-services/digital-strategy-and-planning">Read More</a> <span></span> <i></i></div>
+                    </div>
+                </div>
+                <!-- end project-box -->
+            </li>
+            <li>
+                <div class="project-box">
+                    <figure class="project-image reveal-effect masker wow">
+                        <a href="#">
+                            <img src="http://agensy.themezinho.net/wp-content/uploads/2020/03/works02.jpg" alt="">
+                        </a>
+                    </figure>
+                    <div class="project-content">
+                        <h5><a href="http://agensy.themezinho.net/portfolio/moments-matter-event-studio/"> Digital Strategy & Planning </a></h5>
+                        <p>“We leverage our years of experience to create the correct strategy and plans for your business which helps to grow your brand and revenue.</p>
+                        <div class="custom-link"><a href="http://localhost/github/wbs/our-services/digital-strategy-and-planning">Read More</a> <span></span> <i></i></div>
+                    </div>
+                </div>
+                <!-- end project-box -->
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="services d-none sec-space">
     <div class="container">
         <div class="row">
             <div class="col-md-4 sec-space pt-0">
@@ -170,6 +242,19 @@
                <!-- end card-icon-content -->
             </div>
          </div>
+        </div>
+    </div>
+</section>
+<!-- CTA -->
+<section class="sec-space pt-0">
+    <div class="container">
+        <div class="row align-items-center wow fadeInUp">
+            <div class="col-md-8">
+                <h2 class="font-weight-400 mb-0">Ready to discuss your <b>project</b> ?</h2>
+            </div>
+            <div class="col-md-4 text-right">
+                <div class="custom-btn justify-content-end"><a href="#">Get in touch<span></span> <i></i></a></div>
+            </div>
         </div>
     </div>
 </section>

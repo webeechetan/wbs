@@ -202,6 +202,9 @@
 		@include transition;
 		transform: translateY(-100%);
 		transition-delay: 1.2s;
+		@media (max-width: 991px) {
+			padding-bottom: 15px;
+		}
 	}
 
 	.logo {

@@ -356,7 +356,7 @@
                 <div class="related-articles__title-container">
                     <div class="related-articles__title-rotate-outer">
                         <div class="related-articles__title-rotate-inner">
-                            <h2 class="related-articles__title"><span>Latest</span><span class="related-articles__desktop-content"> <b>news</b></span></h2>
+                            <h2 class="related-articles__title font-weight-400"><span>Latest</span><span class="related-articles__desktop-content"> <b class="font-weight-700">News</b></span></h2>
                         </div>
                     </div>
                 </div>
@@ -365,7 +365,7 @@
                 <div class="related-articles__title-container">
                     <div class="related-articles__title-rotate-outer">
                         <div class="related-articles__title-rotate-inner">
-                            <h2 class="related-articles__title"> <b>news</b></h2>
+                            <h2 class="related-articles__title"> <b class="font-weight-700">News</b></h2>
                         </div>
                     </div>
                 </div>
@@ -520,7 +520,7 @@
                             <defs><path id="master" d="M50,600 Q80,80 450,360 T800 120" stroke="#282828" stroke-width="120" fill="none"></path></defs>
                             <use xlink:href="#master" opacity="1"></use>
                             <text id="mainText" fill="#fff">
-                                <textPath id="masterTextPath" xlink:href="#master">Stay Upadated &nbsp;&nbsp;&nbsp; Thanks for Scrolling</textPath>
+                                <textPath id="masterTextPath" xlink:href="#master">Stay Updated &nbsp;&nbsp;&nbsp; Thanks for Scrolling</textPath>
                             </text>
                         </svg>
                     </div>

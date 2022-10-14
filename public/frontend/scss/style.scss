@@ -210,6 +210,7 @@ body.home {
 	a {
 		display: flex;
 		flex-wrap: wrap;
+		align-items: center;
 		justify-content: center;
 		height: 58px;
 		border: 1px solid $color-dark;
@@ -217,7 +218,6 @@ body.home {
 		font-weight: 600;
 		text-transform: uppercase;
 		padding: 0 30px;
-		padding-top: 18px;
 		background: $color-dark;
 		color: #fff;
 
@@ -232,7 +232,6 @@ body.home {
 		background: #fff;
 		display: inline-block;
 		margin-left: 20px;
-		margin-top: 8px;
 	}
 
 	i {
@@ -245,7 +244,6 @@ body.home {
 		border-width: 4px 0 4px 4px;
 		border-color: transparent transparent transparent #fff;
 		opacity: 1;
-		margin-top: 5px;
 	}
 
 	&:hover span {
@@ -434,6 +432,15 @@ body.home {
     50% { background-color: $primary; }
     99% { background-color: transparent; }
     100%  { background-color: $primary; }
+}
+/* Inner Banner */
+.inner {
+	&-banner {
+		padding: 30px 0;
+		h2 {
+			margin-bottom: 0;
+		}
+	}
 }
 /* LEFT SIDE */
 .left-side {
@@ -1274,6 +1281,9 @@ body.home {
 			margin: 40px 0;
 			padding: 0 30px;
 			list-style: none;
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 }
@@ -3150,6 +3160,11 @@ body.home {
 		span {
 			margin-right: 0;
 			font-size: 12px;
+		}
+	}
+	@media (min-width: 1200px) and (max-width: 1375px) {
+		> .container {
+			padding-left: 40px;
 		}
 	}
 }

@@ -5,13 +5,12 @@
 @section('og_image',$meta->og_image)
 @section('content')
 
-<section class="pb-4">
+<section class="inner-banner">
     <div class="container">
         <h2 class="title-big">About <b>Us</b></h2>
    </div>
 </section>
-
-<section class="page-header">
+<section>
     <img src="{{ asset('frontend') }}/images/about_banner.jpg" width="100%" alt="About Us">
 </section>
 <!-- page header end -->
@@ -19,7 +18,7 @@
 <section class="sec-space pb-0">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-6 p-md-0">
+            <div class="col-md-6 pr-md-0 mb-4 mb-md-0">
                 <figure class="project-image reveal-effect mb-0 masker wow w-100"> 
                     <img src="{{ asset('frontend') }}/images/digital-solutions.jpg" width="100%" alt="Integrated Digital Solutions">
                 </figure>
@@ -32,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <div class="row align-items-center">
+        <div class="row align-items-center flex-column-reverse flex-md-row">
             <div class="col-md-6 pl-md-0">
                 <div class="titles">
                     <h4 class="title">What We <b>Do?</b></h4>
@@ -40,7 +39,7 @@
                     <p class="mb-0"> From marketing events like Auto Expo - Components and MTV unplugged to creating some incredible ROAS (Return on ad spends) for ecommerce brands, our team loves to be creative and strategic about different lines of businesses. We won the 'Best Digital Innovation' award at the ACT summit in Pune where our digital activation campaign for ACMA Safer work-places won accolades from auto component OEMs. We are hungry for creativity and passionate about driving results. Our clients below can attest to our efforts!</p>
                 </div>
             </div>
-            <div class="col-md-6 p-md-0">
+            <div class="col-md-6 pl-md-0">
                 <figure class="project-image reveal-effect mb-0 masker wow w-100"> 
                     <img src="{{ asset('frontend') }}/images/what-we-do.jpg" width="100%" alt="What We Do?">
                 </figure>

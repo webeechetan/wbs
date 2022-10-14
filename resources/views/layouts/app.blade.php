@@ -114,9 +114,9 @@
             <img src="{{ asset('frontend') }}/images/webeesocial_icon.svg" alt="Image">
         </div>
         <ul>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Linkedin</a></li>
-            <li><a href="#">Youtube</a></li>
+            <li><a href="https://www.instagram.com/webeesocial/">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/webeesocial/">Linkedin</a></li>
+            <li><a href="https://www.youtube.com/channel/UCDT0KsuN4ytOlEwX_tZxAqA">Youtube</a></li>
         </ul>
         <a href="#top" class="gotop"><img src="{{ asset('frontend') }}/images/icon-gotop.svg" alt="Image"></a>
     </aside>
